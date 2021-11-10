@@ -2,4 +2,13 @@
 
 [Back to tthe main page](../../README.md)
 
+**Development period:** 1999
+
+**Practical application:** Never (The initial project was in use but I can't show it here)
+
+**Project purpose:** Just to learn how to deal with graphical data reppresentation, print functionality, chm context help manipulation and desktop application infrastructure.
+
+**Implementation technologies:** MFC SDI Application, ATL COM data management level, half division based data search, draw images in memory, copy data to video memory, CHM Help.
+
+
 ![TThe trip graph navigation](TripExplore.gif)
