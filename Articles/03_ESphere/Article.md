@@ -13,7 +13,7 @@ factor and power grid topology history (bypass switches commutation history, mea
 
 **Project description:** 
 My application provides the pssibility of proper data storing corresponding the place on the power grid where 
-measures were collected from. By the other terms my application is the editor for the ctretion of the 
+measures were collected from. By the other terms my application is the editor for the creation of the 
 power network model in the database to store data in the right way to process data by jobs and to retrieve 
 data for the reporting. My application contains script which can actualize any version of the database to 
 the actual version with all necessary data conversions, COM object which provides API and UI controls 
