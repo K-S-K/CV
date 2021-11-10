@@ -18,7 +18,7 @@ power network model in the database to store data in the right way to process da
 data for the reporting. My application contains script which can actualize any version of the database to 
 the actual version with all necessary data conversions, COM object which provides API and UI controls 
 for the data structure editor and for the different applications which work with data: viewers, report 
-generators etc.
+generators etc, and desctop editor for the tree-shabe representation of the electric energy system.
 
 **Implementation technologies:** MFC SDI Application, ATL COM object for data management level, OLE DB, CHM Help, T-SQL and some subject area knowledge.
 
