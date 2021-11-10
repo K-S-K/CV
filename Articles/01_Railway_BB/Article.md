@@ -13,4 +13,4 @@
 
 ![TThe trip graph navigation](TripExplore.gif)
 
-[^1] The initial project was in use but I can't show it here
+[^1]: The initial project was in use but I can't show it here
