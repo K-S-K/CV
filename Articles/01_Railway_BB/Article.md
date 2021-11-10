@@ -10,6 +10,8 @@
 
 **Implementation technologies:** MFC SDI Application, ATL COM data management level, half division based data search, draw images in memory, copy data to video memory, CHM Help.
 
+**Developer tools:** Microsoft Developer Studio v.6 for C++
+
 
 ![TThe trip graph navigation](TripExplore.gif)
 
