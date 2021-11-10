@@ -1,6 +1,6 @@
 # Railway Black Box Data Viewer
 
-[Back to tthe main page](../../README.md)
+[:point_left: Back to tthe main page](../../README.md)
 
 **Development period:** 1999.
 
