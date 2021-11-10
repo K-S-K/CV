@@ -8,8 +8,8 @@
 
 **Project purpose:** Electric power meters can provide data exchange by different hardware and software APIs. 
 The server application collects data from the power meters and put data to the SQL Server database. 
-SQL Server Agent executes jobs which calculate result data from the primary data corresponding to measuring transformer 
-parameters and power grid topology history (bypass switches commutation history, measurement transformers replacement history e t.c.).
+SQL Server Agent executes jobs which calculate result data from the primary data with measuring transformer 
+parameters ratio and power grid topology history (bypass switches commutation history, measurement transformers replacement history e t.c.).
 
 **Project description:** 
 My application provides the pssibility of proper data storing corresponding the place on the power grid where 
