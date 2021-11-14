@@ -23,6 +23,6 @@ generators etc, and desctop editor for the tree-shabe representation of the elec
 **Implementation technologies:** MFC SDI Application, ATL COM object for data management level, OLE DB, CHM Help, T-SQL and some subject area knowledge.
 
 
-![TThe trip graph navigation](Images/Dlg_Bind_Meter_Tree.png)
+![The trip graph navigation](Images/Dlg_Bind_Meter_Tree.png)
 
 [^1]: First deployment was in TumenEnergo, about 26 thousands of metering points. Now it is great successful project.
