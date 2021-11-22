@@ -16,7 +16,33 @@ My application provides the possibility of proper data storing corresponding to 
 
 **Implementation technologies:** MFC SDI Application, ATL COM object for data management level, OLE DB, CHM Help, T-SQL, and some subject area knowledge.
 
+Fig. 1 The procedure of manual binding of the Power meter to the scheme.
+![Bind meter](Images/Dlg_Bind_Meter_Tree.png)
 
-![The trip graph navigation](Images/Dlg_Bind_Meter_Tree.png)
+Fig. 2 The procedure of manual binding of the Power meter to the scheme.
+![Brief Theory](Images/Fig_02_Theor_MeaComplex.png)
+
+Fig. 3 Search scheme element by its name.
+![Search - Name](Images/Fig_03_Search_Name.png)
+
+Fig. 4 Search scheme element previously added to Favorites.
+![Search - Bookmarks](Images/Fig_04_Search_Fav.png)
+
+Fig. 5 Summa calculating scheme building procedure.
+![Summa calculating scheme](Images/Fig_05_Bind_Sum.png)
+
+Fig. 6 Bypass switch binding procedure.
+![Bypass bind init](Images/Fig_06_Bypass_Bind_Init.png)
+
+Fig. 7 Bypass switch binding explanation.
+![Bypass bind init](Images/Fig_07_Bypass_Bind_Explain.png)
+
+Fig. 8 Bypass switch history editor (we use history to calculate the energy for consumers working through bypass switch).
+![Bypass bind init](Images/Fig_08_Bypass_Log.png)
+
+Fig. 9 Current Measurement Transformer Replacement History.
+![Mea Transformers Replacement History](Images/Fig_09_Mea_Coeff_Hist.png)
+
+
 
 [^1]: First deployment was in TumenEnergo, about 26 thousands of metering points. Now it is great successful project.
