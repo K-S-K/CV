@@ -28,21 +28,27 @@ Fig. 3 Search scheme element by its name.
 ![Search - Name](Images/Fig_03_Search_Name.gif)
 
 Fig. 4 Search scheme element previously added to Favorites.
+
 ![Search - Bookmarks](Images/Fig_04_Search_Fav.gif)
 
 Fig. 5 Summa calculating scheme building procedure.
+
 ![Summa calculating scheme](Images/Fig_05_Bind_Sum.bmp)
 
 Fig. 6 Bypass switch binding procedure.
+
 ![Bypass bind init](Images/Fig_06_Bypass_Bind_Init.bmp)
 
 Fig. 7 Bypass switch binding explanation.
+
 ![Bypass bind init](Images/Fig_07_Bypass_Bind_Explain.png)
 
 Fig. 8 Bypass switch history editor (we use history to calculate the energy for consumers working through bypass switch).
+
 ![Bypass bind init](Images/Fig_08_Bypass_Log.gif)
 
 Fig. 9 Current Measurement Transformer Replacement History.
+
 ![Mea Transformers Replacement History](Images/Fig_09_Mea_Coeff_Hist.png)
 
 
