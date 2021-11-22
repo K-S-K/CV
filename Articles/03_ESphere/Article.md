@@ -20,13 +20,15 @@ Fig. 1 The procedure of manual binding of the Power meter to the scheme.
 ![Bind meter](Images/Dlg_Bind_Meter_Tree.png)
 
 Fig. 2 Themeasurement complex explanation.
+
 ![Brief Theory](Images/Fig_02_Theor_MeaComplex.png)
 
 Fig. 3 Search scheme element by its name.
+
 ![Search - Name](Images/Fig_03_Search_Name.gif)
 
 Fig. 4 Search scheme element previously added to Favorites.
-![Search - Bookmarks](Images/Fig_04_Search_Fav.png)
+![Search - Bookmarks](Images/Fig_04_Search_Fav.gif)
 
 Fig. 5 Summa calculating scheme building procedure.
 ![Summa calculating scheme](Images/Fig_05_Bind_Sum.bmp)
