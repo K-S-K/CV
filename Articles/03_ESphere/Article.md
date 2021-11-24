@@ -24,6 +24,7 @@ Fig. 1 The procedure of manual binding of the Power meter to the scheme.
 Fig. 2 Themeasurement complex explanation.
 ![Brief Theory](Images/Fig_02_Theor_MeaComplex.png)
 
+
 Fig. 3 Search scheme element by its name.
 ![Search - Name](Images/Fig_03_Search_Name.gif)
 
