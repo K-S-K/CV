@@ -3,6 +3,9 @@
 ## [Trading Toy](Articles/28_TradeToy/Article.md)
 It is a weekend home project for experiments, research, and fun, dedicated to trading automation with the Binance exchange. [:point_right:](Articles/28_TradeToy/Article.md)
 
+## [Binance Copy Trading](Articles/27_CopyTrading/Article.md)
+The copy trading project for the Binance Cryptocurrency exchange. [:point_right:](Articles/27_CopyTrading/Article.md)
+
 ## Pubmed article editor
 It is a smal desktop application which I use to create XML files for submitting articles to the Pubmed server
 

@@ -35,11 +35,11 @@ Fig. 4 Search scheme element previously added to Favorites.
 
 Fig. 5 Summa calculating scheme building procedure.
 
-![Summa calculating scheme](Images/Fig_05_Bind_Sum.bmp)
+![Summa calculating scheme](Images/Fig_05_Bind_Sum.png)
 
 Fig. 6 Bypass switch binding procedure.
 
-![Bypass bind init](Images/Fig_06_Bypass_Bind_Init.bmp)
+![Bypass bind init](Images/Fig_06_Bypass_Bind_Init.png)
 
 Fig. 7 Bypass switch binding explanation.
 
