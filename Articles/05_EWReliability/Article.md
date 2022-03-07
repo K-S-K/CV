@@ -69,7 +69,7 @@ This diagram highlights emergency situations. Actually, red intervals are critic
 ![Order Events lists](Images/Fig_06_RIDiag_Update.png)
 
 
-**Fig.7 The Reliability Online Monitor shows the actual state of rvery configured application**
+**Fig.7 The Reliability Online Monitor shows the actual state of every configured application**
 ![Order Events lists](Images/Fig_07_RIOM.png)
 
 
