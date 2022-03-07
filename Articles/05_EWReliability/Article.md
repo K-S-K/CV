@@ -43,33 +43,33 @@ The relation between the amout working duration and whole observation time is th
 **Implementation technologies:** .Net Framework, Windows Forms, Performance Counters, MS SQL Server, Windows Servicess, Application Domains, Desktop Applications.
 
 
-Fig.1 The Theory - the meanings of the Reliability Intervals
+**Fig.1 The Theory - the meanings of the Reliability Intervals**
 
 ![The Duplicator list](Images/Fig_01_Theory.png)
 
 
-Fig.2 The Reliability Intervals Table
+**Fig.2 The Reliability Intervals Table**
 ![Order Events lists](Images/Fig_02_RITable.png)
 
 
-Fig.3 The Reliability Intervals Diagramm - Emergency investigation view
+**Fig.3 The Reliability Intervals Diagramm - Emergency investigation view**
 ![Order Events lists](Images/Fig_03_RIDiag.png)
 
 
-Fig.4 The Reliability Intervals Diagramm - Emergency investigation view
+**Fig.4 The Reliability Intervals Diagramm - Emergency investigation view**
 ![Order Events lists](Images/Fig_04_RIDiag.png)
 
 
-Fig.5 The Reliability Intervals Diagramm - Emergency Intervals (The same image appears in the UI and in the automated hourly report)
-This diagram highlights emergency situations. Actually, red intervals are critical errors. Yellow intervals are emergency situations. Dark green intervals are emergency time intervals. If we receive many fat green intervals in means the system does not supply the load.
+**Fig.5 The Reliability Intervals Diagramm - Emergency Intervals**
+This diagram highlights emergency situations. Actually, red intervals are critical errors. Yellow intervals are emergency situations. Dark green intervals are emergency time intervals. If we receive many fat green intervals in means the system does not supply the load. The same image appears in the UI and in the automated hourly report
 ![Order Events lists](Images/Fig_05_RIDiag_Pillars.png)
 
 
-Fig.6 The Reliability Intervals Diagramm - That's how the software update looks like
+**Fig.6 The Reliability Intervals Diagramm - That's how the software update looks like**
 ![Order Events lists](Images/Fig_06_RIDiag_Update.png)
 
 
-Fig.7 The Reliability Online Monitor shows the actual state of rvery configured application
+**Fig.7 The Reliability Online Monitor shows the actual state of rvery configured application**
 ![Order Events lists](Images/Fig_07_RIOM.png)
 
 
