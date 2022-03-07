@@ -44,6 +44,7 @@ The relation between the amout working duration and whole observation time is th
 
 
 Fig.1 The Theory - the meanings of the Reliability Intervals
+
 ![The Duplicator list](Images/Fig_01_Theory.png)
 
 
