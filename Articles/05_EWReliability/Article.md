@@ -2,7 +2,7 @@
 
 [:point_left: Back to tthe main page](../../README.md)
 
-**Development period:** 2012.08-207.05.
+**Development period:** 2012.08-2017.05.
 
 **Practical application:** In use in the production and in the CI cycle[^1].
 
