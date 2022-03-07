@@ -61,6 +61,7 @@ Fig.4 The Reliability Intervals Diagramm - Emergency investigation view
 
 
 Fig.5 The Reliability Intervals Diagramm - Emergency Intervals (The same image appears in the UI and in the automated hourly report)
+This diagram highlights emergency situations. Actually, red intervals are critical errors. Yellow intervals are emergency situations. Dark green intervals are emergency time intervals. If we receive many fat green intervals in means the system does not supply the load.
 ![Order Events lists](Images/Fig_05_RIDiag_Pillars.png)
 
 
