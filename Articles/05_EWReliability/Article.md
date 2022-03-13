@@ -25,7 +25,7 @@ The relation between the amout working duration and whole observation time is th
 - Creating the scanner component to collect data from the observed applications and scanner itself to collect the data to the SQL Server;
 - Creating the first data analisys implementation;
 - Creating the desktop software tool to view the reliability information in the different representation forms;
-- Creating the desktop tool to control the work ot the reliabikity data collecting system remotely over the cluster (start and stop, choose the version of measuring software to be working on the node, configure data collecting on every mode);
+- Creating the desktop tool to control the work ot the reliability data collecting system remotely over the cluster (start and stop, choose the version of measuring software to be working on the node, configure data collecting on every mode);
 - Sharing the work between several members of our team.
 
 **Evolving stages of the project we implemented with wonderfull people I work with:** 
