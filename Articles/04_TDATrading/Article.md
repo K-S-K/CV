@@ -10,7 +10,7 @@
 
 
 **Project description:** 
-The final project is contains from:
+The final project contains these components:
 - The SQL Server database with trading history data in ticks;
 - The Import tool for filling the database with trading history data from .qsh files;
 - The Exchange Emulator;
