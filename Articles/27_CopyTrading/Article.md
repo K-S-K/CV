@@ -1,6 +1,6 @@
 # Binance Copy Trading
 
-[:point_left: Back to tthe main page](../../README.md)
+[:point_left: Back to the main page](../../README.md)
 
 **Development period:** 2021.08-2021.11.
 
