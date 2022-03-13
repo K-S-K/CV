@@ -1,4 +1,4 @@
-# Automated Trading syste m
+# Automated Trading system
 
 [:point_left: Back to the main page](../../README.md)
 
