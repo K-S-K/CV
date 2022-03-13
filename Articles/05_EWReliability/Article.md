@@ -10,7 +10,7 @@
 
 
 **Project description:** 
-Initially we had one point of interrest: to measure availability factor of our software (the cell operator billing system) to be sure we can provide requirements for our customer (cell operator)/ They required us to provide availability factor = 0.99995.
+Initially we had one point of interrest: to measure availability factor of our software (the cell operator billing system) to be sure we can provide requirements for our customer (cell operator). They asked us to provide availability factor = 0.99995.
 We have research methodology for measuring the time we can qualify as "worknig interval" and time we can call "not working interval"
 The relation between the amout working duration and whole observation time is the availability factor we  need. 
 
