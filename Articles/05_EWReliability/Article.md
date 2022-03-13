@@ -31,7 +31,7 @@ The relation between the amout working duration and whole observation time is th
 **Evolving stages of the project we implemented with wonderfull people I work with:** 
 - Configurable delpoyment over claster subsystem;
 - Many different traffic modeles for the load testing subsystem;
-- Suspendable measures queue to survive the database server unavailability periods without keepinh all measures in the operating memory; 
+- Suspendable measures queue to survive the database server unavailability periods without keeping all measures in the operating memory (sometimes it was extremelly necessary); 
 - Several additional measuring subsystems like SQLServer availability observation component and MongoDB Health minitoring component which cennot provide data we need to observ them naturally;
 - Reliability Interval Marking on DB subsystem which is running on SQL Server by the SQL Server Agent and makes ready to use intervals of work for the every observing software instance;
 - Tree-like table interval representation for the UI and for the reports;
