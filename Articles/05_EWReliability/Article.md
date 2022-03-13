@@ -61,7 +61,7 @@ The relation between the amout working duration and whole observation time is th
 
 
 **Fig.5 The Reliability Intervals Diagramm - Emergency Intervals**
-This diagram highlights emergency situations. Actually, red intervals are critical errors. Yellow intervals are emergency situations. Dark green intervals are emergency time intervals. If we receive many fat green intervals in means the system does not supply the load. The same image appears in the UI and in the automated hourly report
+This diagram highlights emergency situations. Actually, red intervals are critical errors. Yellow intervals are emergency situations. Dark green intervals are emergency time intervals. If we receive many fat green intervals it means the system does not supply the load. The same image appears in the UI and in the automated hourly report
 ![Order Events lists](Images/Fig_05_RIDiag_Pillars.png)
 
 
