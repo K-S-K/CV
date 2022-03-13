@@ -21,7 +21,7 @@ My application provides the possibility of proper data storing corresponding to 
 Fig. 1 The procedure of manual binding of the Power meter to the scheme.
 ![Bind meter](Images/Dlg_Bind_Meter_Tree.png)
 
-Fig. 2 Themeasurement complex explanation.
+Fig. 2 The measurement complex explanation.
 
 ![Brief Theory](Images/Fig_02_Theor_MeaComplex.png)
 
