@@ -1,6 +1,6 @@
 # Reliability Analysis System
 
-[:point_left: Back to tthe main page](../../README.md)
+[:point_left: Back to the main page](../../README.md)
 
 **Development period:** 2012.08-2017.05.
 
