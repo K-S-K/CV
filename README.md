@@ -10,7 +10,7 @@ The copy trading project for the Binance Cryptocurrency exchange. [:point_right:
 It is a smal desktop application which I use to create XML files for submitting articles to the Pubmed server
 
 ## [Reliability Analysis System](Articles/05_EWReliability/Article.md)
-It is a distributed system which collects software application diagnostics data and calculates its availability factor, draws diagrams, helps to monitor softwate health status and helps to investigate accident evolve history.
+It is a distributed system which collects software application diagnostics data and calculates its availability factor, draws diagrams, helps to monitor softwate health status and helps to investigate accident evolve history. [:point_right:](Articles/05_EWReliability/Article.md)
 
 ## [Automated Trading System](Articles/04_TDATrading/Article.md)
 It was a big RnD  project dedicated to the trading automation. During eight years we experimented with different trading alghorytms and got some success, great exciting and a lot of experience.
