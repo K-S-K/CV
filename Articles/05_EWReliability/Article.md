@@ -20,7 +20,7 @@ The relation between the amout working duration and whole observation time is th
 - The project architecture development;
 - Creating of the initial version of testing software deployment subsystem;
 - Creating the first several traffic modeles
-- Creating the cell commutator emulator (with traffic enerator schedulers anr recponce time and content analysers)
+- Creating the cell commutator emulator (with traffic generator schedulers and responce time and content analysers)
 - Creating the state reporting component for the software components which must be measured;
 - Creating the scanner component to collect data from the observed applications and scanner itself to collect the data to the SQL Server;
 - Creating the first data analisys implementation;
