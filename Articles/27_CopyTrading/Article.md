@@ -10,7 +10,7 @@
 
 
 **Project description:** 
-This project performs the automatic copying of Originator trader positions for the Dupplicator trader accounts on the Binance Crypto currency Exchange.
+This project performs the automatic copying of Originator trader positions for the Duplicator trader accounts on the Binance Crypto currency Exchange.
 
 **My part in this project:** Requirements collecting from the customer, RND, development of the architecture, 
 implementing, testing, deployment to the tenatent server for experimental use, technical support, 
