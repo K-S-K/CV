@@ -18,7 +18,7 @@ continuous project evolving.
 
 **Implementation technologies:** .Net5, WPF, Binance.Net library by JKorf and some subject area knowledge.
 
-Fig.1 The Duplicator thader list with their states and last operation rresults
+Fig.1 The Duplicator trader list with their states and last operation results
 ![The Duplicator list](Images/Fig_01_UI_L.png)
 
 
