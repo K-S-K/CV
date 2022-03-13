@@ -29,7 +29,7 @@ The relation between the amout working duration and whole observation time is th
 - Sharing the work between several members of our team.
 
 **Evolving stages of the project we implemented with wonderfull people I work with:** 
-- Configurable delpoyment by claster subsystem;
+- Configurable delpoyment over claster subsystem;
 - Many different traffic modeles for the load testing subsystem;
 - Suspendable measures queue to survive the database server unavailability periods without keepinh all measures in the operating memory; 
 - Several additional measuring subsystems like SQLServer availability observation component and MongoDB Health minitoring component which cennot provide data we need to observ them naturally;
