@@ -1,6 +1,6 @@
 # Trading Toy tool
 
-[:point_left: Back to tthe main page](../../README.md)
+[:point_left: Back to the main page](../../README.md)
 
 **Development period:** 2021.11-2021.11.
 
