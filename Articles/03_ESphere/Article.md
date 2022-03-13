@@ -1,6 +1,6 @@
 # Electric power billing project
 
-[:point_left: Back to tthe main page](../../README.md)
+[:point_left: Back to the main page](../../README.md)
 
 **Development period:** 2001-2007.
 
