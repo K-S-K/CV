@@ -6,7 +6,7 @@
 
 **Practical application:** Research and development[^1].
 
-**Project purpose:** Copy Trading automation.
+**Project purpose:** Automated trading research. Testing and tuning of the trading approaches.
 
 
 **Project description:** 
