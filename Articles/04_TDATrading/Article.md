@@ -1,6 +1,6 @@
 # Automated Trading syste m
 
-[:point_left: Back to tthe main page](../../README.md)
+[:point_left: Back to the main page](../../README.md)
 
 **Development period:** 2011.10-2019.11.
 
