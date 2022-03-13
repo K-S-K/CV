@@ -35,7 +35,7 @@ The relation between the amout working duration and whole observation time is th
 - Several additional measuring subsystems like SQLServer availability observation component and MongoDB Health minitoring component which cennot provide data we need to observ them naturally;
 - Reliability Interval Marking on DB subsystem which is running on SQL Server by the SQL Server Agent and makes ready to use intervals of work for the every observing software instance;
 - Tree-like table interval representation for the UI and for the reports;
-- The Reliability diagramm - scalable graphical representationo of the teliability intervals on the one time scale for the visusal manual analisys of the emergency sitoations evolve process;
+- The Reliability diagramm - scalable graphical representationo of the reliability intervals on the one time scale for the visusal manual analisys of the emergency sitoations evolve process;
 - The Dangerous situations detector on the database side - the module which founds the periods when applications are overloaded simultaniously (so colled "Pillars") to show them on ntr Reliability iagramms and in the report tables;
 - The emailing subsystem which hourly sends reports with reliability diagramms and dangerous situations tables;
 - The Online Diagramm - the visualisation of the real time state of the observing applications.
