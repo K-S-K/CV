@@ -26,7 +26,7 @@ The final project contains these components:
 
 **My part in this project:** Requirements collecting, development of the architecture, software development, experiments, analysis, discussions, etc.
 
-**Implementation technologies:** .Net Framework, Windows Forms, WPF, SmartCOM COM Connector, QScalp qsh format import library.
+**Implementation technologies:** .Net Framework, Windows Forms, SmartCOM COM Connector, QScalp qsh format import library.
 
 **Fig.1 The Trading Experiment**
 ![The Duplicator list](Images/Fig_01_Experiment.png)
