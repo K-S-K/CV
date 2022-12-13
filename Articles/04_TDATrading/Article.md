@@ -39,4 +39,4 @@ The final project contains these components:
 **Fig.3 The Trading Session Report** with common results information and hourly earn diagramm.
 ![Order Events lists](Images/Fig_03_Report.png)
 
-[^1]: It was a great journey. My partner is experienced in trading an I is experienced in software development.  During eight years we experimented with different trading alghorytms and got some success, great exciting and a lot of experience. After that our partnership was completed because of personal reasons but we achieved a great knowledges and awareness in our ability to do such things.
+[^1]: It was a great journey. My partner is experienced in trading and I am experienced in software development.  During eight years we experimented with different trading alghorytms and got some success, great exciting and a lot of experience. After that our partnership was completed because of personal reasons but we achieved a great knowledges and awareness in our ability to do such things.
