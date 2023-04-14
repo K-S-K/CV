@@ -19,7 +19,7 @@ The ratio of a calculated sum of the working interval to the whole observation t
 - RND (different experiments with collecting and analysis of the measures);
 - The project architecture development;
 - Creating of the initial version of testing software deployment subsystem;
-- Creating several beta traffic models;
+- Creating two initial traffic models (Voice and SMS);
 - Creating a cell commutator emulator (with traffic generator schedulers and response time and content analyzers);
 - Creating a state reporting component for the software components which must be measured;
 - Creating a scanner component to collect data from the observed applications and a scanner itself to collect the data to the SQL Server;
