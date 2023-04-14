@@ -12,7 +12,7 @@
 **Project description:** 
 Initially we had one point of interest: to measure availability factor of our software (a cell operator billing system) to be sure it meets the requirements of our customer (cell operator). They asked us to provide an availability factor = 0.99995.
 We've researched methodology for measuring a time period we can qualify as "working interval" and a time period we can call "not working interval".
-The ratio of the working interval to the whole observation time is the availability factor we need. 
+The ratio of a calculated sum of the working interval to the whole observation time is the availability factor we need. 
 
 **My part in this project:** 
 - Theory research;
