@@ -24,7 +24,7 @@ The ratio of a calculated sum of the working interval to the whole observation t
 - Creating a state reporting component for the software components which must be measured;
 - Creating a scanner component to collect data from the observed applications and a scanner itself to collect the data to the SQL Server;
 - Creating the first version of data analysis implementation;
-- Creating a desktop software tool to view the reliability information in different representations;
+- Creating a desktop software tool to view the reliability information in different representations (table and diagram);
 - Creating a desktop tool to control the work of the reliability data collecting system remotely over a cluster (start and stop, selection of a version of measuring software to be working on the node, configuration of data collecting in every mode);
 - Sharing the work between several members of our team.
 
