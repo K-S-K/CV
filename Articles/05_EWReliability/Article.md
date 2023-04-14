@@ -4,7 +4,7 @@
 
 **Development period:** August 2012 - May 2017.
 
-**Practical application:** To use in production and in the CI cycle[^1].
+**Practical application:** To measure the availability factor of software in production and in the CI cycle[^1].
 
 **Project purpose:** The program complex reliability parameters and status analysis.
 
