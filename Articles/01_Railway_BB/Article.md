@@ -6,13 +6,13 @@
 
 **Practical application:** Never[^1].
 
-**Project purpose:** Just to learn how to deal with graphical data reppresentation, print functionality, chm context help manipulation and desktop application infrastructure.
+**Project purpose:** To learn how to deal with graphical data representation, print functionality, [CHM](https://learn.microsoft.com/en-us/dynamicsax-2012/appuser-itpro/deprecated-chm-help-files) context help manipulation, and desktop application infrastructure.
 
-**Implementation technologies:** MFC SDI Application, ATL COM data management level, half division based data search, draw images in memory, copy data to video memory, CHM Help.
+**Implementation technologies:** MFC SDI Application, ATL COM data management level, a half-division based data search, drawing images in memory, copying data to video memory, [CHM Help](https://learn.microsoft.com/en-us/dynamicsax-2012/appuser-itpro/deprecated-chm-help-files).
 
 **Developer tools:** Microsoft Developer Studio v.6 for C++
 
 
-![TThe trip graph navigation](TripExplore.gif)
+![The trip graph navigation](TripExplore.gif)
 
-[^1]: The initial project was in use but I can't show it here
+[^1]: The initial project was in use, but I haven't its images to show.
