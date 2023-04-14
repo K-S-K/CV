@@ -16,7 +16,6 @@ It allows choosing whether a user wants to connect: to the Binance exchange or t
 
 **Implementation technologies:** .Net5, WPF, Binance.Net library by JKorf, T-SQL and some subject area knowledge.
 
-![The trading session emulation with 'naive' order completion]<br>
-(Images/01_TT_RetroGraph.gif)
+![The trading session emulation with 'naive' order completion](Images/01_TT_RetroGraph.gif)
 
 [^1]: It is sometimes necessary to program something for yourself. To keep the knowledge in the actual state. To have something "good made" because it's made by yourself on the computer. To avoid hate evolving to the profession. And, of course, just for fun.
