@@ -35,7 +35,7 @@ The ratio of a calculated sum of the working interval to the whole observation t
 - Several additional measuring subsystems like SQLServer availability observation component and MongoDB Health monitoring component, because SQLServer and MongoDB don't naturally provide data we need to observe them;
 - Reliability Interval Marking on DB subsystem which is running on SQL Server by the SQL Server Agent and makes ready-to-use intervals of work for every observing software instance;
 - Tree-like table interval representation for the UI and for the reports;
-- Reliability diagram - a scalable graphical representation of the reliability intervals on a single time scale for manual visual analysis of emergency situations evolution process;
+- Reliability diagram - a scalable graphical representation of the reliability intervals on a common time scale for manual visual analysis of emergency situations evolution process;
 - Dangerous situations detector on the database side - a module that finds time periods when applications are overloaded simultaneously (so called "Pillars") to show them on the Reliability diagram and in the report tables;
 - Emailing subsystem which hourly sends reports with reliability diagrams and dangerous situations tables;
 - Online Diagram - the visualisation of the real time state of the observing applications.
