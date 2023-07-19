@@ -20,3 +20,8 @@ It is part of the big software and hardware project dedicated to collecting data
 
 ## [Railway Black Box Data Viewer](Articles/01_Railway_BB/Article.md)
 Initially it was a big and interesting project for the railway black box data files analysis. But after project was ended I rewrited it from BCB to MSVC just to learn better development environment and also for fun because it was a beautiful project.
+
+# Documents
+([General CV, pdf](Documents/cv-2023-en.pdf)):<br>
+([Fintech oriented CV, pdf](Documents/cv-2023-en-ft.pdf)):<br>
+([Embedded and IoT targeted CV, pdf](Documents/cv-2023-en-mcu.pdf)):<br>
