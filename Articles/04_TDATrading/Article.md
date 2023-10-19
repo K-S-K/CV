@@ -9,7 +9,7 @@
 **Project purpose:** Automated trading research. Testing and tuning of the trading approaches.
 
 
-**Project description:** 
+**Project description:**
 The final project contains these components:
 - The SQL Server database with trading history data in ticks;
 - The Import tool for filling the database with trading history data from .qsh files;
@@ -36,7 +36,11 @@ The final project contains these components:
 ![The Duplicator list](Images/Fig_02_Testing.png)
 
 
-**Fig.3 The Trading Session Report** with common results information and hourly earn diagramm.<br>
+**Fig.3 The Trading Session Report** with common results information and hourly earn diagram.<br>
 ![Order Events lists](Images/Fig_03_Report.png)
+
+
+**Fig.4 The Trading Session WPF UI** which can show price graph, clusters and trends.<br>
+![New trading analysis user interface](Images/Fig_04_SquirrelGraph.gif)
 
 [^1]: It was an incredible journey. My partner is experienced in trading, and I am experienced in software development. During the eight years, we experimented with different trading algorithms and got some success, great excitement, and a lot of experience. After that, our partnership was completed for personal reasons, but we achieved excellent knowledge and awareness of our ability to do such things.
