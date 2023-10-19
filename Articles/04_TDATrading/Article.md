@@ -42,5 +42,6 @@ The final project contains these components:
 
 **Fig.4 The Trading Session WPF UI** which can show price graph, clusters and trends.<br>
 ![New trading analysis user interface](Images/Fig_04_SquirrelGraph.gif)
+(The copy of the video on the YouTube: [youtube.com/watch?v=7lW273PTbGI](https://www.youtube.com/watch?v=7lW273PTbGI).
 
 [^1]: It was an incredible journey. My partner is experienced in trading, and I am experienced in software development. During the eight years, we experimented with different trading algorithms and got some success, great excitement, and a lot of experience. After that, our partnership was completed for personal reasons, but we achieved excellent knowledge and awareness of our ability to do such things.
