@@ -16,7 +16,7 @@ Just started the concept development<br>
 ![Work in progress](Images/Fig_01_Development.png)
 
 
-It is important to feel the breath of your product<br>
+It is important to feel the breath of the product<br>
 ![Article Preview](Images/Fig_02_Demo_Board.png)
 
 
