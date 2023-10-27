@@ -1,18 +1,18 @@
-# Railway Black Box Data Viewer
+# Pubmed article editor
 
-[:point_left: Back to the main page](../../README.md)
+[Back to the main page](../../README.md)
 
-**Development period:** 1999.
+**Development period:** 20015-2023.
 
-**Practical application:** Never[^1].
+**Practical application:** quarterly[^1].
 
-**Project purpose:** To learn how to deal with graphical data representation, print functionality, [CHM](https://learn.microsoft.com/en-us/dynamicsax-2012/appuser-itpro/deprecated-chm-help-files) context help manipulation, and desktop application infrastructure.
+**Project purpose:** To prepare journal articles to be published in PubMed. Creating the article DOM compatible with PubMed requirements.
 
-**Implementation technologies:** MFC SDI Application, ATL COM data management level, a half-division based data search, drawing images in memory, copying data to video memory, [CHM Help](https://learn.microsoft.com/en-us/dynamicsax-2012/appuser-itpro/deprecated-chm-help-files).
+**Implementation technologies:** .Net Framework, C#, Windows Forms, XML.
 
-**Developer tools:** Microsoft Developer Studio v.6 for C++
+**Developer tools:** Microsoft Visual Studio.
 
 
 ![The trip graph navigation](TripExplore.gif)
 
-[^1]: The initial project was in use, but I haven't its images to show.
+[^1]: Every four months I publish the next issue of the magazine to Pubmed.
