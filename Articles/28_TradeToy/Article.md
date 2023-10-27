@@ -1,6 +1,6 @@
 # Trading Toy tool
 
-[:point_left: Back to the main page](../../README.md)
+[Back to the main page](../../README.md)
 
 **Development period:** 2021.11-2021.11.
 
@@ -14,7 +14,7 @@ Also, it can download the real-time trading history and collect it in the SQL da
 Also, it can emulate the exchange for itself to play trading sessions on historical data.
 It allows choosing whether a user wants to connect: to the Binance exchange or the built-in emulator.
 
-**Implementation technologies:** .Net5, WPF, Binance.Net library by JKorf, T-SQL and some subject area knowledge.
+**Implementation technologies:** .Net5, WPF, Binance.Net library by JKorf, T-SQL, and some subject area knowledge.
 
 ![The trading session emulation with 'naive' order completion](Images/01_TT_RetroGraph.gif)
 
