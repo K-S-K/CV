@@ -12,7 +12,12 @@
 
 **Developer tools:** Microsoft Visual Studio.
 
+The preview of the article in the editor<br>
+![Article Preview](Images/Fig_01_WebView.png)
 
-![The trip graph navigation](TripExplore.gif)
+
+The published article on the PubMed site<br>
+![Article Preview](Images/Fig_08_Published.png)
+
 
 [^1]: Every four months I publish the next issue of the magazine to Pubmed.
