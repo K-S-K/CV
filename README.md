@@ -6,7 +6,7 @@ It is a weekend home project for experiments, research, and fun, dedicated to tr
 ## [Binance Copy Trading](Articles/27_CopyTrading/Article.md)
 The copy trading project for the Binance Cryptocurrency exchange.
 
-## Pubmed article editor
+## [Pubmed article editor](Articles/06_PubMedDesktop/Article.md)
 It is a small desktop application that I use to create XML files for submitting articles to the Pubmed server
 
 ## [Reliability Analysis System](Articles/05_EWReliability/Article.md)
