@@ -1,23 +1,23 @@
-# Pubmed article editor
+# Bread Board Editor
 
 [Back to the main page](../../README.md)
 
-**Development period:** 20015-2023.
+**Development period:** 20023-?.
 
-**Practical application:** quarterly[^1].
+**Practical application:** The idea testing[^1].
 
-**Project purpose:** To prepare journal articles to be published in PubMed. Creating the article DOM compatible with PubMed requirements.
+**Project purpose:** To create a simple editor for breadboard wiring planning with effective storage files in version management-friendly format.
 
-**Implementation technologies:** .Net Framework, C#, Windows Forms, XML.
+**Implementation technologies:** .Net Core, C#, Blazor.
 
 **Developer tools:** Microsoft Visual Studio.
 
-The preview of the article in the editor<br>
-![Article Preview](Images/Fig_01_WebView.png)
+Just started the concept development<br>
+![Work in progress](Images/Fig_01_Development.png)
 
 
-The published article on the PubMed site<br>
-![Article Preview](Images/Fig_08_Published.png)
+It is important to feel the breath of your product<br>
+![Article Preview](Images/Fig_02_Demo_Board.png)
 
 
-[^1]: Every four months I publish the next issue of the magazine to Pubmed.
+[^1]: The idea came when I worked on my hardware project.
