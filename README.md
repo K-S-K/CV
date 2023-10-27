@@ -1,5 +1,8 @@
 # Project gallery
 
+## [Breadboard CAD](Articles/30_BBCAD/Article.md)
+The software for the breadboard projects development.
+
 ## [Trading Toy](Articles/28_TradeToy/Article.md)
 It is a weekend home project for experiments, research, and fun, dedicated to trading automation with the Binance exchange.
 
