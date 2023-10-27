@@ -6,7 +6,7 @@
 
 **Practical application:** The idea testing[^1].
 
-**Project purpose:** To create a simple editor for breadboard wiring planning with effective storage files in version management-friendly format.
+**Project purpose:** To create a simple editor for breadboard wiring planning with effective storage files in a version-management-friendly format.
 
 **Implementation technologies:** .Net Core, C#, Blazor.
 
