@@ -1,6 +1,6 @@
 # Automated Trading system
 
-[:point_left: Back to the main page](../../README.md)
+[Back to the main page](../../README.md)
 
 **Development period:** 2011.10-2019.11.
 
@@ -32,7 +32,7 @@ The final project contains these components:
 ![The Duplicator list](Images/Fig_01_Experiment.png)
 
 
-**Fig.2 The Trading Testing** on the live Exchange connection. Comparing the positions representation with representation in the official thading tool.<br>
+**Fig.2 The Trading Testing** on the live Exchange connection. Comparing the representation of positions with representation in the official trading tool.<br>
 ![The Duplicator list](Images/Fig_02_Testing.png)
 
 
@@ -40,8 +40,8 @@ The final project contains these components:
 ![Order Events lists](Images/Fig_03_Report.png)
 
 
-**Fig.4 The Trading Session WPF UI** which can show price graph, clusters and trends.<br>
+**Fig.4 The Trading Session WPF UI** which can show price graphs, clusters, and trends.<br>
 ![New trading analysis user interface](Images/Fig_04_SquirrelGraph.gif)
-(The copy of the video on the YouTube: [youtube.com/watch?v=7lW273PTbGI](https://www.youtube.com/watch?v=7lW273PTbGI).
+(The copy of the video on YouTube: [youtube.com/watch?v=7lW273PTbGI](https://www.youtube.com/watch?v=7lW273PTbGI).
 
 [^1]: It was an incredible journey. My partner is experienced in trading, and I am experienced in software development. During the eight years, we experimented with different trading algorithms and got some success, great excitement, and a lot of experience. After that, our partnership was completed for personal reasons, but we achieved excellent knowledge and awareness of our ability to do such things.
