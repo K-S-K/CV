@@ -1,7 +1,7 @@
 # Project gallery
 
 ## [Breadboard CAD](Articles/30_BBCAD/Article.md)
-The software for the breadboard projects development.
+The software for the prototyping board projects development.
 
 ## [Trading Toy](Articles/28_TradeToy/Article.md)
 It is a weekend home project for experiments, research, and fun, dedicated to trading automation with the Binance exchange.
@@ -24,7 +24,8 @@ It is part of the big software and hardware project dedicated to collecting data
 ## [Railway Black Box Data Viewer](Articles/01_Railway_BB/Article.md)
 Initially, it was an interesting project for the railway black box data file analysis. But after the project ended, I rewrote it from BCB to MSVC to learn a better development environment and also for fun because it was a beautiful project.
 
-# Documents
+# Documents:
 [General CV, pdf](Documents/cv-2023-en.pdf):<br>
 [Fintech oriented CV, pdf](Documents/cv-2023-en-ft.pdf):<br>
+[Electric Power oriented CV, pdf](Documents/cv-2023-en-pw.pdf):<br>
 [Embedded and IoT targeted CV, pdf](Documents/cv-2023-en-mcu.pdf):<br>
