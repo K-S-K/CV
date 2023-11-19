@@ -1,4 +1,4 @@
-# Bread Board Editor
+# Prototype Board Editor
 
 [Back to the main page](../../README.md)
 
