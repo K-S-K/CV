@@ -1,6 +1,6 @@
 # Project gallery
 
-## [Breadboard CAD](Articles/30_BBCAD/Article.md)
+## [Prptotype Board CAD](Articles/30_BBCAD/Article.md)
 The software for the prototyping board projects development.
 
 ## [Trading Toy](Articles/28_TradeToy/Article.md)
