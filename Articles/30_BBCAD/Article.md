@@ -12,12 +12,17 @@
 
 **Developer tools:** Microsoft Visual Studio.
 
-Just started the concept development<br>
-![Work in progress](Images/Fig_01_Development.png)
 
-
-It is important to feel the breath of the product<br>
+2023.10.20. It is important to feel the breath of the product<br>
 ![Article Preview](Images/Fig_02_Demo_Board.png)
+
+
+2023.10.15. The Swagger is a helpful tool for testing and debugging (but, not the only tool, certainly)<br>
+![Article Preview](Images/Fig_03_OpenAPI.png)
+
+
+2023.07.20. I just started the concept development<br>
+![Work in progress](Images/Fig_01_Development.png)
 
 
 [^1]: The idea came when I worked on my hardware project.
