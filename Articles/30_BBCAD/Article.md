@@ -13,6 +13,9 @@
 **Developer tools:** Microsoft Visual Studio.
 
 
+2023.11.20. An exciting way to the life<br>
+![Article Preview](Images/Fig_04_Board.png)
+
 2023.10.20. It is important to feel the breath of the product<br>
 ![Article Preview](Images/Fig_02_Demo_Board.png)
 
