@@ -24,7 +24,7 @@
 ![Article Preview](Images/Fig_03_OpenAPI.png)
 
 
-2023.07.20. I just started the concept development<br>
+2023.07.20. The first steps of the concept development<br>
 ![Work in progress](Images/Fig_01_Development.png)
 
 
