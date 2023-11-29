@@ -1,21 +1,21 @@
 # Project gallery
 
-## [Prptotype Board CAD](Articles/30_BBCAD/Article.md)
+## [2023. Prptotype Board CAD](Articles/30_BBCAD/Article.md)
 The software for the prototyping board projects development.
 
-## [Trading Toy](Articles/28_TradeToy/Article.md)
+## [2021. Trading Toy](Articles/28_TradeToy/Article.md)
 It is a weekend home project for experiments, research, and fun, dedicated to trading automation with the Binance exchange.
 
-## [Binance Copy Trading](Articles/27_CopyTrading/Article.md)
+## [2021. Binance Copy Trading](Articles/27_CopyTrading/Article.md)
 The copy trading project for the Binance Cryptocurrency exchange.
 
-## [Pubmed article editor](Articles/06_PubMedDesktop/Article.md)
+## [201-2023. Pubmed article editor](Articles/06_PubMedDesktop/Article.md)
 It is a small desktop application that I use to create XML files for submitting articles to the Pubmed server
 
-## [Reliability Analysis System](Articles/05_EWReliability/Article.md)
+## [2012-2017. Reliability Analysis System](Articles/05_EWReliability/Article.md)
 It is a distributed system that collects software application diagnostics data and calculates its availability factor, draws diagrams, helps to monitor software health status, and helps to investigate accident evolve history.
 
-## [Automated Trading System](Articles/04_TDATrading/Article.md)
+## [2011-2019. Automated Trading System](Articles/04_TDATrading/Article.md)
 It was a big RnD project dedicated to trading automation. We experimented with different trading algorithms for eight years and had some success, great excitement, and much experience.
 
 
