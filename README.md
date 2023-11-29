@@ -16,17 +16,17 @@ It is a small desktop application that I use to create XML files for submitting 
 It is a distributed system that collects software application diagnostics data and calculates its availability factor, draws diagrams, helps to monitor software health status, and helps to investigate accident evolve history.
 
 ## [Automated Trading System](Articles/04_TDATrading/Article.md)
-It was a big RnD project dedicated to trading automation. We experimented with different trading algorithms for eight years and got some success, great excitement, and much experience.
+It was a big RnD project dedicated to trading automation. We experimented with different trading algorithms for eight years and had some success, great excitement, and much experience.
 
 
-## [SMS Station](Articles/02_SMSS/Article.md)
-It is a desktop application dedicated to sending and broadcasting SMS messages via SMS user terminal connected to the computer. It maybe my Best UI project.
+## [2009-2010. SMS Station](Articles/02_SMSS/Article.md)
+It is a desktop application dedicated to sending and broadcasting SMS messages via SMS user terminal connected to the computer. It may be my Best UI project.
 
 
-## [Electric power billing project](Articles/03_ESphere/Article.md)
+## [2001-2007. Electric power billing project](Articles/03_ESphere/Article.md)
 It is part of the big software and hardware project dedicated to collecting data from the power meters, storing billing data regarding power grid topology, calculating aggregate parameters, and creating billing reports.
 
-## [Railway Black Box Data Viewer](Articles/01_Railway_BB/Article.md)
+## [1999. Railway Black Box Data Viewer](Articles/01_Railway_BB/Article.md)
 Initially, it was an interesting project for the railway black box data file analysis. But after the project ended, I rewrote it from BCB to MSVC to learn a better development environment and also for fun because it was a beautiful project.
 
 # Documents:
