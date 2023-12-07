@@ -16,7 +16,7 @@
 - Send particular SMS, as well as message broadcasting;
 - Create an user - friendly interactive SMS editor;
 - Create a recipient library;
-- Create recipients aggregation to groups;
+- Aggregate recipients to groups;
 - Provide clear monitoring of the current state and  sending log;
 - Send messages according to the configured schedule.
 

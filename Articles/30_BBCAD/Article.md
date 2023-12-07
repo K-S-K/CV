@@ -12,6 +12,8 @@
 
 **Developer tools:** Microsoft Visual Studio.
 
+2023.12.07. Connecting UI with API by commands<br>
+![Resizing command is connected](Images/Fig_05_Resize_Wizard.gif)
 
 2023.11.20. An exciting way to the life<br>
 ![Article Preview](Images/Fig_04_Board.png)
