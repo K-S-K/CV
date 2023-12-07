@@ -12,21 +12,21 @@
 
 **Developer tools:** Microsoft Visual Studio.
 
-2023.12.07. Connecting UI with API by commands<br>
+## 2023.12.07. Connecting UI with API by commands<br>
 ![Resizing command is connected](Images/Fig_05_Resize_Wizard.gif)
 
-2023.11.20. An exciting way to the life<br>
+## 2023.11.20. An exciting way to life<br>
 ![Article Preview](Images/Fig_04_Board.png)
 
-2023.10.20. It is important to feel the breath of the product<br>
+## 2023.10.20. It is important to feel the breath of the product<br>
 ![Article Preview](Images/Fig_02_Demo_Board.png)
 
 
-2023.10.15. The Swagger is a helpful tool for testing and debugging (but, not the only tool, certainly)<br>
+## 2023.10.15. The Swagger is a helpful tool for testing and debugging (but not the only tool, certainly)<br>
 ![Article Preview](Images/Fig_03_OpenAPI.png)
 
 
-2023.07.20. The first steps of the concept development<br>
+## 2023.07.20. The first steps of the concept development<br>
 ![Work in progress](Images/Fig_01_Development.png)
 
 
