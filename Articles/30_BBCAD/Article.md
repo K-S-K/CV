@@ -12,6 +12,9 @@
 
 **Developer tools:** Microsoft Visual Studio.
 
+## 2023.12.08. Add textual command  to the UI<br>
+![Resizing command as a  text](Images/Fig_06_Resize_Command.gif)
+
 ## 2023.12.07. Connecting UI with API by commands<br>
 ![Resizing command is connected](Images/Fig_05_Resize_Wizard.gif)
 
