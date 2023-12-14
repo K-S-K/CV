@@ -12,11 +12,8 @@
 
 **Developer tools:** Microsoft Visual Studio.
 
-## 2023.12.10. All commands are in the single UI now<br>
+## 2023.12.10. All commands are in the common textual UI now<br>
 ![Resizing command as a text](Images/Fig_07_Unified_CLI.gif)
-
-## 2023.12.08. Add textual command  to the UI<br>
-![Resizing command as a  text](Images/Fig_06_Resize_Command.gif)
 
 ## 2023.12.07. Connecting UI with API by commands<br>
 ![Resizing command is connected](Images/Fig_05_Resize_Wizard.gif)
