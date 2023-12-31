@@ -6,25 +6,29 @@ Sometimes, projects get completed. Sometimes, projects evolve to their complete 
 I just moved to Germany and am looking for a new interesting job there.
 
 What I can and want to propose:
-C#, 
-.Net, 
-Net Core / .Net 5+(.Net 7), 
-T-SQL.
+- C#, 
+- .Net, 
+- Net Core / .Net 5+(.Net 7), 
+- T-SQL.
 
-What I'm experienced in the rememberable past:
-Windows Desktop Development, including:
-WinForms - a lot of;
-WPF - some as MVC and direct;
-MFC - many years ago, not actual, but it was interesting;
-Network, Web, and Distributed software development, including:
-Distributed on MS cluster monitoring system;
-.Net Web Applications - several projects in the past, currently experimenting to learn.
+What I've experienced in the rememberable past:
+- Windows Desktop Development, including:
+- WinForms - a lot of;
+- WPF - some as MVC and direct;
+- MFC - many years ago, not actual, but it was interesting;
+- Network, Web, and Distributed software development, including distributed on MS cluster monitoring system;
+- .Net Web Applications - several projects in the past, currently experimenting to learn.
 
 What do I want to practice in:
-Microservice architecture, cloud-distributed auto-scaling architecture, Azure API automation. Microcontroller programming in C and C++ (currently experimenting with ESP32, want to touch PIC).
+- Microservice architecture;
+- Cloud-distributed auto-scaling architecture;
+- Azure API automation;
+- AWS deployment infrastructure;
+- AWS IoT infrastructure with ESP32;
+- Microcontroller programming in C and C++ (currently experimenting with ESP32, want to touch PIC).
 
 What do I want to touch:
-Ideally - real-life applications regarding natural things - nature, industry, etc.
+- Ideally - real-life applications regarding natural things - nature, industry, etc.
 
 What am I experienced in:
 - Creating the electric energy billing software (electricity is my professional domain);
@@ -33,17 +37,23 @@ What am I experienced in:
 - Creating the crypto-exchange software (initially, it was an exciting challenge, but also it was an interesting project)
 - Participation in the railway black box analysis project (a long time ago but very exciting)
 
-What do I read now:
-Andrew Lock. ASP.NET Core in Action, Third Edition
+The content of my bookshelf:
+- Andrew Lock. ASP.NET Core in Action, Third Edition;
+- Michael and Ruth Haephrati. Learning C++;
+- Ronald Mak. Object-Oriented Software Design in C++;
+- Naomi Ceder. The Quick Python Book.
 
-What do I study now:
-MongoDB on my little projects.
-FreeRTOS on home weekend projects.
-Amazon AWS on home weekend projects.
-MS Azure on Microsoft and the Linked In platforms.
+What did I study recently:
+- MongoDB on my little projects;
+- FreeRTOS on home weekend projects;
+- Amazon AWS on home weekend projects;
+- MS Azure on Microsoft and the Linked In platforms.
 
 What are my out-of-job interests:
-Family, photography, and traveling around.
+- Family;
+- Photography;
+- Traveling around
+- Microcontrollers, home automation.
 
 # Project gallery
 
