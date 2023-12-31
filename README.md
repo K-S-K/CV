@@ -1,3 +1,50 @@
+# Introduction
+I am a .Net software developer with 25 years of software development experience who still likes software development.
+During my professional life, I worked on several projects in several areas. Some of them were interesting. Some of them were exciting.
+Sometimes, projects get completed. Sometimes, projects evolve to their complete state, and a software developer cannot develop himself inside it, and the time comes to move on. 
+
+I just moved to Germany and am looking for a new interesting job there.
+
+What I can and want to propose:
+C#, 
+.Net, 
+Net Core / .Net 5+(.Net 7), 
+T-SQL.
+
+What I'm experienced in the rememberable past:
+Windows Desktop Development, including:
+WinForms - a lot of;
+WPF - some as MVC and direct;
+MFC - many years ago, not actual, but it was interesting;
+Network, Web, and Distributed software development, including:
+Distributed on MS cluster monitoring system;
+.Net Web Applications - several projects in the past, currently experimenting to learn.
+
+What do I want to practice in:
+Microservice architecture, cloud-distributed auto-scaling architecture, Azure API automation. Microcontroller programming in C and C++ (currently experimenting with ESP32, want to touch PIC).
+
+What do I want to touch:
+Ideally - real-life applications regarding natural things - nature, industry, etc.
+
+What am I experienced in:
+- Creating the electric energy billing software (electricity is my professional domain);
+- Creating the software for monitoring the quality of other software working;
+- Creating the exchange automatic trading software (several years of participation in this kind of project);
+- Creating the crypto-exchange software (initially, it was an exciting challenge, but also it was an interesting project)
+- Participation in the railway black box analysis project (a long time ago but very exciting)
+
+What do I read now:
+Andrew Lock. ASP.NET Core in Action, Third Edition
+
+What do I study now:
+MongoDB on my little projects.
+FreeRTOS on home weekend projects.
+Amazon AWS on home weekend projects.
+MS Azure on Microsoft and the Linked In platforms.
+
+What are my out-of-job interests:
+Family, photography, and traveling around.
+
 # Project gallery
 
 ## [2023. Prptotype Board CAD](Articles/30_BBCAD/Article.md)
