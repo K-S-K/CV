@@ -52,7 +52,7 @@ What did I study recently:
 What are my out-of-job interests:
 - Family;
 - Photography;
-- Traveling around
+- Traveling around;
 - Microcontrollers, home automation.
 
 # Project gallery
