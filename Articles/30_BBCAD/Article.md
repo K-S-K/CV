@@ -33,6 +33,7 @@
 
 #### The Data Storage Service
 - It implements the Board Projects Storage in the database (currently, it is In-Memory DB).
+- It provides the requested Prototype Board Project for the **Behavior Controller** and applies changes to the particular project selected by its identifier.
 
 #### The API Server
 - The API Server is a Minimal API Web Application.
