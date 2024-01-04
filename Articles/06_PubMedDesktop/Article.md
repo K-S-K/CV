@@ -2,7 +2,7 @@
 
 [Back to the main page](../../README.md)
 
-**Development period:** 20015-2023.
+**Development period:** 20015-2024.
 
 **Practical application:** quarterly[^1].
 
@@ -20,4 +20,4 @@ The published article on the PubMed site<br>
 ![Article Preview](Images/Fig_08_Published.png)
 
 
-[^1]: Every four months I publish the next issue of the magazine to Pubmed.
+[^1]: Every four months, I publish the magazine's next issue to Pubmed.
