@@ -26,7 +26,7 @@
 #### The Batch
 - The Batch is an object that can accept the script with several **Command** statements in the text form and deserialize it to the collection of commands.
 - The batch splits the input script to particular statements like "**COMMAND NAME ARG1 = Value1, ARG2 = Value2, ...**"
-- After that, **Batch** fills its statement collection with commands, deserialized from the statements.
+- After that, **Batch** fills its statement collection with **Commands** deserialized from the statements.
 
 #### The Behavior Controller
 - The Behavior Controller accepts **Batches** and applies **Commands** from **Batches** to the **Model**.
