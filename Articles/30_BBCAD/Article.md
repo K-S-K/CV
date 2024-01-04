@@ -2,7 +2,7 @@
 
 [Back to the main page](../../README.md)
 
-**Development period:** 2023-?.
+**Development period:** 2023-2024.
 
 **Practical application:** The idea testing[^1].
 
