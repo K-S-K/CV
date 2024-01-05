@@ -57,7 +57,7 @@ What are my out-of-job interests:
 
 # Project gallery
 
-## [2023. Prptotype Board CAD](Articles/30_BBCAD/Article.md)
+## [2023-2024. Prptotype Board CAD](Articles/30_BBCAD/Article.md)
 The software for the prototyping board projects development.
 
 ## [2021. Trading Toy](Articles/28_TradeToy/Article.md)
