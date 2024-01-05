@@ -6,19 +6,19 @@
 
 **Practical application:** In Production[^1].
 
-**Project purpose:** Electric power meters can provide data exchange by different hardware and software APIs. 
+**Project purpose:** Electric power meters can exchange data by different hardware and software APIs. 
 The server application collects data from the power meters and puts data into the SQL Server database. 
 SQL Server Agent executes jobs that calculate result data from the primary data with measurement transformer 
 factor and power grid topology history (bypass switches commutation history, measurement transformers replacement history e, etc.)
 
 **Project description:** 
-My application provides the possibility of proper data storing corresponding to the place on the power grid where measures were collected from. In other words, my application is the editor for creating the power network model in the database to store data in the right way to process data by jobs and retrieve data for the reporting. My application contains a T-SQL script that can actualize any version of the database to the actual version with all necessary data conversions, COM object which provides API and UI controls for the data structure editor, and for the different applications that work with data: viewers, report generators, etc., and desktop editor for the tree-shaped representation of the electric energy system.
+My application allows proper data storage corresponding to the place on the power grid where measures were collected. In other words, my application is the editor for creating the power network model in the database to store data in the right way to process data by jobs and retrieve data for the reporting. My application contains a T-SQL script that can actualize any version of the database to the actual version with all necessary data conversions, COM object which provides API and UI controls for the data structure editor, and for the different applications that work with data: viewers, report generators, etc., and desktop editor for the tree-shaped representation of the electric energy system.
 
 **My part in this project:** Requirements preparation, integration with existing architecture, development of the architecture, implementing, testing, deployment to the first customer, technical support, collecting and implementing additional customer requirements after they got some user experience.
 
-**Implementation technologies:** MFC SDI Application, ATL COM object for data management level, OLE DB, Windows API, [CHM Help](https://learn.microsoft.com/en-us/dynamicsax-2012/appuser-itpro/deprecated-chm-help-files), T-SQL, and some subject area knowledge.
+**Implementation technologies:** MFC SDI Application, ATL COM object for data management level, OLE DB, Windows API, [CHM Help](https://learn.microsoft.com/en-us/dynamicsax-2012/appuser-itpro/deprecated-chm-help-files), T-SQL, and some domain knowledge.
 
-Fig. 1 The procedure of manual binding of the Power meter to the scheme[^2].<br>
+Fig. 1 The manual binding of the Power meter to the scheme[^2].<br>
 ![Bind meter](Images/Dlg_Bind_Meter_Tree.png)
 
 Fig. 2 The measurement complex explanation.<br>
@@ -47,5 +47,5 @@ Fig. 9 Current Measurement Transformer Replacement History.<br>
 
 
 
-[^1]: First deployment was in TumenEnergo, about 26 thousands of metering points. Now it is a great successful project.
-[^2]: All pictures were taken from the help subsystem and doed not contain any sensitive data.
+[^1]: The first deployment was in TumenEnergo, about 26 thousand metering points. Now, it is a great, successful project.
+[^2]: All pictures were taken from the help subsystem and contained no sensitive data.
