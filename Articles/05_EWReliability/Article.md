@@ -11,7 +11,7 @@
 
 **Project description:** 
 Application health data collection and analysis. Availability factor measuring. Tool for investigation of the evolving of accidents. Software for load monitoring and emergency prediction. Tool for loading testing of billing software after every sprint.<br>
-Initially, we had one point of interest: to measure the availability factor of our software (a cell operator billing system) to be sure it meets the requirements of our customer (cell operator). They asked us to provide an availability factor = 0.99995.
+**Initially**, we had one point of interest: to measure the availability factor of our software (a cell operator billing system) to be sure it meets the requirements of our customer (cell operator). They asked us to provide an availability factor = 0.99995.
 We've researched methodology for measuring a period we can qualify as a "working interval" and a period we can call a "not working interval."
 The ratio of a calculated sum of the working interval to the whole observation time is the availability factor we need. 
 
