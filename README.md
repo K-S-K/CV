@@ -3,8 +3,6 @@ I am a .Net software developer with 25 years of software development experience 
 During my professional life, I worked on several projects in several areas. Some of them were interesting. Some of them were exciting.
 Sometimes, projects get completed. Sometimes, projects evolve to their complete state, and a software developer cannot develop himself inside it, and the time comes to move on. 
 
-I just moved to Germany and am looking for a new interesting job there.
-
 What I can and want to propose:
 - C#, 
 - .Net, 
@@ -44,6 +42,7 @@ The content of my bookshelf:
 - Naomi Ceder. The Quick Python Book.
 
 What did I study recently:
+- Linux C++ development;
 - MongoDB on my little projects;
 - FreeRTOS on home weekend projects;
 - Amazon AWS on home weekend projects;
