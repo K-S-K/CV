@@ -56,7 +56,10 @@ What are my out-of-job interests:
 
 # Project gallery
 
-## [2023-2024. Prptotype Board CAD](Articles/30_BBCAD/Article.md)
+## [2024. Data exchange between docker containerized applications](https://github.com/K-S-K/CCSS)
+The purpose of this project is to adjust the approach of creating several projects in different docker containers and let them communicate with each other via sockets. The project can be used as a template for creating more complex projects. Programming language: C++. Development environment: Ubuntu. Deployment environment: Ubuntu. IDE: VSCode.
+
+## [2023-2024. Prototype Board CAD](Articles/30_BBCAD/Article.md)
 The software for the prototyping board projects development.
 
 ## [2021. Trading Toy](Articles/28_TradeToy/Article.md)
