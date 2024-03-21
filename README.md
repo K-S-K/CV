@@ -60,8 +60,8 @@ What are my out-of-job interests:
 The purpose of this project is to adjust the approach of creating several projects in different docker containers and let them communicate with each other via sockets. The project can be used as a template for creating more complex projects. Programming language: C++. Development environment: Ubuntu. Deployment environment: Ubuntu. IDE: VSCode.
 
 ## [2023-2024. Prototype Board CAD](Articles/30_BBCAD/Article.md)
-![Resizing command as a text](Articles/30_BBCAD/Images/Fig_07_Unified_CLI.gif)<br>
-The software for prototyping board project development is a simple editor for prototype board wiring planning with effective storage files in a version-management-friendly format. The project is written in C# for use in a web environment. It is written in C# for .Net 7. It can work on Windows and Linux. It contains a pipeline for the deployment to the AWS virtual machine.
+The prototyping board project development software is a simple editor for prototype board wiring planning with effective storage files in a version-management-friendly format. The project is written in C# for use in a web environment. It is written in C# for .Net 7. It can work on Windows and Linux. It contains a pipeline for the deployment to the AWS virtual machine.<br>
+![Resizing command as a text](Articles/30_BBCAD/Images/Fig_07_Unified_CLI.gif)
 
 ## [2021. Trading Toy](Articles/28_TradeToy/Article.md)
 It is a weekend home project for experiments, research, and fun, dedicated to trading automation with the Binance exchange.
