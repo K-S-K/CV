@@ -61,8 +61,8 @@ The purpose of this project is to adjust the approach of creating several projec
 
 IDE: VSCode.<br>
 Programming language: C++.<br>
-Deployment environment: Ubuntu.<br>
-Development environment: Ubuntu.<br>
+Development environment: Linux (Ubuntu).<br>
+Deployment environment: Linux (Ubuntu) on Raspberry PI.<br>
 ![How does looks now](https://github.com/K-S-K/CCCS/raw/main/Doc/Fig.01-Debug-complete.png)
 
 ## [2023-2024. Prototype Board CAD](Articles/30_BBCAD/Article.md)
