@@ -57,11 +57,12 @@ What are my out-of-job interests:
 # Project gallery
 
 ## [2024. Data exchange between docker containerized applications](https://github.com/K-S-K/CCCS)
-The purpose of this project is to adjust the approach of creating several projects in different docker containers and let them communicate with each other via sockets. The project can be used as a template for creating more complex projects.<br>
+The purpose of this project is to adjust the approach of creating several projects in different docker containers and let them communicate with each other via sockets. The project can be used as a template for creating more complex projects.
+
 IDE: VSCode.<br>
 Programming language: C++.<br>
-Development environment: Ubuntu.<br>
 Deployment environment: Ubuntu.<br>
+Development environment: Ubuntu.<br>
 ![How does looks now](https://github.com/K-S-K/CCCS/raw/main/Doc/Fig.01-Debug-complete.png)
 
 ## [2023-2024. Prototype Board CAD](Articles/30_BBCAD/Article.md)
