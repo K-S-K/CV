@@ -6,7 +6,7 @@
 
 **Practical application:** quarterly[^1].
 
-**Project purpose:** To prepare journal articles to be published in PubMed. Creating the article DOM compatible with PubMed requirements.
+**Project purpose:** To prepare journal articles for publication in PubMed, creating an article DOM compatible with PubMed requirements.
 
 **Implementation technologies:** .Net Framework, C#, Windows Forms, XML.
 
@@ -20,4 +20,4 @@ The published article on the PubMed site<br>
 ![Article Preview](Images/Fig_08_Published.png)
 
 
-[^1]: Every four months, I publish the magazine's next issue to Pubmed.
+[^1]: I publish the magazine's next issue to Pubmed every four months.
