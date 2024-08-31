@@ -2,7 +2,7 @@
 
 [Back to the main page](../../README.md)
 
-**Development period:** 20015-2023.
+**Development period:** 2015-2023.
 
 **Practical application:** quarterly[^1].
 
