@@ -52,7 +52,7 @@ What are my out-of-job interests:
 - Family;
 - Photography;
 - Traveling around;
-- Microcontrollers, home automation.
+- Microcontrollers, home and industry automation.
 
 # Project gallery
 
