@@ -40,7 +40,7 @@ The final project contains these components:
 ![Order Events lists](Images/Fig_03_Report.png)
 
 
-**Fig.4 The Trading Session WPF UI** which can show price graphs, clusters, and trends.<br>
+**Fig.4 The Trading Session WPF UI**, which can show price graphs, clusters, and trends.<br>
 ![New trading analysis user interface](Images/Fig_04_SquirrelGraph.gif)
 (The copy of the video on YouTube: [youtube.com/watch?v=7lW273PTbGI](https://www.youtube.com/watch?v=7lW273PTbGI).
 
