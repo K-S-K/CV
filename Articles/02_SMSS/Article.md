@@ -8,7 +8,7 @@
 
 #### Project purpose. There are two of them:
 - To create a simple, intuitively understandable desktop SMS-sending manager inspired by the Outlook Express application;
-- To create my first .Net / C# application. I read a big book about .Net and C# in those days.
+- To create my first .Net / C# application. I read my first book about .Net and C# by Andrew Troelsen in those days.
 
 #### The initial requirements of the project were:
 - Application must connect to the user terminal (GSM modem or cell phone);
