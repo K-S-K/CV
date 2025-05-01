@@ -39,7 +39,7 @@ Sometimes, projects get completed. Sometimes, projects evolve to their complete 
 - Microcontroller programming in C and C++ (currently experimenting with PIC, in the past experimented with ESP32).
 
 **What do I want to deal with:**
-- Ideally - real-life applications regarding natural things - nature, industry, etc. Something more important than just making some reach people more reach.
+- Ideally - real-life applications regarding natural things - science, nature, industry, etc. Something more important than just making some reach people more reach.
 
 **The domains that I've experienced in:**
 - Creating the software for modeling the spacecraft attitude control;
