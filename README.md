@@ -50,6 +50,7 @@ Sometimes, projects get completed. Sometimes, projects evolve to their complete 
 - Participation in the railway black box analysis project (a long time ago, my first real project, it was very exciting).
 
 **The content of my bookshelf:**
+- Jörg Rippel. FPGAs. Einsteig, Schaltungen,  Projekte;
 - Andrew Lock. ASP.NET Core in Action, Third Edition;
 - Ronald Mak. Object-Oriented Software Design in C++;
 - Naomi Ceder. The Quick Python Book.
@@ -59,11 +60,15 @@ Sometimes, projects get completed. Sometimes, projects evolve to their complete 
 - Linux C++ development - sometimes at home;
 - Embedded C++ development - sometimes at home;
 
-**What did I study in the past year:**
+**What did I study in the software development area:**
 - MongoDB on my little projects;
 - FreeRTOS on home weekend projects;
 - Amazon AWS on home weekend projects;
-- MS Azure on Microsoft and the Linked In platforms.
+- MS Azure on Microsoft and the Linked In platforms;
+- T-SQL in my professional practice in different projects;
+- Software development in C# for many years in practical projects;
+- Software development in C++ for Windows during my job in several big projects;
+- Programming in Assembler, C, and C++ during my education in the university.
 
 **What are my out-of-job interests:**
 - Family;
