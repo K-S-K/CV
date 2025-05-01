@@ -56,7 +56,8 @@ Sometimes, projects get completed. Sometimes, projects evolve to their complete 
 - Naomi Ceder. The Quick Python Book.
 
 **What did I study recently:**
-- Astronomy as a domain of my current job;
+- FreeRTOS at my home projects;
+- Some amazing Astronomy things as a domain of my current job;
 - Linux C++ development - sometimes at home;
 - Embedded C++ development - sometimes at home;
 
