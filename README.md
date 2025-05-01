@@ -60,6 +60,7 @@ Sometimes, projects get completed. Sometimes, projects evolve to their complete 
 - Some amazing Astronomy things as a domain of my current job;
 - Linux C++ development - sometimes at home;
 - Embedded C++ development - sometimes at home;
+- FPGA - just for curiosity now, by reading a book in German with Google translate.
 
 **What did I study in the software development area:**
 - MongoDB on my little projects;
