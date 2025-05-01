@@ -12,6 +12,8 @@
 
 **Developer tools:** Microsoft Visual Studio.
 
+**Current status:** The idea is tested, and looking interesting for me but is not in the priority now. So it is currently on pause.
+
 ## How it works.
 #### The Model
 - There is a **Prototype Board Model**. It contains the board metadata (like dimensions, name, description, etc.) and the collection of wires in the multiline-like coordinate form.
