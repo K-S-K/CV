@@ -6,11 +6,13 @@
 
 **Practical application:** Commercial[^1].
 
-#### Project purpose. There are two of them:
+## Project purpose. There are two of them
+
 - To create a simple, intuitively understandable desktop SMS-sending manager inspired by the Outlook Express application;
 - To create my first .Net / C# application. I read my first book about .Net and C# by Andrew Troelsen in those days.
 
-#### The initial requirements of the project were:
+## The initial requirements of the project
+
 - Application must connect to the user terminal (GSM modem or cell phone);
 - Application must be able to send particular SMS, as well as SMS corteges, encoded in PDU form;
 - Application must be able to send particular SMS, as well as message broadcasting;

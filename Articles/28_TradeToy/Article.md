@@ -8,7 +8,7 @@
 
 **Project purpose:** Research of some trading algorithms
 
-**Project description:** 
+**Project description:**
 The program can connect to the exchange, listen to trade signals, analyze price trends, and emulate buy and sell operations.
 Also, it can download the real-time trading history and collect it in the SQL database.
 Also, it can emulate the exchange for itself to play trading sessions on historical data.

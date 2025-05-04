@@ -6,12 +6,11 @@
 
 **Practical application:** In Production[^1].
 
-**Project purpose:** Electric power meters can exchange data by different hardware and software APIs. 
-The server application collects data from the power meters and puts data into the SQL Server database. 
-SQL Server Agent executes jobs that calculate result data from the primary data with measurement transformer 
-factor and power grid topology history (bypass switches commutation history, measurement transformers replacement history e, etc.)
+**Project purpose:** Electric power meters can exchange data by different hardware and software APIs.
+The server application collects data from the power meters and puts data into the SQL Server database.
+SQL Server Agent executes jobs that calculate result data from the primary data with measurement transformer factor and power grid topology history (bypass switches commutation history, measurement transformers replacement history e, etc.)
 
-**Project description:** 
+**Project description:**
 My application allows proper data storage corresponding to the place on the power grid where measures were collected. In other words, my application is the editor for creating the power network model in the database to store data in the right way to process data by jobs and retrieve data for the reporting. My application contains a T-SQL script that can actualize any version of the database to the actual version with all necessary data conversions, COM object which provides API and UI controls for the data structure editor, and for the different applications that work with data: viewers, report generators, etc., and desktop editor for the tree-shaped representation of the electric energy system.
 
 **My part in this project:** Requirements preparation, integration with existing architecture, development of the architecture, implementing, testing, deployment to the first customer, technical support, collecting and implementing additional customer requirements after they got some user experience.
@@ -44,8 +43,6 @@ Fig. 8 Bypass switch history editor (we use history to calculate the energy for 
 
 Fig. 9 Current Measurement Transformer Replacement History.<br>
 ![Mea Transformers Replacement History](Images/Fig_09_Mea_Coeff_Hist.png)
-
-
 
 [^1]: The first deployment was in TumenEnergo, about 26 thousand metering points. Now, it is a great, successful project.
 [^2]: All pictures were taken from the help subsystem and contained no sensitive data.

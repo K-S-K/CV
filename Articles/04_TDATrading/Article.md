@@ -8,9 +8,9 @@
 
 **Project purpose:** Automated trading research. Testing and tuning of the trading approaches.
 
-
 **Project description:**
 The final project contains these components:
+
 - The SQL Server database with trading history data in ticks;
 - The Import tool for filling the database with trading history data from .qsh files;
 - The Exchange Emulator;
@@ -31,14 +31,11 @@ The final project contains these components:
 **Fig.1 The Trading Experiment**<br>
 ![The Duplicator list](Images/Fig_01_Experiment.png)
 
-
 **Fig.2 The Trading Testing** on the live Exchange connection. Comparing the representation of positions with representation in the official trading tool.<br>
 ![The Duplicator list](Images/Fig_02_Testing.png)
 
-
 **Fig.3 The Trading Session Report** with common results information and hourly earn diagram.<br>
 ![Order Events lists](Images/Fig_03_Report.png)
-
 
 **Fig.4 The Trading Session WPF UI**, which can show price graphs, clusters, and trends.<br>
 ![New trading analysis user interface](Images/Fig_04_SquirrelGraph.gif)

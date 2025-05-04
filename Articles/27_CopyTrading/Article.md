@@ -8,11 +8,10 @@
 
 **Project purpose:** Copy Trading automation.
 
-
-**Project description:** 
+**Project description:**
 This project automatically copies Originator trader positions for the Duplicator trader accounts on the Binance Cryptocurrency Exchange.
 
-**My part in this project:** Requirements collecting from the customer, RND, development of the architecture, implementing, testing, deployment to the cloud server for experimental use, technical support, 
+**My part in this project:** Requirements collecting from the customer, RND, development of the architecture, implementing, testing, deployment to the cloud server for experimental use, technical support,
 ongoing project evolving.
 
 **Implementation technologies:** .Net5, WPF, Binance.Net library by JKorf, and some subject area knowledge.

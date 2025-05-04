@@ -14,39 +14,46 @@
 
 **Current status:** The idea is tested, and looking interesting for me but is not in the priority now. So it is currently on pause.
 
-## How it works.
-#### The Model
+## How it works
+
+### The Model
+
 - There is a **Prototype Board Model**. It contains the board metadata (like dimensions, name, description, etc.) and the collection of wires in the multiline-like coordinate form.
 - The model can be represented as an SVG image or serialized to an XML file.
 - The Model has methods and properties that allow the user class to control its state.
 
-#### Commands
+### Commands
+
 - Commands are objects with a Name (like, for instance, CREATE BOARD or RESIZE BOARD) and command arguments.
 - Each command has a deserialization constructor to be created by.
 - The commands are immutable.
 
-#### The Batch
+### The Batch
+
 - The Batch is an object that can accept the script with several **Command** statements in the text form and deserialize it to the collection of commands.
 - The batch splits the input script to particular statements like "**COMMAND NAME ARG1 = Value1, ARG2 = Value2, ...**"
 - After that, **Batch** fills its statement collection with **Commands** deserialized from the statements.
 
-#### The Behavior Controller
+### The Behavior Controller
+
 - The Behavior Controller accepts **Batches** and applies **Commands** from **Batches** to the **Model**.
 
-#### The Data Storage Service
+### The Data Storage Service
+
 - It implements the Board Projects Storage in the database (currently, it is In-Memory DB).
 - It provides the requested Prototype Board Project for the **Behavior Controller** and applies changes to the particular project selected by its identifier.
 
-#### The API Server
+### The API Server
+
 - The API Server is a Minimal API Web Application.
 - It hosts the **Behavior Controller**.
 - It also hosts the Data **Storage Service** and all other necessary services to provide the whole functionality.
 
-#### The WEB Server
+### The WEB Server
+
 - The WEB Server is the simple Blazor application that provides UI for the API server.
 - It provides a CRUD UI for the **API Server**.
 - It displays the board schema as the SVG image.
-
 
 ## The most significant updates
 

@@ -12,7 +12,6 @@
 
 **Developer tools:** Microsoft Developer Studio v.6 for C++
 
-
 ![The trip graph navigation](TripExplore.gif)<br>
 Figure 1. Trip log navigation.
 
