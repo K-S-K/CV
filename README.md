@@ -12,7 +12,6 @@ Throughout my life, I have worked on numerous projects across various areas. Som
 - Dotnet development for Linux;
 - T-SQL (Not hands-on, but have some);
 - FreeRTOS (the subject I am currently learn at tiny hardware projects).
-.
 
 **What I've experienced in (currently):**
 
@@ -92,8 +91,14 @@ Throughout my life, I have worked on numerous projects across various areas. Som
 
 ## Project gallery
 
+### [2024-2025 The modeling of the Gaia telescope Attitude and Orbit Control System](Articles/36_GaiaSDT/Article.md)
+
+During this job I touched amazing things which are significantly bigger then I could imagine ever before. The picture and brief description of project is inside of the article.
+
 ### [2024. Data exchange between docker containerized applications](https://github.com/K-S-K/CCCS)
 
+In these days I started to remind C++ and to learn Linux for the sake of preparation to my next job. That's how this project was created.
+s
 The purpose of this project is to adjust the approach of creating several projects in different Docker containers and let them communicate with each other via sockets. The project can be used as a template for creating more complex projects.
 
 IDE: VSCode.<br>
@@ -127,11 +132,9 @@ It is a distributed system that collects software application diagnostics data a
 
 It was a big R&D project dedicated to trading automation. We experimented with different trading algorithms for eight years and had some success, great excitement, and much experience.
 
-
 ### [2009-2010. SMS Station](Articles/02_SMSS/Article.md)
 
 It is a desktop application dedicated to sending and broadcasting SMS messages via SMS user terminal connected to the computer. It may be my Best UI project.
-
 
 ### [2001-2007. Electric power billing project](Articles/03_ESphere/Article.md)
 
@@ -141,7 +144,7 @@ It is part of a large software and hardware project dedicated to collecting data
 
 Initially, it was an interesting project for the railway black box data file analysis. But after the project ended, I rewrote it from BCB to MSVC to learn a better development environment and also for fun because it was a beautiful project.
 
-## Documents:
+## Documents
 
 [General CV, pdf](Documents/cv-2023-en.pdf):<br>
 [Fintech oriented CV, pdf](Documents/cv-2023-en-ft.pdf):<br>
