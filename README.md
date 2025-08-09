@@ -97,7 +97,7 @@ Throughout my life, I have worked on numerous projects across various areas. Som
 ### [2024-2025 The modeling of the Gaia telescope Attitude and Orbit Control System](Articles/36_GaiaSDT/Article.md)
 
 During my current job I touched amazing things which are significantly bigger then I could imagine ever before. The picture and brief description of project is inside of the article.
-![How does looks now](Articles/36_GaiaSDT/Images/01_SDT-UI.png)
+![How does looks now](Articles/36_GaiaSDT/Images/Fig_01_SDT-UI.png)
 
 ### [2024. Data exchange between docker containerized applications](https://github.com/K-S-K/CCCS)
 
