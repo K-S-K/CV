@@ -9,8 +9,8 @@
 **Project purpose:** Research of some physics algorithms
 
 **Project description:**
-Creating a software model of the attitude control of the next probable version of the Gaia telescope.
-The project itself is a physics-based software digital twin of Gaia telescope Attitude and Orbit Control System for testing and tuning spacecraft attitude control algorithms, originally prototyped in Python and Java by my colleagues. Building on these foundational implementations, we're creating a fast, configurable, and production-ready framework tailored for the proving of algorithms for the next generation of the telescope.
+
+The project itself is a physics-based software digital twin of Gaia telescope Attitude and Orbit Control System. It is a scientific tool for testing and tuning spacecraft attitude control algorithms, originally prototyped in Python and Java by the scientists in the Astronomisches Rechen-Institut. Building on these foundational implementations, we're creating a fast, configurable, and production-ready framework tailored for the proving of algorithms for the next generation of the telescope.
 
 **Implementation technologies:**
 Technically, it is a .NET Core development for Linux-based platforms, including:
@@ -19,9 +19,15 @@ Technically, it is a .NET Core development for Linux-based platforms, including:
 - Partially monolithic and partially distributed architecture;
 - Applications that can work on the developer machine, in the local Docker network, and also distributed between several machines in Docker as well, naturally.
 
-![The Computational Experiment](Images/01_SDT-UI.png)
+![The Computational Experiment](Images/Fig_01_SDT-UI.png)
 
 On the picture represented the Computational Experiment.
 Approximately in the middle of the experiment, the micrometeorite hits the spacecraft. The model detects it and uses thrusters to return the spacecraft to the planned flight plan.
+
+**Implementation technologies:** .Net Core, C#, Blazor.
+
+**Developer tools:** Microsoft Visual Studio Code.
+
+**Current status:** The development is in progress.
 
 [^1]: It is a research in the my main job at the Astronomisches Rechen-Institut, a branch of Heidelberg University.

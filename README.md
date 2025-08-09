@@ -10,16 +10,19 @@ Throughout my life, I have worked on numerous projects across various areas. Som
 - C# (12);
 - .NET Core (8);
 - Dotnet development for Linux;
-- T-SQL (Not hands-on, but have some);
+- T-SQL (Not hands-on, but have a lot in my past);
 - FreeRTOS (the subject I am currently learn at tiny hardware projects).
 
 **What I've experienced in (currently):**
 
-- Dotnet core development for Linux-based platforms, including:
+- Dotnet development for Linux-based platforms, including:
 - - Scientific applications with a lot of calculations;
 - - Monolith and distributed architecture with HTTP communications;
 - - Applications that can work on the developer machine, also in the local Docker network, also on a distributed hardware architecture;
 - - Applications for lightweight hardware platforms to communicate with equipment (Raspberry PI, I2C devices communications)
+- FreeRTOS development for Raspberry Pi Pico platforms:
+- - Development of the hardware level abstractions (I2C-connected DIsplay, Rotary Encoder);
+- - Development of UI abstractions (Main screen, Menus, Configuration screen pages);
 
 **What I've experienced in (memorable past):**
 
@@ -41,7 +44,7 @@ Throughout my life, I have worked on numerous projects across various areas. Som
 - Azure API automation;
 - AWS deployment infrastructure;
 - AWS IoT infrastructure with ESP32;
-- Microcontroller programming in C and C++ (currently experimenting with Raspberry PI Pico; previously experimented with PIC and ESP32).
+- Microcontroller programming in C and C++ (currently experimenting with Raspberry PI and Pico; previously experimented with PIC and ESP32).
 
 **What do I want to deal with:**
 
@@ -93,7 +96,8 @@ Throughout my life, I have worked on numerous projects across various areas. Som
 
 ### [2024-2025 The modeling of the Gaia telescope Attitude and Orbit Control System](Articles/36_GaiaSDT/Article.md)
 
-During this job I touched amazing things which are significantly bigger then I could imagine ever before. The picture and brief description of project is inside of the article.
+During my current job I touched amazing things which are significantly bigger then I could imagine ever before. The picture and brief description of project is inside of the article.
+![How does looks now](Articles/36_GaiaSDT/Images/01_SDT-UI.png)
 
 ### [2024. Data exchange between docker containerized applications](https://github.com/K-S-K/CCCS)
 
@@ -105,7 +109,6 @@ IDE: VSCode.<br>
 Programming language: C++.<br>
 Development environment: Linux (Ubuntu).<br>
 Deployment environment: Linux (Ubuntu) on Raspberry PI.<br>
-![How does looks now](https://github.com/K-S-K/CCCS/raw/main/Doc/Fig.01-Debug-complete.png)
 
 ### [2023-2024. Prototype Board CAD](Articles/30_BBCAD/Article.md)
 
@@ -146,7 +149,5 @@ Initially, it was an interesting project for the railway black box data file ana
 
 ## Documents
 
-[General CV, pdf](Documents/cv-2023-en.pdf):<br>
-[Fintech oriented CV, pdf](Documents/cv-2023-en-ft.pdf):<br>
-[Electric Power oriented CV, pdf](Documents/cv-2023-en-pw.pdf):<br>
-[Embedded and IoT targeted CV, pdf](Documents/cv-2023-en-mcu.pdf):<br>
+[General CV, pdf](Documents/cv-2026-en.pdf)
+[Extended CV, pdf](Documents/cv-2026-en-ext.pdf)
