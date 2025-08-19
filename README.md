@@ -33,7 +33,7 @@ Throughout my life, I have worked on numerous projects across various areas. Som
 - Database development (MS SQL), including:
 - - DB Architecture development;
 - - DDL, DML including SP, UDF, Triggers, etc.;
-- - ORMLESS communications between application and DB due to performance and more exact dealing with DBMS;
+- - ORMless communications between application and DB due to performance and more exact dealing with DBMS;
 - Network, Web, and Distributed software development, including distributed on MS cluster monitoring system;
 - .NET Web Applications - several projects.
 
@@ -94,7 +94,7 @@ Throughout my life, I have worked on numerous projects across various areas. Som
 
 ## Project gallery
 
-### [2024-2025 The modeling of the Gaia telescope Attitude and Orbit Control System](Articles/36_GaiaSDT/Article.md)
+### [2024-... The modeling of the Gaia telescope Attitude and Orbit Control System](Articles/36_GaiaSDT/Article.md)
 
 During my current job I touched amazing things which are significantly bigger then I could imagine ever before. The picture and brief description of project is inside of the article.
 ![How does looks now](Articles/36_GaiaSDT/Images/Fig_01_SDT-UI.png)
