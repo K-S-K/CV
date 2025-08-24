@@ -18,7 +18,7 @@ Throughout my life, I have worked on numerous projects across various areas. Som
 - .NET development for Linux-based platforms, including:
 - - Scientific applications with a lot of calculations;
 - - Monolith and distributed architecture with HTTP communications;
-- - Applications that can work on the developer machine, also in the local Docker network, also on a distributed hardware architecture;
+- - Applications that can work on the developer machine, also in the local Docker network, and also on a distributed hardware architecture;
 - - Applications for lightweight hardware platforms to communicate with equipment (Raspberry PI, I2C devices communications)
 - FreeRTOS development for Raspberry Pi Pico platforms:
 - - Development of the hardware level abstractions (I2C-connected DIsplay, Rotary Encoder);
@@ -48,7 +48,7 @@ Throughout my life, I have worked on numerous projects across various areas. Som
 
 **What do I want to deal with:**
 
-- Ideally - real-life applications regarding natural things - science, nature, industry, etc. Something more important than just making some reach people more reach.
+- Ideally - real-life applications regarding natural things - science, nature, industry, etc.
 
 **The domains that I've experienced in:**
 
@@ -82,8 +82,8 @@ Throughout my life, I have worked on numerous projects across various areas. Som
 - MS Azure on Microsoft and the LinkedIn platforms;
 - T-SQL in my professional practice in different projects;
 - Software development in C# for many years in practical projects;
-- Software development in C++ for Windows during my job in several big projects;
-- Programming in Assembler, C, and C++ during my education in the university.
+- Software development in C++ for Windows during my job on several big projects;
+- Programming in Assembler, C, and C++ during my education at the university.
 
 **What are my out-of-job interests:**
 
@@ -97,6 +97,7 @@ Throughout my life, I have worked on numerous projects across various areas. Som
 ### [2025. The FreeRTOS-based timer working on RP2350](https://github.com/K-S-K/Pico-Timer-2)
 
 Through this project, I gained experience with FreeRTOS and embedded development. I've also had a lot of fun working on this project because I genuinely enjoy it.
+
 ![Timer User Interface](https://github.com/K-S-K/Pico-Timer-2/blob/main/Doc/Pico2-timer-menu.gif)
 
 ### [2024-... The modeling of the Gaia telescope Attitude and Orbit Control System](Articles/36_GaiaSDT/Article.md)
