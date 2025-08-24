@@ -102,7 +102,7 @@ Through this project, I gained experience with FreeRTOS and embedded development
 
 ### [2024-... The modeling of the Gaia telescope Attitude and Orbit Control System](Articles/36_GaiaSDT/Article.md)
 
-During my current job, I touched amazing things that are significantly bigger than I could have ever imagined. The picture and brief description of the project are inside the article.
+During my current job, I develop a physics-based software digital twin of Gaia telescope Attitude and Orbit Control System for testing and tuning spacecraft attitude control algorithms, originally prototyped in Python and Java by my colleagues.
 ![How does looks now](Articles/36_GaiaSDT/Images/Fig_01_SDT-UI.png)
 
 ### [2024. Data exchange between Docker containerized applications](https://github.com/K-S-K/CCCS)
