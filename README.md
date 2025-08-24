@@ -15,7 +15,7 @@ Throughout my life, I have worked on numerous projects across various areas. Som
 
 **What I've experienced in (currently):**
 
-- Dotnet development for Linux-based platforms, including:
+- .NET development for Linux-based platforms, including:
 - - Scientific applications with a lot of calculations;
 - - Monolith and distributed architecture with HTTP communications;
 - - Applications that can work on the developer machine, also in the local Docker network, also on a distributed hardware architecture;
@@ -96,19 +96,19 @@ Throughout my life, I have worked on numerous projects across various areas. Som
 
 ### [2024-... The modeling of the Gaia telescope Attitude and Orbit Control System](Articles/36_GaiaSDT/Article.md)
 
-During my current job I touched amazing things which are significantly bigger then I could imagine ever before. The picture and brief description of project is inside of the article.
+During my current job, I touched amazing things that are significantly bigger than I could have ever imagined before. The picture and brief description of the project are inside the article.
 ![How does looks now](Articles/36_GaiaSDT/Images/Fig_01_SDT-UI.png)
 
-### [2024. Data exchange between docker containerized applications](https://github.com/K-S-K/CCCS)
+### [2024. Data exchange between Docker containerized applications](https://github.com/K-S-K/CCCS)
 
-In these days I started to remind C++ and to learn Linux for the sake of preparation to my next job. That's how this project was created.
-s
+These days, I started to relearn C++ and to learn Linux for the sake of preparation for my new job in Astronomisches Rechen-Institut, the branch of Heidelberg University. That's how this project was created.
+
 The purpose of this project is to adjust the approach of creating several projects in different Docker containers and let them communicate with each other via sockets. The project can be used as a template for creating more complex projects.
 
 IDE: VSCode.<br>
 Programming language: C++.<br>
 Development environment: Linux (Ubuntu).<br>
-Deployment environment: Linux (Ubuntu) on Raspberry PI.<br>
+Deployment environment: Linux (Ubuntu) on Raspberry PI.
 
 ### [2023-2024. Prototype Board CAD](Articles/30_BBCAD/Article.md)
 
@@ -125,19 +125,19 @@ The copy trading project for the Binance Cryptocurrency exchange.
 
 ### [2021-2023. Pubmed article editor](Articles/06_PubMedDesktop/Article.md)
 
-It is a small desktop application that I use to create XML files for submitting articles to the PubMed server
+It is a small desktop application that I use to create XML files for submitting articles to the PubMed server.
 
 ### [2012-2017. Reliability Analysis System](Articles/05_EWReliability/Article.md)
 
-It is a distributed system that collects software application diagnostics data and calculates its availability factor, draws diagrams, helps to monitor software health status, and helps to investigate accident evolution history.
+It is a distributed system that collects software application diagnostics data, calculates its availability factor, draws diagrams, and monitors software health status. It was also applied as a tool for investigating accident evolution history.
 
 ### [2011-2019. Automated Trading System](Articles/04_TDATrading/Article.md)
 
-It was a big R&D project dedicated to trading automation. We experimented with different trading algorithms for eight years and had some success, great excitement, and much experience.
+It was a long R&D project dedicated to trading automation. We experimented with different trading algorithms for eight years, achieving some success, great excitement, and much experience.
 
 ### [2009-2010. SMS Station](Articles/02_SMSS/Article.md)
 
-It is a desktop application dedicated to sending and broadcasting SMS messages via SMS user terminal connected to the computer. It may be my Best UI project.
+It is a desktop application dedicated to sending and broadcasting SMS messages via an SMS user terminal connected to the computer. It may be my Best UI project.
 
 ### [2001-2007. Electric power billing project](Articles/03_ESphere/Article.md)
 
@@ -145,7 +145,7 @@ It is part of a large software and hardware project dedicated to collecting data
 
 ### [1999. Railway Black Box Data Viewer](Articles/01_Railway_BB/Article.md)
 
-Initially, it was an interesting project for the railway black box data file analysis. But after the project ended, I rewrote it from BCB to MSVC to learn a better development environment and also for fun because it was a beautiful project.
+Initially, it was an interesting project for the railway black box data file analysis. After the project ended, I rewrote it from BCB to MSVC to learn a better development environment and, for fun, as I found this project beautiful.
 
 ## Documents
 
