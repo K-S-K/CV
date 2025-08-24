@@ -94,9 +94,14 @@ Throughout my life, I have worked on numerous projects across various areas. Som
 
 ## Project gallery
 
+### [2025. The FreeRTOS-based timer working on RP2350](https://github.com/K-S-K/Pico-Timer-2)
+
+Through this project, I gained experience with FreeRTOS and embedded development. I've also had a lot of fun working on this project because I genuinely enjoy it.
+![Timer User Interface]()
+
 ### [2024-... The modeling of the Gaia telescope Attitude and Orbit Control System](Articles/36_GaiaSDT/Article.md)
 
-During my current job, I touched amazing things that are significantly bigger than I could have ever imagined before. The picture and brief description of the project are inside the article.
+During my current job, I touched amazing things that are significantly bigger than I could have ever imagined. The picture and brief description of the project are inside the article.
 ![How does looks now](Articles/36_GaiaSDT/Images/Fig_01_SDT-UI.png)
 
 ### [2024. Data exchange between Docker containerized applications](https://github.com/K-S-K/CCCS)
