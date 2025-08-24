@@ -121,6 +121,14 @@ Deployment environment: Linux (Ubuntu) on Raspberry PI.
 The prototyping board project development software is a simple editor for prototype board wiring planning with effective storage of files in a version-management-friendly format. The project is written in C# for use in a web environment. It is written in C# for .NET 7. It works on both Windows and Linux. It contains a pipeline for the deployment to the AWS virtual machine.<br>
 ![Resizing command as a text](Articles/30_BBCAD/Images/Fig_07_Unified_CLI.gif)
 
+
+#### [2023. LCD Screen driver for ESP Microcontroller](https://github.com/K-S-K/ESP32-02-OLed-SSD1366)
+
+It was my [first steps](https://github.com/K-S-K/ESP32-02-OLed-SSD1366/blob/master/docs/Ch01_LostBits.md) in this direction.
+
+![](https://github.com/K-S-K/ESP32-02-OLed-SSD1366/blob/master/docs/oled.gif)
+
+
 ### [2021. Trading Toy](Articles/28_TradeToy/Article.md)
 
 It is a weekend home project dedicated to experimenting, researching, and having fun, focusing on trading automation with the Binance exchange.
