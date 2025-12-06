@@ -111,23 +111,21 @@ These days, I started to relearn C++ and to learn Linux for the sake of preparat
 
 The purpose of this project is to adjust the approach of creating several projects in different Docker containers and let them communicate with each other via sockets. The project can be used as a template for creating more complex projects.
 
-IDE: VSCode.<br>
-Programming language: C++.<br>
-Development environment: Linux (Ubuntu).<br>
-Deployment environment: Linux (Ubuntu) on Raspberry PI.
+- IDE: VSCode.
+- Programming language: C++.
+- Development environment: Linux (Ubuntu).
+- Deployment environment: Linux (Ubuntu) on Raspberry PI.
 
 ### [2023-2024. Prototype Board CAD](Articles/30_BBCAD/Article.md)
 
 The prototyping board project development software is a simple editor for prototype board wiring planning with effective storage of files in a version-management-friendly format. The project is written in C# for use in a web environment. It is written in C# for .NET 7. It works on both Windows and Linux. It contains a pipeline for the deployment to the AWS virtual machine.<br>
 ![Resizing command as a text](Articles/30_BBCAD/Images/Fig_07_Unified_CLI.gif)
 
-
 #### [2023. LCD Screen driver for ESP Microcontroller](https://github.com/K-S-K/ESP32-02-OLed-SSD1366)
 
 It was my [first steps](https://github.com/K-S-K/ESP32-02-OLed-SSD1366/blob/master/docs/Ch01_LostBits.md) in this direction.
 
 ![](https://github.com/K-S-K/ESP32-02-OLed-SSD1366/blob/master/docs/oled.gif)
-
 
 ### [2021. Trading Toy](Articles/28_TradeToy/Article.md)
 
