@@ -7,8 +7,8 @@ Throughout my life, I have worked on numerous projects across various areas. Som
 
 **What I can and want to propose:**
 
-- C# (12);
-- .NET Core (8);
+- C# (14);
+- .NET Core (10);
 - Dotnet development for Linux;
 - T-SQL (Not hands-on, but have a lot in my past);
 - FreeRTOS (the subject I am currently learn at tiny hardware projects).
