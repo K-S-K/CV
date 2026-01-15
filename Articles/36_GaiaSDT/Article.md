@@ -21,10 +21,10 @@ Technically, it is a .NET Core development for Linux-based platforms, including:
 
 ![The Computational Experiment](Images/Fig_01_SDT-UI.png)
 
-On the picture represented the Computational Experiment.
+The picture represents the Computational Experiment.
 Approximately in the middle of the experiment, the micrometeorite hits the spacecraft. The model detects it and uses thrusters to return the spacecraft to the planned flight plan.
 
-**Implementation technologies:** .Net Core, C#, Blazor.
+**Implementation technologies:** .Net 10, C#, Blazor.
 
 **Developer tools:** Microsoft Visual Studio Code.
 
