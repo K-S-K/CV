@@ -2,11 +2,11 @@
 
 [Back to the main page](../../README.md)
 
-**Development period:** 2024.05-...
+**Development period:** 2024.05-2026.04
 
 **Practical application:** Testing the innovative approaches of the attitude control[^1].
 
-**Project purpose:** Research of some physics algorithms
+**Project purpose:** Research on some physics algorithms
 
 **Project description:**
 
