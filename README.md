@@ -2,14 +2,15 @@
 
 ## Introduction
 
-I am a .NET software developer with 25 years of software development experience who still likes software development.
+I am a .NET software developer with 25 years of experience who still enjoys it.
 Throughout my life, I have worked on numerous projects across various areas. Some of them were interesting. Some of them were exciting.
 
 **What I can and want to propose:**
 
 - C# (14);
 - .NET Core (10);
-- Dotnet development for Linux;
+- Dotnet development for Linux / Mac (cmd tools and web services);
+- Dotnet development for Windows (Windows Services, Web Services, WinForms, WPF);
 - T-SQL (Not hands-on, but have a lot in my past);
 - FreeRTOS (the subject I am currently learn at tiny hardware projects).
 
