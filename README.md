@@ -9,7 +9,7 @@ Throughout my life, I have worked on numerous projects across various areas. Som
 
 - C# (14);
 - .NET Core (10);
-- Dotnet development for Linux / Mac (cmd tools and web services);
+- Dotnet development for Linux / Mac (command-line tools, Web Services, and Blazor);
 - Dotnet development for Windows (Windows Services, Web Services, WinForms, WPF);
 - T-SQL (Not hands-on, but have a lot in my past);
 - FreeRTOS (the subject I am currently learn at tiny hardware projects).
