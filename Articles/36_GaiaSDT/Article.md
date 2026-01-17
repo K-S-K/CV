@@ -13,11 +13,12 @@
 The project itself is a physics-based software digital twin of Gaia telescope Attitude and Orbit Control System. It is a scientific tool for testing and tuning spacecraft attitude control algorithms, originally prototyped in Python and Java by the scientists in the Astronomisches Rechen-Institut. Building on these foundational implementations, we're creating a fast, configurable, and production-ready framework tailored for the proving of algorithms for the next generation of the telescope.
 
 **Implementation technologies:**
-Technically, it is a .NET Core development for Linux-based platforms, including:
+Technically, it is a cross-platform .NET Core development, including:
 
 - Scientific applications with a lot of calculations;
 - Partially monolithic and partially distributed architecture;
 - Applications that can work on the developer machine, in the local Docker network, and also distributed between several machines in Docker as well, naturally.
+- Everything works on MacOS, Linux, and Windows.
 
 ![The Computational Experiment](Images/Fig_01_SDT-UI.png)
 
@@ -30,4 +31,4 @@ Approximately in the middle of the experiment, the micrometeorite hits the space
 
 **Current status:** The development is in progress.
 
-[^1]: It is a research in the my main job at the Astronomisches Rechen-Institut, a branch of Heidelberg University.
+[^1]: It is research in my main job at the Astronomisches Rechen-Institut, a branch of Heidelberg University.
