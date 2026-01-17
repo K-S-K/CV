@@ -8,17 +8,17 @@
 
 **Project purpose:** To create a simple editor for the prototyping board wiring planning with effective storage files in a version-management-friendly format.
 
-**Implementation technologies:** .Net Core, C#, Blazor.
+**Implementation technologies:** .Net 7, C#, Blazor.
 
 **Developer tools:** Microsoft Visual Studio.
 
-**Current status:** The idea is tested, and looking interesting for me but is not in the priority now. So it is currently on pause.
+**Current status:** The idea is tested, and looks interesting to me, but is not a priority now. So it is currently on pause.
 
 ## How it works
 
 ### The Model
 
-- There is a **Prototype Board Model**. It contains the board metadata (like dimensions, name, description, etc.) and the collection of wires in the multiline-like coordinate form.
+- There is a **Prototype Board Model**. It contains the board metadata (such as dimensions, name, description, etc.) and a collection of wires in a multiline-like coordinate format.
 - The model can be represented as an SVG image or serialized to an XML file.
 - The Model has methods and properties that allow the user class to control its state.
 
@@ -30,8 +30,8 @@
 
 ### The Batch
 
-- The Batch is an object that can accept the script with several **Command** statements in the text form and deserialize it to the collection of commands.
-- The batch splits the input script to particular statements like "**COMMAND NAME ARG1 = Value1, ARG2 = Value2, ...**"
+- The Batch is an object that can accept the script with several **Command** statements in the text form and deserialize it to a collection of commands.
+- The batch splits the input script into particular statements like "**COMMAND NAME ARG1 = Value1, ARG2 = Value2, ...**"
 - After that, **Batch** fills its statement collection with **Commands** deserialized from the statements.
 
 ### The Behavior Controller
@@ -40,7 +40,7 @@
 
 ### The Data Storage Service
 
-- It implements the Board Projects Storage in the database (currently, it is In-Memory DB).
+- It implements the Board Projects Storage in the database (currently, it is an in-memory DB).
 - It provides the requested Prototype Board Project for the **Behavior Controller** and applies changes to the particular project selected by its identifier.
 
 ### The API Server
@@ -51,7 +51,7 @@
 
 ### The WEB Server
 
-- The WEB Server is the simple Blazor application that provides UI for the API server.
+- The WEB Server is a simple Blazor application that provides UI for the API server.
 - It provides a CRUD UI for the **API Server**.
 - It displays the board schema as the SVG image.
 
