@@ -62,6 +62,7 @@ Throughout my life, I have worked on numerous projects across various areas. Som
 
 **The content of my bookshelf:**
 
+- Mark J. Price. C# 14 and .NET 10 – Modern Cross-Platform Development Fundamentals
 - Jörg Rippel. FPGAs. Einsteig, Schaltungen,  Projekte;
 - Andrew Lock. ASP.NET Core in Action, Third Edition;
 - Ronald Mak. Object-Oriented Software Design in C++;
