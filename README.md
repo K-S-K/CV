@@ -109,15 +109,15 @@ Through this project, I gained experience with FreeRTOS and embedded development
 
 ### [2024-2025. The Experiment with .NET and Raspberry PI](https://github.com/K-S-K/RPIDBClock)
 
-Through this project, I touched the I2C devices from the .NET code, and found it easy and convenient. .Net provides all necessary basement in the "System.Device.Gpio" nuget library to build any communication API at GPIO level, and also to work with "I2cDevice" and just exchange data with devices with byte resolution. Also, I've made a desk clock which shows me current date and time and two closest commute trains I need, which was funny and attractive.
+Through this project, I touched the I2C devices from the .NET code, and found it easy and convenient. .Net provides all necessary tools in the "System.Device.Gpio" NuGet library to build any communication API at GPIO level, and also to work with "I2cDevice" and just exchange data with devices with byte resolution. Also, I've made a desk clock that shows the current date and time, as well as the two closest trains on my commute route. The development process was funny and attractive.
 
 ![Raspberry Pi Clock](https://github.com/K-S-K/RPIDBClock/blob/main/Doc/Images/Fig_00_Common_View.jpg)
 
 ### [2024. Data exchange between Docker containerized applications](https://github.com/K-S-K/CCCS)
 
-These days, I started to relearn C++ and to learn Linux for the sake of preparation for my new job in Astronomisches Rechen-Institut, the branch of Heidelberg University. That's how this project was created.
+These days, I started relearning C++ and learning Linux to prepare for my new job at the Astronomisches Rechen-Institut, a branch of Heidelberg University. That's how this project was created.
 
-The purpose of this project is to adjust the approach of creating several projects in different Docker containers and let them communicate with each other via sockets. The project can be used as a template for creating more complex projects.
+The purpose of this project is to adjust the approach to creating multiple projects in separate Docker containers and to let them communicate with each other via sockets. The project can be used as a template for creating more complex projects.
 
 - IDE: VSCode.
 - Programming language: C++.
@@ -126,7 +126,7 @@ The purpose of this project is to adjust the approach of creating several projec
 
 ### [2023-2024. Prototype Board CAD](Articles/30_BBCAD/Article.md)
 
-The prototyping board project development software is a simple editor for prototype board wiring planning with effective storage of files in a version-management-friendly format. The project is written in C# for use in a web environment. It is written in C# for .NET 7. It works on both Windows and Linux. It contains a pipeline for the deployment to the AWS virtual machine.<br>
+The prototyping board project development software is a simple editor for planning prototype board wiring, with effective file storage in a version-management-friendly format. The project is written in C# for use in a web environment. It is written in C# for .NET 7. It works on both Windows and Linux. It contains a pipeline for deploying to an AWS virtual machine.<br>
 ![Resizing command as a text](Articles/30_BBCAD/Images/Fig_07_Unified_CLI.gif)
 
 #### [2023. LCD Screen driver for ESP Microcontroller](https://github.com/K-S-K/ESP32-02-OLed-SSD1366)
@@ -149,7 +149,7 @@ It is a small desktop application that I use to create XML files for submitting 
 
 ### [2012-2017. Reliability Analysis System](Articles/05_EWReliability/Article.md)
 
-It is a distributed system that collects software application diagnostics data, calculates its availability factor, draws diagrams, and monitors software health status. It was also applied as a tool for investigating accident evolution history.
+It is a distributed system that collects software application diagnostics data, calculates its availability factor, draws diagrams, and monitors software health status. It was also used as a tool for investigating the evolution of accident history.
 
 ### [2011-2019. Automated Trading System](Articles/04_TDATrading/Article.md)
 
@@ -161,11 +161,11 @@ It is a desktop application dedicated to sending and broadcasting SMS messages v
 
 ### [2001-2007. Electric power billing project](Articles/03_ESphere/Article.md)
 
-It is part of a large software and hardware project dedicated to collecting data from the power meters, storing billing data regarding power grid topology, calculating aggregate parameters, and creating billing reports.
+It is part of a large software and hardware project dedicated to collecting data from power meters, storing billing data regarding power grid topology, calculating aggregate parameters, and creating billing reports.
 
 ### [1999. Railway Black Box Data Viewer](Articles/01_Railway_BB/Article.md)
 
-Initially, it was an interesting project for the railway black box data file analysis. After the project ended, I rewrote it from BCB to MSVC to learn a better development environment and, for fun, as I found this project beautiful.
+Initially, it was an interesting project for analyzing railway black box data files. After the project ended, I rewrote it from BCB to MSVC to learn a better development environment and, for fun, as I found this project beautiful.
 
 ## Documents
 
