@@ -96,16 +96,22 @@ Throughout my life, I have worked on numerous projects across various areas. Som
 
 ## Project gallery
 
+### [2024-... The modeling of the Gaia telescope Attitude and Orbit Control System](Articles/36_GaiaSDT/Article.md)
+
+During my current job, I develop a physics-based software digital twin of Gaia telescope Attitude and Orbit Control System for testing and tuning spacecraft attitude control algorithms, originally prototyped in Python and Java by my colleagues.
+![How does looks now](Articles/36_GaiaSDT/Images/Fig_01_SDT-UI.png)
+
 ### [2025. The FreeRTOS-based timer working on RP2350](https://github.com/K-S-K/Pico-Timer-2)
 
 Through this project, I gained experience with FreeRTOS and embedded development. I've also had a lot of fun working on this project because I genuinely enjoy it.
 
 ![Timer User Interface](https://github.com/K-S-K/Pico-Timer-2/blob/main/Doc/Pico2-timer-menu.gif)
 
-### [2024-... The modeling of the Gaia telescope Attitude and Orbit Control System](Articles/36_GaiaSDT/Article.md)
+### [2024-2025. The Experiment with .NET and Raspberry PI](https://github.com/K-S-K/RPIDBClock)
 
-During my current job, I develop a physics-based software digital twin of Gaia telescope Attitude and Orbit Control System for testing and tuning spacecraft attitude control algorithms, originally prototyped in Python and Java by my colleagues.
-![How does looks now](Articles/36_GaiaSDT/Images/Fig_01_SDT-UI.png)
+Through this project, I touched the I2C devices from the .NET code, and found it easy and convenient. .Net provides all necessary basement in the "System.Device.Gpio" nuget library to build any communication API at GPIO level, and also to work with "I2cDevice" and just exchange data with devices with byte resolution. Also, I've made a desk clock which shows me current date and time and two closest commute trains I need, which was funny and attractive.
+
+![Raspberry Pi Clock](https://github.com/K-S-K/RPIDBClock/blob/main/Doc/Images/Fig_00_Common_View.jpg)
 
 ### [2024. Data exchange between Docker containerized applications](https://github.com/K-S-K/CCCS)
 
