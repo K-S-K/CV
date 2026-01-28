@@ -143,13 +143,15 @@ It is a weekend home project dedicated to experimenting, researching, and having
 
 The copy trading project for the Binance Cryptocurrency exchange.
 
-### [2021-2023. Pubmed article editor](Articles/06_PubMedDesktop/Article.md)
+### [2015-2023. Pubmed article editor](Articles/06_PubMedDesktop/Article.md)
 
 It is a small desktop application that I use to create XML files for submitting articles to the PubMed server.
 
 ### [2012-2017. Reliability Analysis System](Articles/05_EWReliability/Article.md)
 
 It is a distributed system that collects software application diagnostics data, calculates its availability factor, draws diagrams, and monitors software health status. It was also used as a tool for investigating the evolution of accident history.
+
+![The Reliability Intervals Diagram - Emergency Intervals](Articles/05_EWReliability/Images/Fig_05_RIDiag_Pillars.png)
 
 ### [2011-2019. Automated Trading System](Articles/04_TDATrading/Article.md)
 
@@ -159,9 +161,13 @@ It was a long R&D project dedicated to trading automation. We experimented with 
 
 It is a desktop application dedicated to sending and broadcasting SMS messages via an SMS user terminal connected to the computer. It may be my Best UI project.
 
+![The connection to the user terminal](Articles/02_SMSS/Images/Fig_01_Check_Modem.png)
+
 ### [2001-2007. Electric power billing project](Articles/03_ESphere/Article.md)
 
 It is part of a large software and hardware project dedicated to collecting data from power meters, storing billing data regarding power grid topology, calculating aggregate parameters, and creating billing reports.
+
+![The manual binding of the Power meter to the scheme](Articles/03_ESphere/Images/Dlg_Bind_Meter_Tree.png)
 
 ### [1999. Railway Black Box Data Viewer](Articles/01_Railway_BB/Article.md)
 
