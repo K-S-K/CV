@@ -128,7 +128,7 @@ The table is a full-date-based index of my projects.
 
 | Date           |[Employment Based Projects](./Articles/EmploymentBasedProjects.md)| [Experimental Projects](./Articles/ExperimentsAndEducation.md)|
 |----|----|----|
-|2026|    |[Interop Communication Example](https://github.com/K-S-K/Interop)|
+|2026|    |[ C#/C++ Interop Communication Example](https://github.com/K-S-K/Interop)|
 |2025|    |[Simple 3V3 LMR50410 DC-DC Converter](https://github.com/K-S-K/PWR-LMR50410-Simple)|
 |2024&#8209;2026 |[Gaia telescope Attitude and Orbit Control System Software Digital Twin](Articles/36_GaiaSDT/Article.md)|[The FreeRTOS-based timer working on RP2350](https://github.com/K-S-K/Pico-Timer-2)|
 |2024&#8209;2025|    |[The Experiment with .NET and Raspberry PI](https://github.com/K-S-K/RPIDBClock)|
