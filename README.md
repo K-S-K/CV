@@ -2,7 +2,7 @@
 
 ## Introduction
 
-I am a .NET software developer with 25 years of experience who still enjoys it.
+I am a .NET software developer with 25 years of experience, and I still enjoy it.
 Throughout my life, I have worked on numerous projects across various areas. Some of them were interesting. Some of them were exciting.
 
 **What I can and want to propose:**
@@ -62,7 +62,10 @@ Throughout my life, I have worked on numerous projects across various areas. Som
 - Creating the crypto-exchange software (initially, it was an exciting challenge, but it was also an interesting project);
 - Participation in the railway black box analysis project (a long time ago, my first real project, it was very exciting).
 
-**The content of my bookshelf:**
+
+<details>
+
+<summary>The content of my bookshelf:</summary>
 
 - Carmine Noviello // Mastering STM32. 2nd ed. 2022
 - Jim Yuill, Penn Linder // Hands-On RTOS with Microcontrollers. 2nd ed. 2025
@@ -71,7 +74,11 @@ Throughout my life, I have worked on numerous projects across various areas. Som
 - Andrew Lock. // ASP.NET Core in Action, Third Edition;
 - Naomi Ceder. // The Quick Python Book.
 
-**What did I study recently:**
+</details>
+
+<details>
+
+<summary>What did I study recently:</summary>
 
 - FreeRTOS in my home projects;
 - Bare-metal development in C and C++ in my home projects;
@@ -80,7 +87,11 @@ Throughout my life, I have worked on numerous projects across various areas. Som
 - Embedded C++ development - sometimes at home;
 - FPGA - just for curiosity now, by reading a book in German with Google Translate.
 
-**What did I study in the software development area:**
+</details>
+
+<details>
+
+<summary>What did I study in the software development area:</summary>
 
 - MongoDB on my little projects;
 - FreeRTOS on home weekend projects;
@@ -91,12 +102,18 @@ Throughout my life, I have worked on numerous projects across various areas. Som
 - Software development in C++ for Windows during my job on several big projects;
 - Programming in Assembler, C, and C++ during my education at the university.
 
-**What are my out-of-job interests:**
+</details>
+
+<details>
+
+<summary>What are my out-of-job interests:</summary>
 
 - Family;
 - Photography;
 - Traveling around;
 - Microcontrollers for home and industrial automation.
+
+</details>
 
 ## Project gallery
 
