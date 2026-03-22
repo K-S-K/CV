@@ -47,7 +47,7 @@ Throughout my life, I have worked on numerous projects across various areas. Som
 - Embedded development with FreeRTOS;
 - Embedded Linux and Yocto development;
 - KiCAD and Embedded hardware development;
-- Currently, I'm experimenting with STM32; previously, I experimented with Raspberry PI and Pico, PIC, and ESP32.
+- The STM32 development in Hardware and Software aspects.
 
 **What do I want to deal with:**
 
@@ -86,6 +86,7 @@ Throughout my life, I have worked on numerous projects across various areas. Som
 - Linux C++ development - sometimes at home and at work;
 - Embedded C++ development - sometimes at home;
 - FPGA - just for curiosity now, by reading a book in German with Google Translate.
+- Some experiments with Raspberry PI and Pico, PIC, and ESP32.
 
 </details>
 
