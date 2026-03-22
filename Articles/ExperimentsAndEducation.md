@@ -27,7 +27,7 @@ Through this project, I gained experience with FreeRTOS and embedded development
 
 Just a first CAD-based PCB design experience as a part of passing the Fedevel course.
 
-![DC-DC Converter PCB](./31_PowerSupplyPCB/FrontView.jpg)
+![Schematics of the Converter](./31_PowerSupplyPCB/Schematics.png)
 
 ## [2024-2025. The Experiment with .NET and Raspberry PI](https://github.com/K-S-K/RPIDBClock)
 
