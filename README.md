@@ -124,7 +124,7 @@ All projects listed in this repository are divided into two categories:
 - [Employment Based Projects](./Articles/EmploymentBasedProjects.md) - these are some of the projects that I worked on during my employment in different places.
 - [Experimental Projects](./Articles/ExperimentsAndEducation.md) - these are some of the projects I've created out of curiosity, or for experimental and educational purposes.
 
-The table is a full date - based index of my projects.
+The table is a full-date-based index of my projects.
 
 | Date           |[Employment Based Projects](./Articles/EmploymentBasedProjects.md)| [Experimental Projects](./Articles/ExperimentsAndEducation.md)|
 |----|----|----|
