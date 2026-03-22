@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="380" height="370" viewBox="0 0 380 370" font-family="'Segoe UI', sans-serif">
+
+  <!-- Soft background -->
+  <rect width="380" height="370" rx="14" fill="#f4f6fb"/>
+
+  <!-- Title -->
+  <text x="190" y="22" text-anchor="middle" font-size="11" font-weight="600" fill="#6b7a99" letter-spacing="1">P/Invoke Interop · Async Parallel Measurement</text>
+
+  <!-- ======== HEADER BOXES ======== -->
+
+  <!-- C# Client box -->
+  <rect x="16" y="38" width="164" height="304" rx="10" fill="#ddeeff" stroke="#7aaddd" stroke-width="1.5"/>
+  <rect x="16" y="34" width="164" height="28" rx="10" fill="#7aaddd"/>
+  <rect x="16" y="48" width="164" height="14" fill="#7aaddd"/>
+  <text x="100" y="53" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">C# Client Program</text>
+
+  <!-- C++ Library box -->
+  <rect x="218" y="34" width="144" height="308" rx="10" fill="#e8f5e9" stroke="#7ac47a" stroke-width="1.5"/>
+  <rect x="218" y="34" width="144" height="28" rx="10" fill="#7ac47a"/>
+  <rect x="218" y="48" width="144" height="14" fill="#7ac47a"/>
+  <text x="290" y="53" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">C++ Library (.dll)</text>
+
+  <!-- ======== LIFELINES ======== -->
+  <!-- C# client lifeline -->
+  <line x1="100" y1="62" x2="100" y2="330" stroke="#7aaddd" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <!-- MeasureOne lifeline -->
+  <line x1="251" y1="62" x2="251" y2="330" stroke="#7ac47a" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <!-- MeasureTwo lifeline -->
+  <line x1="329" y1="62" x2="329" y2="330" stroke="#7ac47a" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+  <!-- ======== ACTIVATION BARS ======== -->
+  <!-- C# client active throughout -->
+  <rect x="94" y="80" width="12" height="230" rx="3" fill="#7aaddd" opacity="0.5"/>
+  <!-- MeasureOne active from call to return (~3s) -->
+  <rect x="245" y="110" width="12" height="120" rx="3" fill="#7ac47a" opacity="0.5"/>
+  <!-- MeasureTwo active from call to return (~5s) -->
+  <rect x="323" y="130" width="12" height="160" rx="3" fill="#7ac47a" opacity="0.5"/>
+
+  <!-- ======== SEQUENCE MESSAGES ======== -->
+
+  <!-- Label: Measure One -->
+  <rect x="224" y="75" width="60" height="16" rx="4" fill="#d5e2d5" stroke="#5a8a5a" stroke-width="1"/>
+  <text x="253" y="85" text-anchor="middle" font-size="8" fill="#2a4a70" font-weight="600">MeasureOne</text>
+
+  <!-- Label: Measure Two -->
+  <rect x="296" y="75" width="60" height="16" rx="4" fill="#d5e2d5" stroke="#5a8a5a" stroke-width="1"/>
+  <text x="325" y="85" text-anchor="middle" font-size="8" fill="#2a4a70" font-weight="600">MeasureTwo</text>
+
+  <!-- 1. t1 = MeasureOneAsync() call -->
+  <line x1="106" y1="110" x2="245" y2="110" stroke="#e07b3a" stroke-width="1.8" stroke-dasharray="5,3"/>
+  <polygon points="240,106 250,110 240,114" fill="#e07b3a"/>
+  <text x="163" y="105" text-anchor="middle" font-size="7.5" fill="#e07b3a" font-weight="600">MeasureOneAsync() → t1</text>
+
+  <!-- 2. t2 = MeasureTwoAsync() call -->
+  <line x1="106" y1="130" x2="323" y2="130" stroke="#e07b3a" stroke-width="1.8" stroke-dasharray="5,3"/>
+  <polygon points="318,126 328,130 318,134" fill="#e07b3a"/>
+  <text x="163" y="125" text-anchor="middle" font-size="7.5" fill="#e07b3a" font-weight="600">MeasureTwoAsync() → t2</text>
+
+  <!-- Label: await Task.WhenAll -->
+  <rect x="22" y="148" width="150" height="16" rx="4" fill="#d0e8f8" stroke="#7aaddd" stroke-width="1"/>
+  <text x="98" y="160" text-anchor="middle" font-size="8" fill="#2a4a70" font-weight="600">await Task.WhenAll(t1, t2)</text>
+
+  <!-- Parallel work indicator -->
+  <rect x="230" y="148" width="120" height="96" rx="5" fill="none" stroke="#b0c8b0" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="290" y="161" text-anchor="middle" font-size="7.5" fill="#5a8a5a" font-style="italic">parallel execution</text>
+
+  <!-- MeasureOne timer label -->
+  <text x="263" y="185" font-size="7.5" fill="#3a7a3a">~3 sec</text>
+
+  <!-- MeasureTwo timer label -->
+  <text x="296" y="225" font-size="7.5" fill="#3a7a3a">~5 sec</text>
+
+  <!-- 3. MeasureOne returns (after ~3s) -->
+  <line x1="245" y1="230" x2="106" y2="230" stroke="#9b59b6" stroke-width="1.8" stroke-dasharray="5,3"/>
+  <polygon points="106,226 96,230 106,234" fill="#9b59b6"/>
+  <text x="163" y="224" text-anchor="middle" font-size="7.5" fill="#9b59b6" font-weight="600">MeasureResult (value, status)</text>
+
+  <!-- 4. MeasureTwo returns (after ~5s) -->
+  <line x1="323" y1="290" x2="106" y2="290" stroke="#9b59b6" stroke-width="1.8" stroke-dasharray="5,3"/>
+  <polygon points="106,286 96,290 106,294" fill="#9b59b6"/>
+  <text x="163" y="284" text-anchor="middle" font-size="7.5" fill="#9b59b6" font-weight="600">MeasureResult (value, status)</text>
+
+  <!-- 5. WhenAll complete, results[] ready -->
+  <rect x="22" y="303" width="150" height="16" rx="4" fill="#e8d8f8" stroke="#9b59b6" stroke-width="1"/>
+  <text x="98" y="315" text-anchor="middle" font-size="8" fill="#5a2a7a" font-weight="600">results[] ready → Console.WriteLine</text>
+
+  <!-- ======== FOOTER ======== -->
+  <text x="190" y="355" text-anchor="middle" font-size="9" fill="#aab0c0">P/Invoke · cdecl calling convention · Task.WhenAll parallelism</text>
+</svg>
