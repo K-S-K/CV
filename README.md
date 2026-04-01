@@ -84,6 +84,7 @@ Throughout my life, I have worked on numerous projects across various areas. Som
 - Bare-metal development in C and C++ in my home projects;
 - Some amazing Astronomy things as a domain of my current job;
 - Linux C++ development - sometimes at home and at work;
+- Linux C# development - sometimes at home and at work;
 - Embedded C++ development - sometimes at home;
 - FPGA - just for curiosity now, by reading a book in German with Google Translate.
 - Some experiments with Raspberry PI and Pico, PIC, and ESP32.
