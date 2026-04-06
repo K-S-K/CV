@@ -2,6 +2,14 @@
 
 These are some of the projects I've created out of curiosity or for experimental and educational purposes.
 
+## [2026. AI Assistant](./37_LocalAI/Article.md)
+
+At this project I'm experimenting on the possibilities of language models to be assistant in my daily activity.
+
+TI just started working on this project, and the description will grow here.
+
+![P/Invoke Interop Diagram](./37_LocalAI/Images/Fig_01_UI.png)
+
 ## [2026. Interop Communication Example](https://github.com/K-S-K/Interop)
 
 Sometimes, when I work on hardware-related projects, I see that some tasks are better implemented in C++ than in C#. The reasons are performance-, compatibility-, and culturally related. On the other hand, some functionality, such as web services or database communication, is more efficiently implemented in C#. And I got curious: how easy or difficult is it to integrate the benefits of both technologies into a single solution? And, is it possible to debug the control flow transparently through the border between them, as if it were one homogeneous piece of code?

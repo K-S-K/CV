@@ -62,11 +62,11 @@ Throughout my life, I have worked on numerous projects across various areas. Som
 - Creating the crypto-exchange software (initially, it was an exciting challenge, but it was also an interesting project);
 - Participation in the railway black box analysis project (a long time ago, my first real project, it was very exciting).
 
-
 <details>
 
 <summary>The content of my bookshelf:</summary>
 
+- Marius Bancila // Modern C++ Programming Cookbook. 3rd ed. 2024
 - Carmine Noviello // Mastering STM32. 2nd ed. 2022
 - Jim Yuill, Penn Linder // Hands-On RTOS with Microcontrollers. 2nd ed. 2025
 - Mark J. Price. // C# 14 and .NET 10 – Modern Cross-Platform Development Fundamentals
@@ -129,7 +129,8 @@ The table is a full-date-based index of my projects.
 
 | Date           |[Employment Based Projects](./Articles/EmploymentBasedProjects.md)| [Experimental Projects](./Articles/ExperimentsAndEducation.md)|
 |----|----|----|
-|2026|    |[ C#/C++ Interop Communication Example](https://github.com/K-S-K/Interop)|
+|2026|    |[Local AI Assistant](./Articles/37_LocalAI/Article.md)|
+|2026|    |[C#/C++ Interop Communication Example](https://github.com/K-S-K/Interop)|
 |2025|    |[Simple 3V3 LMR50410 DC-DC Converter](https://github.com/K-S-K/PWR-LMR50410-Simple)|
 |2024&#8209;2026 |[Gaia telescope Attitude and Orbit Control System Software Digital Twin](Articles/36_GaiaSDT/Article.md)|[The FreeRTOS-based timer working on RP2350](https://github.com/K-S-K/Pico-Timer-2)|
 |2024&#8209;2025|    |[The Experiment with .NET and Raspberry PI](https://github.com/K-S-K/RPIDBClock)|
