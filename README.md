@@ -12,7 +12,7 @@ Throughout my life, I have worked on numerous projects across various areas. Som
 - Dotnet development for Linux / Mac (command-line tools, Web Services, and Blazor);
 - Dotnet development for Windows (Windows Services, Web Services, WinForms, WPF);
 - T-SQL (Not hands-on, but have a lot in my past);
-- FreeRTOS (the subject I am currently learn at tiny hardware projects).
+- FreeRTOS (the subject I am currently learning at tiny hardware projects).
 
 **What I've experienced in (currently):**
 
@@ -127,7 +127,7 @@ All projects listed in this repository are divided into two categories:
 
 The table is a full-date-based index of my projects.
 
-| Date           |[Employment Based Projects](./Articles/EmploymentBasedProjects.md)| [Experimental Projects](./Articles/ExperimentsAndEducation.md)|
+| Date           |[Employment Based Projects](./Articles/EmploymentBasedProjects.md)| [Experimental and Educational Projects](./Articles/ExperimentsAndEducation.md)|
 |----|----|----|
 |2026|    |[Local AI Assistant](./Articles/37_LocalAI/Article.md)|
 |2026|    |[C#/C++ Interop Communication Example](https://github.com/K-S-K/Interop)|
