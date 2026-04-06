@@ -4,7 +4,7 @@ These are some of the projects I've created out of curiosity or for experimental
 
 ## [2026. AI Assistant](./37_LocalAI/Article.md)
 
-At this project I'm experimenting on the possibilities of language models to be assistant in my daily activity.
+In this project, I'm experimenting with the potential of language models to assist me in my daily activities.
 
 TI just started working on this project, and the description will grow here.
 
