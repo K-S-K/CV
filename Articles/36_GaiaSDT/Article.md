@@ -12,9 +12,13 @@
 
 The project itself is a physics-based software digital twin of the Gaia telescope Attitude and Orbit Control System. It is a scientific tool for testing and tuning spacecraft attitude control algorithms, originally prototyped in Python and Java by the scientists in the Astronomisches Rechen-Institut. Building on these foundational implementations, we're creating a fast, configurable, and production-ready framework tailored for the proving of algorithms for the next generation of the telescope.
 
-![The Computational Experiment](Images/Fig_01_SDT-UI.png)
+![The Computational Experiment](Images/Fig_01_SDT-UI-Q.png)
 
 **Fig. 1 The picture represents the Computational Experiment.** Approximately in the middle of the experiment, the micrometeorite hits the spacecraft. The model detects it and uses thrusters to return the spacecraft to the planned flight plan.
+
+![The Clank Detection](Images/Fig_02_SDT-UI-Clank-Along.png)
+
+**Fig. 1 The picture represents two sequential Clank detection during the Computational Experiment.** We can see propagations of the clank effects to the detectable velocity change.
 
 ## Technical project description
 
@@ -48,7 +52,7 @@ While working on the project, the following duties were performed:
 - - The Disturbances (micro meteoroids, clanks, and solar pressure) model.
 - - The Star Catalog to handle the Sky Map. It can receive direction and window size and provide a list of stars in the window with those coordinates.
 - - The Star Tracker Module, which simulates taking a photo of stars in the specified direction, recognizes constellation patterns, and returns the “measured” orientation with hardware-specific errors.
-- - The Focal Plane Module, which simulates star movement over the telescope CCDs, and performs angular velocity measurements with hardware-specific delays and deviations.
+- - The Focal Plane Module, which simulates star movement over the telescope CCDs, and performs angular velocity measurements with hardware-specific delays and deviations. We tried several different approaches, the finally accepted version was developed by my colleague, who joined to the project recently.
 - - The Kalman Filter implementation, for verifying the “measured” orientation and angular velocity.
 - - The Controller model, which compares verified attitude with nominal attitude and calculates, if necessary, a torque that is needed to correct the actual attitude.
 - - The Micro Propulsion System model, which accepts a required torque, and, knowing the geometry and power of thrusters, produces an “applied torque”, which is going to the Dynamic/Kinematic model at the next iteration of the computational experiment.

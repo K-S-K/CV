@@ -4,16 +4,23 @@
         "Astronomisches",
         "Astronomishes",
         "Blazor",
+        "dasharray",
         "Fedevel",
         "Fintech",
         "Institut",
         "Kalman",
         "Korf",
+        "linecap",
+        "linejoin",
         "Microcontroller",
         "Microcontrollers",
         "Ollama",
         "Rechen",
+        "rgba",
+        "Segoe",
         "Suspendable",
+        "tpiwb",
         "Yocto"
-    ]
+    ],
+    "svg.preview.background": "white"
 }

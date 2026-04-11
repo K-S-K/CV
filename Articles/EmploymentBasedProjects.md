@@ -5,7 +5,7 @@ These are some of the projects that I worked on during my employment in differen
 ## [2024-2026 The Software Digital Twin of Gaia telescope Attitude and Orbit Control System](./36_GaiaSDT/Article.md)
 
 During my work at the Astronomishes Rechen Institut of the Heidelberg University, I develop a physics-based Software Digital Twin of Gaia telescope Attitude and Orbit Control System. It is a tool for testing and tuning spacecraft attitude control algorithms, originally prototyped in Python and Java by my colleagues.
-![The Gaia AOCS SDT UI](./36_GaiaSDT/Images/Fig_01_SDT-UI.png)
+![The Gaia AOCS SDT UI](./36_GaiaSDT/Images/Fig_01_SDT-UI-Q.png)
 
 ## [2021. Binance Copy Trading](./27_CopyTrading/Article.md)
 
