@@ -8,7 +8,7 @@ In this project, I'm experimenting with the potential of language models to assi
 
 TI just started working on this project, and the description will grow here.
 
-![P/Invoke Interop Diagram](./37_LocalAI/Images/Fig_01_UI.png)
+![AI Assistant](./37_LocalAI/Images/Fig_02_UI_Translate.png)
 
 ## [2026. Interop Communication Example](https://github.com/K-S-K/Interop)
 
