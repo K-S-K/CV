@@ -16,9 +16,9 @@ WissensNest is a combination of "Wissen" (knowledge) with "Nest" (nest), suggest
 
 ### What Is WissensNest
 
-WissensNest is a **personal AI assistant that runs entirely locally** on a standard computer (a MacBook Pro M3 with 36 GB RAM). No cloud, no subscriptions, no registration, no SMS. No data leakage, no risk of disconnection from the tool, and data just because the service owner changed their plans. All conversation history is stored in a local SQLite database; models run through Ollama.
+WissensNest is a **personal AI assistant that runs entirely locally** on a standard computer (a MacBook Pro M3 with 36 GB RAM). No cloud, no subscriptions. No data leakage, no risk of disconnection from the tool, and no data loss just because the service owner changed their plans. All conversation history is stored in a local SQLite database; models run through Ollama.
 
-The interface is a web app accessible in any browser. Projects separate contexts: each project has its own system instruction (prompt) and its own conversation history.
+The interface is a web app accessible in any browser. I introduced the concept of Projects in the domain model. Projects separate contexts. Each project has its own set of system instructions (prompts) and its own conversation history.
 
 ### Use Cases
 
@@ -34,7 +34,7 @@ The entire breakdown is saved in the local database under the relevant grouping 
 
 ![The User Interface](Images/Fig_02_UI_Translate.png)
 
-**Fig. 1 The picture represents the UI of the chat with the German Book Reader prompt.** It accepts phrases in German and answers by explanation and translation immediately, without any additional commands. The prompt can be configured for any other language.
+**Fig. 1 The picture represents the UI of the chat with the German Book Reader prompt.** It accepts phrases in German and answers by explanation and translation immediately, without any additional commands, because the behavior of this particular project was described in the prompt, assigned to the project. The prompt can be configured for any other language.
 
 #### Use Case 2 — General-Purpose Local Knowledge Base
 
@@ -49,11 +49,11 @@ Example uses: personal project-related information, history and biology question
 
 ![The User Interface](Images/Fig_03_UI_Embedded.png)
 
-**Fig. 2 The assistant helps in the engineering job.** It uses data hidden in the trained model used in the project. This approach is less reliable than RAG, but RAG is a subject for future versions. For now, it is just a concept.
+**Fig. 2 The assistant helps in the engineering job.** It uses data hidden in the model trained by the LLM base provider. This approach is less reliable than RAG, but RAG is a subject for future versions. For now, it is just a concept.
 
 #### Use Case 3 — Assistant That Reaches Into the Real World
 
-A language model knows only what it was trained on. WissensNest goes further — it calls real external services automatically when a question requires live data.
+A language model knows only what it was trained on. WissensNest goes further — it automatically calls external services when a question requires live data.
 
 Ask *"What's the weather like in Munich right now?"* — the assistant:
 
