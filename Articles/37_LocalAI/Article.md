@@ -75,13 +75,13 @@ From an architecture perspective, adding a new tool requires only implementing t
 
 The project itself is a service that stands between Ollama and Blazor Web UI. This service should provide assistance in daily life, at work, and in learning. Currently, it is just a chat model, but in the future, it can be connected to sensors, actuators, and whatever.
 
-![The User Interface](Images/01_02_MyAI_Sequence_Diagram.svg)
+![The User Interface](Images/01_02_WissensNest_Sequence_Diagram.svg)
 
 **Fig. 2 The picture represents a sequence diagram of the first version of the Assistant.** It was the simplest chat that proved the viability of the idea. It prepares the chat request, then, sends it to the model, then, collects parts of the answer, and, finally, renders it at the UI.
 
 ## Technical project description
 
-![The Computational Experiment](Images/02_01_MyAI_Assembly_Dependencies.svg)
+![The Computational Experiment](Images/01_01_WissensNest_System_Architecture.svg)
 
 **Fig. 3 The current project structure.** I'm trying to keep architecture clean, self-explanatory, and easy to maintain.
 
