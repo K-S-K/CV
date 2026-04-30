@@ -71,6 +71,10 @@ From an architecture perspective, adding a new tool requires only implementing t
 
 **Fig. 3 External tools calling sequence.**
 
+#### Use Case 4 - Articles research on the specified subject
+
+![The User Interface](Images/Fig_05_UI_Buber.png)
+
 ## Common Project description
 
 The project itself is a service that stands between Ollama and Blazor Web UI. This service should provide assistance in daily life, at work, and in learning. Currently, it is just a chat model, but in the future, it can be connected to sensors, actuators, and whatever.
