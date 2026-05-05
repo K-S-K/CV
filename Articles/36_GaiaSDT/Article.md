@@ -1,69 +1,83 @@
-# Gaia telescope Software Digital Twin
+# Gaia Telescope Software Digital Twin
 
 [Back to the main page](../../README.md)
 
-**Development period:** 2024.05-2026.04
+**Development period:** 2024.05–2026.04
 
-**Practical application:** Testing the innovative approaches of the attitude control[^1].
+**Practical application:** Testing innovative attitude control approaches for the next-generation telescope[^1].
 
-**Project purpose:** Research on some physics algorithms
+## The Problem
 
-## Common Project description
+The scientists at the Astronomisches Rechen-Institut had spent years working with data downloaded from the Gaia telescope. From that experience, they had developed concrete ideas about how attitude control could be improved for a future spacecraft — better disturbance detection, more precise corrections, significant fuel economy over a multi-year mission. To test those ideas, they needed a complete simulation of the Attitude and Orbit Control System (AOCS).
 
-The project itself is a physics-based software digital twin of the Gaia telescope Attitude and Orbit Control System. It is a scientific tool for testing and tuning spacecraft attitude control algorithms, originally prototyped in Python and Java by the scientists in the Astronomisches Rechen-Institut. Building on these foundational implementations, we're creating a fast, configurable, and production-ready framework tailored for the proving of algorithms for the next generation of the telescope.
+What they had was a collection of partial implementations. Separate modules written in Python and Java by different people, for different research goals, developed by brilliant astronomers and mathematicians — not software engineers. They had attempted to connect these parts using Kafka. It didn't work properly, and it didn't promise to work with necessary performance. The modules had no compatibility in data exchange, units, or coordinate scales. The whole system had never run together. They could not see how it behaved as a complete system.
+
+They needed someone to bridge the gap between their scientific understanding and a working instrument — and that gap is what brought me to the project.
+
+## What I Had to Learn
+
+Before any architecture was possible, I had to understand the system the software was meant to simulate.
+
+I started with the signal and data flow between the AOCS components — what each device does, at what frequency, with what delay, and under what physical constraints. The central structural insight came early: there is a strict boundary between **physical reality** and **what the system can observe**. The spacecraft exists in physics. The control system can only act on what its sensors report. These two levels must be kept separate in the simulation, or the model produces results that could never happen in hardware.
+
+Working through this with my colleagues, I built an understanding of each component in the control loop:
+
+- **Scanning Law** — the nominal attitude plan that defines where the spacecraft should be pointing at every moment of the mission. Two implementations: *inertial movement*, a pure rotation based on the equations of motion (used for testing and calibration); and *orbital plan movement*, a rotation with a spiral offset designed to scan the entire planned sky area over time
+- **Inertial rotation** — the physics model of how the spacecraft actually moves under applied torques and disturbances
+- **Disturbances** — micrometeorite impacts, thermal deformation clanks, solar radiation pressure, fuel sloshing in tanks
+- **Star Catalog** — the sky map that supports sensor modeling; given a pointing direction and a field of view, it returns the list of stars visible from that direction, enabling the Star Tracker's lost-in-space constellation recognition
+- **Star Tracker** — photographs a patch of sky, uses the Star Catalog to recognize constellation patterns, returns an *approximation* of orientation with hardware-specific errors
+- **Focal Plane** — measures angular velocity at high precision from star movement across the CCD arrays, with hardware-specific delays
+- **Kalman Filter** — fuses Star Tracker and Focal Plane data, decides which measurements are trustworthy, produces a verified attitude estimate
+- **Controller** — compares verified attitude against the Scanning Law plan, calculates the torque correction needed
+- **Micro Propulsion System** — takes the required torque, applies hardware constraints (thruster geometry and power), and produces the *actually applied torque* that feeds back into the physics model
+
+The hardest conceptual challenge was twofold.
+
+First: **quaternion mathematics** — the algebra for rotating vectors between reference frames and for integrating angular motion over time. Once this clicked, everything about orientation representation became consistent.
+
+Second, and more fundamental: **the controller never knows what it actually did**. It calculates the torque it *should* produce. It fires the thrusters. And then it waits — watching whether the stars in its field of view shift the way they were expected to. There is no direct feedback. The system infers its own effect from a delayed, noisy physical response. Understanding this gap between commanded torque, applied torque, and observable effect — and keeping those three things correctly separated throughout the simulation — was the conceptual foundation for the entire architecture.
+
+I don't claim to understand all the mathematics at the depth my colleagues do. What I learned was enough to implement their algorithms correctly, connect the implementations into a coherent system, and build something they can actually use.
+
+## The Architecture
+
+The existing implementations couldn't be connected incrementally — the incompatibilities were too fundamental. They had to be rewritten.
+
+My proposal was a **hybrid architecture**: all modules run together as a monolith when performance matters, computational experiments completing quickly with minimal overhead; or selected modules wrap as microservices when resource constraints require it. The Star Catalog, for example, can consume more memory than a typical workstation can spare — it runs as a persistent separate service and stays warm between experiments to eliminate startup delay.
+
+I eliminated Kafka entirely. Minimal API endpoints are faster, carry no external dependencies, and do everything the project actually needs. A single bash script launches the appropriate topology for the experiment at hand. Scientists configure experiments, observe results, and export data through a browser UI.
 
 ![The Computational Experiment](Images/Fig_01_SDT-UI-Q.png)
 
-**Fig. 1 The picture represents the Computational Experiment.** Approximately in the middle of the experiment, the micrometeorite hits the spacecraft. The model detects it and uses thrusters to return the spacecraft to the planned flight plan.
+**Fig. 1** — A computational experiment in progress. Around the midpoint, a micrometeorite strikes the spacecraft. The model detects the disturbance and activates the thrusters to return to the planned attitude.
 
-![The Clank Detection](Images/Fig_02_SDT-UI-Clank-Along.png)
+![Clank Detection](Images/Fig_02_SDT-UI-Clank-Along.png)
 
-**Fig. 1 The picture represents two sequential Clank detection during the Computational Experiment.** We can see propagations of the clank effects to the detectable velocity change.
+**Fig. 2** — Two sequential clank detections. The propagation of each disturbance is visible as a detectable change in the measured angular velocity.
 
-## Technical project description
+## What It Enabled
 
-The project was organized as a cross-platform .NET Core development, including:
+Before this tool, the scientists had partial models that worked in isolation — slowly, and never as a complete system. Now they have a configurable, production-ready framework that simulates the full AOCS loop from disturbance through sensing, filtering, control, and propulsion, and produces results they can export and analyze.
 
-- Scientific applications with a lot of calculations;
-- Partially monolithic and partially distributed architecture;
-- Applications that can work on the developer machine, in the local Docker network, and also distributed between several machines in Docker as well, naturally.
-- Everything works on MacOS, Linux, and Windows.
+The tool continues in use. My contract has formally ended, but the collaboration has not — my colleagues continue to use the simulation to test ideas for the next telescope mission: improved Kalman filtering, better disturbance recognition, more precise attitude corrections that would reduce fuel consumption over a multi-year mission. The simulation is the instrument they use to evaluate those ideas in silico before anything flies.
 
-The whole project is organized into the following components, which can be used separately, and can be connected as an end-user tool:
+## Technical Details
 
-- The set of “Library” assemblies with common mathematical abstractions and infrastructure tools.
-- The set of “Modules” – assemblies with implementations of different spacecraft equipment parts.
-- The “Laboratory” – a special module that holds all the different modules together and provides communication between them.
-- UI Service, which allows users to configure experiments, see the progress, browse the results, and download experiment data in CSV form.
-- Rest API based service that holds the Laboratory module.
-- Optional separately executable service for Star Catalog, which, in some experiments, consumes more memory than normally can be allocated on the workstation.
+**Architecture:** Cross-platform .NET, deployable as a monolith or distributed across Docker containers — developer machine, local Docker network, or distributed hardware.
 
-## Project Roadmap
+**Components:**
+- Library assemblies — mathematical abstractions and infrastructure
+- Module assemblies — Scanning Law (two variants), inertial rotation, disturbances, Star Catalog, Star Tracker, Focal Plane, Kalman Filter, Controller, Micro Propulsion System
+- Laboratory — integrates modules and manages communication between them
+- REST API service — hosts the Laboratory
+- UI Service (Blazor) — experiment configuration, progress monitoring, results visualization, CSV export
+- Optional Star Catalog service — runs separately when memory requirements exceed workstation capacity
 
-While working on the project, the following duties were performed:
-
-- Translating various concepts and requirements into a format appropriate for software product development.
-- Organizing the development flow for bringing models and prototypes to a usable instrument.
-- Development of the modules from the ideas was originally prototyped in Python and Java by astronomers and mathematicians, and adjusted after primary implementations due to compatibility and performance requirements.
-- Designed the full architecture and implemented a physics-based software digital twin of the Gaia telescope Attitude and Orbit Control System. It is a tool for testing and tuning spacecraft attitude control algorithms - the fast, configurable, production-ready framework to prove algorithms for the next-generation telescope. The parts of the product are following:
-- - Different time systems models and conversions between them.
-- - The inertial rotating Dynamic/Kinematic model, which can be affected by torques.
-- - Two nominal attitude plans, one of them is based on the inertial rotation for testing and calibration purposes, another on the mission schedule for the computational experiments. Attitude contains orientation and angular velocity for every moment of mission time.
-- - The Disturbances (micro meteoroids, clanks, and solar pressure) model.
-- - The Star Catalog to handle the Sky Map. It can receive direction and window size and provide a list of stars in the window with those coordinates.
-- - The Star Tracker Module, which simulates taking a photo of stars in the specified direction, recognizes constellation patterns, and returns the “measured” orientation with hardware-specific errors.
-- - The Focal Plane Module, which simulates star movement over the telescope CCDs, and performs angular velocity measurements with hardware-specific delays and deviations. We tried several different approaches, the finally accepted version was developed by my colleague, who joined to the project recently.
-- - The Kalman Filter implementation, for verifying the “measured” orientation and angular velocity.
-- - The Controller model, which compares verified attitude with nominal attitude and calculates, if necessary, a torque that is needed to correct the actual attitude.
-- - The Micro Propulsion System model, which accepts a required torque, and, knowing the geometry and power of thrusters, produces an “applied torque”, which is going to the Dynamic/Kinematic model at the next iteration of the computational experiment.
-- - The User Interface for configuring and executing the computational experiments, observing results in graphical and tabular form, and exporting experimental data for further analysis.
-
-## Common project details
-
-**Implementation technologies:** .Net 10, C#, Blazor.
+**Implementation technologies:** .NET 10, C#, Blazor.
 
 **Developer tools:** Microsoft Visual Studio Code.
 
-**Current status:** The development is in progress.
+**Current status:** Development in progress.
 
-[^1]: It is research in my main job at the Astronomisches Rechen-Institut, a branch of Heidelberg University.
+[^1]: Research at the Astronomisches Rechen-Institut, Heidelberg University.
