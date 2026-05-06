@@ -12,7 +12,9 @@
 
 **Developer tools:** Microsoft Developer Studio v.6 for C++
 
-![The trip graph navigation](TripExplore.gif)<br>
+The black box recorded 46 parameters at two readings per second: speed, braking signals from multiple subsystems, pneumatic pressures, track signals, and the driver's electrical skin impedance — measured via a special wristband to detect fatigue or stress. Working with this data revealed how the railway signaling system actually works: the rails carry a low-frequency current, and the first wheel axle to enter a track segment short-circuits it, marking it occupied — no radio, no electronics, just physics and cascading signal lights across fragments 2–5 km long. The system also monitors brake tests before downhill sections and compares actual deceleration against the expected curve for the train's weight, a safety check is mandatory. It was a huge collision in the past, when a driver skipped the procedure.
+
+![The trip graph navigation](TripExplore.gif)  
 Figure 1. Trip log navigation.
 
 [^1]: The initial project was in use, but I don't have its images to show.

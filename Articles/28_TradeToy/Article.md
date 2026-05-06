@@ -9,10 +9,7 @@
 **Project purpose:** Research on some trading algorithms
 
 **Project description:**
-The program can connect to the exchange, listen to trade signals, analyze price trends, and emulate buy and sell operations.
-Also, it can download the real-time trading history and collect it in the SQL database.
-Also, it can emulate the exchange for itself to play trading sessions on historical data.
-It allows users to choose whether to connect to the Binance exchange or the built-in emulator.
+The program connects to the exchange, listens to trade signals, analyzes price trends, and emulates buy and sell operations. It downloads real-time trading history into a SQL database and can replay it through a built-in exchange emulator — so algorithms can be tested on historical data without real capital at risk. The user switches between the live exchange and the emulator with a single setting.
 
 **Implementation technologies:** .NET 5, WPF, Binance.Net library by JKorf, T-SQL, and some domain knowledge.
 
