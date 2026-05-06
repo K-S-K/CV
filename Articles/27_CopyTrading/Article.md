@@ -18,12 +18,12 @@ Technically, it is a Windows Service that contains a listener module and a set o
 
 - Each of the Trader modules connects to the Exchange with the particular Follower account and subscribes to the Listener's signals and adds them to its own incoming signal queue. When it precedes the signal, it makes the same trading position as the Originator trader makes, but adjusts the size of the position according to the Follower's asset amount.
 
-This is the whole idea. The service owner has some fees from the Follower traders as a percentage of their effort.
+This is the whole idea. The service owner charges clients a monthly subscription plus a percentage of their earnings.
 
 **My part in this project.** I was involved from the very beginning of the project. So I've done the following:
 
 - Collecting the primary requirements from the Customer.
-- RND - Check the viability of the idea (secondary connecting to the exchange by tool with the Originator trader account, listening to the echo of trading orders and order update signals, creating the same orders for the Follower's account).
+- RND - Check the viability of the idea (secondary connecting to the exchange by tool with the Originator trader account, listening to the echo of trading orders and order update signals, creating the same orders for the Follower's account). API documentation is not a contract — before committing to a client relationship, I needed a working prototype as proof that the exchange's infrastructure actually behaves as described under real conditions.
 - Proposing the MVP architecture specification, discuss its stages with the Customer.
 - Creating the MVP, deploying to the tenant server, and transferring it to the Customer.
 - Customer support, collect Customer experience and wishes for the first version.

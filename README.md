@@ -1,131 +1,83 @@
 # About me
 
-## Introduction
+## How I work
 
-I am a .NET software developer with 25 years of experience, and I still enjoy it.
-Throughout my life, I have worked on numerous projects across various areas. Some of them were interesting. Some of them were exciting.
+I am a software developer with 25 years of experience. The consistent pattern across those years: before any architecture was possible, there was a domain to understand.
 
-**What I can and want to propose:**
+Track circuits and axle physics before railway black box analysis. Transformer calibration factors and bypass switch topology before electric energy billing. Reliability theory from economics and industrial literature before building a methodology that the software industry didn't yet have. Wave behavior models before automated trading research. Quaternion mathematics, Kalman filtering, and the geometry of attitude control before spacecraft simulation.
 
-- C# (14);
-- .NET (10);
-- Dotnet development for Linux / Mac (command-line tools, Web Services, and Blazor);
-- Dotnet development for Windows (Windows Services, Web Services, WinForms, WPF);
-- T-SQL (Not hands-on, but have a lot in my past);
-- FreeRTOS (the subject I am currently learning at tiny hardware projects).
+The software was never the first thing. Understanding the physical or operational reality was. Once a domain becomes clear enough - once the structure of the problem reveals itself - the architecture tends to follow naturally. What I build is the artifact of that understanding.
 
-**What I've experienced in (currently):**
+---
 
-- .NET development for Linux-based platforms, including:
-- - Scientific applications with a lot of calculations;
-- - Software Digital Twins of any kind of equipment;
-- - Microservice architecture;
-- - Monolith and distributed architecture with HTTP communications;
-- - Applications that can work on the developer machine, also in the local Docker network, and also on a distributed hardware architecture;
-- - Applications for lightweight hardware platforms to communicate with equipment (Raspberry PI, I2C devices communications)
-- FreeRTOS development for Raspberry Pi Pico platforms:
-- - Development of the hardware level abstractions (I2C-connected DIsplay, Rotary Encoder);
-- - Development of UI abstractions (Main screen, Menus, Configuration screen pages);
+## The work, chronologically
 
-**What I've experienced in (memorable past):**
+**Railway black box analysis (1998-1999)** — My first real project: locomotive black box data, 46 parameters at 2 Hz. It taught me how track circuits actually work — a low-frequency current in the rails, the first wheel axle to enter a segment short-circuits it, and signal lights change across track fragments 2–5 km long. No radio, no electronics. Physics, cascading through infrastructure. The system also monitored brake tests before downhill sections — a mandatory safety check, and also evaluating brake efficiency to detect the equipment degradation at the early stages.
 
-- Windows Desktop Development, including:
-- - WinForms - a lot of;
-- - WPF - some as MVC and direct;
-- - MFC - many years ago, not actual, but it was interesting;
-- Database development (MS SQL), including:
-- - DB Architecture development;
-- - DDL, DML including SP, UDF, Triggers, etc.;
-- - ORMless communications between application and DB due to performance and more exact dealing with DBMS;
-- Network, Web, and Distributed software development, including distributed on MS cluster monitoring system;
-- .NET Web Applications - several projects.
+**Electric energy billing (2003–2007)** — My university degree is in Electric Energy System Automated Control. That was the prerequisite, not an addition. The predecessor system stored raw instrument readings and called them data. Real billing requires transformer calibration factors, bypass switch commutation histories, and transformer replacement records. The replacement history is not metadata — it is the calculation. I built the tree-structured grid model that encoded the physical reality, and deployed it to 26,000 metering points at the first customer.
 
-**What do I want to practice in:**
+**Cell operator reliability measurement (2012–2017)** — A billing system had a legal availability threshold: ≥ 0.99995. No methodology existed in the software industry to measure this. I went into reliability theory from industrial and economic literature, defined a model for software working and non-working intervals, and built the measurement system from first principles. Along the way we discovered that .NET's garbage collector could freeze a service long enough to look like downtime — I added a new interval type to distinguish it. The "Pillars" visualization I built revealed simultaneous overloads across all system components on a common time axis. The Pillars identified a fixable hardware bottleneck and an unfixable traffic wave from the cell commutator. Knowing which was which changed how the team responded to each.
 
-- Microcontroller programming in C and C++;
-- Bare-metal development in C and C++;
-- Embedded development with FreeRTOS;
-- Embedded Linux and Yocto development;
-- KiCAD and Embedded hardware development;
-- The STM32 development in Hardware and Software aspects.
+**Automated trading (2017–2022)** — A five-year research collaboration with a trading domain expert. The first deliverable was not code — it was a shared vocabulary for describing market behavior in terms that could become software. The architecture evolved through consequences: multi-frequency trading forced a balance control module; an undebuggable live session forced full replay logging. On most trading days, the system produced 2–3% capital growth. In the final year, three complete wallet wipes. That combination is a finding. It says something specific about what the wave model captures and what it doesn't see — regime changes the model wasn't built to detect.
 
-**What do I want to deal with:**
+**Gaia telescope AOCS digital twin (2024–2026)** — A simulation of the Gaia telescope's Attitude and Orbit Control System, built for research at the Astronomisches Rechen-Institut, Heidelberg University. Scientists had developed ideas for improving attitude control for the next telescope generation; they needed a complete simulation to test them. The existing implementations — separate Python and Java modules, built by different people for different research goals — had never run together and couldn't be connected incrementally. I learned the full control loop: scanning law, inertial rotation, disturbance modeling, star tracker, Kalman filtering, micro propulsion. The hardest conceptual challenge was understanding that the controller never knows what it actually did — it fires the thrusters and then watches whether the stars shift the way they were expected to. Keeping commanded torque, applied torque, and observable effect correctly separated was the conceptual foundation for the entire architecture. The simulation continues in use for next-generation telescope research.
 
-- Ideally - real-life applications regarding natural things - science, nature, industry, etc.
+---
 
-**The domains that I've experienced in:**
+## What I want to work on
 
-- Creating the software for modeling the spacecraft attitude control;
-- Creating the electric energy billing software (electricity is my professional domain);
-- Creating the software for monitoring the quality of other software working (for the cell operator billing software);
-- Creating the exchange automatic trading software (several years of participation in this kind of project);
-- Creating the crypto-exchange software (initially, it was an exciting challenge, but it was also an interesting project);
-- Participation in the railway black box analysis project (a long time ago, my first real project, it was very exciting).
+Real problems where the domain is what matters. Systems where correct answers depend on understanding the physics, the engineering, or the mathematics — not just reading requirement documents. Science, instrumentation, embedded systems, critical infrastructure.
+
+I am currently learning FreeRTOS, bare-metal C and C++, and embedded Linux — not to collect credentials, but to add hardware-level understanding to the software thinking I already have. And, certainly, because of curiosity and fun.
+
+---
+
+## Technology
+
+**Primary:** C# 14, .NET 10, cross-platform development for Linux and Windows
+
+**Currently working with:** FreeRTOS on RP2350, embedded C/C++, I2C devices, bare-metal development
+
+**Databases:** T-SQL / SQL Server (extensive past practice), MongoDB, SQLite
+
+**Architecture:** Microservices, monolith, distributed systems, Docker, Minimal API, Blazor, Windows Services, WPF, WinForms
+
+**Learning:** STM32, KiCAD, Embedded Linux / Yocto, FPGA
 
 <details>
 
-<summary>The content of my bookshelf:</summary>
+<summary>Bookshelf:</summary>
 
 - Marius Bancila // Modern C++ Programming Cookbook. 3rd ed. 2024
 - Carmine Noviello // Mastering STM32. 2nd ed. 2022
 - Jim Yuill, Penn Linder // Hands-On RTOS with Microcontrollers. 2nd ed. 2025
-- Mark J. Price. // C# 14 and .NET 10 – Modern Cross-Platform Development Fundamentals
-- Jörg Rippel. // FPGAs. Einsteig, Schaltungen,  Projekte;
-- Andrew Lock. // ASP.NET Core in Action, Third Edition;
-- Naomi Ceder. // The Quick Python Book.
+- Mark J. Price // C# 14 and .NET 10 – Modern Cross-Platform Development Fundamentals
+- Jörg Rippel // FPGAs. Einsteig, Schaltungen, Projekte
+- Andrew Lock // ASP.NET Core in Action, Third Edition
+- Naomi Ceder // The Quick Python Book
 
 </details>
 
 <details>
 
-<summary>What did I study recently:</summary>
+<summary>Out-of-job interests:</summary>
 
-- FreeRTOS in my home projects;
-- Bare-metal development in C and C++ in my home projects;
-- Some amazing Astronomy things as a domain of my current job;
-- Linux C++ development - sometimes at home and at work;
-- Linux C# development - sometimes at home and at work;
-- Embedded C++ development - sometimes at home;
-- FPGA - just for curiosity now, by reading a book in German with Google Translate.
-- Some experiments with Raspberry PI and Pico, PIC, and ESP32.
+- Family
+- Photography
+- Traveling
+- Microcontrollers for home and industrial automation
 
 </details>
 
-<details>
-
-<summary>What did I study in the software development area:</summary>
-
-- MongoDB on my little projects;
-- FreeRTOS on home weekend projects;
-- Amazon AWS on home weekend projects;
-- MS Azure on Microsoft and the LinkedIn platforms;
-- T-SQL in my professional practice in different projects;
-- Software development in C# for many years in practical projects;
-- Software development in C++ for Windows during my job on several big projects;
-- Programming in Assembler, C, and C++ during my education at the university.
-
-</details>
-
-<details>
-
-<summary>What are my out-of-job interests:</summary>
-
-- Family;
-- Photography;
-- Traveling around;
-- Microcontrollers for home and industrial automation.
-
-</details>
+---
 
 ## Project gallery
 
-The following articles above contain a brief view of the projects with links to the detailed description.
+The following articles contain a brief view of the projects with links to detailed descriptions.
 All projects listed in this repository are divided into two categories:
 
-- [Employment Based Projects](./Articles/EmploymentBasedProjects.md) - these are some of the projects that I worked on during my employment in different places.
-- [Experimental Projects](./Articles/ExperimentsAndEducation.md) - these are some of the projects I've created out of curiosity, or for experimental and educational purposes.
-
-The table is a full-date-based index of my projects.
+- [Employment Based Projects](./Articles/EmploymentBasedProjects.md) - projects I worked on during employment.
+- [Experimental Projects](./Articles/ExperimentsAndEducation.md) - projects created out of curiosity, or for experimental and educational purposes.
 
 | Date           |[Employment Based Projects](./Articles/EmploymentBasedProjects.md)| [Experimental and Educational Projects](./Articles/ExperimentsAndEducation.md)|
 |----|----|----|

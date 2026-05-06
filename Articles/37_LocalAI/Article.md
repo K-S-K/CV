@@ -14,6 +14,20 @@
 
 WissensNest is a combination of "Wissen" (knowledge) with "Nest" (nest), suggesting a cozy, home-like repository of knowledge.
 
+### Why Build Rather Than Subscribe
+
+Several drives converged to make this project inevitable rather than optional.
+
+The first was demystification. I wanted to understand what language models actually are — not the marketing description, but the mechanics. The only reliable way to understand a technology is to build with it.
+
+The second was curiosity about the practical ceiling. Can a language model help me learn German? (Yes.) Can it filter and generalize internet search results better than a keyword engine? (Yes, impressively so.) Can it automate tasks at a higher level of abstraction than conventional code? I needed to find out by doing.
+
+The third was ownership. I respect OpenAI as a business, but I have watched companies close projects that people depended on. Any business can change its pricing, restrict access, or simply stop. I cannot own everything. But I can own some things. A system running on my own hardware is one of them.
+
+The fourth was reproducibility. For anything research-adjacent, I need to control the full prompt stack — global instructions, project-level context, conversation history. A cloud tool gives you a chat window. Building your own gives you an experiment you can reproduce exactly.
+
+The fifth was configurability: combining custom prompts, integrating external tools, and eventually connecting to domain-specific vector databases. That depth requires access to the full architecture.
+
 ### What Is WissensNest
 
 WissensNest is a **personal AI assistant that runs entirely locally** on a standard computer (a MacBook Pro M3 with 36 GB RAM). No cloud, no subscriptions. No data leakage, no risk of disconnection from the tool, and no data loss just because the service owner changed their plans. All conversation history is stored in a local SQLite database; models run through Ollama.
@@ -78,6 +92,16 @@ From an architecture perspective, adding a new tool requires only implementing t
 ## Common Project description
 
 The project itself is a service that stands between Ollama and Blazor Web UI. This service should provide assistance in daily life, at work, and in learning. Currently, it is just a chat model, but in the future, it can be connected to sensors, actuators, and whatever.
+
+### What Building It Revealed
+
+The most surprising discovery was not technical — it was conceptual.
+
+I had expected a sophisticated text predictor. What I encountered was something that jokes. Not cleverly, but genuinely — during a debugging session, it noticed I was asking the same question twice and mentioned it with mild humor, then accepted "I am debugging the UI" as a perfectly reasonable answer and moved on cooperatively. A lookup table does not do that.
+
+This led me to a framing I find more useful than "it is just statistics." I am familiar with Daniel Kahneman's work on two modes of cognition, but I prefer my own terms: a *Chemical computer* — fast, associative, pattern-driven, the kind of thinking that fires under stress or fatigue — and a *Logical computer* — deliberate, intentional, structured. An LLM is a Chemical computer. My framework around it — the project system, the prompt architecture, the tool integration — is the Logical computer. The two together may be more capable and more interesting than either alone.
+
+That is still a hypothesis. Testing it is part of why the project continues.
 
 ![The User Interface](Images/01_02_WissensNest_Sequence_Diagram.svg)
 

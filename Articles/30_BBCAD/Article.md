@@ -14,6 +14,8 @@
 
 **Current status:** The idea is tested, and looks interesting to me, but is not a priority now. So it is currently on pause.
 
+The immediate trigger was a small hardware project — a timer with buttons, a buzzer, and a 4×7-segment LED display wired on a prototype board. Planning the wiring on paper worked once, but not when the design evolved across sessions. Storing the board model as XML was a deliberate design choice from the start: text-based formats produce readable git diffs, which matters when you return to a project after months and need to understand what changed and why.
+
 ## How it works
 
 ### The Model
@@ -57,25 +59,28 @@
 
 ## The most significant updates
 
-#### 2023.12.10. All commands are in the common textual UI now<br>
+### 2023.12.10. All commands are in the common textual UI now
+
 ![Resizing command as a text](Images/Fig_07_Unified_CLI.gif)
 
-#### 2023.12.07. Connecting UI with API by commands<br>
+### 2023.12.07. Connecting UI with API by commands
+
 ![Resizing command is connected](Images/Fig_05_Resize_Wizard.gif)
 
-#### 2023.11.20. An exciting way to life<br>
+### 2023.11.20. An exciting way to life
+
 ![Article Preview](Images/Fig_04_Board.png)
 
-#### 2023.10.20. It is important to feel the breath of the product<br>
+### 2023.10.20. It is important to feel the breath of the product
+
 ![Article Preview](Images/Fig_02_Demo_Board.png)
 
+### 2023.10.15. The Swagger is a helpful tool for testing and debugging (but not the only tool, certainly)
 
-#### 2023.10.15. The Swagger is a helpful tool for testing and debugging (but not the only tool, certainly)<br>
 ![Article Preview](Images/Fig_03_OpenAPI.png)
 
+### 2023.07.20. The first steps of the concept development
 
-#### 2023.07.20. The first steps of the concept development<br>
 ![Work in progress](Images/Fig_01_Development.png)
-
 
 [^1]: The idea came when I worked on my hardware project.
