@@ -1,4 +1,4 @@
-<svg width="100%" viewBox="0 0 790 640" xmlns="http://www.w3.org/2000/svg">
+<svg width="100%" viewBox="0 0 790 700" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
       <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -6,127 +6,155 @@
   </defs>
 
   <!-- Service boundary -->
-  <rect x="140" y="30" width="490" height="430" rx="16" fill="none" stroke="rgba(31,30,29,0.3)" stroke-width="1" stroke-dasharray="6 4"/>
-  <text x="385" y="25" text-anchor="middle" fill="rgb(61,61,58)" font-family="-apple-system,system-ui,sans-serif" font-size="12">(WissensNest Project)</text>
-
+  <rect x="20" y="30" width="510" height="490" rx="16" fill="none" stroke="rgba(31,30,29,0.3)" stroke-width="1" stroke-dasharray="6 4"/>
+  <text x="265" y="25" text-anchor="middle" fill="rgb(61,61,58)" font-family="-apple-system,system-ui,sans-serif" font-size="12">(WissensNest Project)</text>
 
   <!-- External dependencies -->
-  <rect x="140" y="490" width="490" height="85" rx="16" fill="none" stroke="rgba(31,30,29,0.3)" stroke-width="1" stroke-dasharray="6 4"/>
-  <text x="385" y="485" text-anchor="middle" fill="rgb(61,61,58)" font-family="-apple-system,system-ui,sans-serif" font-size="12">(External Dependencies)</text>
+  <rect x="20" y="550" width="620" height="90" rx="16" fill="none" stroke="rgba(31,30,29,0.3)" stroke-width="1" stroke-dasharray="6 4"/>
+  <text x="200" y="545" text-anchor="middle" fill="rgb(61,61,58)" font-family="-apple-system,system-ui,sans-serif" font-size="12">(External / Hardware)</text>
 
   <!-- UI -->
-  <rect x="255" y="50" width="200" height="56" rx="8" fill="rgb(238,237,254)" stroke="rgb(83,74,183)" stroke-width="0.5"/>
-  <text x="355" y="74" text-anchor="middle" dominant-baseline="central" fill="rgb(60,52,137)" font-family="-apple-system,system-ui,sans-serif" font-size="14" font-weight="500">WissensNest.UI</text>
-  <text x="355" y="92" text-anchor="middle" dominant-baseline="central" fill="rgb(83,74,183)" font-family="-apple-system,system-ui,sans-serif" font-size="12">Blazor Server</text>
+  <rect x="135" y="50" width="200" height="56" rx="8" fill="rgb(238,237,254)" stroke="rgb(83,74,183)" stroke-width="0.5"/>
+  <text x="235" y="74" text-anchor="middle" dominant-baseline="central" fill="rgb(60,52,137)" font-family="-apple-system,system-ui,sans-serif" font-size="14" font-weight="500">WissensNest.UI</text>
+  <text x="235" y="92" text-anchor="middle" dominant-baseline="central" fill="rgb(83,74,183)" font-family="-apple-system,system-ui,sans-serif" font-size="12">Blazor Server</text>
 
   <!-- UI → API -->
-  <line x1="355" y1="106" x2="355" y2="148" stroke="rgb(115,114,108)" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
-  <text x="367" y="132" fill="rgb(61,61,58)" font-family="-apple-system,system-ui,sans-serif" font-size="12">HTTP / SSE</text>
+  <line x1="235" y1="106" x2="235" y2="148" stroke="rgb(115,114,108)" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <text x="247" y="132" fill="rgb(61,61,58)" font-family="-apple-system,system-ui,sans-serif" font-size="12">HTTP / SSE</text>
 
   <!-- API -->
-  <rect x="255" y="148" width="200" height="56" rx="8" fill="rgb(238,237,254)" stroke="rgb(83,74,183)" stroke-width="0.5"/>
-  <text x="355" y="172" text-anchor="middle" dominant-baseline="central" fill="rgb(60,52,137)" font-family="-apple-system,system-ui,sans-serif" font-size="14" font-weight="500">WissensNest.API</text>
-  <text x="355" y="190" text-anchor="middle" dominant-baseline="central" fill="rgb(83,74,183)" font-family="-apple-system,system-ui,sans-serif" font-size="12">Minimal API + streaming</text>
+  <rect x="135" y="148" width="200" height="56" rx="8" fill="rgb(238,237,254)" stroke="rgb(83,74,183)" stroke-width="0.5"/>
+  <text x="235" y="172" text-anchor="middle" dominant-baseline="central" fill="rgb(60,52,137)" font-family="-apple-system,system-ui,sans-serif" font-size="14" font-weight="500">WissensNest.API</text>
+  <text x="235" y="190" text-anchor="middle" dominant-baseline="central" fill="rgb(83,74,183)" font-family="-apple-system,system-ui,sans-serif" font-size="12">Minimal API + streaming</text>
 
   <!-- API → Core -->
-  <line x1="300" y1="204" x2="300" y2="256" stroke="rgb(115,114,108)" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <line x1="200" y1="204" x2="200" y2="256" stroke="rgb(115,114,108)" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
 
-  <!-- API → Tools group (elbow right) -->
-  <line x1="440" y1="205" x2="440" y2="238" stroke="rgb(115,114,108)" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <!-- API → Tools group -->
+  <line x1="320" y1="205" x2="320" y2="238" stroke="rgb(115,114,108)" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- API → Persistence -->
+  <line x1="270" y1="205" x2="270" y2="400" stroke="rgb(115,114,108)" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
 
   <!-- Core -->
-  <rect x="168" y="256" width="182" height="56" rx="8" fill="rgb(225,245,238)" stroke="rgb(15,110,86)" stroke-width="0.5"/>
-  <text x="259" y="280" text-anchor="middle" dominant-baseline="central" fill="rgb(8,80,65)" font-family="-apple-system,system-ui,sans-serif" font-size="14" font-weight="500">WissensNest.Core</text>
-  <text x="259" y="298" text-anchor="middle" dominant-baseline="central" fill="rgb(15,110,86)" font-family="-apple-system,system-ui,sans-serif" font-size="12">ChatService</text>
+  <rect x="60" y="256" width="182" height="56" rx="8" fill="rgb(225,245,238)" stroke="rgb(15,110,86)" stroke-width="0.5"/>
+  <text x="151" y="280" text-anchor="middle" dominant-baseline="central" fill="rgb(8,80,65)" font-family="-apple-system,system-ui,sans-serif" font-size="14" font-weight="500">WissensNest.Core</text>
+  <text x="151" y="298" text-anchor="middle" dominant-baseline="central" fill="rgb(15,110,86)" font-family="-apple-system,system-ui,sans-serif" font-size="12">ChatService</text>
 
-  <!-- Tools group container -->
-  <rect x="424" y="238" width="196" height="110" rx="8" fill="rgb(248,240,255)" stroke="rgb(110,50,180)" stroke-width="0.8" stroke-dasharray="4 3"/>
-  <text x="522" y="254" text-anchor="middle" fill="rgb(80,30,140)" font-family="-apple-system,system-ui,sans-serif" font-size="11" font-weight="500">Tools  (ITool)</text>
+  <!-- Tools group container (3×2 grid) -->
+  <rect x="304" y="238" width="215" height="150" rx="8" fill="rgb(248,240,255)" stroke="rgb(110,50,180)" stroke-width="0.8" stroke-dasharray="4 3"/>
+  <text x="402" y="254" text-anchor="middle" fill="rgb(80,30,140)" font-family="-apple-system,system-ui,sans-serif" font-size="11" font-weight="500">Tools  (ITool)</text>
 
-  <!-- GetCurrentTimeTool -->
-  <rect x="432" y="265" width="86" height="35" rx="4" fill="rgb(242,232,252)" stroke="rgb(110,50,180)" stroke-width="0.5"/>
-  <text x="475" y="277" text-anchor="middle" dominant-baseline="central" fill="rgb(80,30,140)" font-family="-apple-system,system-ui,sans-serif" font-size="9.5">GetCurrentTime</text>
-  <text x="475" y="289" text-anchor="middle" dominant-baseline="central" fill="rgb(110,50,180)" font-family="-apple-system,system-ui,sans-serif" font-size="9">Tool</text>
+  <!-- Row 1: GetCurrentTime, GetWeather -->
+  <rect x="312" y="262" width="86" height="35" rx="4" fill="rgb(242,232,252)" stroke="rgb(110,50,180)" stroke-width="0.5"/>
+  <text x="355" y="275" text-anchor="middle" dominant-baseline="central" fill="rgb(80,30,140)" font-family="-apple-system,system-ui,sans-serif" font-size="9.5">GetCurrentTime</text>
+  <text x="355" y="288" text-anchor="middle" dominant-baseline="central" fill="rgb(110,50,180)" font-family="-apple-system,system-ui,sans-serif" font-size="9">Tool</text>
 
-  <!-- GetWeatherTool -->
-  <rect x="526" y="265" width="86" height="35" rx="4" fill="rgb(242,232,252)" stroke="rgb(110,50,180)" stroke-width="0.5"/>
-  <text x="569" y="277" text-anchor="middle" dominant-baseline="central" fill="rgb(80,30,140)" font-family="-apple-system,system-ui,sans-serif" font-size="9.5">GetWeather</text>
-  <text x="569" y="289" text-anchor="middle" dominant-baseline="central" fill="rgb(110,50,180)" font-family="-apple-system,system-ui,sans-serif" font-size="9">Tool</text>
+  <rect x="426" y="262" width="86" height="35" rx="4" fill="rgb(242,232,252)" stroke="rgb(110,50,180)" stroke-width="0.5"/>
+  <text x="469" y="275" text-anchor="middle" dominant-baseline="central" fill="rgb(80,30,140)" font-family="-apple-system,system-ui,sans-serif" font-size="9.5">GetWeather</text>
+  <text x="469" y="288" text-anchor="middle" dominant-baseline="central" fill="rgb(110,50,180)" font-family="-apple-system,system-ui,sans-serif" font-size="9">Tool</text>
 
-  <!-- GeocodingTool -->
-  <rect x="432" y="305" width="86" height="35" rx="4" fill="rgb(242,232,252)" stroke="rgb(110,50,180)" stroke-width="0.5"/>
-  <text x="475" y="317" text-anchor="middle" dominant-baseline="central" fill="rgb(80,30,140)" font-family="-apple-system,system-ui,sans-serif" font-size="9.5">Geocoding</text>
-  <text x="475" y="329" text-anchor="middle" dominant-baseline="central" fill="rgb(110,50,180)" font-family="-apple-system,system-ui,sans-serif" font-size="9">Tool</text>
+  <!-- Row 2: Geocoding, WebSearch -->
+  <rect x="312" y="303" width="86" height="35" rx="4" fill="rgb(242,232,252)" stroke="rgb(110,50,180)" stroke-width="0.5"/>
+  <text x="355" y="316" text-anchor="middle" dominant-baseline="central" fill="rgb(80,30,140)" font-family="-apple-system,system-ui,sans-serif" font-size="9.5">Geocoding</text>
+  <text x="355" y="329" text-anchor="middle" dominant-baseline="central" fill="rgb(110,50,180)" font-family="-apple-system,system-ui,sans-serif" font-size="9">Tool</text>
 
-  <!-- WebSearchTool (stub, dashed border) -->
-  <rect x="526" y="305" width="86" height="35" rx="4" fill="rgb(252,244,242)" stroke="rgb(170,70,40)" stroke-width="0.5" stroke-dasharray="3 2"/>
-  <text x="569" y="317" text-anchor="middle" dominant-baseline="central" fill="rgb(130,50,20)" font-family="-apple-system,system-ui,sans-serif" font-size="9.5">WebSearch</text>
-  <text x="569" y="329" text-anchor="middle" dominant-baseline="central" fill="rgb(170,70,40)" font-family="-apple-system,system-ui,sans-serif" font-size="9">stub</text>
+  <rect x="426" y="303" width="86" height="35" rx="4" fill="rgb(242,232,252)" stroke="rgb(110,50,180)" stroke-width="0.5"/>
+  <text x="469" y="316" text-anchor="middle" dominant-baseline="central" fill="rgb(80,30,140)" font-family="-apple-system,system-ui,sans-serif" font-size="9.5">WebSearch</text>
+  <text x="469" y="329" text-anchor="middle" dominant-baseline="central" fill="rgb(110,50,180)" font-family="-apple-system,system-ui,sans-serif" font-size="9">Tool</text>
 
-  <!-- Tools → open-meteo (Weather + Geocoding) -->
-  <line x1="600" y1="350" x2="600" y2="510" stroke="rgb(115,114,108)" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <!-- Row 3: FetchPage, Library -->
+  <rect x="312" y="344" width="86" height="35" rx="4" fill="rgb(242,232,252)" stroke="rgb(110,50,180)" stroke-width="0.5"/>
+  <text x="355" y="357" text-anchor="middle" dominant-baseline="central" fill="rgb(80,30,140)" font-family="-apple-system,system-ui,sans-serif" font-size="9.5">FetchPage</text>
+  <text x="355" y="370" text-anchor="middle" dominant-baseline="central" fill="rgb(110,50,180)" font-family="-apple-system,system-ui,sans-serif" font-size="9">Tool</text>
 
-  <!-- open-meteo.com (external) -->
-  <rect x="520" y="510" width="90" height="54" rx="8" fill="rgb(241,239,232)" stroke="rgb(95,94,90)" stroke-width="0.5"/>
-  <text x="565" y="530" text-anchor="middle" dominant-baseline="central" fill="rgb(68,68,65)" font-family="-apple-system,system-ui,sans-serif" font-size="13" font-weight="500">open-meteo</text>
-  <text x="565" y="545" text-anchor="middle" dominant-baseline="central" fill="rgb(95,94,90)" font-family="-apple-system,system-ui,sans-serif" font-size="11">.com API</text>
+  <rect x="426" y="344" width="86" height="35" rx="4" fill="rgb(242,232,252)" stroke="rgb(110,50,180)" stroke-width="0.5"/>
+  <text x="469" y="357" text-anchor="middle" dominant-baseline="central" fill="rgb(80,30,140)" font-family="-apple-system,system-ui,sans-serif" font-size="9.5">Library</text>
+  <text x="469" y="370" text-anchor="middle" dominant-baseline="central" fill="rgb(110,50,180)" font-family="-apple-system,system-ui,sans-serif" font-size="9">Tools</text>
+
+  <!-- Tools → external (arrow down) -->
+  <line x1="510" y1="390" x2="510" y2="550" stroke="rgb(115,114,108)" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Voice assembly -->
+  <rect x="304" y="464" width="196" height="44" rx="8" fill="rgb(228,242,255)" stroke="rgb(40,100,180)" stroke-width="0.9" stroke-dasharray="5 3"/>
+  <text x="402" y="476" text-anchor="middle" dominant-baseline="central" fill="rgb(20,70,140)" font-family="-apple-system,system-ui,sans-serif" font-size="12" font-weight="500">WissensNest.Voice</text>
+  <text x="402" y="493" text-anchor="middle" dominant-baseline="central" fill="rgb(40,100,180)" font-family="-apple-system,system-ui,sans-serif" font-size="11">Whisper STT · Piper TTS</text>
+
+  <!-- Voice → external -->
+  <line x1="402" y1="507" x2="402" y2="570" stroke="rgb(115,114,108)" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
 
   <!-- Core → Ollama assembly -->
-  <line x1="228" y1="312" x2="228" y2="372" stroke="rgb(115,114,108)" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
-
-  <!-- API → Persistence (path) -->
-  <line x1="390" y1="205" x2="390" y2="372" stroke="rgb(115,114,108)" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <line x1="108" y1="312" x2="108" y2="400" stroke="rgb(115,114,108)" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
 
   <!-- Ollama assembly -->
-  <rect x="162" y="372" width="174" height="56" rx="8" fill="rgb(225,245,238)" stroke="rgb(15,110,86)" stroke-width="0.5"/>
-  <text x="249" y="396" text-anchor="middle" dominant-baseline="central" fill="rgb(8,80,65)" font-family="-apple-system,system-ui,sans-serif" font-size="13" font-weight="500">WissensNest.Ollama</text>
-  <text x="249" y="414" text-anchor="middle" dominant-baseline="central" fill="rgb(15,110,86)" font-family="-apple-system,system-ui,sans-serif" font-size="12">ILanguageModelClient</text>
+  <rect x="42" y="400" width="174" height="56" rx="8" fill="rgb(225,245,238)" stroke="rgb(15,110,86)" stroke-width="0.5"/>
+  <text x="129" y="424" text-anchor="middle" dominant-baseline="central" fill="rgb(8,80,65)" font-family="-apple-system,system-ui,sans-serif" font-size="13" font-weight="500">WissensNest.Ollama</text>
+  <text x="129" y="442" text-anchor="middle" dominant-baseline="central" fill="rgb(15,110,86)" font-family="-apple-system,system-ui,sans-serif" font-size="12">ILanguageModelClient</text>
 
   <!-- Persistence assembly -->
-  <rect x="350" y="372" width="240" height="56" rx="8" fill="rgb(250,238,218)" stroke="rgb(133,79,11)" stroke-width="0.5"/>
-  <text x="470" y="396" text-anchor="middle" dominant-baseline="central" fill="rgb(99,56,6)" font-family="-apple-system,system-ui,sans-serif" font-size="14" font-weight="500">WissensNest.Persistence.SQLite</text>
-  <text x="470" y="414" text-anchor="middle" dominant-baseline="central" fill="rgb(133,79,11)" font-family="-apple-system,system-ui,sans-serif" font-size="12"> </text>
-
-  <!-- Persistence assembly → SQLite -->
-  <line x1="470" y1="428" x2="470" y2="510" stroke="rgb(115,114,108)" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <rect x="230" y="400" width="230" height="56" rx="8" fill="rgb(250,238,218)" stroke="rgb(133,79,11)" stroke-width="0.5"/>
+  <text x="345" y="422" text-anchor="middle" dominant-baseline="central" fill="rgb(99,56,6)" font-family="-apple-system,system-ui,sans-serif" font-size="12" font-weight="500">Persistent.SQLite</text>
+  <text x="345" y="440" text-anchor="middle" dominant-baseline="central" fill="rgb(133,79,11)" font-family="-apple-system,system-ui,sans-serif" font-size="11">EF Core · Repositories</text>
 
   <!-- Ollama assembly → Ollama runner -->
-  <line x1="230" y1="430" x2="230" y2="510" stroke="rgb(115,114,108)" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <line x1="90" y1="456" x2="90" y2="570" stroke="rgb(115,114,108)" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
 
-  <!-- Ollama runner (external) -->
-  <rect x="160" y="510" width="85" height="56" rx="8" fill="rgb(241,239,232)" stroke="rgb(95,94,90)" stroke-width="0.5"/>
-  <text x="200" y="530" text-anchor="middle" dominant-baseline="central" fill="rgb(68,68,65)" font-family="-apple-system,system-ui,sans-serif" font-size="14" font-weight="500">Ollama</text>
-  <text x="200" y="545" text-anchor="middle" dominant-baseline="central" fill="rgb(95,94,90)" font-family="-apple-system,system-ui,sans-serif" font-size="12">local runner</text>
+  <!-- Persistence → SQLite DB -->
+  <line x1="280" y1="456" x2="280" y2="570" stroke="rgb(115,114,108)" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
 
-  <!-- Ollama runner → LLM -->
-  <line x1="245" y1="550" x2="275" y2="550" stroke="rgb(115,114,108)" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <!-- External section items -->
+  <!-- Ollama runner -->
+  <rect x="35" y="570" width="82" height="54" rx="8" fill="rgb(241,239,232)" stroke="rgb(95,94,90)" stroke-width="0.5"/>
+  <text x="76" y="588" text-anchor="middle" dominant-baseline="central" fill="rgb(68,68,65)" font-family="-apple-system,system-ui,sans-serif" font-size="13" font-weight="500">Ollama</text>
+  <text x="76" y="605" text-anchor="middle" dominant-baseline="central" fill="rgb(95,94,90)" font-family="-apple-system,system-ui,sans-serif" font-size="11">local runner</text>
 
-  <!-- LLM weights (external) -->
-  <rect x="275" y="510" width="124" height="56" rx="8" fill="rgb(241,239,232)" stroke="rgb(95,94,90)" stroke-width="0.5"/>
-  <text x="342" y="530" text-anchor="middle" dominant-baseline="central" fill="rgb(68,68,65)" font-family="-apple-system,system-ui,sans-serif" font-size="14" font-weight="500">LLM weights</text>
-  <text x="342" y="545" text-anchor="middle" dominant-baseline="central" fill="rgb(95,94,90)" font-family="-apple-system,system-ui,sans-serif" font-size="12">Phi-4 / Qwen</text>
+  <!-- Ollama → LLM -->
+  <line x1="117" y1="595" x2="127" y2="595" stroke="rgb(115,114,108)" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
 
-  <!-- SQLite Database -->
-  <rect x="420" y="510" width="80" height="56" rx="8" fill="rgb(250,238,218)" stroke="rgb(133,79,11)" stroke-width="0.5"/>
-  <text x="460" y="530" text-anchor="middle" dominant-baseline="central" fill="rgb(99,56,6)" font-family="-apple-system,system-ui,sans-serif" font-size="14" font-weight="500">SQLite</text>
-  <text x="460" y="545" text-anchor="middle" dominant-baseline="central" fill="rgb(133,79,11)" font-family="-apple-system,system-ui,sans-serif" font-size="12">Database</text>
+  <!-- LLM weights -->
+  <rect x="127" y="570" width="114" height="54" rx="8" fill="rgb(241,239,232)" stroke="rgb(95,94,90)" stroke-width="0.5"/>
+  <text x="184" y="588" text-anchor="middle" dominant-baseline="central" fill="rgb(68,68,65)" font-family="-apple-system,system-ui,sans-serif" font-size="13" font-weight="500">LLM weights</text>
+  <text x="184" y="605" text-anchor="middle" dominant-baseline="central" fill="rgb(95,94,90)" font-family="-apple-system,system-ui,sans-serif" font-size="11">Qwen / Phi-4</text>
+
+  <!-- SQLite DB -->
+  <rect x="249" y="570" width="70" height="54" rx="8" fill="rgb(250,238,218)" stroke="rgb(133,79,11)" stroke-width="0.5"/>
+  <text x="284" y="588" text-anchor="middle" dominant-baseline="central" fill="rgb(99,56,6)" font-family="-apple-system,system-ui,sans-serif" font-size="13" font-weight="500">SQLite</text>
+  <text x="284" y="605" text-anchor="middle" dominant-baseline="central" fill="rgb(133,79,11)" font-family="-apple-system,system-ui,sans-serif" font-size="11">Database</text>
+
+  <!-- Whisper + Piper -->
+  <rect x="327" y="570" width="88" height="54" rx="8" fill="rgb(228,242,255)" stroke="rgb(40,100,180)" stroke-width="0.5"/>
+  <text x="371" y="588" text-anchor="middle" dominant-baseline="central" fill="rgb(20,70,140)" font-family="-apple-system,system-ui,sans-serif" font-size="10" font-weight="500">Whisper / Piper</text>
+  <text x="371" y="603" text-anchor="middle" dominant-baseline="central" fill="rgb(40,100,180)" font-family="-apple-system,system-ui,sans-serif" font-size="10">STT · TTS</text>
+  <text x="371" y="617" text-anchor="middle" dominant-baseline="central" fill="rgb(60,120,200)" font-family="-apple-system,system-ui,sans-serif" font-size="9">:9000 / :5002</text>
+
+  <!-- Web APIs -->
+  <rect x="423" y="570" width="100" height="54" rx="8" fill="rgb(241,239,232)" stroke="rgb(95,94,90)" stroke-width="0.5"/>
+  <text x="475" y="588" text-anchor="middle" dominant-baseline="central" fill="rgb(68,68,65)" font-family="-apple-system,system-ui,sans-serif" font-size="11" font-weight="500">Web APIs</text>
+  <text x="475" y="603" text-anchor="middle" dominant-baseline="central" fill="rgb(95,94,90)" font-family="-apple-system,system-ui,sans-serif" font-size="10">weather · search</text>
+  <text x="475" y="616" text-anchor="middle" dominant-baseline="central" fill="rgb(115,114,108)" font-family="-apple-system,system-ui,sans-serif" font-size="9">open-meteo · DDG</text>
+
+  <!-- Local Library -->
+  <rect x="540" y="570" width="80" height="54" rx="8" fill="rgb(241,239,232)" stroke="rgb(95,94,90)" stroke-width="0.5"/>
+  <text x="580" y="588" text-anchor="middle" dominant-baseline="central" fill="rgb(68,68,65)" font-family="-apple-system,system-ui,sans-serif" font-size="11" font-weight="500">Local Library</text>
+  <text x="580" y="603" text-anchor="middle" dominant-baseline="central" fill="rgb(95,94,90)" font-family="-apple-system,system-ui,sans-serif" font-size="10">PDF + MD files</text>
+  <text x="580" y="616" text-anchor="middle" dominant-baseline="central" fill="rgb(115,114,108)" font-family="-apple-system,system-ui,sans-serif" font-size="9">on-disk</text>
 
   <!-- Legend -->
-  <rect x="22" y="590" width="14" height="14" rx="3" fill="rgb(238,237,254)" stroke="rgb(83,74,183)" stroke-width="0.5"/>
-  <text x="42" y="601" fill="rgb(61,61,58)" font-family="-apple-system,system-ui,sans-serif" font-size="12">UI &amp; API</text>
+  <rect x="22" y="658" width="14" height="14" rx="3" fill="rgb(238,237,254)" stroke="rgb(83,74,183)" stroke-width="0.5"/>
+  <text x="42" y="669" fill="rgb(61,61,58)" font-family="-apple-system,system-ui,sans-serif" font-size="12">UI &amp; API</text>
 
-  <rect x="108" y="590" width="14" height="14" rx="3" fill="rgb(225,245,238)" stroke="rgb(15,110,86)" stroke-width="0.5"/>
-  <text x="128" y="601" fill="rgb(61,61,58)" font-family="-apple-system,system-ui,sans-serif" font-size="12">core logic</text>
+  <rect x="110" y="658" width="14" height="14" rx="3" fill="rgb(225,245,238)" stroke="rgb(15,110,86)" stroke-width="0.5"/>
+  <text x="130" y="669" fill="rgb(61,61,58)" font-family="-apple-system,system-ui,sans-serif" font-size="12">core logic</text>
 
-  <rect x="210" y="590" width="14" height="14" rx="3" fill="rgb(242,232,252)" stroke="rgb(110,50,180)" stroke-width="0.5"/>
-  <text x="230" y="601" fill="rgb(61,61,58)" font-family="-apple-system,system-ui,sans-serif" font-size="12">tools</text>
+  <rect x="214" y="658" width="14" height="14" rx="3" fill="rgb(242,232,252)" stroke="rgb(110,50,180)" stroke-width="0.5"/>
+  <text x="234" y="669" fill="rgb(61,61,58)" font-family="-apple-system,system-ui,sans-serif" font-size="12">tools</text>
 
-  <rect x="278" y="590" width="14" height="14" rx="3" fill="rgb(252,244,242)" stroke="rgb(170,70,40)" stroke-width="0.5" stroke-dasharray="3 2"/>
-  <text x="298" y="601" fill="rgb(61,61,58)" font-family="-apple-system,system-ui,sans-serif" font-size="12">tool stub</text>
+  <rect x="284" y="658" width="14" height="14" rx="3" fill="rgb(228,242,255)" stroke="rgb(40,100,180)" stroke-width="0.5"/>
+  <text x="304" y="669" fill="rgb(61,61,58)" font-family="-apple-system,system-ui,sans-serif" font-size="12">voice</text>
 
-  <rect x="374" y="590" width="14" height="14" rx="3" fill="rgb(250,238,218)" stroke="rgb(133,79,11)" stroke-width="0.5"/>
-  <text x="394" y="601" fill="rgb(61,61,58)" font-family="-apple-system,system-ui,sans-serif" font-size="12">persistence</text>
+  <rect x="360" y="658" width="14" height="14" rx="3" fill="rgb(250,238,218)" stroke="rgb(133,79,11)" stroke-width="0.5"/>
+  <text x="380" y="669" fill="rgb(61,61,58)" font-family="-apple-system,system-ui,sans-serif" font-size="12">persistence</text>
 
-  <rect x="472" y="590" width="14" height="14" rx="3" fill="rgb(241,239,232)" stroke="rgb(95,94,90)" stroke-width="0.5"/>
-  <text x="492" y="601" fill="rgb(61,61,58)" font-family="-apple-system,system-ui,sans-serif" font-size="12">external / hardware</text>
+  <rect x="464" y="658" width="14" height="14" rx="3" fill="rgb(241,239,232)" stroke="rgb(95,94,90)" stroke-width="0.5"/>
+  <text x="484" y="669" fill="rgb(61,61,58)" font-family="-apple-system,system-ui,sans-serif" font-size="12">external / hardware</text>
 </svg>

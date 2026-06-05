@@ -1,135 +1,183 @@
-# AI Assistant
+# WissensNest — A Local AI Assistant Research Project
 
 [Back to the main page](../../README.md)
 
-**Development period:** 2026.04-...
+**Development period:** 2026.04–ongoing
 
-**Practical application:** Having all LLM tools locally without regular fees, registration, and SMS.
+**Starting question:** Can a language model actually help with real daily work if it runs entirely on local hardware?[^1]
 
-**Project purpose:** Researching and testing the possibilities of language models in learning, web searching, engineering activities, etc[^1].
+---
 
-## Project description
+## How It Started
 
-### Why is it "WissensNest"
+I had been using ChatGPT on and off. Sometimes genuinely useful, always a black box. I knew the rough shape of the technology — transformer architecture, next-token prediction, trained on large text corpora — but that's like knowing a car has a combustion engine. It doesn't tell you how it drives.
 
-WissensNest is a combination of "Wissen" (knowledge) with "Nest" (nest), suggesting a cozy, home-like repository of knowledge.
+So I built one. Not from scratch — training from scratch requires datacenters. But I set up local inference through Ollama, wrote an API layer, wrote a browser-based UI, wired in tools, and started using the result for actual daily work. The goal was to learn by doing.
 
-### Why Build Rather Than Subscribe
+A few months in, the system has grown in ways I didn't plan, and some of what I've found is more interesting than I expected.
 
-Several drives converged to make this project inevitable rather than optional.
+---
 
-The first was demystification. I wanted to understand what language models actually are — not the marketing description, but the mechanics. The only reliable way to understand a technology is to build with it.
+## The Case for Local
 
-The second was curiosity about the practical ceiling. Can a language model help me learn German? (Yes.) Can it filter and generalize internet search results better than a keyword engine? (Yes, impressively so.) Can it automate tasks at a higher level of abstraction than conventional code? I needed to find out by doing.
+Cloud AI services are excellent. The models are larger, the infrastructure is managed, the latency is low. I'm not arguing against them.
 
-The third was ownership. I respect OpenAI as a business, but I have watched companies close projects that people depended on. Any business can change its pricing, restrict access, or simply stop. I cannot own everything. But I can own some things. A system running on my own hardware is one of them.
+But they have a structural property worth thinking about: every prompt you type goes somewhere. It gets processed on someone else's hardware, may be logged, may be used for training, and is subject to whatever that company's policies turn out to be over the next decade. For casual use, that's fine. For work notes, engineering questions, family conversations, or anything sensitive — it's a different calculation.
 
-The fourth was reproducibility. For anything research-adjacent, I need to control the full prompt stack — global instructions, project-level context, conversation history. A cloud tool gives you a chat window. Building your own gives you an experiment you can reproduce exactly.
+WissensNest runs entirely on my hardware. The models run locally through Ollama. The conversation database is a SQLite file on my machine. Nothing leaves unless a tool explicitly reaches out — and I control which tools are available per conversation.
 
-The fifth was configurability: combining custom prompts, integrating external tools, and eventually connecting to domain-specific vector databases. That depth requires access to the full architecture.
+That last part is the interesting design: the system can do web search, fetch web pages and PDFs, and query my local document library — all while keeping the conversation and all data local. The *reasoning* happens here. The *reaching out* is selective and explicit.
 
-### What Is WissensNest
+This is not a product. It is a research project. But the pattern — local inference, selective external access, full data ownership — seems like it could be the right shape for a privacy-first AI assistant that organisations or individuals could actually trust.
 
-WissensNest is a **personal AI assistant that runs entirely locally** on a standard computer (a MacBook Pro M3 with 36 GB RAM). No cloud, no subscriptions. No data leakage, no risk of disconnection from the tool, and no data loss just because the service owner changed their plans. All conversation history is stored in a local SQLite database; models run through Ollama.
+---
 
-The interface is a web app accessible in any browser. I introduced the concept of Projects in the domain model. Projects separate contexts. Each project has its own set of system instructions (prompts) and its own conversation history.
+## What It Does
 
-### Use Cases
+### Language Learning
 
-#### Use Case 1 — Reading Literature in a Foreign Language
+You're reading a book in German. You encounter a sentence you can't parse. Paste it in, and the assistant:
 
-You are reading a book in German (or any other language). You encounter an unfamiliar phrase or a complex sentence. Paste the excerpt into the chat — the assistant:
+- builds a word-by-word glossary with usage notes
+- explains the grammatical constructions (Konjunktiv II, Passiv, Modalpartikeln)
+- conjugates the verbs
+- answers follow-up questions about usage or context
 
-- builds a mini-glossary of all words in the phrase with translations and usage examples
-- explains the grammatical constructions used (Konjunktiv II, Passiv, Modalpartikeln, etc.)
-- Displays different tenses of verbs from the phrase.
-
-The entire breakdown is saved in the local database under the relevant grouping structures called "projects" — you can return and review the material at any time.
+The whole session is saved under the relevant project. Next week, you can come back and review. The conversation is also the study notes.
 
 ![The User Interface](Images/Fig_02_UI_Translate.png)
 
-**Fig. 1 The picture represents the UI of the chat with the German Book Reader prompt.** It accepts phrases in German and answers by explanation and translation immediately, without any additional commands, because the behavior of this particular project was described in the prompt, assigned to the project. The prompt can be configured for any other language.
+**Fig. 1** The German Book Reader project. The project has a system prompt that shapes how the assistant responds to German text — it provides translation and grammatical breakdown automatically, without being asked each time, because the instructions are baked into the project context.
 
-#### Use Case 2 — General-Purpose Local Knowledge Base
+---
 
-Unlike ChatGPT or Google, WissensNest:
+### Engineering Work
 
-- requires no internet and sends nothing to external servers
-- stores all history locally, browseable by project and conversation
-- responds in a configured format: Markdown tables, lists, code blocks — rendered and readable
-- retains context: multi-turn dialogue allows you to refine and rephrase
-
-Example uses: personal project-related information, history and biology questions for schoolchildren, recipe scaling, and help drafting letters and documents.
+The assistant is part of my regular workflow for embedded development: explaining register configurations, working through SPI/I²C timing constraints, reading datasheet excerpts. It is not infallible — the model knows only what it was trained on — but it gets me to the right section of the datasheet faster, and it handles the routine questions well enough that I spend less time on them.
 
 ![The User Interface](Images/Fig_03_UI_Embedded.png)
 
-**Fig. 2 The assistant helps in the engineering job.** It uses data hidden in the model trained by the LLM base provider. This approach is less reliable than RAG, but RAG is a subject for future versions. For now, it is just a concept.
+**Fig. 2** An embedded development conversation. The project context is set up to assume embedded systems domain, which shapes the model's default assumptions about what I'm asking.
 
-#### Use Case 3 — Assistant That Reaches Into the Real World
+---
 
-A language model knows only what it was trained on. WissensNest goes further — it automatically calls external services when a question requires live data.
+### Reaching into the Real World
 
-Ask *"What's the weather like in Munich right now?"* — the assistant:
+A language model is frozen in time and blind to its environment. WissensNest closes some of those gaps through a tool system.
 
-1. Calls **GeocodingTool** → resolves "Munich" to coordinates (lat/lon/timezone) from geocoding-api.open-meteo.com
-2. Calls **GetWeatherTool** → fetches current temperature, wind, and precipitation from open-meteo.com
-3. Answers in natural language with the live data embedded
+Ask *"What's the weather in Munich right now?"* — the model decides, without being told, to call the **Geocoding** tool to resolve "Munich" to coordinates, then the **Weather** tool to fetch current conditions from open-meteo.com. It calls them silently. The answer looks like the model just knows the weather.
 
-Ask *"What time is it in Tokyo?"* — **GetCurrentTimeTool** is called immediately, returns UTC time, requested by the model, and the model, knowing how to calculate Tokyo local time, does it and returns the time to the user.
+Ask *"What do people say about Martin Buber's concept of dialogue?"* — the model calls the **WebSearch** tool, scrapes DuckDuckGo, and synthesises the results.
 
-**The model decides** when a tool is needed and silently invokes it. There is no *"Should I check the weather for you?"* — it just does it. The tool's results flow back into the response as naturally as if the model had always had that information.
+Point it at a PDF from my local library — a datasheet, a research paper, a technical manual — and the **Library** tools handle it: search by keyword, read specific pages, and summarise. The model calls `library_search` before `web_search` by default, so local sources get priority.
 
-From an architecture perspective, adding a new tool requires only implementing the `ITool` interface and registering it in DI. The ChatService, streaming layer, and UI pick it up with zero additional changes.
-
-![The User Interface](Images/Fig_04_UI_Weather.png)
-
-**Fig. 3 External tools calling sequence.**
-
-#### Use Case 4 - Articles research on the specified subject
+For web documents, **FetchPage** fetches HTML or PDF content directly and hands it to the model to read.
 
 ![The User Interface](Images/Fig_05_UI_Buber.png)
 
-## Common Project description
+**Fig. 3** Research on Martin Buber. The assistant uses web search to gather sources and synthesises the results into a structured answer. The tool calls happen silently — no prompt required.
 
-The project itself is a service that stands between Ollama and Blazor Web UI. This service should provide assistance in daily life, at work, and in learning. Currently, it is just a chat model, but in the future, it can be connected to sensors, actuators, and whatever.
+The tools run as isolated .NET assemblies, each implementing a single `ITool` interface. Adding a new one means implementing that interface and registering it in DI. The routing, tool selection, streaming, and persistence all pick it up automatically.
 
-### What Building It Revealed
+![Tool Calling Flow](Images/16_01_WissensNest_Tool_Calling_Flow.svg)
 
-The most surprising discovery was not technical — it was conceptual.
+**Fig. 4** The tool-calling sequence. The model decides which tools to call; the orchestrator executes them; results flow back into the model's context. The loop continues until the model has everything it needs and returns a final text answer.
 
-I had expected a sophisticated text predictor. What I encountered was something that jokes. Not cleverly, but genuinely — during a debugging session, it noticed I was asking the same question twice and mentioned it with mild humor, then accepted "I am debugging the UI" as a perfectly reasonable answer and moved on cooperatively. A lookup table does not do that.
+---
 
-This led me to a framing I find more useful than "it is just statistics." I am familiar with Daniel Kahneman's work on two modes of cognition, but I prefer my own terms: a *Chemical computer* — fast, associative, pattern-driven, the kind of thinking that fires under stress or fatigue — and a *Logical computer* — deliberate, intentional, structured. An LLM is a Chemical computer. My framework around it — the project system, the prompt architecture, the tool integration — is the Logical computer. The two together may be more capable and more interesting than either alone.
+### Knowledge Workbench
+
+This evolved from a practical problem. Conversations are good for exploration. But they are linear and don't accumulate. After a few months, I had useful material — explanations, summaries, reference answers — scattered across dozens of threads with no structure.
+
+The Knowledge Workbench adds a second mode alongside the chat: **Articles**. An article is a curated Markdown document made of movable blocks. You can take a message from any conversation — something the assistant explained well, a summary you asked it to write — and promote it to a block in an article. From there you can reorder it, split it, merge it with adjacent blocks, move it to a different article, or export the article as PDF.
+
+The hierarchy is: Project → Section → Article → Block.
+
+![Knowledge Workbench Hierarchy](Images/23_01_WissensNest_KnowledgeWorkbench_Hierarchy.svg)
+
+**Fig. 5** The full hierarchy. Conversations and Articles live side by side within a Section. The bridge — Promote to Block, Send to Conversation — lets you move material in both directions between exploratory dialogue and curated writing.
+
+The flow I find useful: explore a topic in conversation, promote the useful parts to a Scratch area, then organise them into an article when the structure becomes clear. The conversation stays as the working record; the article is the distillation.
+
+---
+
+### Voice
+
+The most recent addition is voice input and output in the browser UI.
+
+It uses **whisper.cpp** (large-v3 model, Metal-accelerated on the M3) for speech-to-text and **Piper TTS** for text-to-speech, with separate Russian, German, and English voice models. The mic button records, sends audio to the local Whisper instance over HTTP, transcribes, and fills the input field. The response can be played back through Piper.
+
+Everything runs on-device. No speech data leaves the machine.
+
+The next intended step is a headless version on a Raspberry Pi: a small box listening for a wake word, processing speech locally, and talking back — without any cloud dependency in the loop.
+
+---
+
+## Architecture
+
+The system follows a layered architecture with strict dependency boundaries. The language model, the database, and each tool are separate assemblies. The core logic never knows which model is in use — it calls `ILanguageModelClient`. The tools never know about each other.
+
+![System Architecture](Images/01_01_WissensNest_System_Architecture.svg)
+
+**Fig. 6** Current system structure. All components run on local hardware. External service calls happen only through explicit tool invocations.
+
+The main data flow for a chat request:
+
+1. UI streams the request to the API over HTTP/SSE
+2. API loads the conversation's stored prompt snapshot and the list of enabled tools
+3. ChatService builds the full system prompt and passes it to the ToolOrchestrator
+4. ToolOrchestrator loops: call the model → if a tool is requested, execute it → append the result to message history → repeat until the model returns pure text
+5. Text tokens stream back through the API to the UI in real time
+6. Voice interfaces currently connected to the Web UI. In future it should be not only Web UI feature but also separated chat flow.
+
+Streaming is handled as Server-Sent Events. A `StreamingService` in the UI manages circuit-safe token accumulation, so switching conversations mid-stream doesn't cause exceptions or data loss.
+
+The three-layer prompt system is worth mentioning: a global system prompt in config, a project-level prompt assigned per project, and a conversation-level prompt set at conversation creation. All three layers compose at request time. This is what lets the German reader project behave differently from the engineering project without any special-case code.
+
+---
+
+## What I Found Along the Way
+
+The most surprising discovery was not technical.
+
+I expected something that matches patterns. What I kept encountering is something that jokes. During a debugging session, it noticed I was asking the same question twice and mentioned it with mild humour, then accepted "I am debugging the UI" as a perfectly reasonable answer and moved on. No code path produces "mild humour on repeat questions." It emerged from the model having been trained on enough human text to recognize the social shape of that situation.
+
+I find this easier to think about through a framing I've settled on over the months. I distinguish what I call a *Chemical computer* — fast, associative, pattern-driven, the kind of thinking that fires under pressure or in automatic mode — from a *Logical computer* — deliberate, structured, step-by-step. A language model is a Chemical computer. The architecture around it — the project structure, the prompt layers, the tool system — is the Logical computer. Neither is sufficient alone. The combination handles a wider range of problems than either could.
 
 That is still a hypothesis. Testing it is part of why the project continues.
 
-![The User Interface](Images/01_02_WissensNest_Sequence_Diagram.svg)
+---
 
-**Fig. 2 The picture represents a sequence diagram of the first version of the Assistant.** It was the simplest chat that proved the viability of the idea. It prepares the chat request, then, sends it to the model, then, collects parts of the answer, and, finally, renders it at the UI.
+## Where It Goes Next
 
-## Technical project description
+The things I know are interesting and haven't built yet:
 
-![The Computational Experiment](Images/01_01_WissensNest_System_Architecture.svg)
+**Persistent memory.** The model doesn't know who you are across sessions. Injecting extracted facts from past conversations into future ones would change the character of the tool significantly — closer to a genuine assistant than a stateless oracle.
 
-**Fig. 3 The current project structure.** I'm trying to keep architecture clean, self-explanatory, and easy to maintain.
+**Home automation.** A `HomeControl` tool talking to Home Assistant. Voice interface on a Raspberry Pi plus lights that respond to spoken commands — a legitimate ambient assistant with no cloud dependency anywhere in the chain.
 
-## Technical project details
+**Reasoning models.** The streaming layer already handles `ThinkingChunk` tokens for models that expose chain-of-thought reasoning (Qwen3, DeepSeek-R1, and similar). Turning on thinking produces visibly better results on multi-step problems. This is already working; the question is how much it matters in practice.
 
-### Applied Software Development Technologies
+**Document retrieval.** The library tools do keyword search over PDFs. The natural next step is embedding-based retrieval — proper RAG — for larger document collections.
 
-- **.NET Application Architecture** — multi-layer solution following Clean Architecture principles: Contracts / Core / Infrastructure / UI with strict dependency boundaries (dependency inversion, no leaky abstractions)
-- **.NET Core Minimal API** — REST API design and implementation: routing, response streaming (`IAsyncEnumerable`), middleware, DI container
-- **Blazor Server** — interactive web UI: component model, circuit-scoped state, server-side rendering, real-time token streaming via SignalR
-- **Entity Framework Core + SQLite** — Code-First migrations, soft-delete, separation of domain entities from EF entities (DBEntity ↔ Domain), SQLite limitation workarounds (DateTimeOffset)
-- **LLM Integration** — Ollama API via OllamaSharp, conversation history management, multi-layer system prompt composition (global / project/conversation)
-- **Tool / Function Calling** — ITool abstraction, DI-based tool registration, Ollama function-calling protocol, streaming discriminated union (TextToken / ToolCallRequest / ToolResult / Completion / Error); implemented tools: GetCurrentTime, GetWeather (open-meteo.com), Geocoding
-- **Domain Model Design** — Projects, Conversations, Messages, PromptCollections; soft delete, message editing, response regeneration, context modes (MultiTurn / SingleTurn)
-- **Testing** — unit tests (xUnit), test-driven development for Markdown response formatter
-- **AI-Assisted Development** — production use of Claude Code (Anthropic) as a primary pair-programmer: architecture review, multi-file refactoring, migration generation, continuous codebase documentation via CLAUDE.md
-- **Local DevOps** — deployment scripts.
+None of these require new infrastructure breakthroughs. They require time.
 
-**Developer tools:** Microsoft Visual Studio Code, Claude Code, DB Browser for SQLite.
+---
 
-**Current status:** The development is in progress.
+## Technical Notes
 
-[^1]: It is my own research for educational and curiosity purposes. Ideally, I will automate some home staff, KiCad design, software development, and documentation formatting.
+**Stack:** .NET 10, Blazor Server, EF Core + SQLite, Ollama (qwen2.5:14b default, phi4 for speed), OllamaSharp
+
+**Tools implemented:** GetCurrentTime, GetWeather (open-meteo.com), Geocoding (open-meteo.com), WebSearch (DuckDuckGo HTML scraping via AngleSharp), FetchPage (HTML + PDF, with byte cache), Library (search / read / describe — local PDF and Markdown files)
+
+**Voice:** whisper.cpp (large-v3, Metal-accelerated), Piper TTS (RU/DE/EN voices), ffmpeg for browser audio format conversion
+
+**Knowledge:** Sections → Articles → Blocks hierarchy, PDF export via QuestPDF, SVG image library with thumbnail generation
+
+**Hardware:** MacBook Pro M3, 36 GB RAM
+
+**Development tools:** VS Code, Claude Code.
+
+---
+
+[^1]: Personal research project. Long-term ambitions include home automation (KiCad design assistance, sensor integration), a headless voice assistant on Raspberry Pi, and whatever else turns out to be tractable on local hardware.

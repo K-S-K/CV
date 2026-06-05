@@ -1,2 +1,11 @@
 # Docker Storage:
 .DS_Store
+
+# /Applications directory:
+/Applications
+
+# Claude Context Files:
+*_CONTEXT.md
+
+# Claude Permissions settings:
+.claude/settings.json
