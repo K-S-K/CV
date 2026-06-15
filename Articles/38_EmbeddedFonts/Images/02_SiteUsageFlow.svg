@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 230" width="1060" height="230"
+     font-family="ui-sans-serif, system-ui, -apple-system, sans-serif">
+
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0,10 3.5,0 7" fill="#6B7280"/>
+    </marker>
+  </defs>
+
+  <rect width="1060" height="230" fill="#F9FAFB"/>
+
+  <text x="530" y="26" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">EmbeddedFontMaker — Usage Workflow</text>
+
+  <!-- 8 boxes · width=105 · step=123 (box 105 + gap 18) · start x=40 -->
+  <!-- box left edges: 40, 163, 286, 409, 532, 655, 778, 901 -->
+  <!-- box centres:    92.5, 215.5, 338.5, 461.5, 584.5, 707.5, 830.5, 953.5 -->
+
+  <!-- Step 1: Header Options (optional) -->
+  <rect x="40" y="46" width="105" height="88" rx="8" fill="#6B7280" stroke="#4B5563" stroke-width="1.5"/>
+  <text x="92.5" y="64" text-anchor="middle" font-size="10" fill="#E5E7EB">Step 1</text>
+  <text x="92.5" y="80" text-anchor="middle" font-size="12" font-weight="700" fill="white">Header</text>
+  <text x="92.5" y="95" text-anchor="middle" font-size="12" font-weight="700" fill="white">Options</text>
+  <text x="92.5" y="111" text-anchor="middle" font-size="9" fill="#E5E7EB">array name ·</text>
+  <text x="92.5" y="122" text-anchor="middle" font-size="9" fill="#E5E7EB">byte layout</text>
+  <text x="92.5" y="133" text-anchor="middle" font-size="9" font-style="italic" fill="#D1D5DB">optional</text>
+
+  <line x1="145" y1="90" x2="161" y2="90" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Step 2: Font Family -->
+  <rect x="163" y="46" width="105" height="88" rx="8" fill="#3B82F6" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="215.5" y="64" text-anchor="middle" font-size="10" fill="#BFDBFE">Step 2</text>
+  <text x="215.5" y="84" text-anchor="middle" font-size="12" font-weight="700" fill="white">Font</text>
+  <text x="215.5" y="99" text-anchor="middle" font-size="12" font-weight="700" fill="white">Family</text>
+  <text x="215.5" y="118" text-anchor="middle" font-size="9" fill="#BFDBFE">vendor + tree</text>
+
+  <line x1="268" y1="90" x2="284" y2="90" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Step 3: Dimensions -->
+  <rect x="286" y="46" width="105" height="88" rx="8" fill="#3B82F6" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="338.5" y="64" text-anchor="middle" font-size="10" fill="#BFDBFE">Step 3</text>
+  <text x="338.5" y="91" text-anchor="middle" font-size="12" font-weight="700" fill="white">Dimensions</text>
+  <text x="338.5" y="110" text-anchor="middle" font-size="9" fill="#BFDBFE">height &amp; width</text>
+  <text x="338.5" y="122" text-anchor="middle" font-size="9" fill="#BFDBFE">Basic / Advanced</text>
+
+  <line x1="391" y1="90" x2="407" y2="90" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Step 4: Characters (optional) -->
+  <rect x="409" y="46" width="105" height="88" rx="8" fill="#3B82F6" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="461.5" y="64" text-anchor="middle" font-size="10" fill="#BFDBFE">Step 4</text>
+  <text x="461.5" y="91" text-anchor="middle" font-size="12" font-weight="700" fill="white">Characters</text>
+  <text x="461.5" y="110" text-anchor="middle" font-size="9" fill="#BFDBFE">presets / custom</text>
+  <text x="461.5" y="125" text-anchor="middle" font-size="9" font-style="italic" fill="#DBEAFE">optional</text>
+
+  <line x1="514" y1="90" x2="530" y2="90" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Step 5: Create Font Header -->
+  <rect x="532" y="46" width="105" height="88" rx="8" fill="#059669" stroke="#047857" stroke-width="1.5"/>
+  <text x="584.5" y="64" text-anchor="middle" font-size="10" fill="#A7F3D0">Step 5</text>
+  <text x="584.5" y="84" text-anchor="middle" font-size="12" font-weight="700" fill="white">Create</text>
+  <text x="584.5" y="99" text-anchor="middle" font-size="12" font-weight="700" fill="white">Font Header</text>
+  <text x="584.5" y="118" text-anchor="middle" font-size="9" fill="#A7F3D0">generates .h</text>
+
+  <line x1="637" y1="90" x2="653" y2="90" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Step 6: Customize Glyphs (optional) -->
+  <rect x="655" y="46" width="105" height="88" rx="8" fill="#F97316" stroke="#EA580C" stroke-width="1.5"/>
+  <text x="707.5" y="64" text-anchor="middle" font-size="10" fill="#FFEDD5">Step 6</text>
+  <text x="707.5" y="84" text-anchor="middle" font-size="12" font-weight="700" fill="white">Customize</text>
+  <text x="707.5" y="99" text-anchor="middle" font-size="12" font-weight="700" fill="white">Glyphs</text>
+  <text x="707.5" y="115" text-anchor="middle" font-size="9" fill="#FFEDD5">pixel editor</text>
+  <text x="707.5" y="127" text-anchor="middle" font-size="9" font-style="italic" fill="#FED7AA">optional</text>
+
+  <line x1="760" y1="90" x2="776" y2="90" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Step 7: Preview on Display (optional) -->
+  <rect x="778" y="46" width="105" height="88" rx="8" fill="#0E7490" stroke="#0C6783" stroke-width="1.5"/>
+  <text x="830.5" y="64" text-anchor="middle" font-size="10" fill="#CFFAFE">Step 7</text>
+  <text x="830.5" y="84" text-anchor="middle" font-size="12" font-weight="700" fill="white">Preview</text>
+  <text x="830.5" y="99" text-anchor="middle" font-size="12" font-weight="700" fill="white">on Display</text>
+  <text x="830.5" y="115" text-anchor="middle" font-size="9" fill="#CFFAFE">emulator</text>
+  <text x="830.5" y="127" text-anchor="middle" font-size="9" font-style="italic" fill="#A5F3FC">optional</text>
+
+  <line x1="883" y1="90" x2="899" y2="90" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Step 8: Download -->
+  <rect x="901" y="46" width="105" height="88" rx="8" fill="#7C3AED" stroke="#6D28D9" stroke-width="1.5"/>
+  <text x="953.5" y="64" text-anchor="middle" font-size="10" fill="#DDD6FE">Step 8</text>
+  <text x="953.5" y="84" text-anchor="middle" font-size="12" font-weight="700" fill="white">Download</text>
+  <text x="953.5" y="99" text-anchor="middle" font-size="12" font-weight="700" fill="white">.h file</text>
+  <text x="953.5" y="118" text-anchor="middle" font-size="9" fill="#DDD6FE">C header</text>
+
+  <!-- Footer notes -->
+  <text x="530" y="172" text-anchor="middle" font-size="11" fill="#6B7280">
+    Steps 2, 3, 5 required · Steps 1, 4, 6, 7 optional · Step 8 produces the ready-to-use C header
+  </text>
+  <text x="530" y="190" text-anchor="middle" font-size="11" fill="#9CA3AF">
+    A licensing notice appears after Step 5 — check your font license before downloading
+  </text>
+
+</svg>

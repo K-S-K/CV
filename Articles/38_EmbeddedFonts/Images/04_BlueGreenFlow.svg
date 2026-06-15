@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 960" width="540" height="960"
+     font-family="'Segoe UI', Arial, sans-serif" font-size="12">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#6B7280"/>
+    </marker>
+    <marker id="ah-yes" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#22C55E"/>
+    </marker>
+    <marker id="ah-no" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#EF4444"/>
+    </marker>
+  </defs>
+
+  <!-- ── Step 1: Trigger ── -->
+  <rect x="40" y="15" width="280" height="55" rx="6"
+        fill="#FFFBEB" stroke="#F59E0B" stroke-width="2"/>
+  <text x="180" y="36" text-anchor="middle" dominant-baseline="middle"
+        font-weight="600" fill="#92400E">Push tag  v1.x.0</text>
+  <text x="180" y="56" text-anchor="middle" dominant-baseline="middle"
+        font-size="11" fill="#78350F">GitHub Actions  OR  ./prod-deploy.sh -v</text>
+  <line x1="180" y1="70" x2="180" y2="88"
+        stroke="#6B7280" stroke-width="1.5" marker-end="url(#ah)"/>
+
+  <!-- ── Step 2: Build ── -->
+  <rect x="40" y="88" width="280" height="50" rx="6"
+        fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="180" y="109" text-anchor="middle" dominant-baseline="middle"
+        font-weight="600" fill="#1E40AF">Build all projects</text>
+  <text x="180" y="127" text-anchor="middle" dominant-baseline="middle"
+        font-size="11" fill="#3B82F6">prod-build.sh linux-x64</text>
+  <line x1="180" y1="138" x2="180" y2="156"
+        stroke="#6B7280" stroke-width="1.5" marker-end="url(#ah)"/>
+
+  <!-- ── Step 3: Read active slot ── -->
+  <rect x="40" y="156" width="280" height="50" rx="6"
+        fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="180" y="177" text-anchor="middle" dominant-baseline="middle"
+        font-weight="600" fill="#1E40AF">Read active slot from Gate</text>
+  <text x="180" y="195" text-anchor="middle" dominant-baseline="middle"
+        font-size="11" fill="#3B82F6">GET :5888/get-settings  →  "blue" | "green"</text>
+  <line x1="180" y1="206" x2="180" y2="224"
+        stroke="#6B7280" stroke-width="1.5" marker-end="url(#ah)"/>
+
+  <!-- ── Step 4: Stop inactive ── -->
+  <rect x="40" y="224" width="280" height="50" rx="6"
+        fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="180" y="245" text-anchor="middle" dominant-baseline="middle"
+        font-weight="600" fill="#1E40AF">Stop inactive slot</text>
+  <text x="180" y="263" text-anchor="middle" dominant-baseline="middle"
+        font-size="11" fill="#3B82F6">fms-api-{inactive}  ·  fms-site-{inactive}</text>
+  <line x1="180" y1="274" x2="180" y2="292"
+        stroke="#6B7280" stroke-width="1.5" marker-end="url(#ah)"/>
+
+  <!-- ── Step 5: Transfer binaries ── -->
+  <rect x="40" y="292" width="280" height="50" rx="6"
+        fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="180" y="313" text-anchor="middle" dominant-baseline="middle"
+        font-weight="600" fill="#1E40AF">Transfer binaries + fonts</text>
+  <text x="180" y="331" text-anchor="middle" dominant-baseline="middle"
+        font-size="11" fill="#3B82F6">/opt/fms/{inactive}/site|api/  ·  /opt/fms/fnts/</text>
+  <line x1="180" y1="342" x2="180" y2="360"
+        stroke="#6B7280" stroke-width="1.5" marker-end="url(#ah)"/>
+
+  <!-- ── Step 6: Start inactive ── -->
+  <rect x="40" y="360" width="280" height="50" rx="6"
+        fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="180" y="381" text-anchor="middle" dominant-baseline="middle"
+        font-weight="600" fill="#1E40AF">Start inactive slot</text>
+  <text x="180" y="399" text-anchor="middle" dominant-baseline="middle"
+        font-size="11" fill="#3B82F6">fms-api-{inactive}  →  fms-site-{inactive}</text>
+  <line x1="180" y1="410" x2="180" y2="428"
+        stroke="#6B7280" stroke-width="1.5" marker-end="url(#ah)"/>
+
+  <!-- ── Step 7: Health check ── -->
+  <rect x="40" y="428" width="280" height="50" rx="6"
+        fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="180" y="449" text-anchor="middle" dominant-baseline="middle"
+        font-weight="600" fill="#1E40AF">Health check inactive slot</text>
+  <text x="180" y="467" text-anchor="middle" dominant-baseline="middle"
+        font-size="11" fill="#3B82F6">GET :{inactive-port}/health  (5 retries × 5 s)</text>
+  <line x1="180" y1="478" x2="180" y2="496"
+        stroke="#6B7280" stroke-width="1.5" marker-end="url(#ah)"/>
+
+  <!-- ── Decision 1: Healthy? (cy=524) ── -->
+  <polygon points="180,496 280,524 180,552 80,524"
+           fill="#FFFBEB" stroke="#F59E0B" stroke-width="2"/>
+  <text x="180" y="521" text-anchor="middle" dominant-baseline="middle"
+        font-weight="600" font-size="12" fill="#92400E">Healthy?</text>
+
+  <!-- D1: Yes ↓ -->
+  <line x1="180" y1="552" x2="180" y2="570"
+        stroke="#22C55E" stroke-width="1.5" marker-end="url(#ah-yes)"/>
+  <text x="193" y="565" font-size="10" fill="#22C55E">Yes</text>
+
+  <!-- D1: No → Abort -->
+  <line x1="280" y1="524" x2="352" y2="524"
+        stroke="#EF4444" stroke-width="1.5" marker-end="url(#ah-no)"/>
+  <text x="314" y="516" text-anchor="middle" font-size="10" fill="#EF4444">No</text>
+  <rect x="352" y="506" width="170" height="40" rx="5"
+        fill="#FEE2E2" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="437" y="521" text-anchor="middle" dominant-baseline="middle"
+        font-weight="600" font-size="11" fill="#B91C1C">ABORT</text>
+  <text x="437" y="536" text-anchor="middle" dominant-baseline="middle"
+        font-size="10" fill="#EF4444">active slot unchanged</text>
+
+  <!-- ── Step 8: Switch Gate ── -->
+  <rect x="40" y="570" width="280" height="50" rx="6"
+        fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="180" y="591" text-anchor="middle" dominant-baseline="middle"
+        font-weight="600" fill="#1E40AF">Switch Gate</text>
+  <text x="180" y="609" text-anchor="middle" dominant-baseline="middle"
+        font-size="11" fill="#3B82F6">GET :5888/switch-settings</text>
+  <line x1="180" y1="620" x2="180" y2="638"
+        stroke="#6B7280" stroke-width="1.5" marker-end="url(#ah)"/>
+
+  <!-- ── Step 9: Verify ── -->
+  <rect x="40" y="638" width="280" height="50" rx="6"
+        fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="180" y="659" text-anchor="middle" dominant-baseline="middle"
+        font-weight="600" fill="#1E40AF">Verify Gate switched</text>
+  <text x="180" y="677" text-anchor="middle" dominant-baseline="middle"
+        font-size="11" fill="#3B82F6">GET :5888/get-settings  ==  {inactive}</text>
+  <line x1="180" y1="688" x2="180" y2="706"
+        stroke="#6B7280" stroke-width="1.5" marker-end="url(#ah)"/>
+
+  <!-- ── Decision 2: Verified? (cy=734) ── -->
+  <polygon points="180,706 280,734 180,762 80,734"
+           fill="#FFFBEB" stroke="#F59E0B" stroke-width="2"/>
+  <text x="180" y="731" text-anchor="middle" dominant-baseline="middle"
+        font-weight="600" font-size="12" fill="#92400E">Verified?</text>
+
+  <!-- D2: Yes ↓ -->
+  <line x1="180" y1="762" x2="180" y2="780"
+        stroke="#22C55E" stroke-width="1.5" marker-end="url(#ah-yes)"/>
+  <text x="193" y="775" font-size="10" fill="#22C55E">Yes</text>
+
+  <!-- D2: No → Abort -->
+  <line x1="280" y1="734" x2="352" y2="734"
+        stroke="#EF4444" stroke-width="1.5" marker-end="url(#ah-no)"/>
+  <text x="314" y="726" text-anchor="middle" font-size="10" fill="#EF4444">No</text>
+  <rect x="352" y="716" width="170" height="60" rx="5"
+        fill="#FEE2E2" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="437" y="731" text-anchor="middle" dominant-baseline="middle"
+        font-weight="600" font-size="11" fill="#B91C1C">ABORT</text>
+  <text x="437" y="746" text-anchor="middle" dominant-baseline="middle"
+        font-size="10" fill="#EF4444">both slots running</text>
+  <text x="437" y="761" text-anchor="middle" dominant-baseline="middle"
+        font-size="10" fill="#EF4444">until inactive self-closes</text>
+
+  <!-- ── Step 10: Done (script exits here, ~1 min total) ── -->
+  <rect x="40" y="780" width="280" height="55" rx="6"
+        fill="#F0FDF4" stroke="#22C55E" stroke-width="2"/>
+  <text x="180" y="801" text-anchor="middle" dominant-baseline="middle"
+        font-weight="600" fill="#166534">Deploy complete — script exits</text>
+  <text x="180" y="821" text-anchor="middle" dominant-baseline="middle"
+        font-size="11" fill="#22C55E">traffic → new slot  ·  ~1 minute total</text>
+  <line x1="180" y1="835" x2="180" y2="853"
+        stroke="#6B7280" stroke-width="1.5" marker-end="url(#ah)"/>
+
+  <!-- ── Step 11: Old slot self-terminates (watchdog) — happens afterwards, no script involvement ── -->
+  <rect x="40" y="853" width="280" height="85" rx="6"
+        fill="#FFFBEB" stroke="#F59E0B" stroke-width="2"/>
+  <text x="180" y="874" text-anchor="middle" dominant-baseline="middle"
+        font-weight="600" fill="#92400E">Inactive slot self-terminates (watchdog)</text>
+  <text x="180" y="893" text-anchor="middle" dominant-baseline="middle"
+        font-size="10" fill="#78350F">no /keepalive received → stops within 3 min</text>
+  <text x="180" y="909" text-anchor="middle" dominant-baseline="middle"
+        font-size="10" fill="#78350F">this 3-min window is also the rollback window —</text>
+  <text x="180" y="924" text-anchor="middle" dominant-baseline="middle"
+        font-size="10" fill="#78350F">call /switch-settings again to flip back</text>
+</svg>

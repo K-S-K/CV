@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 330" width="800" height="330"
+     font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#6B7280"/>
+    </marker>
+    <marker id="ah-blue" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#3B82F6"/>
+    </marker>
+    <marker id="ah-gray" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#9CA3AF"/>
+    </marker>
+    <clipPath id="blue-clip">
+      <rect x="468" y="38" width="317" height="116" rx="8"/>
+    </clipPath>
+    <clipPath id="green-clip">
+      <rect x="468" y="176" width="317" height="116" rx="8"/>
+    </clipPath>
+  </defs>
+
+  <!-- ── Internet ── -->
+  <rect x="10" y="115" width="118" height="100" rx="8"
+        fill="#F9FAFB" stroke="#9CA3AF" stroke-width="1.5"/>
+  <text x="69" y="157" text-anchor="middle" dominant-baseline="middle"
+        font-size="14" font-weight="700" fill="#374151">Internet</text>
+  <text x="69" y="179" text-anchor="middle" dominant-baseline="middle"
+        font-size="11" fill="#6B7280">:80  HTTP</text>
+  <text x="69" y="197" text-anchor="middle" dominant-baseline="middle"
+        font-size="11" fill="#6B7280">:443 HTTPS</text>
+
+  <!-- Internet → Gate -->
+  <line x1="128" y1="165" x2="190" y2="165"
+        stroke="#6B7280" stroke-width="2" marker-end="url(#ah)"/>
+
+  <!-- ── Gate ── -->
+  <rect x="195" y="48" width="210" height="234" rx="8"
+        fill="#F5F3FF" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="300" y="77" text-anchor="middle" dominant-baseline="middle"
+        font-size="14" font-weight="700" fill="#6D28D9">Gate Service</text>
+  <line x1="208" y1="91" x2="392" y2="91" stroke="#DDD6FE" stroke-width="1"/>
+  <text x="300" y="114" text-anchor="middle" dominant-baseline="middle"
+        font-size="12" fill="#7C3AED">:80  →  HTTP redirect</text>
+  <text x="300" y="136" text-anchor="middle" dominant-baseline="middle"
+        font-size="12" fill="#7C3AED">:443 →  TLS termination</text>
+  <text x="300" y="158" text-anchor="middle" dominant-baseline="middle"
+        font-size="12" fill="#7C3AED">routes to active slot</text>
+  <line x1="208" y1="174" x2="392" y2="174"
+        stroke="#DDD6FE" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="300" y="197" text-anchor="middle" dominant-baseline="middle"
+        font-size="11" fill="#8B5CF6">:XXX0  service API Port</text>
+  <text x="300" y="215" text-anchor="middle" dominant-baseline="middle"
+        font-size="10" fill="#A78BFA">GET /get-settings</text>
+  <text x="300" y="232" text-anchor="middle" dominant-baseline="middle"
+        font-size="10" fill="#A78BFA">GET /switch-settings</text>
+  <text x="300" y="252" text-anchor="middle" dominant-baseline="middle"
+        font-size="10" fill="#C4B5FD">(localhost only)</text>
+
+  <!-- Gate → Blue (active) -->
+  <line x1="405" y1="122" x2="462" y2="96"
+        stroke="#3B82F6" stroke-width="2.5" marker-end="url(#ah-blue)"/>
+  <text x="437" y="90" text-anchor="middle" font-size="10"
+        font-style="italic" fill="#3B82F6">active</text>
+
+  <!-- Gate → Green (idle, dashed) -->
+  <line x1="405" y1="210" x2="462" y2="244"
+        stroke="#9CA3AF" stroke-width="1.5" stroke-dasharray="5,4"
+        marker-end="url(#ah-gray)"/>
+  <text x="437" y="250" text-anchor="middle" font-size="10"
+        font-style="italic" fill="#9CA3AF">idle</text>
+
+  <!-- ── Blue Slot ── -->
+  <rect x="468" y="38" width="317" height="116" rx="8"
+        fill="#EFF6FF" stroke="#3B82F6" stroke-width="2"/>
+  <!-- header bar -->
+  <rect x="468" y="38" width="317" height="28" rx="8" fill="#3B82F6" clip-path="url(#blue-clip)"/>
+  <rect x="468" y="52" width="317" height="14" fill="#3B82F6"/>
+  <text x="627" y="55" text-anchor="middle" dominant-baseline="middle"
+        font-size="12" font-weight="700" fill="white">Blue Slot  (active)</text>
+
+  <!-- Blue: site service -->
+  <rect x="480" y="76" width="130" height="50" rx="5"
+        fill="#DBEAFE" stroke="#93C5FD" stroke-width="1"/>
+  <text x="545" y="97" text-anchor="middle" dominant-baseline="middle"
+        font-size="11" font-weight="600" fill="#1E40AF">Site-blue</text>
+  <text x="545" y="115" text-anchor="middle" dominant-baseline="middle"
+        font-size="12" fill="#3B82F6">:XXX1</text>
+
+  <!-- Blue: API service -->
+  <rect x="635" y="76" width="130" height="50" rx="5"
+        fill="#DBEAFE" stroke="#93C5FD" stroke-width="1"/>
+  <text x="700" y="97" text-anchor="middle" dominant-baseline="middle"
+        font-size="11" font-weight="600" fill="#1E40AF">API-blue</text>
+  <text x="700" y="115" text-anchor="middle" dominant-baseline="middle"
+        font-size="12" fill="#3B82F6">:XXX2</text>
+
+  <!-- Blue: internal arrow site→api -->
+  <line x1="610" y1="101" x2="629" y2="101"
+        stroke="#6B7280" stroke-width="1.5" marker-end="url(#ah)"/>
+
+  <!-- Blue: path note -->
+  <text x="627" y="145" text-anchor="middle" font-size="10"
+        fill="#93C5FD">/opt/fms/blue/</text>
+
+  <!-- ── Green Slot ── -->
+  <rect x="468" y="176" width="317" height="116" rx="8"
+        fill="#F9FAFB" stroke="#9CA3AF" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <!-- header bar -->
+  <rect x="468" y="176" width="317" height="28" rx="8" fill="#6B7280" clip-path="url(#green-clip)"/>
+  <rect x="468" y="190" width="317" height="14" fill="#6B7280"/>
+  <text x="627" y="193" text-anchor="middle" dominant-baseline="middle"
+        font-size="12" font-weight="700" fill="white">Green Slot  (idle)</text>
+
+  <!-- Green: site service -->
+  <rect x="480" y="214" width="130" height="50" rx="5"
+        fill="#F3F4F6" stroke="#D1D5DB" stroke-width="1"/>
+  <text x="545" y="235" text-anchor="middle" dominant-baseline="middle"
+        font-size="11" font-weight="600" fill="#6B7280">Site-green</text>
+  <text x="545" y="253" text-anchor="middle" dominant-baseline="middle"
+        font-size="12" fill="#9CA3AF">:XXX3</text>
+
+  <!-- Green: API service -->
+  <rect x="635" y="214" width="130" height="50" rx="5"
+        fill="#F3F4F6" stroke="#D1D5DB" stroke-width="1"/>
+  <text x="700" y="235" text-anchor="middle" dominant-baseline="middle"
+        font-size="11" font-weight="600" fill="#6B7280">API-green</text>
+  <text x="700" y="253" text-anchor="middle" dominant-baseline="middle"
+        font-size="12" fill="#9CA3AF">:XXX4</text>
+
+  <!-- Green: internal arrow site→api -->
+  <line x1="610" y1="239" x2="629" y2="239"
+        stroke="#D1D5DB" stroke-width="1.5" marker-end="url(#ah-gray)"/>
+
+  <!-- Green: path note -->
+  <text x="627" y="283" text-anchor="middle" font-size="10"
+        fill="#D1D5DB">/opt/fms/green/</text>
+</svg>

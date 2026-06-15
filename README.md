@@ -79,25 +79,26 @@ All projects listed in this repository are divided into two categories:
 - [Employment Based Projects](./Articles/EmploymentBasedProjects.md) - projects I worked on during employment.
 - [Experimental Projects](./Articles/ExperimentsAndEducation.md) - projects created out of curiosity, or for experimental and educational purposes.
 
-| Date           |[Employment Based Projects](./Articles/EmploymentBasedProjects.md)| [Experimental and Educational Projects](./Articles/ExperimentsAndEducation.md)|
-|----|----|----|
-|2026|    |[Local AI Assistant](./Articles/37_LocalAI/Article.md)|
-|2026|    |[C#/C++ Interop Communication Example](https://github.com/K-S-K/Interop)|
-|2025|    |[Simple 3V3 LMR50410 DC-DC Converter](https://github.com/K-S-K/PWR-LMR50410-Simple)|
-|2024&#8209;2026 |[Gaia telescope Attitude and Orbit Control System Software Digital Twin](Articles/36_GaiaSDT/Article.md)|[The FreeRTOS-based timer working on RP2350](https://github.com/K-S-K/Pico-Timer-2)|
-|2024&#8209;2025|    |[The Experiment with .NET and Raspberry PI](https://github.com/K-S-K/RPIDBClock)|
-|2024|    |[Data exchange between Docker containerized applications](https://github.com/K-S-K/CCCS)|
-|2023&#8209;2024|    |[Prototype Board CAD](Articles/30_BBCAD/Article.md)|
-|2023|    |[LCD Screen driver for ESP Microcontroller](https://github.com/K-S-K/ESP32-02-OLed-SSD1366)|
-|2021|[Binance Copy Trading](Articles/27_CopyTrading/Article.md)|[Trading Toy](Articles/28_TradeToy/Article.md)|
-|2017&#8209;2022|[Automated Trading System](Articles/04_TDATrading/Article.md)||
-|2012&#8209;2017|[Reliability Analysis System](Articles/05_EWReliability/Article.md)|    |
-|2010&#8209;2011|[Pubmed article editor](Articles/06_PubMedDesktop/Article.md)|    |
-|2009&#8209;2010|[SMS Station](Articles/02_SMSS/Article.md)|    |
+| Date           | [Employment Based Projects](./Articles/EmploymentBasedProjects.md) | [Experimental and Educational Projects](./Articles/ExperimentsAndEducation.md) |
+| ---- | ---- | ---- |
+| 2026 |    | [Font Rasterization SaaS](./Articles/38_EmbeddedFonts/Article.md) |
+| 2026 |    | [Local AI Assistant](./Articles/37_LocalAI/Article.md) |
+| 2026 |    | [C#/C++ Interop Communication Example](https://github.com/K-S-K/Interop) |
+| 2025 |    | [Simple 3V3 LMR50410 DC-DC Converter](https://github.com/K-S-K/PWR-LMR50410-Simple) |
+|2024&#8209;2026 | [Gaia telescope Attitude and Orbit Control System Software Digital Twin](Articles/36_GaiaSDT/Article.md)|[The FreeRTOS-based timer working on RP2350](https://github.com/K-S-K/Pico-Timer-2) |
+| 2024&#8209;2025 |    | [The Experiment with .NET and Raspberry PI](https://github.com/K-S-K/RPIDBClock) |
+| 2024 |    | [Data exchange between Docker containerized applications](https://github.com/K-S-K/CCCS) |
+| 2023&#8209;2024 |    | [Prototype Board CAD](Articles/30_BBCAD/Article.md) |
+| 2023 |    | [LCD Screen driver for ESP Microcontroller](https://github.com/K-S-K/ESP32-02-OLed-SSD1366) |
+| 2021 |[Binance Copy Trading](Articles/27_CopyTrading/Article.md)|[Trading Toy](Articles/28_TradeToy/Article.md)|
+|2017&#8209;2022 | [Automated Trading System](Articles/04_TDATrading/Article.md) | |
+| 2012&#8209;2017 | [Reliability Analysis System](Articles/05_EWReliability/Article.md) |    |
+| 2010&#8209;2011 | [Pubmed article editor](Articles/06_PubMedDesktop/Article.md) |    |
+| 2009&#8209;2010 | [SMS Station](Articles/02_SMSS/Article.md) |    |
 |    |    |    |
 |    |    |    |
-|2003&#8209;2007|[Electric power billing project](Articles/03_ESphere/Article.md)|    |
-|1998&#8209;1999|[Railway Black Box Data Viewer](Articles/01_Railway_BB/Article.md)|    |
+| 2003&#8209;2007 | [Electric power billing project](Articles/03_ESphere/Article.md) |    |
+| 1998&#8209;1999 | [Railway Black Box Data Viewer](Articles/01_Railway_BB/Article.md) |    |
 |    |    |    |
 
 ## Documents

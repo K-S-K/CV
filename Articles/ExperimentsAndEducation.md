@@ -2,6 +2,14 @@
 
 These are some of the projects I've created out of curiosity or for experimental and educational purposes.
 
+## [2026. Font Rasterization Service](./38_EmbeddedFonts/Article.md)
+
+Embedded Font Generator is a SaaS that rasterizes TTF fonts into C header files for small monochrome displays — SSD1306 OLED, e-ink, ST7735. User can pick a font, set the cell dimensions, trim the character set to what your firmware actually needs, fix any pixels by hand, preview on an emulated display, and download a ready-to-compile `.h` file.
+
+It is the actual working site, which can serve needs of embedded developers right now at **[embedded-font.com](https://embedded-font.com/)** — for free, runs in the browser, no account needed.
+
+![Embedded Font Generator](./38_EmbeddedFonts/Images/01_CommonView.png)
+
 ## [2026. AI Assistant](./37_LocalAI/Article.md)
 
 In this project, I'm experimenting with the potential of language models to assist me in my daily activities.

@@ -15,6 +15,7 @@
         "Institut",
         "Jörg",
         "Kalman",
+        "keepalive",
         "Konjunktiv",
         "Korf",
         "Linder",
@@ -25,11 +26,13 @@
         "Microcontrollers",
         "Modalpartikeln",
         "Noviello",
+        "OLED",
         "Ollama",
         "organisations",
         "Passiv",
         "Projekte",
         "qwen",
+        "rasterizes",
         "Rechen",
         "rgba",
         "Rippel",
@@ -45,5 +48,5 @@
         "Yocto",
         "Yuill"
     ],
-    "svg.preview.background": "white"
+    "svg.preview.background": "transparent"
 }
