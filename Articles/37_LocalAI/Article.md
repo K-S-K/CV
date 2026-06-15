@@ -12,7 +12,7 @@
 
 I had been using ChatGPT on and off. Sometimes genuinely useful, always a black box. I knew the rough shape of the technology — transformer architecture, next-token prediction, trained on large text corpora — but that's like knowing a car has a combustion engine. It doesn't tell you how it drives.
 
-So I built one. Not from scratch — training from scratch requires datacenters. But I set up local inference through Ollama, wrote an API layer, wrote a browser-based UI, wired in tools, and started using the result for actual daily work. The goal was to learn by doing.
+So I built one. Not from scratch — training from scratch requires data centers. But I set up local inference with Ollama, wrote an API layer, built a browser-based UI, wired in tools, and started using the results for actual daily work. The goal was to learn by doing.
 
 A few months in, the system has grown in ways I didn't plan, and some of what I've found is more interesting than I expected.
 
@@ -28,7 +28,7 @@ WissensNest runs entirely on my hardware. The models run locally through Ollama.
 
 That last part is the interesting design: the system can do web search, fetch web pages and PDFs, and query my local document library — all while keeping the conversation and all data local. The *reasoning* happens here. The *reaching out* is selective and explicit.
 
-This is not a product. It is a research project. But the pattern — local inference, selective external access, full data ownership — seems like it could be the right shape for a privacy-first AI assistant that organisations or individuals could actually trust.
+This is not a product. It is a research project. But the pattern — local inference, selective external access, full data ownership — seems like it could be the right shape for a privacy-first AI assistant that organizations or individuals could actually trust.
 
 ---
 
@@ -57,7 +57,7 @@ The assistant is part of my regular workflow for embedded development: explainin
 
 ![The User Interface](Images/Fig_03_UI_Embedded.png)
 
-**Fig. 2** An embedded development conversation. The project context is set up to assume embedded systems domain, which shapes the model's default assumptions about what I'm asking.
+**Fig. 2** An embedded development conversation. The project context is set up to assume the embedded systems domain, which shapes the model's default assumptions about what I'm asking.
 
 ---
 
@@ -67,15 +67,15 @@ A language model is frozen in time and blind to its environment. WissensNest clo
 
 Ask *"What's the weather in Munich right now?"* — the model decides, without being told, to call the **Geocoding** tool to resolve "Munich" to coordinates, then the **Weather** tool to fetch current conditions from open-meteo.com. It calls them silently. The answer looks like the model just knows the weather.
 
-Ask *"What do people say about Martin Buber's concept of dialogue?"* — the model calls the **WebSearch** tool, scrapes DuckDuckGo, and synthesises the results.
+Ask *"What do people say about Martin Buber's concept of dialogue?"* — the model calls the **WebSearch** tool, scrapes DuckDuckGo, and synthesizes the results.
 
-Point it at a PDF from my local library — a datasheet, a research paper, a technical manual — and the **Library** tools handle it: search by keyword, read specific pages, and summarise. The model calls `library_search` before `web_search` by default, so local sources get priority.
+Point it at a PDF from my local library — a datasheet, a research paper, a technical manual — and the **Library** tools handle it: search by keyword, read specific pages, and summarise. By default, the model calls `library_search` before `web_search`, so local sources take priority.
 
-For web documents, **FetchPage** fetches HTML or PDF content directly and hands it to the model to read.
+For web documents, **FetchPage** fetches HTML or PDF content directly and passes it to the model for reading.
 
 ![The User Interface](Images/Fig_05_UI_Buber.png)
 
-**Fig. 3** Research on Martin Buber. The assistant uses web search to gather sources and synthesises the results into a structured answer. The tool calls happen silently — no prompt required.
+**Fig. 3** Research on the Web for the specific subject (Martin Buber works). The assistant uses web search to gather sources and synthesizes the results into a structured answer. The tool calls happen silently — no prompt required.
 
 The tools run as isolated .NET assemblies, each implementing a single `ITool` interface. Adding a new one means implementing that interface and registering it in DI. The routing, tool selection, streaming, and persistence all pick it up automatically.
 
