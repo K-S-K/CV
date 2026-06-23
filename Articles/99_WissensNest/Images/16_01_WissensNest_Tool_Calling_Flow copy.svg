@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="650" viewBox="0 0 900 650" font-family="ui-sans-serif, system-ui, sans-serif">
+
+  <defs>
+    <marker id="ah" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="#444"/>
+    </marker>
+    <marker id="ah-red" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="#c0392b"/>
+    </marker>
+    <marker id="ah-grn" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="#1e8449"/>
+    </marker>
+    <marker id="ah-gry" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="#666"/>
+    </marker>
+  </defs>
+
+  <!-- background -->
+  <rect width="900" height="650" fill="#f4f6f9" rx="10"/>
+
+  <!-- title -->
+  <text x="450" y="24" text-anchor="middle" font-size="14" font-weight="700" fill="#1a1a2e">WissensNest — Tool Calling Flow</text>
+
+  <!-- ===== ACTOR BOXES ===== -->
+  <!-- x-centers: 75 | 215 | 390 | 600 | 804 -->
+
+  <rect x="17"  y="36" width="116" height="36" rx="6" fill="#4a90d9" stroke="#2c6fad" stroke-width="1.5"/>
+  <text x="75"  y="59" text-anchor="middle" font-size="11" font-weight="600" fill="white">Chat.razor / API</text>
+
+  <rect x="153" y="36" width="124" height="36" rx="6" fill="#5c6bc0" stroke="#3949ab" stroke-width="1.5"/>
+  <text x="215" y="59" text-anchor="middle" font-size="11" font-weight="600" fill="white">ChatService</text>
+
+  <rect x="315" y="36" width="150" height="36" rx="6" fill="#5c6bc0" stroke="#3949ab" stroke-width="1.5"/>
+  <text x="390" y="53" text-anchor="middle" font-size="11" font-weight="600" fill="white">Tool</text>
+  <text x="390" y="67" text-anchor="middle" font-size="11" font-weight="600" fill="white">Orchestrator</text>
+
+  <rect x="530" y="36" width="140" height="36" rx="6" fill="#c0392b" stroke="#922b21" stroke-width="1.5"/>
+  <text x="600" y="53" text-anchor="middle" font-size="11" font-weight="600" fill="white">OllamaSharp</text>
+  <text x="600" y="67" text-anchor="middle" font-size="11" font-weight="600" fill="white">+ Model</text>
+
+  <rect x="745" y="36" width="118" height="36" rx="6" fill="#27ae60" stroke="#1e8449" stroke-width="1.5"/>
+  <text x="804" y="53" text-anchor="middle" font-size="11" font-weight="600" fill="white">ITool</text>
+  <text x="804" y="67" text-anchor="middle" font-size="11" font-weight="600" fill="white">Implementation</text>
+
+  <!-- ===== LIFELINES ===== -->
+  <line x1="75"  y1="72" x2="75"  y2="615" stroke="#bbc" stroke-width="1" stroke-dasharray="5,4"/>
+  <line x1="215" y1="72" x2="215" y2="615" stroke="#bbc" stroke-width="1" stroke-dasharray="5,4"/>
+  <line x1="390" y1="72" x2="390" y2="615" stroke="#bbc" stroke-width="1" stroke-dasharray="5,4"/>
+  <line x1="600" y1="72" x2="600" y2="615" stroke="#bbc" stroke-width="1" stroke-dasharray="5,4"/>
+  <line x1="804" y1="72" x2="804" y2="615" stroke="#bbc" stroke-width="1" stroke-dasharray="5,4"/>
+
+  <!-- ===== STEP 1: UI → ChatService ===== -->
+  <line x1="82" y1="105" x2="207" y2="105" stroke="#444" stroke-width="1.5" marker-end="url(#ah)"/>
+  <text x="145" y="99" text-anchor="middle" font-size="9.5" fill="#333">POST /chat/stream  +  EnabledTools</text>
+
+  <!-- ===== STEP 2: ChatService → ToolOrchestrator ===== -->
+  <line x1="222" y1="132" x2="382" y2="132" stroke="#444" stroke-width="1.5" marker-end="url(#ah)"/>
+  <text x="302" y="126" text-anchor="middle" font-size="9.5" fill="#333">OrchestrateAsync(messages, enabledTools)</text>
+
+  <!-- ===== LOOP BOX ===== -->
+  <rect x="305" y="149" width="576" height="305" rx="5" fill="rgba(92,107,192,0.04)" stroke="#5c6bc0" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <rect x="305" y="149" width="48" height="17" rx="3" fill="#5c6bc0"/>
+  <text x="329" y="161" text-anchor="middle" font-size="9" font-weight="600" fill="white">loop</text>
+  <text x="362" y="161" font-size="9" font-style="italic" fill="#5c6bc0">  while model requests tool calls</text>
+
+  <!-- STEP 3: ToolOrchestrator → OllamaSharp -->
+  <line x1="397" y1="190" x2="592" y2="190" stroke="#444" stroke-width="1.5" marker-end="url(#ah)"/>
+  <text x="494" y="184" text-anchor="middle" font-size="9.5" fill="#333">StreamChatAsync(messages, tool schemas)</text>
+
+  <!-- STEP 4: OllamaSharp → ToolOrchestrator  (tool call requested) -->
+  <line x1="593" y1="222" x2="398" y2="222" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#ah-red)"/>
+  <text x="494" y="216" text-anchor="middle" font-size="9.5" fill="#c0392b">ToolCallRequestChunk(toolName, inputJson)</text>
+
+  <!-- STEP 5: ToolOrchestrator → ITool -->
+  <line x1="397" y1="260" x2="796" y2="260" stroke="#1e8449" stroke-width="1.5" marker-end="url(#ah-grn)"/>
+  <text x="594" y="254" text-anchor="middle" font-size="9.5" fill="#1e8449">ExecuteAsync(inputJson)  →  Task&lt;string&gt;</text>
+
+  <!-- STEP 6: ITool → ToolOrchestrator (plain-text result) -->
+  <line x1="797" y1="292" x2="398" y2="292" stroke="#1e8449" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#ah-grn)"/>
+  <text x="594" y="286" text-anchor="middle" font-size="9.5" fill="#1e8449">plain-text result (key: value lines)</text>
+
+  <!-- Internal state note -->
+  <rect x="313" y="310" width="248" height="24" rx="4" fill="#fff8e1" stroke="#f9a825" stroke-width="1"/>
+  <text x="437" y="326" text-anchor="middle" font-size="9.5" fill="#6d4c00">append assistant + tool messages to history</text>
+
+  <!-- Repeat indicator -->
+  <text x="490" y="447" text-anchor="middle" font-size="9.5" font-style="italic" fill="#5c6bc0">↻  repeat until no more tool calls are returned</text>
+
+  <!-- ===== FINAL RESPONSE (outside loop) ===== -->
+  <!-- "no tool calls" annotation -->
+  <text x="494" y="480" text-anchor="middle" font-size="9" font-style="italic" fill="#888">no tool calls → final text answer</text>
+
+  <!-- STEP 7: OllamaSharp → ToolOrchestrator (text tokens) -->
+  <line x1="593" y1="493" x2="398" y2="493" stroke="#666" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#ah-gry)"/>
+  <text x="494" y="487" text-anchor="middle" font-size="9.5" fill="#555">TextTokenChunk…  CompletionChunk</text>
+
+  <!-- STEP 8: ToolOrchestrator → ChatService -->
+  <line x1="383" y1="528" x2="222" y2="528" stroke="#666" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#ah-gry)"/>
+  <text x="302" y="522" text-anchor="middle" font-size="9.5" fill="#555">yield StreamChunks</text>
+
+  <!-- STEP 9: ChatService → UI -->
+  <line x1="208" y1="560" x2="82" y2="560" stroke="#666" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#ah-gry)"/>
+  <text x="145" y="554" text-anchor="middle" font-size="9.5" fill="#555">NDJSON stream  →  UI renders</text>
+
+  <!-- ===== LEGEND ===== -->
+  <rect x="17" y="590" width="866" height="44" rx="5" fill="white" stroke="#ddd" stroke-width="1"/>
+
+  <line x1="30"  y1="613" x2="55"  y2="613" stroke="#444" stroke-width="1.5" marker-end="url(#ah)"/>
+  <text x="63"   y="617" font-size="9" fill="#444">Request</text>
+
+  <line x1="133" y1="613" x2="158" y2="613" stroke="#666" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#ah-gry)"/>
+  <text x="166"  y="617" font-size="9" fill="#444">Response / stream</text>
+
+  <line x1="283" y1="613" x2="308" y2="613" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#ah-red)"/>
+  <text x="316"  y="617" font-size="9" fill="#444">Tool call from model</text>
+
+  <line x1="440" y1="613" x2="465" y2="613" stroke="#1e8449" stroke-width="1.5" marker-end="url(#ah-grn)"/>
+  <text x="473"  y="617" font-size="9" fill="#444">Tool execution</text>
+
+  <rect x="572" y="607" width="12" height="12" fill="#fff8e1" stroke="#f9a825" stroke-width="1"/>
+  <text x="592"  y="617" font-size="9" fill="#444">Internal state update</text>
+
+  <rect x="710" y="607" width="14" height="12" fill="rgba(92,107,192,0.04)" stroke="#5c6bc0" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="732"  y="617" font-size="9" fill="#444">Loop boundary</text>
+
+</svg>

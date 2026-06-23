@@ -1,0 +1,111 @@
+<svg width="100%" viewBox="0 0 960 620" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arr-dash" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="480" y="22" text-anchor="middle" fill="rgb(35,35,33)" font-family="-apple-system,system-ui,sans-serif" font-size="15" font-weight="600">WissensNest — Knowledge Workbench Hierarchy</text>
+
+  <!-- ── PROJECT ─────────────────────────────────────────────────────── -->
+  <rect x="340" y="36" width="280" height="56" rx="10" fill="rgb(238,237,254)" stroke="rgb(83,74,183)" stroke-width="1.8"/>
+  <text x="480" y="60" text-anchor="middle" fill="rgb(60,52,137)" font-family="-apple-system,system-ui,sans-serif" font-size="14" font-weight="700">Project</text>
+  <text x="480" y="80" text-anchor="middle" fill="rgb(100,90,200)" font-family="-apple-system,system-ui,sans-serif" font-size="11">e.g. "STM32 Clock" · "Book — I and Thou"</text>
+
+  <!-- Project → Section connector -->
+  <line x1="480" y1="92" x2="480" y2="116" stroke="rgb(83,74,183)" stroke-width="1.4" marker-end="url(#arr)"/>
+  <text x="490" y="108" fill="rgb(100,90,200)" font-family="-apple-system,system-ui,sans-serif" font-size="9">1 : N</text>
+
+  <!-- ── SECTION ─────────────────────────────────────────────────────── -->
+  <rect x="310" y="116" width="340" height="56" rx="10" fill="rgb(228,242,255)" stroke="rgb(40,100,180)" stroke-width="1.6"/>
+  <text x="480" y="140" text-anchor="middle" fill="rgb(20,70,140)" font-family="-apple-system,system-ui,sans-serif" font-size="14" font-weight="700">Section</text>
+  <text x="480" y="160" text-anchor="middle" fill="rgb(50,120,200)" font-family="-apple-system,system-ui,sans-serif" font-size="11">e.g. "Schematic" · "Historical Context" · "UI"</text>
+
+  <!-- Section → Conversations branch (left) -->
+  <path d="M 400 172 L 400 196 L 220 196 L 220 220" fill="none" stroke="rgb(15,110,86)" stroke-width="1.4" marker-end="url(#arr)"/>
+  <text x="296" y="192" text-anchor="middle" fill="rgb(15,110,86)" font-family="-apple-system,system-ui,sans-serif" font-size="9">1 : N</text>
+
+  <!-- Section → Articles branch (right) -->
+  <path d="M 560 172 L 560 196 L 740 196 L 740 220" fill="none" stroke="rgb(160,85,10)" stroke-width="1.4" marker-end="url(#arr)"/>
+  <text x="664" y="192" text-anchor="middle" fill="rgb(160,85,10)" font-family="-apple-system,system-ui,sans-serif" font-size="9">1 : N</text>
+
+  <!-- ── CONVERSATIONS ───────────────────────────────────────────────── -->
+  <rect x="80" y="220" width="280" height="56" rx="10" fill="rgb(225,245,238)" stroke="rgb(15,110,86)" stroke-width="1.5"/>
+  <text x="220" y="244" text-anchor="middle" fill="rgb(8,80,65)" font-family="-apple-system,system-ui,sans-serif" font-size="14" font-weight="700">Conversation</text>
+  <text x="220" y="262" text-anchor="middle" fill="rgb(20,130,100)" font-family="-apple-system,system-ui,sans-serif" font-size="11">dialogue · exploration · AI-assisted</text>
+
+  <!-- Conversations → Messages -->
+  <line x1="220" y1="276" x2="220" y2="300" stroke="rgb(15,110,86)" stroke-width="1.4" marker-end="url(#arr)"/>
+  <text x="230" y="292" fill="rgb(20,130,100)" font-family="-apple-system,system-ui,sans-serif" font-size="9">1 : N</text>
+
+  <!-- ── MESSAGES ────────────────────────────────────────────────────── -->
+  <rect x="80" y="300" width="280" height="96" rx="10" fill="rgb(210,240,228)" stroke="rgb(15,110,86)" stroke-width="1.2"/>
+  <text x="220" y="324" text-anchor="middle" fill="rgb(8,80,65)" font-family="-apple-system,system-ui,sans-serif" font-size="13" font-weight="700">Message</text>
+  <text x="220" y="342" text-anchor="middle" fill="rgb(20,130,100)" font-family="-apple-system,system-ui,sans-serif" font-size="10">chronological · fixed order</text>
+  <text x="220" y="358" text-anchor="middle" fill="rgb(20,130,100)" font-family="-apple-system,system-ui,sans-serif" font-size="10">Role: user | assistant</text>
+  <text x="220" y="374" text-anchor="middle" fill="rgb(20,130,100)" font-family="-apple-system,system-ui,sans-serif" font-size="10">actions: Reply · Ignore · Regenerate · Edit</text>
+
+  <!-- ── ARTICLES ────────────────────────────────────────────────────── -->
+  <rect x="600" y="220" width="280" height="56" rx="10" fill="rgb(255,243,220)" stroke="rgb(160,85,10)" stroke-width="1.5"/>
+  <text x="740" y="244" text-anchor="middle" fill="rgb(110,60,5)" font-family="-apple-system,system-ui,sans-serif" font-size="14" font-weight="700">Article</text>
+  <text x="740" y="262" text-anchor="middle" fill="rgb(180,100,20)" font-family="-apple-system,system-ui,sans-serif" font-size="11">authoring · curation · export target</text>
+
+  <!-- Articles → Blocks -->
+  <line x1="740" y1="276" x2="740" y2="300" stroke="rgb(160,85,10)" stroke-width="1.4" marker-end="url(#arr)"/>
+  <text x="750" y="292" fill="rgb(180,100,20)" font-family="-apple-system,system-ui,sans-serif" font-size="9">1 : N</text>
+
+  <!-- ── BLOCKS ─────────────────────────────────────────────────────── -->
+  <rect x="600" y="300" width="280" height="96" rx="10" fill="rgb(255,235,195)" stroke="rgb(160,85,10)" stroke-width="1.2"/>
+  <text x="740" y="324" text-anchor="middle" fill="rgb(110,60,5)" font-family="-apple-system,system-ui,sans-serif" font-size="13" font-weight="700">Block</text>
+  <text x="740" y="342" text-anchor="middle" fill="rgb(180,100,20)" font-family="-apple-system,system-ui,sans-serif" font-size="10">manual order (Ordinal)</text>
+  <text x="740" y="358" text-anchor="middle" fill="rgb(180,100,20)" font-family="-apple-system,system-ui,sans-serif" font-size="10">Author: user (AI-assisted)</text>
+  <text x="740" y="374" text-anchor="middle" fill="rgb(180,100,20)" font-family="-apple-system,system-ui,sans-serif" font-size="10">actions: Move · Copy · Merge · Split · ☑ Export</text>
+
+  <!-- ── BRIDGE ARROWS (Messages ↔ Blocks) ──────────────────────────── -->
+  <!-- Promote: Message → Block -->
+  <path d="M 360 346 L 430 346 L 430 438 L 600 438" fill="none" stroke="rgb(83,74,183)" stroke-width="1.5" stroke-dasharray="6 3" marker-end="url(#arr)"/>
+  <text x="480" y="432" text-anchor="middle" fill="rgb(60,52,137)" font-family="-apple-system,system-ui,sans-serif" font-size="10" font-weight="500">Promote to Block</text>
+
+  <!-- Discuss: Block → Conversation -->
+  <path d="M 600 362 L 530 362 L 530 445 L 360 445" fill="none" stroke="rgb(60,52,137)" stroke-width="1.5" stroke-dasharray="6 3" marker-end="url(#arr)"/>
+  <text x="480" y="458" text-anchor="middle" fill="rgb(83,74,183)" font-family="-apple-system,system-ui,sans-serif" font-size="10" font-weight="500">Send to Conversation</text>
+
+  <!-- ── SCRATCH AREA ────────────────────────────────────────────────── -->
+  <rect x="290" y="490" width="380" height="52" rx="8" fill="rgb(251,251,248)" stroke="rgb(120,120,115)" stroke-width="1" stroke-dasharray="5 3"/>
+  <text x="480" y="512" text-anchor="middle" fill="rgb(80,80,75)" font-family="-apple-system,system-ui,sans-serif" font-size="12" font-weight="600">Scratch (per Section)</text>
+  <text x="480" y="530" text-anchor="middle" fill="rgb(110,110,105)" font-family="-apple-system,system-ui,sans-serif" font-size="10">unorganised Block inbox — quick capture; promote to Article when ready</text>
+
+  <!-- Scratch connector from Section -->
+  <line x1="480" y1="172" x2="480" y2="490" stroke="rgb(120,120,115)" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+
+  <!-- ── EXPORT callout ─────────────────────────────────────────────── -->
+  <rect x="600" y="430" width="280" height="52" rx="8" fill="rgb(252,244,242)" stroke="rgb(170,70,40)" stroke-width="1" stroke-dasharray="5 3"/>
+  <text x="740" y="452" text-anchor="middle" fill="rgb(130,50,20)" font-family="-apple-system,system-ui,sans-serif" font-size="12" font-weight="600">PDF Export</text>
+  <text x="740" y="470" text-anchor="middle" fill="rgb(170,70,40)" font-family="-apple-system,system-ui,sans-serif" font-size="10">Whole Article · or selected Blocks (☑ checkbox)</text>
+
+  <!-- Export connector from Blocks -->
+  <line x1="740" y1="396" x2="740" y2="430" stroke="rgb(170,70,40)" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+
+  <!-- ── LEGEND ─────────────────────────────────────────────────────── -->
+  <rect x="10" y="556" width="940" height="56" rx="8" fill="rgb(251,251,248)" stroke="rgba(40,40,38,0.10)" stroke-width="1"/>
+  <text x="24" y="573" fill="rgb(80,80,75)" font-family="-apple-system,system-ui,sans-serif" font-size="10" font-weight="600">Legend</text>
+
+  <rect x="24" y="580" width="14" height="10" rx="2" fill="rgb(238,237,254)" stroke="rgb(83,74,183)" stroke-width="1.2"/>
+  <text x="44" y="590" fill="rgb(60,52,137)" font-family="-apple-system,system-ui,sans-serif" font-size="10">Project / Section hierarchy</text>
+
+  <rect x="180" y="580" width="14" height="10" rx="2" fill="rgb(225,245,238)" stroke="rgb(15,110,86)" stroke-width="1.2"/>
+  <text x="200" y="590" fill="rgb(8,80,65)" font-family="-apple-system,system-ui,sans-serif" font-size="10">Conversation world</text>
+
+  <rect x="340" y="580" width="14" height="10" rx="2" fill="rgb(255,243,220)" stroke="rgb(160,85,10)" stroke-width="1.2"/>
+  <text x="360" y="590" fill="rgb(110,60,5)" font-family="-apple-system,system-ui,sans-serif" font-size="10">Article world</text>
+
+  <line x1="480" y1="585" x2="506" y2="585" stroke="rgb(83,74,183)" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#arr)"/>
+  <text x="512" y="590" fill="rgb(60,52,137)" font-family="-apple-system,system-ui,sans-serif" font-size="10">Bridge: Promote / Send to Conversation</text>
+
+  <line x1="730" y1="585" x2="756" y2="585" stroke="rgb(170,70,40)" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+  <text x="762" y="590" fill="rgb(130,50,20)" font-family="-apple-system,system-ui,sans-serif" font-size="10">Export flow</text>
+</svg>
