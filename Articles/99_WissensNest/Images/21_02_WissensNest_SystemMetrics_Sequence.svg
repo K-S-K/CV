@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" font-family="ui-sans-serif, system-ui, sans-serif">
+  <defs>
+    <marker id="ah"     markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#444"/></marker>
+    <marker id="ah-grn" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#27ae60"/></marker>
+    <marker id="ah-org" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#e67e22"/></marker>
+    <marker id="ah-pur" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#7d3c98"/></marker>
+    <marker id="ah-red" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#c0392b"/></marker>
+    <marker id="ah-blu" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#2980b9"/></marker>
+  </defs>
+
+  <rect width="900" height="520" fill="#f4f6f9" rx="10"/>
+  <text x="450" y="26" text-anchor="middle" font-size="15" font-weight="700" fill="#1a1a2e">SystemMetrics — Data Flow &amp; Timing</text>
+
+  <!-- ═══ PARTICIPANT BOXES (y=36) ═══ -->
+  <!-- centres: macOS=80, SvcBg=240, HTTP=430, UIGauge=620, User=820 -->
+
+  <rect x="20"  y="36" width="120" height="36" rx="6" fill="#5d6d7e" stroke="#424949" stroke-width="1.5"/>
+  <text x="80"  y="59" text-anchor="middle" font-size="11" font-weight="600" fill="white">macOS</text>
+
+  <rect x="174" y="36" width="132" height="36" rx="6" fill="#27ae60" stroke="#1e8449" stroke-width="1.5"/>
+  <text x="240" y="52" text-anchor="middle" font-size="11" font-weight="600" fill="white">SystemMetrics</text>
+  <text x="240" y="66" text-anchor="middle" font-size="9"  font-weight="400" fill="#d5f5e3">BackgroundService</text>
+
+  <rect x="364" y="36" width="132" height="36" rx="6" fill="#2980b9" stroke="#1a6fa8" stroke-width="1.5"/>
+  <text x="430" y="52" text-anchor="middle" font-size="11" font-weight="600" fill="white">API Endpoints</text>
+  <text x="430" y="66" text-anchor="middle" font-size="9"  font-weight="400" fill="#d6eaf8">/system/metrics</text>
+
+  <rect x="554" y="36" width="132" height="36" rx="6" fill="#7d3c98" stroke="#6c3483" stroke-width="1.5"/>
+  <text x="620" y="52" text-anchor="middle" font-size="11" font-weight="600" fill="white">MemoryGauge</text>
+  <text x="620" y="66" text-anchor="middle" font-size="9"  font-weight="400" fill="#e8daef">UI · PeriodicTimer 2 s</text>
+
+  <rect x="770" y="36" width="110" height="36" rx="6" fill="#c0392b" stroke="#a93226" stroke-width="1.5"/>
+  <text x="825" y="59" text-anchor="middle" font-size="11" font-weight="600" fill="white">User (click)</text>
+
+  <!-- lifelines -->
+  <line x1="80"  y1="72" x2="80"  y2="510" stroke="#5d6d7e" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="240" y1="72" x2="240" y2="510" stroke="#27ae60" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="430" y1="72" x2="430" y2="510" stroke="#2980b9" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="620" y1="72" x2="620" y2="510" stroke="#7d3c98" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="825" y1="72" x2="825" y2="510" stroke="#c0392b" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- ═══ BACKGROUND LOOP 1: Backend poll (y=100..230) ═══ -->
+  <rect x="14" y="96" width="450" height="142" fill="none" stroke="#27ae60" stroke-width="1" stroke-dasharray="6,3" rx="6"/>
+  <text x="20" y="110" font-size="9" fill="#27ae60">loop  every 2 s  (PollIntervalMs = 2000)</text>
+
+  <!-- call: SvcBg → macOS  (sysctl + vm_stat + swapusage in parallel) -->
+  <line x1="240" y1="126" x2="84"  y2="126" stroke="#27ae60" stroke-width="1.5" marker-end="url(#ah-grn)"/>
+  <text x="162" y="121" text-anchor="middle" font-size="9" fill="#27ae60">sysctl · vm_stat · swapusage  (Task.WhenAll)</text>
+
+  <!-- return: macOS → SvcBg -->
+  <line x1="84"  y1="148" x2="236" y2="148" stroke="#5d6d7e" stroke-width="1.5" stroke-dasharray="4,2" marker-end="url(#ah)"/>
+  <text x="162" y="144" text-anchor="middle" font-size="9" fill="#5d6d7e">raw page counts · swap string</text>
+
+  <!-- call: SvcBg → macOS  (process scan) -->
+  <line x1="240" y1="170" x2="84"  y2="170" stroke="#27ae60" stroke-width="1.5" marker-end="url(#ah-grn)"/>
+  <text x="162" y="165" text-anchor="middle" font-size="9" fill="#27ae60">GetProcessesByName("ollama")  .WorkingSet64</text>
+
+  <!-- return: macOS → SvcBg -->
+  <line x1="84"  y1="186" x2="236" y2="186" stroke="#5d6d7e" stroke-width="1.5" stroke-dasharray="4,2" marker-end="url(#ah)"/>
+  <text x="162" y="182" text-anchor="middle" font-size="9" fill="#5d6d7e">RSS bytes</text>
+
+  <!-- SvcBg internal: lock + store -->
+  <rect x="222" y="196" width="36" height="34" fill="#d5f5e3" stroke="#27ae60" stroke-width="1" rx="3"/>
+  <text x="240" y="210" text-anchor="middle" font-size="8" fill="#1e8449">lock</text>
+  <text x="240" y="222" text-anchor="middle" font-size="8" fill="#1e8449">store</text>
+  <text x="272" y="218" font-size="9" fill="#27ae60">_latest = snapshot;  _history.Add(snapshot);</text>
+  <text x="272" y="230" font-size="9" fill="#27ae60">if (_history.Count &gt; 60)  _history.RemoveAt(0);</text>
+
+  <!-- ═══ BACKGROUND LOOP 2: UI poll (y=260..400) ═══ -->
+  <rect x="364" y="256" width="300" height="152" fill="none" stroke="#7d3c98" stroke-width="1" stroke-dasharray="6,3" rx="6"/>
+  <text x="370" y="270" font-size="9" fill="#7d3c98">loop  every 2 s  (PeriodicTimer, independent clock)</text>
+
+  <!-- UIGauge → HTTP: GET /system/metrics -->
+  <line x1="616" y1="286" x2="434" y2="286" stroke="#7d3c98" stroke-width="1.5" marker-end="url(#ah-pur)"/>
+  <text x="525" y="281" text-anchor="middle" font-size="9" fill="#7d3c98">GET /system/metrics</text>
+
+  <!-- HTTP → UIGauge: snapshot JSON -->
+  <line x1="434" y1="306" x2="616" y2="306" stroke="#2980b9" stroke-width="1.5" stroke-dasharray="4,2" marker-end="url(#ah-blu)"/>
+  <text x="525" y="302" text-anchor="middle" font-size="9" fill="#2980b9">SystemMetricsSnapshot (JSON)</text>
+
+  <!-- UIGauge → HTTP: GET /system/metrics/history -->
+  <line x1="616" y1="330" x2="434" y2="330" stroke="#7d3c98" stroke-width="1.5" marker-end="url(#ah-pur)"/>
+  <text x="525" y="325" text-anchor="middle" font-size="9" fill="#7d3c98">GET /system/metrics/history</text>
+
+  <!-- HTTP → UIGauge: history JSON -->
+  <line x1="434" y1="350" x2="616" y2="350" stroke="#2980b9" stroke-width="1.5" stroke-dasharray="4,2" marker-end="url(#ah-blu)"/>
+  <text x="525" y="346" text-anchor="middle" font-size="9" fill="#2980b9">List&lt;SystemMetricsSnapshot&gt;  (up to 60 entries)</text>
+
+  <!-- UIGauge internal: StateHasChanged -->
+  <rect x="602" y="360" width="36" height="38" fill="#e8daef" stroke="#7d3c98" stroke-width="1" rx="3"/>
+  <text x="620" y="374" text-anchor="middle" font-size="8" fill="#4a235a">Invoke</text>
+  <text x="620" y="386" text-anchor="middle" font-size="8" fill="#4a235a">Async</text>
+  <text x="644" y="378" font-size="9" fill="#7d3c98">InvokeAsync(StateHasChanged)  →  variant re-renders</text>
+  <text x="644" y="390" font-size="9" fill="#7d3c98">with fresh _snapshot and _history</text>
+
+  <!-- ═══ USER CLICK FLOW (y=430..490) ═══ -->
+  <text x="15" y="424" font-size="9" fill="#c0392b">User click</text>
+
+  <!-- User → UIGauge -->
+  <line x1="821" y1="436" x2="624" y2="436" stroke="#c0392b" stroke-width="1.5" marker-end="url(#ah-red)"/>
+  <text x="722" y="431" text-anchor="middle" font-size="9" fill="#c0392b">click on .memory-gauge div</text>
+
+  <!-- UIGauge → DisplayService (CycleVariant) — shown as self-note since DisplayService is a singleton -->
+  <rect x="622" y="448" width="220" height="24" fill="#fde8d8" stroke="#c0392b" stroke-width="1" rx="3"/>
+  <text x="732" y="464" text-anchor="middle" font-size="9" fill="#c0392b">MemoryDisplayService.CycleVariant()  →  OnVariantChanged fires</text>
+
+  <!-- UIGauge: OnVariantChanged handler → InvokeAsync(StateHasChanged) -->
+  <rect x="622" y="480" width="220" height="22" fill="#e8daef" stroke="#7d3c98" stroke-width="1" rx="3"/>
+  <text x="732" y="495" text-anchor="middle" font-size="9" fill="#7d3c98">InvokeAsync(StateHasChanged)  →  new variant rendered</text>
+
+  <!-- note: two independent clocks -->
+  <rect x="14" y="420" width="330" height="72" fill="#fffde7" stroke="#f39c12" stroke-width="1" stroke-dasharray="4,2" rx="5"/>
+  <text x="20" y="437" font-size="9" font-weight="600" fill="#e67e22">Two independent 2-second clocks:</text>
+  <text x="20" y="453" font-size="9" fill="#5d6d7e">Backend: Task.Delay(2000) in BackgroundService</text>
+  <text x="20" y="469" font-size="9" fill="#5d6d7e">UI:      PeriodicTimer(TimeSpan.FromSeconds(2))</text>
+  <text x="20" y="485" font-size="9" fill="#5d6d7e">Not synchronized — UI may see the same snapshot</text>
+  <text x="20" y="497" font-size="9" fill="#5d6d7e">twice or skip one. Drift ≤ 2 s, imperceptible.</text>
+</svg>

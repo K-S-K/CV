@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" font-family="-apple-system,system-ui,sans-serif">
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5"
+            markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke"
+            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- canvas -->
+  <rect width="760" height="400" fill="#f4f6f9" rx="10"/>
+  <text x="380" y="26" text-anchor="middle" font-size="15" font-weight="700" fill="#1a1a2e">
+    System Prompt Composition — Three Layers
+  </text>
+
+  <!-- ── Layer 3 — Conversation (top) ──────────────────── -->
+  <rect x="160" y="44" width="440" height="68" rx="6"
+        fill="rgb(237,233,254)" stroke="rgb(124,58,237)" stroke-width="1.5"/>
+  <text x="220" y="65" font-size="11" font-weight="700" fill="rgb(91,33,182)">
+    Layer 3 — Conversation Prompt
+  </text>
+  <text x="220" y="82" font-size="10" fill="rgb(76,29,149)">
+    Optional · set once at conversation creation
+  </text>
+  <text x="220" y="99" font-size="10" fill="rgb(76,29,149)">
+    UI: "Add context" dropdown before the first message
+  </text>
+  <rect x="516" y="55" width="70" height="18" rx="9" fill="rgb(124,58,237)"/>
+  <text x="551" y="68" text-anchor="middle" font-size="9" fill="#ffffff">per conversation</text>
+
+  <!-- + separator -->
+  <text x="380" y="131" text-anchor="middle" font-size="22" fill="#6b7280">+</text>
+
+  <!-- ── Layer 2 — Project (middle) ─────────────────────── -->
+  <rect x="160" y="140" width="440" height="68" rx="6"
+        fill="rgb(219,234,254)" stroke="rgb(59,130,246)" stroke-width="1.5"/>
+  <text x="220" y="161" font-size="11" font-weight="700" fill="rgb(29,78,216)">
+    Layer 2 — Project Default Prompt
+  </text>
+  <text x="220" y="178" font-size="10" fill="rgb(30,64,175)">
+    Optional · assigned to a project, applies to all new conversations
+  </text>
+  <text x="220" y="195" font-size="10" fill="rgb(30,64,175)">
+    UI: &#x229E; button per project in the sidebar
+  </text>
+  <rect x="526" y="151" width="60" height="18" rx="9" fill="rgb(59,130,246)"/>
+  <text x="556" y="164" text-anchor="middle" font-size="9" fill="#ffffff">per project</text>
+
+  <!-- + separator -->
+  <text x="380" y="227" text-anchor="middle" font-size="22" fill="#6b7280">+</text>
+
+  <!-- ── Layer 1 — Global (bottom) ──────────────────────── -->
+  <rect x="160" y="236" width="440" height="68" rx="6"
+        fill="rgb(209,250,229)" stroke="rgb(5,150,105)" stroke-width="1.5"/>
+  <text x="220" y="257" font-size="11" font-weight="700" fill="rgb(6,95,70)">
+    Layer 1 — Global Config Prompt
+  </text>
+  <text x="220" y="274" font-size="10" fill="rgb(6,78,59)">
+    Always active · set in appsettings.json &#x2192; Chat:SystemPrompt
+  </text>
+  <text x="220" y="291" font-size="10" fill="rgb(6,78,59)">
+    Instructs: language, tool policy, Markdown formatting rules
+  </text>
+  <rect x="524" y="247" width="62" height="18" rx="9" fill="rgb(5,150,105)"/>
+  <text x="555" y="260" text-anchor="middle" font-size="9" fill="#ffffff">always active</text>
+
+  <!-- ── Arrow to result ────────────────────────────────── -->
+  <line x1="380" y1="308" x2="380" y2="328" stroke="rgb(115,114,108)" stroke-width="2"
+        marker-end="url(#arrow)"/>
+
+  <!-- ── Combined system prompt ─────────────────────────── -->
+  <rect x="210" y="330" width="340" height="40" rx="6"
+        fill="#1c1c2e" stroke="#374151" stroke-width="1.5"/>
+  <text x="380" y="347" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff">
+    Combined System Prompt
+  </text>
+  <text x="380" y="363" text-anchor="middle" font-size="9" fill="#9ca3af">
+    Layers joined with  ---  · stored as snapshot at conversation creation
+  </text>
+
+  <!-- ── Arrow to model ─────────────────────────────────── -->
+  <line x1="552" y1="350" x2="598" y2="350" stroke="rgb(115,114,108)" stroke-width="2"
+        marker-end="url(#arrow)"/>
+
+  <!-- ── Model ──────────────────────────────────────────── -->
+  <rect x="600" y="332" width="120" height="36" rx="18"
+        fill="rgb(83,74,183)" stroke="rgb(99,91,207)" stroke-width="1.5"/>
+  <text x="660" y="355" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">
+    Language Model
+  </text>
+
+  <!-- ── Left margin: newest → oldest labels ───────────── -->
+  <text x="148" y="83" text-anchor="end" font-size="10" font-style="italic" fill="#9ca3af">newest</text>
+  <text x="152" y="176" text-anchor="end" font-size="14" fill="#9ca3af">&#x2193;</text>
+  <text x="148" y="272" text-anchor="end" font-size="10" font-style="italic" fill="#9ca3af">oldest</text>
+
+</svg>

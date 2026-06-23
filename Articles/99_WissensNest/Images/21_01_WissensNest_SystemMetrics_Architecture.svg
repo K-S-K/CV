@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" font-family="ui-sans-serif, system-ui, sans-serif">
+  <defs>
+    <marker id="ah"     markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#5d6d7e"/></marker>
+    <marker id="ah-grn" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#27ae60"/></marker>
+    <marker id="ah-org" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#e67e22"/></marker>
+    <marker id="ah-pur" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#7d3c98"/></marker>
+    <marker id="ah-red" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#c0392b"/></marker>
+  </defs>
+
+  <!-- background -->
+  <rect width="900" height="560" fill="#f4f6f9" rx="10"/>
+  <text x="450" y="30" text-anchor="middle" font-size="15" font-weight="700" fill="#1a1a2e">SystemMetrics — Component Architecture</text>
+
+  <!-- ═══ LEFT PANEL: WissensNest.API ═══ -->
+  <rect x="12" y="44" width="396" height="502" fill="#eaf4fb" stroke="#2980b9" stroke-width="2" rx="8"/>
+  <text x="210" y="66" text-anchor="middle" font-size="12" font-weight="700" fill="#2980b9">WissensNest.API</text>
+
+  <!-- macOS sources -->
+  <rect x="28" y="74" width="364" height="126" fill="#d5d8dc" stroke="#7f8c8d" stroke-width="1.2" rx="6"/>
+  <text x="210" y="93" text-anchor="middle" font-size="11" font-weight="700" fill="#2c3e50">macOS</text>
+  <text x="44"  y="113" font-size="10" fill="#2c3e50" font-family="monospace">sysctl -n hw.memsize</text>
+  <text x="382" y="113" text-anchor="end" font-size="10" fill="#5d6d7e">→ Total physical RAM</text>
+  <text x="44"  y="131" font-size="10" fill="#2c3e50" font-family="monospace">vm_stat</text>
+  <text x="382" y="131" text-anchor="end" font-size="10" fill="#5d6d7e">→ anonymous / wired / compressor pages</text>
+  <text x="44"  y="149" font-size="10" fill="#2c3e50" font-family="monospace">sysctl vm.swapusage</text>
+  <text x="382" y="149" text-anchor="end" font-size="10" fill="#5d6d7e">→ Swap used (M or G suffix)</text>
+  <text x="44"  y="167" font-size="10" fill="#2c3e50" font-family="monospace">Process("ollama").WorkingSet64</text>
+  <text x="382" y="167" text-anchor="end" font-size="10" fill="#5d6d7e">→ Ollama RSS</text>
+  <text x="210" y="192" text-anchor="middle" font-size="9" fill="#7f8c8d">Three child processes + process scan launched via Task.WhenAll</text>
+
+  <!-- arrow macOS → SystemMetricsService -->
+  <line x1="210" y1="200" x2="210" y2="224" stroke="#5d6d7e" stroke-width="1.5" marker-end="url(#ah)"/>
+  <text x="224"  y="215" font-size="9" fill="#5d6d7e">every 2 s</text>
+
+  <!-- SystemMetricsService -->
+  <rect x="28" y="224" width="364" height="108" fill="#d5f5e3" stroke="#27ae60" stroke-width="1.5" rx="6"/>
+  <text x="210" y="244" text-anchor="middle" font-size="11" font-weight="700" fill="#1e8449">SystemMetricsService</text>
+  <text x="210" y="260" text-anchor="middle" font-size="10" fill="#5d6d7e">BackgroundService  ·  singleton</text>
+  <text x="44"  y="282" font-size="10" fill="#2c3e50">PollIntervalMs   = 2 000 ms</text>
+  <text x="44"  y="300" font-size="10" fill="#2c3e50">HistoryCapacity  = 60  →  window = 60 × 2 s = 2 min</text>
+  <text x="44"  y="318" font-size="10" fill="#2c3e50">lock(_lock)  →  _latest  /  _history[60]</text>
+
+  <!-- arrow → ISystemMetricsProvider -->
+  <line x1="210" y1="332" x2="210" y2="356" stroke="#1abc9c" stroke-width="1.5" marker-end="url(#ah-grn)"/>
+
+  <!-- interface pill -->
+  <rect x="78" y="356" width="264" height="26" fill="#a9dfbf" stroke="#1abc9c" stroke-width="1.2" rx="13"/>
+  <text x="210" y="373" text-anchor="middle" font-size="10" font-weight="600" fill="#1e8449">« interface »  ISystemMetricsProvider</text>
+
+  <!-- arrow → API Endpoints -->
+  <line x1="210" y1="382" x2="210" y2="406" stroke="#1abc9c" stroke-width="1.5" marker-end="url(#ah-grn)"/>
+
+  <!-- API Endpoints -->
+  <rect x="28" y="406" width="364" height="72" fill="#d6eaf8" stroke="#2980b9" stroke-width="1.2" rx="6"/>
+  <text x="210" y="426" text-anchor="middle" font-size="11" font-weight="700" fill="#2980b9">HTTP Endpoints</text>
+  <text x="44"  y="446" font-size="10" fill="#2c3e50" font-family="monospace">GET  /system/metrics</text>
+  <text x="382" y="446" text-anchor="end" font-size="10" fill="#5d6d7e">→ latest snapshot (JSON)</text>
+  <text x="44"  y="464" font-size="10" fill="#2c3e50" font-family="monospace">GET  /system/metrics/history</text>
+  <text x="382" y="464" text-anchor="end" font-size="10" fill="#5d6d7e">→ last 60 snapshots (JSON array)</text>
+
+  <!-- NavMenu note (API panel bottom) -->
+  <rect x="28" y="494" width="364" height="38" fill="none" stroke="#bdc3c7" stroke-width="1" stroke-dasharray="4,3" rx="4"/>
+  <text x="210" y="510" text-anchor="middle" font-size="10" fill="#7f8c8d">Registered in Program.cs as singleton + IHostedService</text>
+  <text x="210" y="526" text-anchor="middle" font-size="10" fill="#7f8c8d">ISystemMetricsProvider also registered (same instance)</text>
+
+  <!-- ═══ HTTP TRANSPORT ═══ -->
+  <path d="M 408 442 C 440 442 460 300 492 290" stroke="#e67e22" stroke-width="2" stroke-dasharray="7,3" fill="none" marker-end="url(#ah-org)"/>
+  <text x="448" y="400" text-anchor="middle" font-size="10" font-weight="600" fill="#e67e22" transform="rotate(-52 448 400)">HTTP</text>
+  <text x="453" y="413" text-anchor="middle" font-size="9" fill="#e67e22" transform="rotate(-52 453 413)">IWissensNestClient</text>
+
+  <!-- ═══ RIGHT PANEL: WissensNest.UI ═══ -->
+  <rect x="492" y="44" width="396" height="502" fill="#f4ecf7" stroke="#7d3c98" stroke-width="2" rx="8"/>
+  <text x="690" y="66" text-anchor="middle" font-size="12" font-weight="700" fill="#7d3c98">WissensNest.UI</text>
+
+  <!-- MemoryDisplayService -->
+  <rect x="508" y="74" width="364" height="114" fill="#e8daef" stroke="#7d3c98" stroke-width="1.2" rx="6"/>
+  <text x="690" y="94" text-anchor="middle" font-size="11" font-weight="700" fill="#7d3c98">MemoryDisplayService</text>
+  <text x="690" y="110" text-anchor="middle" font-size="10" fill="#5d6d7e">singleton</text>
+  <text x="524" y="132" font-size="10" fill="#2c3e50">_current: Donut (0)  →  Bars (1)  →  Dashboard (2)  →  …</text>
+  <text x="524" y="150" font-size="10" fill="#2c3e50">CycleVariant()   →   _current = (_current + 1) % 3</text>
+  <text x="524" y="168" font-size="10" fill="#2c3e50">OnVariantChanged  →  event Action?  (fired after cycle)</text>
+
+  <!-- arrow MemoryDisplayService → MemoryGauge (OnVariantChanged) -->
+  <line x1="690" y1="188" x2="690" y2="212" stroke="#7d3c98" stroke-width="1.5" marker-end="url(#ah-pur)"/>
+  <text x="704"  y="204" font-size="9" fill="#7d3c98">OnVariantChanged</text>
+
+  <!-- MemoryGauge -->
+  <rect x="508" y="212" width="364" height="154" fill="#d2b4de" stroke="#7d3c98" stroke-width="1.5" rx="6"/>
+  <text x="690" y="232" text-anchor="middle" font-size="11" font-weight="700" fill="#4a235a">MemoryGauge.razor</text>
+  <text x="690" y="248" text-anchor="middle" font-size="10" fill="#5d6d7e">@rendermode InteractiveServer</text>
+  <line x1="524" y1="258" x2="856" y2="258" stroke="#9b59b6" stroke-width="0.5" stroke-dasharray="3,3"/>
+  <text x="690" y="276" text-anchor="middle" font-size="10" fill="#2c3e50" font-weight="600">Poll loop  (PeriodicTimer 2 s, independent of backend)</text>
+  <text x="524" y="296" font-size="10" fill="#2c3e50">Client.GetSystemMetricsAsync()          →  _snapshot</text>
+  <text x="524" y="314" font-size="10" fill="#2c3e50">Client.GetSystemMetricsHistoryAsync()   →  _history</text>
+  <text x="524" y="332" font-size="10" fill="#2c3e50">InvokeAsync(StateHasChanged)</text>
+  <line x1="524" y1="342" x2="856" y2="342" stroke="#9b59b6" stroke-width="0.5" stroke-dasharray="3,3"/>
+  <text x="524" y="358" font-size="10" fill="#2c3e50">@onclick  →  DisplayService.CycleVariant()</text>
+
+  <!-- arrow MemoryGauge → variants -->
+  <line x1="690" y1="366" x2="690" y2="392" stroke="#7d3c98" stroke-width="1.5" marker-end="url(#ah-pur)"/>
+  <text x="704"  y="382" font-size="9" fill="#7d3c98">Snapshot + History</text>
+
+  <!-- Three variant boxes -->
+  <rect x="512" y="392" width="106" height="50" fill="#fef9e7" stroke="#e67e22" stroke-width="1.2" rx="5"/>
+  <text x="565" y="413" text-anchor="middle" font-size="11" font-weight="600" fill="#e67e22">Donut</text>
+  <text x="565" y="431" text-anchor="middle" font-size="9" fill="#5d6d7e">220 × 162</text>
+
+  <rect x="634" y="392" width="106" height="50" fill="#eaf7fb" stroke="#2980b9" stroke-width="1.2" rx="5"/>
+  <text x="687" y="413" text-anchor="middle" font-size="11" font-weight="600" fill="#2980b9">Bars</text>
+  <text x="687" y="431" text-anchor="middle" font-size="9" fill="#5d6d7e">220 × 105</text>
+
+  <rect x="756" y="392" width="112" height="50" fill="#eafaf1" stroke="#27ae60" stroke-width="1.2" rx="5"/>
+  <text x="812" y="413" text-anchor="middle" font-size="11" font-weight="600" fill="#27ae60">Dashboard</text>
+  <text x="812" y="431" text-anchor="middle" font-size="9" fill="#5d6d7e">220 × 195</text>
+
+  <!-- connector lines -->
+  <line x1="638" y1="366" x2="565" y2="392" stroke="#9b59b6" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="690" y1="366" x2="690" y2="392" stroke="#9b59b6" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="742" y1="366" x2="812" y2="392" stroke="#9b59b6" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- @onclick return arc -->
+  <path d="M 868 417 Q 884 417 884 134 Q 884 87 872 84" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="5,3" fill="none" marker-end="url(#ah-red)"/>
+  <text x="892" y="292" text-anchor="middle" font-size="9" fill="#c0392b" transform="rotate(90 892 292)">@onclick → CycleVariant()</text>
+
+  <!-- NavMenu note (UI panel bottom) -->
+  <rect x="508" y="460" width="364" height="72" fill="none" stroke="#bdc3c7" stroke-width="1" stroke-dasharray="4,3" rx="4"/>
+  <text x="690" y="480" text-anchor="middle" font-size="10" fill="#7f8c8d">Placed in NavMenu.razor via  &lt;MemoryGauge /&gt;</text>
+  <text x="690" y="498" text-anchor="middle" font-size="10" fill="#7f8c8d">Visible on every page · click anywhere on widget to cycle variant</text>
+  <text x="690" y="522" text-anchor="middle" font-size="10" fill="#7f8c8d">DisposeAsync cancels timer + unsubscribes event on circuit disconnect</text>
+</svg>

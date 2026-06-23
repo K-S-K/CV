@@ -1,0 +1,237 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 548" font-family="-apple-system,system-ui,sans-serif">
+
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5"
+            markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke"
+            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="840" height="548" fill="#f8f9fb" rx="10"/>
+
+  <!-- Title -->
+  <text x="420" y="20" text-anchor="middle" font-size="13" font-weight="700" fill="#1a1a2e">
+    G-5 — ArticleEditor: [[ Link Picker Event Handlers
+  </text>
+
+  <!-- Column separator -->
+  <line x1="430" y1="35" x2="430" y2="470" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 3"/>
+
+  <!-- ══════════════════════════════════════════════════════
+       HANDLER 1 — OnBlockTextareaInput   (LEFT, TOP)
+  ══════════════════════════════════════════════════════ -->
+  <rect x="10" y="35" width="412" height="22" rx="4" fill="#1e3a5f"/>
+  <text x="216" y="50" text-anchor="middle" font-size="10.5" font-weight="700" fill="#ffffff">
+    OnBlockTextareaInput
+  </text>
+
+  <!-- Trigger -->
+  <rect x="88" y="65" width="256" height="28" rx="6"
+        fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="216" y="83" text-anchor="middle" font-size="11" fill="#1e3a5f">oninput fires</text>
+
+  <!-- Arrow -->
+  <line x1="216" y1="93" x2="216" y2="111" stroke="#6b7280" stroke-width="1.5"
+        marker-end="url(#arr)"/>
+
+  <!-- JS call -->
+  <rect x="78" y="111" width="276" height="28" rx="6"
+        fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="216" y="129" text-anchor="middle" font-size="10.5" fill="#14532d">
+    detectLinkTrigger(id)  ·  JS
+  </text>
+
+  <!-- Arrow -->
+  <line x1="216" y1="139" x2="216" y2="157" stroke="#6b7280" stroke-width="1.5"
+        marker-end="url(#arr)"/>
+
+  <!-- Decision diamond -->
+  <polygon points="116,174 216,156 316,174 216,192"
+           fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="216" y="178" text-anchor="middle" font-size="10" fill="#713f12">trigger.Triggered?</text>
+
+  <!-- YES branch → right -->
+  <text x="310" y="165" font-size="9" fill="#6b7280">yes</text>
+  <line x1="316" y1="174" x2="333" y2="174" stroke="#6b7280" stroke-width="1.5"
+        marker-end="url(#arr)"/>
+  <rect x="334" y="160" width="110" height="28" rx="5"
+        fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="390" y="172" text-anchor="middle" font-size="8.5" fill="#3b0764">set picker state</text>
+  <text x="390" y="182" text-anchor="middle" font-size="8" fill="#6d28d9">visible·query·queryStart</text>
+
+  <!-- NO branch → down -->
+  <text x="224" y="205" font-size="9" fill="#6b7280">no</text>
+  <line x1="216" y1="192" x2="216" y2="210" stroke="#6b7280" stroke-width="1.5"
+        marker-end="url(#arr)"/>
+  <rect x="88" y="210" width="256" height="28" rx="6"
+        fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="216" y="228" text-anchor="middle" font-size="10.5" fill="#78350f">
+    CloseLinkPicker()  if was open
+  </text>
+
+  <!-- ══════════════════════════════════════════════════════
+       HANDLER 2 — OnLinkSelected   (RIGHT, TOP)
+  ══════════════════════════════════════════════════════ -->
+  <rect x="438" y="35" width="392" height="22" rx="4" fill="#1e3a5f"/>
+  <text x="634" y="50" text-anchor="middle" font-size="10.5" font-weight="700" fill="#ffffff">
+    OnLinkSelected(markdownLink)
+  </text>
+
+  <!-- Trigger -->
+  <rect x="514" y="65" width="240" height="28" rx="6"
+        fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="634" y="83" text-anchor="middle" font-size="11" fill="#1e3a5f">item clicked in dropdown</text>
+
+  <!-- Arrow -->
+  <line x1="634" y1="93" x2="634" y2="111" stroke="#6b7280" stroke-width="1.5"
+        marker-end="url(#arr)"/>
+
+  <!-- JS call -->
+  <rect x="498" y="111" width="272" height="28" rx="6"
+        fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="634" y="122" text-anchor="middle" font-size="9.5" fill="#14532d">
+    replaceLinkTrigger(id, queryStart, link)
+  </text>
+  <text x="634" y="134" text-anchor="middle" font-size="9" fill="#16a34a">JS</text>
+
+  <!-- Arrow -->
+  <line x1="634" y1="139" x2="634" y2="157" stroke="#6b7280" stroke-width="1.5"
+        marker-end="url(#arr)"/>
+
+  <!-- State write (two-line box) -->
+  <rect x="494" y="157" width="280" height="40" rx="6"
+        fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="634" y="172" text-anchor="middle" font-size="10" fill="#3b0764">
+    _blockDraft = result.NewContent
+  </text>
+  <text x="634" y="186" text-anchor="middle" font-size="10" fill="#3b0764">
+    _pendingCursorPosition = result.CursorPosition
+  </text>
+
+  <!-- Arrow -->
+  <line x1="634" y1="197" x2="634" y2="215" stroke="#6b7280" stroke-width="1.5"
+        marker-end="url(#arr)"/>
+
+  <!-- CloseLinkPicker -->
+  <rect x="514" y="215" width="240" height="28" rx="6"
+        fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="634" y="233" text-anchor="middle" font-size="11" fill="#78350f">CloseLinkPicker()</text>
+
+  <!-- ══════════════════════════════════════════════════════
+       HANDLER 3 — HandleBlockEditKey   (LEFT, BOTTOM)
+  ══════════════════════════════════════════════════════ -->
+  <rect x="10" y="270" width="412" height="22" rx="4" fill="#1e3a5f"/>
+  <text x="216" y="285" text-anchor="middle" font-size="10.5" font-weight="700" fill="#ffffff">
+    HandleBlockEditKey
+  </text>
+
+  <!-- Trigger -->
+  <rect x="88" y="300" width="256" height="28" rx="6"
+        fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="216" y="318" text-anchor="middle" font-size="11" fill="#1e3a5f">onkeydown fires</text>
+
+  <!-- Arrow -->
+  <line x1="216" y1="328" x2="216" y2="346" stroke="#6b7280" stroke-width="1.5"
+        marker-end="url(#arr)"/>
+
+  <!-- Decision diamond -->
+  <polygon points="116,363 216,345 316,363 216,381"
+           fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="216" y="366" text-anchor="middle" font-size="9.5" fill="#713f12">picker visible</text>
+  <text x="216" y="377" text-anchor="middle" font-size="9.5" fill="#713f12">&amp;&amp; Esc?</text>
+
+  <!-- YES branch → right -->
+  <text x="310" y="354" font-size="9" fill="#6b7280">yes</text>
+  <line x1="316" y1="363" x2="333" y2="363" stroke="#6b7280" stroke-width="1.5"
+        marker-end="url(#arr)"/>
+  <rect x="333" y="350" width="88" height="28" rx="5"
+        fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="377" y="361" text-anchor="middle" font-size="8.5" fill="#78350f">CloseLinkPicker()</text>
+  <text x="377" y="373" text-anchor="middle" font-size="8.5" fill="#78350f">return</text>
+
+  <!-- NO branch → down -->
+  <text x="224" y="393" font-size="9" fill="#6b7280">no</text>
+  <line x1="216" y1="381" x2="216" y2="399" stroke="#6b7280" stroke-width="1.5"
+        marker-end="url(#arr)"/>
+  <rect x="78" y="399" width="276" height="28" rx="6"
+        fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="216" y="417" text-anchor="middle" font-size="10.5" fill="#374151">
+    normal Ctrl+Enter / Esc handling
+  </text>
+
+  <!-- ══════════════════════════════════════════════════════
+       HANDLER 4 — CancelEditBlock   (RIGHT, BOTTOM)
+  ══════════════════════════════════════════════════════ -->
+  <rect x="438" y="270" width="392" height="22" rx="4" fill="#1e3a5f"/>
+  <text x="634" y="285" text-anchor="middle" font-size="10.5" font-weight="700" fill="#ffffff">
+    CancelEditBlock
+  </text>
+
+  <!-- Trigger -->
+  <rect x="504" y="300" width="260" height="28" rx="6"
+        fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="634" y="314" text-anchor="middle" font-size="10.5" fill="#1e3a5f">Cancel clicked</text>
+  <text x="634" y="325" text-anchor="middle" font-size="10.5" fill="#1e3a5f">or Esc (no picker open)</text>
+
+  <!-- Arrow -->
+  <line x1="634" y1="328" x2="634" y2="346" stroke="#6b7280" stroke-width="1.5"
+        marker-end="url(#arr)"/>
+
+  <!-- CloseLinkPicker -->
+  <rect x="514" y="346" width="240" height="28" rx="6"
+        fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="634" y="364" text-anchor="middle" font-size="11" fill="#78350f">CloseLinkPicker()</text>
+
+  <!-- Arrow -->
+  <line x1="634" y1="374" x2="634" y2="392" stroke="#6b7280" stroke-width="1.5"
+        marker-end="url(#arr)"/>
+
+  <!-- Clear state -->
+  <rect x="494" y="392" width="280" height="40" rx="6"
+        fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="634" y="407" text-anchor="middle" font-size="10" fill="#374151">
+    _editingBlockId = null
+  </text>
+  <text x="634" y="421" text-anchor="middle" font-size="10" fill="#374151">
+    _blockDraft = string.Empty
+  </text>
+
+  <!-- ══════════════════════════════════════════════════════
+       SHARED STATE BAND — bottom
+  ══════════════════════════════════════════════════════ -->
+  <rect x="10" y="478" width="820" height="58" rx="6"
+        fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="420" y="496" text-anchor="middle" font-size="10" font-weight="700" fill="#4c1d95">
+    CloseLinkPicker() always writes:
+  </text>
+  <text x="175" y="516" text-anchor="middle" font-size="10" fill="#3b0764">
+    _linkPickerVisible = false
+  </text>
+  <line x1="300" y1="488" x2="300" y2="530" stroke="#c4b5fd" stroke-width="1"/>
+  <text x="420" y="516" text-anchor="middle" font-size="10" fill="#3b0764">
+    _linkPickerQuery = ""
+  </text>
+  <line x1="540" y1="488" x2="540" y2="530" stroke="#c4b5fd" stroke-width="1"/>
+  <text x="665" y="516" text-anchor="middle" font-size="10" fill="#3b0764">
+    _linkPickerQueryStart = 0
+  </text>
+
+  <!-- ── Legend ─────────────────────────────────────── -->
+  <rect x="10" y="450" width="820" height="22" rx="4"
+        fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <rect x="22" y="457" width="12" height="10" rx="2" fill="#dbeafe" stroke="#3b82f6" stroke-width="1"/>
+  <text x="38" y="466" font-size="8.5" fill="#374151">Event entry</text>
+  <rect x="112" y="457" width="12" height="10" rx="2" fill="#dcfce7" stroke="#16a34a" stroke-width="1"/>
+  <text x="128" y="466" font-size="8.5" fill="#374151">JS interop</text>
+  <rect x="204" y="457" width="12" height="10" rx="2" fill="#ede9fe" stroke="#7c3aed" stroke-width="1"/>
+  <text x="220" y="466" font-size="8.5" fill="#374151">State write</text>
+  <rect x="296" y="457" width="12" height="10" rx="2" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
+  <text x="312" y="466" font-size="8.5" fill="#374151">CloseLinkPicker()</text>
+  <rect x="418" y="457" width="12" height="10" rx="2" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1"/>
+  <text x="434" y="466" font-size="8.5" fill="#374151">Default handling</text>
+  <polygon points="528,462 537,456 546,462 537,468" fill="#fef9c3" stroke="#ca8a04" stroke-width="1"/>
+  <text x="552" y="466" font-size="8.5" fill="#374151">Decision</text>
+
+</svg>

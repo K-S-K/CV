@@ -1,0 +1,142 @@
+<svg width="100%" viewBox="0 0 960 560" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="480" y="22" text-anchor="middle" fill="rgb(35,35,33)" font-family="-apple-system,system-ui,sans-serif" font-size="15" font-weight="600">WissensNest — Conversation ↔ Article Bridge</text>
+
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <!-- LEFT: Conversation panel                                        -->
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <rect x="10" y="34" width="390" height="470" rx="11" fill="rgb(225,245,238)" stroke="rgb(15,110,86)" stroke-width="1.4"/>
+  <text x="205" y="54" text-anchor="middle" fill="rgb(8,80,65)" font-family="-apple-system,system-ui,sans-serif" font-size="12" font-weight="700" letter-spacing="0.5">CONVERSATION</text>
+  <text x="205" y="70" text-anchor="middle" fill="rgb(20,130,100)" font-family="-apple-system,system-ui,sans-serif" font-size="10" font-style="italic">exploration · dialogue · sequential</text>
+
+  <!-- Message 1 — user -->
+  <rect x="24" y="82" width="362" height="52" rx="7" fill="rgb(210,240,228)" stroke="rgb(15,110,86)" stroke-width="1"/>
+  <text x="36" y="100" fill="rgb(8,80,65)" font-family="-apple-system,system-ui,sans-serif" font-size="10" font-weight="600">User</text>
+  <text x="36" y="116" fill="rgb(20,130,100)" font-family="-apple-system,system-ui,sans-serif" font-size="10">Explain STM32 RTC prescaler configuration</text>
+
+  <!-- Message 2 — assistant -->
+  <rect x="24" y="142" width="362" height="88" rx="7" fill="rgb(195,235,215)" stroke="rgb(15,110,86)" stroke-width="1"/>
+  <text x="36" y="160" fill="rgb(8,80,65)" font-family="-apple-system,system-ui,sans-serif" font-size="10" font-weight="600">Assistant</text>
+  <text x="36" y="177" fill="rgb(20,130,100)" font-family="-apple-system,system-ui,sans-serif" font-size="10">The RTC uses two prescalers: async (PREDIV_A, 7-bit)</text>
+  <text x="36" y="193" fill="rgb(20,130,100)" font-family="-apple-system,system-ui,sans-serif" font-size="10">and sync (PREDIV_S, 15-bit). For 32.768 kHz crystal:</text>
+  <text x="36" y="209" fill="rgb(20,130,100)" font-family="-apple-system,system-ui,sans-serif" font-size="10">PREDIV_A=127, PREDIV_S=255 → 1 Hz tick.</text>
+  <!-- Promote button -->
+  <rect x="296" y="218" width="82" height="20" rx="4" fill="rgb(83,74,183)" stroke="none"/>
+  <text x="337" y="232" text-anchor="middle" fill="white" font-family="-apple-system,system-ui,sans-serif" font-size="9" font-weight="600">▲ Promote</text>
+
+  <!-- Message 3 — user -->
+  <rect x="24" y="240" width="362" height="52" rx="7" fill="rgb(210,240,228)" stroke="rgb(15,110,86)" stroke-width="1"/>
+  <text x="36" y="258" fill="rgb(8,80,65)" font-family="-apple-system,system-ui,sans-serif" font-size="10" font-weight="600">User</text>
+  <text x="36" y="274" fill="rgb(20,130,100)" font-family="-apple-system,system-ui,sans-serif" font-size="10">What about LSE startup time impact?</text>
+
+  <!-- Message 4 — assistant -->
+  <rect x="24" y="300" width="362" height="88" rx="7" fill="rgb(195,235,215)" stroke="rgb(15,110,86)" stroke-width="1"/>
+  <text x="36" y="318" fill="rgb(8,80,65)" font-family="-apple-system,system-ui,sans-serif" font-size="10" font-weight="600">Assistant</text>
+  <text x="36" y="335" fill="rgb(20,130,100)" font-family="-apple-system,system-ui,sans-serif" font-size="10">LSE can take up to 2 s to stabilize. Wait for LSERDY</text>
+  <text x="36" y="351" fill="rgb(20,130,100)" font-family="-apple-system,system-ui,sans-serif" font-size="10">flag in RCC_BDCR before enabling RTC clock source.</text>
+  <text x="36" y="367" fill="rgb(20,130,100)" font-family="-apple-system,system-ui,sans-serif" font-size="10">Add timeout loop in firmware init.</text>
+  <!-- Promote button -->
+  <rect x="296" y="376" width="82" height="20" rx="4" fill="rgb(83,74,183)" stroke="none"/>
+  <text x="337" y="390" text-anchor="middle" fill="white" font-family="-apple-system,system-ui,sans-serif" font-size="9" font-weight="600">▲ Promote</text>
+
+  <!-- Scratch label -->
+  <rect x="24" y="402" width="362" height="88" rx="7" fill="rgb(251,251,248)" stroke="rgb(120,120,115)" stroke-width="0.8" stroke-dasharray="4 3"/>
+  <text x="205" y="428" text-anchor="middle" fill="rgb(110,110,105)" font-family="-apple-system,system-ui,sans-serif" font-size="11" font-weight="600">Scratch area (Section inbox)</text>
+  <text x="205" y="448" text-anchor="middle" fill="rgb(130,130,125)" font-family="-apple-system,system-ui,sans-serif" font-size="10">Quick notes land here before</text>
+  <text x="205" y="464" text-anchor="middle" fill="rgb(130,130,125)" font-family="-apple-system,system-ui,sans-serif" font-size="10">being placed in an Article</text>
+
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <!-- CENTER: bridge arrows                                           -->
+  <!-- ════════════════════════════════════════════════════════════════ -->
+
+  <!-- Promote arrow (left → right, upper) -->
+  <path d="M 378 233 L 420 233 L 420 310 L 558 310" fill="none" stroke="rgb(83,74,183)" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="480" y="224" text-anchor="middle" fill="rgb(60,52,137)" font-family="-apple-system,system-ui,sans-serif" font-size="10" font-weight="600">▲ Promote to Block</text>
+  <text x="480" y="238" text-anchor="middle" fill="rgb(100,90,200)" font-family="-apple-system,system-ui,sans-serif" font-size="9">source reference stored</text>
+
+  <!-- Promote arrow lower -->
+  <path d="M 378 391 L 420 391 L 420 380 L 558 380" fill="none" stroke="rgb(83,74,183)" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- Send to Conversation arrow (right → left) -->
+  <path d="M 558 450 L 440 450 L 440 470 L 402 470" fill="none" stroke="rgb(160,85,10)" stroke-width="1.6" stroke-dasharray="6 3" marker-end="url(#arr)"/>
+  <text x="480" y="442" text-anchor="middle" fill="rgb(130,60,5)" font-family="-apple-system,system-ui,sans-serif" font-size="10" font-weight="600">▼ Send to Conversation</text>
+  <text x="500" y="467" text-anchor="middle" fill="rgb(170,90,20)" font-family="-apple-system,system-ui,sans-serif" font-size="9">seeds new conversation</text>
+
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <!-- RIGHT: Article panel                                            -->
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <rect x="558" y="34" width="392" height="470" rx="11" fill="rgb(255,243,220)" stroke="rgb(160,85,10)" stroke-width="1.4"/>
+  <text x="754" y="54" text-anchor="middle" fill="rgb(110,60,5)" font-family="-apple-system,system-ui,sans-serif" font-size="12" font-weight="700" letter-spacing="0.5">ARTICLE: "RTC Configuration Notes"</text>
+  <text x="754" y="70" text-anchor="middle" fill="rgb(180,100,20)" font-family="-apple-system,system-ui,sans-serif" font-size="10" font-style="italic">curated · manual order · export target</text>
+
+  <!-- Block 1 -->
+  <rect x="572" y="82" width="364" height="100" rx="7" fill="rgb(255,235,195)" stroke="rgb(160,85,10)" stroke-width="1"/>
+  <rect x="572" y="82" width="8" height="100" rx="3" fill="rgb(83,74,183)"/>
+  <!-- checkbox -->
+  <rect x="900" y="88" width="16" height="16" rx="3" fill="white" stroke="rgb(160,85,10)" stroke-width="1.2"/>
+  <text x="908" y="101" text-anchor="middle" fill="rgb(83,74,183)" font-family="-apple-system,system-ui,sans-serif" font-size="11" font-weight="700">✓</text>
+  <text x="590" y="100" fill="rgb(110,60,5)" font-family="-apple-system,system-ui,sans-serif" font-size="10" font-weight="600">Block 1 — Prescaler Setup</text>
+  <text x="590" y="117" fill="rgb(160,85,10)" font-family="-apple-system,system-ui,sans-serif" font-size="10">The RTC uses two prescalers: async (PREDIV_A)</text>
+  <text x="590" y="133" fill="rgb(160,85,10)" font-family="-apple-system,system-ui,sans-serif" font-size="10">and sync (PREDIV_S). For 32.768 kHz: PREDIV_A=127,</text>
+  <text x="590" y="149" fill="rgb(160,85,10)" font-family="-apple-system,system-ui,sans-serif" font-size="10">PREDIV_S=255 → 1 Hz tick.  [edited + annotated]</text>
+  <!-- source ref -->
+  <text x="590" y="170" fill="rgb(140,100,50)" font-family="-apple-system,system-ui,sans-serif" font-size="8.5" font-style="italic">↗ from conversation "STM32 RTC / prescaler" · 2026-04-28</text>
+
+  <!-- Block 2 -->
+  <rect x="572" y="192" width="364" height="100" rx="7" fill="rgb(255,235,195)" stroke="rgb(160,85,10)" stroke-width="1"/>
+  <rect x="572" y="192" width="8" height="100" rx="3" fill="rgb(83,74,183)"/>
+  <rect x="900" y="198" width="16" height="16" rx="3" fill="white" stroke="rgb(160,85,10)" stroke-width="1.2"/>
+  <text x="908" y="211" text-anchor="middle" fill="rgb(83,74,183)" font-family="-apple-system,system-ui,sans-serif" font-size="11" font-weight="700">✓</text>
+  <text x="590" y="210" fill="rgb(110,60,5)" font-family="-apple-system,system-ui,sans-serif" font-size="10" font-weight="600">Block 2 — LSE Startup Timing</text>
+  <text x="590" y="227" fill="rgb(160,85,10)" font-family="-apple-system,system-ui,sans-serif" font-size="10">LSE can take up to 2 s to stabilize. Poll LSERDY</text>
+  <text x="590" y="243" fill="rgb(160,85,10)" font-family="-apple-system,system-ui,sans-serif" font-size="10">flag in RCC_BDCR before enabling RTC clock source.</text>
+  <text x="590" y="259" fill="rgb(160,85,10)" font-family="-apple-system,system-ui,sans-serif" font-size="10">Add timeout loop in firmware init.</text>
+  <text x="590" y="278" fill="rgb(140,100,50)" font-family="-apple-system,system-ui,sans-serif" font-size="8.5" font-style="italic">↗ from conversation "STM32 RTC / prescaler" · 2026-04-28</text>
+
+  <!-- Block 3 — user-authored -->
+  <rect x="572" y="302" width="364" height="100" rx="7" fill="rgb(255,228,180)" stroke="rgb(160,85,10)" stroke-width="1"/>
+  <rect x="572" y="302" width="8" height="100" rx="3" fill="rgb(160,85,10)"/>
+  <rect x="900" y="308" width="16" height="16" rx="3" fill="white" stroke="rgb(160,85,10)" stroke-width="1.2"/>
+  <text x="590" y="320" fill="rgb(110,60,5)" font-family="-apple-system,system-ui,sans-serif" font-size="10" font-weight="600">Block 3 — My Observations</text>
+  <text x="590" y="337" fill="rgb(160,85,10)" font-family="-apple-system,system-ui,sans-serif" font-size="10">Tested on NUCLEO-G031K8. Crystal takes ~800 ms</text>
+  <text x="590" y="353" fill="rgb(160,85,10)" font-family="-apple-system,system-ui,sans-serif" font-size="10">at room temperature. At 5°C, observed ~1.4 s.</text>
+  <text x="590" y="369" fill="rgb(160,85,10)" font-family="-apple-system,system-ui,sans-serif" font-size="10">Timeout of 3 s is safe margin.</text>
+  <text x="590" y="388" fill="rgb(140,100,50)" font-family="-apple-system,system-ui,sans-serif" font-size="8.5" font-style="italic">authored directly · no source conversation</text>
+
+  <!-- "Send to Conversation" button on Block 3 -->
+  <rect x="810" y="432" width="120" height="20" rx="4" fill="rgb(160,85,10)" stroke="none"/>
+  <text x="870" y="446" text-anchor="middle" fill="white" font-family="-apple-system,system-ui,sans-serif" font-size="9" font-weight="600">▼ Discuss this Block</text>
+
+  <!-- Export strip -->
+  <rect x="572" y="418" width="220" height="72" rx="7" fill="rgb(252,244,242)" stroke="rgb(170,70,40)" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="682" y="438" text-anchor="middle" fill="rgb(130,50,20)" font-family="-apple-system,system-ui,sans-serif" font-size="11" font-weight="600">Export selected Blocks</text>
+  <text x="682" y="456" text-anchor="middle" fill="rgb(170,70,40)" font-family="-apple-system,system-ui,sans-serif" font-size="10">☑ Block 1  ☑ Block 2  ☐ Block 3</text>
+  <rect x="612" y="464" width="140" height="18" rx="4" fill="rgb(170,70,40)" stroke="none"/>
+  <text x="682" y="477" text-anchor="middle" fill="white" font-family="-apple-system,system-ui,sans-serif" font-size="9" font-weight="600">Export to PDF</text>
+
+  <!-- ── LEGEND ──────────────────────────────────────────────────────── -->
+  <rect x="10" y="514" width="940" height="38" rx="8" fill="rgb(251,251,248)" stroke="rgba(40,40,38,0.10)" stroke-width="1"/>
+
+  <rect x="24" y="524" width="10" height="10" rx="2" fill="rgb(225,245,238)" stroke="rgb(15,110,86)" stroke-width="1"/>
+  <text x="40" y="533" fill="rgb(8,80,65)" font-family="-apple-system,system-ui,sans-serif" font-size="10">Message (AI-generated)</text>
+
+  <rect x="170" y="524" width="10" height="10" rx="2" fill="rgb(255,235,195)" stroke="rgb(160,85,10)" stroke-width="1"/>
+  <rect x="170" y="524" width="3" height="10" rx="1" fill="rgb(83,74,183)"/>
+  <text x="186" y="533" fill="rgb(110,60,5)" font-family="-apple-system,system-ui,sans-serif" font-size="10">Block promoted from conversation (purple stripe)</text>
+
+  <rect x="440" y="524" width="10" height="10" rx="2" fill="rgb(255,228,180)" stroke="rgb(160,85,10)" stroke-width="1"/>
+  <rect x="440" y="524" width="3" height="10" rx="1" fill="rgb(160,85,10)"/>
+  <text x="456" y="533" fill="rgb(110,60,5)" font-family="-apple-system,system-ui,sans-serif" font-size="10">Block authored directly (amber stripe)</text>
+
+  <line x1="670" y1="529" x2="696" y2="529" stroke="rgb(83,74,183)" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="702" y="533" fill="rgb(60,52,137)" font-family="-apple-system,system-ui,sans-serif" font-size="10">Promote to Block</text>
+
+  <line x1="810" y1="529" x2="836" y2="529" stroke="rgb(160,85,10)" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#arr)"/>
+  <text x="842" y="533" fill="rgb(130,60,5)" font-family="-apple-system,system-ui,sans-serif" font-size="10">Send to Conversation</text>
+</svg>

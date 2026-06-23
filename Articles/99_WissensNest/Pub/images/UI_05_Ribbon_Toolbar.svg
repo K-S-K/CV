@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 340" font-family="-apple-system,system-ui,sans-serif">
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5"
+            markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke"
+            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <rect width="880" height="340" fill="#f4f6f9" rx="10"/>
+  <text x="440" y="24" text-anchor="middle" font-size="14" font-weight="700" fill="#1a1a2e">
+    WissensNest — Ribbon Toolbar
+  </text>
+
+  <!-- ── Toolbar frame ─────────────────────────────────────── -->
+  <!-- shadow -->
+  <rect x="22" y="42" width="836" height="100" rx="7" fill="#c8ccd4"/>
+  <!-- toolbar -->
+  <rect x="20" y="40" width="836" height="100" rx="7" fill="#f0f0f5"
+        stroke="#d8dae0" stroke-width="1.5"/>
+
+  <!-- ── Separators ──────────────────────────────────────────── -->
+  <line x1="198" y1="48" x2="198" y2="132" stroke="#d1d5db" stroke-width="1"/>
+  <line x1="410" y1="48" x2="410" y2="132" stroke="#d1d5db" stroke-width="1"/>
+  <line x1="550" y1="48" x2="550" y2="132" stroke="#d1d5db" stroke-width="1"/>
+  <line x1="760" y1="48" x2="760" y2="132" stroke="#d1d5db" stroke-width="1"/>
+
+  <!-- ── Group: Metrics ───────────────────────────────────────── -->
+  <text x="109" y="60" text-anchor="middle" font-size="9" font-weight="700" fill="#6b7280">METRICS</text>
+  <circle cx="109" cy="87" r="18" fill="none" stroke="rgb(83,74,183)" stroke-width="5"
+          stroke-dasharray="72 41"/>
+  <circle cx="109" cy="87" r="18" fill="none" stroke="rgb(167,139,250)" stroke-width="5"
+          stroke-dasharray="32 81" stroke-dashoffset="-72"/>
+  <text x="109" y="91" text-anchor="middle" font-size="8" fill="#374151">72%</text>
+  <text x="109" y="130" text-anchor="middle" font-size="8" fill="#6b7280">Metrics</text>
+
+  <!-- ── Group: Navigation ──────────────────────────────────── -->
+  <text x="304" y="60" text-anchor="middle" font-size="9" font-weight="700" fill="#6b7280">NAVIGATION</text>
+
+  <!-- Row 1: scroll buttons + Auto -->
+  <rect x="212" y="66" width="26" height="24" rx="4" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="225" y="82" text-anchor="middle" font-size="13" fill="#374151">⇈</text>
+  <rect x="242" y="66" width="26" height="24" rx="4" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="255" y="82" text-anchor="middle" font-size="13" fill="#374151">↑</text>
+  <rect x="272" y="66" width="26" height="24" rx="4" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="285" y="82" text-anchor="middle" font-size="13" fill="#374151">↓</text>
+  <rect x="302" y="66" width="26" height="24" rx="4" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="315" y="82" text-anchor="middle" font-size="13" fill="#374151">⇊</text>
+
+  <!-- Row 2: history buttons (← →) -->
+  <rect x="212" y="94" width="26" height="24" rx="4" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="225" y="110" text-anchor="middle" font-size="13" fill="#374151">←</text>
+  <rect x="242" y="94" width="26" height="24" rx="4" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="255" y="110" text-anchor="middle" font-size="13" fill="#374151">→</text>
+  <text x="282" y="107" font-size="8" fill="#9ca3af" font-style="italic">history</text>
+
+  <!-- Auto toggle -->
+  <rect x="340" y="80" width="48" height="24" rx="4" fill="rgb(237,233,254)" stroke="rgb(124,58,237)" stroke-width="1.5"/>
+  <text x="364" y="96" text-anchor="middle" font-size="10" font-weight="600" fill="rgb(91,33,182)">↓ Auto</text>
+
+  <text x="304" y="130" text-anchor="middle" font-size="8" fill="#6b7280">Navigation</text>
+
+  <!-- ── Group: View ─────────────────────────────────────────── -->
+  <text x="480" y="60" text-anchor="middle" font-size="9" font-weight="700" fill="#6b7280">VIEW</text>
+  <rect x="422" y="74" width="36" height="24" rx="4" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="440" y="90" text-anchor="middle" font-size="11" fill="#374151">A+</text>
+  <rect x="462" y="74" width="36" height="24" rx="4" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="480" y="90" text-anchor="middle" font-size="11" fill="#374151">A&#x2212;</text>
+  <!-- AL active -->
+  <rect x="502" y="74" width="36" height="24" rx="4" fill="rgb(237,233,254)" stroke="rgb(124,58,237)" stroke-width="1.5"/>
+  <text x="520" y="90" text-anchor="middle" font-size="10" font-weight="600" fill="rgb(91,33,182)">AL</text>
+  <text x="480" y="130" text-anchor="middle" font-size="8" fill="#6b7280">View</text>
+
+  <!-- ── Group: Tools ──────────────────────────────────────── -->
+  <text x="650" y="60" text-anchor="middle" font-size="9" font-weight="700" fill="#6b7280">TOOLS</text>
+  <rect x="562" y="62" width="28" height="24" rx="4" fill="rgb(237,233,254)" stroke="rgb(124,58,237)" stroke-width="1.5"/>
+  <text x="576" y="78" text-anchor="middle" font-size="9" font-weight="700" fill="rgb(91,33,182)">WS</text>
+  <rect x="594" y="62" width="28" height="24" rx="4" fill="rgb(237,233,254)" stroke="rgb(124,58,237)" stroke-width="1.5"/>
+  <text x="608" y="78" text-anchor="middle" font-size="9" font-weight="700" fill="rgb(91,33,182)">FP</text>
+  <rect x="626" y="62" width="28" height="24" rx="4" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="640" y="78" text-anchor="middle" font-size="9" fill="#9ca3af">Lib</text>
+  <rect x="658" y="62" width="28" height="24" rx="4" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="672" y="78" text-anchor="middle" font-size="9" fill="#9ca3af">Geo</text>
+  <rect x="690" y="62" width="28" height="24" rx="4" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="704" y="78" text-anchor="middle" font-size="9" fill="#9ca3af">Wx</text>
+  <rect x="722" y="62" width="28" height="24" rx="4" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="736" y="78" text-anchor="middle" font-size="9" fill="#9ca3af">Tm</text>
+  <text x="650" y="130" text-anchor="middle" font-size="8" fill="#6b7280">Tools — purple border = active</text>
+
+  <!-- ── Toggle area ─────────────────────────────────────────── -->
+  <circle cx="778" cy="74" r="9" fill="none" stroke="#d1d5db" stroke-width="1.2"/>
+  <text x="778" y="78" text-anchor="middle" font-size="10" font-weight="700" fill="#9ca3af">?</text>
+  <rect x="792" y="65" width="24" height="20" rx="3" fill="none" stroke="#d1d5db" stroke-width="1"/>
+  <text x="804" y="79" text-anchor="middle" font-size="11" fill="#9ca3af">▾</text>
+
+  <!-- ── Callout annotations ──────────────────────────────────── -->
+
+  <!-- Metrics -->
+  <line x1="109" y1="142" x2="109" y2="172" stroke="rgb(115,114,108)" stroke-width="1.5"
+        marker-end="url(#arrow)"/>
+  <rect x="48" y="173" width="122" height="36" rx="5" fill="#1f2937"/>
+  <text x="109" y="188" text-anchor="middle" font-size="10" fill="#ffffff">Memory gauge</text>
+  <text x="109" y="202" text-anchor="middle" font-size="9" fill="#9ca3af">click to cycle views</text>
+
+  <!-- Navigation -->
+  <line x1="304" y1="142" x2="304" y2="172" stroke="rgb(115,114,108)" stroke-width="1.5"
+        marker-end="url(#arrow)"/>
+  <rect x="196" y="173" width="216" height="48" rx="5" fill="#1f2937"/>
+  <text x="304" y="188" text-anchor="middle" font-size="10" fill="#ffffff">Scroll · History · Auto-scroll</text>
+  <text x="304" y="202" text-anchor="middle" font-size="9" fill="#9ca3af">⇈↑↓⇊ scroll · ← → back/forward</text>
+  <text x="304" y="214" text-anchor="middle" font-size="9" fill="#9ca3af">Auto = pin to latest message</text>
+
+  <!-- View -->
+  <line x1="480" y1="142" x2="480" y2="172" stroke="rgb(115,114,108)" stroke-width="1.5"
+        marker-end="url(#arrow)"/>
+  <rect x="398" y="173" width="164" height="36" rx="5" fill="#1f2937"/>
+  <text x="480" y="188" text-anchor="middle" font-size="10" fill="#ffffff">Font size + Activity log</text>
+  <text x="480" y="202" text-anchor="middle" font-size="9" fill="#9ca3af">A+ / A− / AL toggle</text>
+
+  <!-- Tools -->
+  <line x1="650" y1="142" x2="650" y2="172" stroke="rgb(115,114,108)" stroke-width="1.5"
+        marker-end="url(#arrow)"/>
+  <rect x="560" y="173" width="180" height="36" rx="5" fill="#1f2937"/>
+  <text x="650" y="188" text-anchor="middle" font-size="10" fill="#ffffff">Tool toggles</text>
+  <text x="650" y="202" text-anchor="middle" font-size="9" fill="#9ca3af">disabled while model streams</text>
+
+  <!-- Help + Collapse -->
+  <line x1="793" y1="142" x2="793" y2="172" stroke="rgb(115,114,108)" stroke-width="1.5"
+        marker-end="url(#arrow)"/>
+  <rect x="737" y="173" width="112" height="36" rx="5" fill="#1f2937"/>
+  <text x="793" y="188" text-anchor="middle" font-size="10" fill="#ffffff">? Help · ▾ Collapse</text>
+  <text x="793" y="202" text-anchor="middle" font-size="9" fill="#9ca3af">always visible</text>
+
+  <!-- Collapsed state preview -->
+  <text x="440" y="238" text-anchor="middle" font-size="11" font-weight="600" fill="#374151">
+    Collapsed state (click ▴ to expand)
+  </text>
+  <rect x="22" y="248" width="836" height="28" rx="5" fill="#f0f0f5" stroke="#d8dae0" stroke-width="1"/>
+  <text x="109" y="267" text-anchor="middle" font-size="9" fill="#9ca3af">Metrics</text>
+  <text x="304" y="267" text-anchor="middle" font-size="9" fill="#9ca3af">Navigation</text>
+  <text x="480" y="267" text-anchor="middle" font-size="9" fill="#9ca3af">View</text>
+  <text x="650" y="267" text-anchor="middle" font-size="9" fill="#9ca3af">Tools</text>
+  <text x="806" y="267" text-anchor="middle" font-size="11" fill="#9ca3af">▴</text>
+  <rect x="22" y="248" width="836" height="28" rx="5" fill="rgba(240,240,245,0.85)"/>
+  <text x="440" y="268" text-anchor="middle" font-size="9" fill="#6b7280" font-style="italic">
+    group labels and ? button remain visible — buttons hidden
+  </text>
+
+</svg>

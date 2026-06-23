@@ -1,0 +1,134 @@
+<svg width="100%" viewBox="0 0 900 660" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="22" text-anchor="middle" fill="rgb(35,35,33)" font-family="-apple-system,system-ui,sans-serif" font-size="15" font-weight="600">WissensNest — Article Editor</text>
+
+  <!-- ── EDITOR FRAME ───────────────────────────────────────────────────── -->
+  <rect x="20" y="36" width="560" height="560" rx="10" fill="rgb(252,252,252)" stroke="rgb(210,210,210)" stroke-width="1.5"/>
+
+  <!-- ── ARTICLE HEADER ─────────────────────────────────────────────────── -->
+  <text x="44" y="74" fill="rgb(30,30,30)" font-family="-apple-system,system-ui,sans-serif" font-size="22" font-weight="700">Power Supply Design</text>
+  <!-- rename button -->
+  <rect x="426" y="54" width="34" height="24" rx="5" fill="rgb(245,245,245)" stroke="rgb(210,210,210)" stroke-width="1"/>
+  <text x="443" y="71" text-anchor="middle" fill="rgb(80,80,80)" font-family="-apple-system,system-ui,sans-serif" font-size="13">✎</text>
+  <!-- divider -->
+  <line x1="36" y1="88" x2="564" y2="88" stroke="rgb(230,230,230)" stroke-width="1"/>
+
+  <!-- ── BLOCK 1 — preview mode (hovered) ──────────────────────────────── -->
+  <rect x="36" y="100" width="528" height="130" rx="8" fill="rgb(255,255,255)" stroke="rgb(196,181,253)" stroke-width="1.5"/>
+  <!-- block toolbar (visible on hover) -->
+  <rect x="36" y="100" width="528" height="28" rx="8" fill="rgb(250,250,250)" stroke="rgb(196,181,253)" stroke-width="1"/>
+  <rect x="36" y="114" width="528" height="14" fill="rgb(250,250,250)"/>
+  <line x1="36" y1="128" x2="564" y2="128" stroke="rgb(235,235,235)" stroke-width="1"/>
+  <!-- toolbar buttons -->
+  <rect x="44" y="104" width="26" height="20" rx="4" fill="rgb(245,245,245)" stroke="rgb(210,210,210)" stroke-width="1"/>
+  <text x="57" y="118" text-anchor="middle" fill="rgb(80,80,80)" font-family="-apple-system,system-ui,sans-serif" font-size="11">↑</text>
+  <rect x="74" y="104" width="26" height="20" rx="4" fill="rgb(245,245,245)" stroke="rgb(210,210,210)" stroke-width="1"/>
+  <text x="87" y="118" text-anchor="middle" fill="rgb(80,80,80)" font-family="-apple-system,system-ui,sans-serif" font-size="11">↓</text>
+  <rect x="104" y="104" width="26" height="20" rx="4" fill="rgb(245,245,245)" stroke="rgb(210,210,210)" stroke-width="1"/>
+  <text x="117" y="118" text-anchor="middle" fill="rgb(80,80,80)" font-family="-apple-system,system-ui,sans-serif" font-size="11">✎</text>
+  <rect x="134" y="104" width="26" height="20" rx="4" fill="rgb(255,240,240)" stroke="rgb(252,165,165)" stroke-width="1"/>
+  <text x="147" y="118" text-anchor="middle" fill="rgb(180,50,50)" font-family="-apple-system,system-ui,sans-serif" font-size="11">✕</text>
+  <!-- block preview content (markdown rendered) -->
+  <text x="52" y="148" fill="rgb(50,50,50)" font-family="-apple-system,system-ui,sans-serif" font-size="13" font-weight="600">Requirements</text>
+  <text x="52" y="168" fill="rgb(70,70,70)" font-family="-apple-system,system-ui,sans-serif" font-size="12">The STM32G031 requires a 3.3 V supply rail with max 100 mV ripple.</text>
+  <text x="52" y="186" fill="rgb(70,70,70)" font-family="-apple-system,system-ui,sans-serif" font-size="12">Input voltage range: 4.5 V – 5.5 V (USB powered).</text>
+  <!-- list items -->
+  <circle cx="62" cy="208" r="2.5" fill="rgb(83,74,183)"/>
+  <text x="72" y="212" fill="rgb(70,70,70)" font-family="-apple-system,system-ui,sans-serif" font-size="12">Regulator: AMS1117-3.3 (LDO)</text>
+  <circle cx="62" cy="224" r="2.5" fill="rgb(83,74,183)"/>
+  <text x="72" y="228" fill="rgb(70,70,70)" font-family="-apple-system,system-ui,sans-serif" font-size="12">Bulk cap: 100 µF electrolytic</text>
+
+  <!-- ── BLOCK 2 — edit mode ────────────────────────────────────────────── -->
+  <rect x="36" y="244" width="528" height="184" rx="8" fill="rgb(255,255,255)" stroke="rgb(83,74,183)" stroke-width="2"/>
+  <rect x="36" y="244" width="528" height="28" rx="8" fill="rgb(250,250,252)" stroke="rgb(83,74,183)" stroke-width="1"/>
+  <rect x="36" y="258" width="528" height="14" fill="rgb(250,250,252)"/>
+  <line x1="36" y1="272" x2="564" y2="272" stroke="rgb(220,215,250)" stroke-width="1"/>
+  <!-- toolbar buttons (edit mode) -->
+  <rect x="44" y="248" width="26" height="20" rx="4" fill="rgb(245,245,245)" stroke="rgb(210,210,210)" stroke-width="1"/>
+  <text x="57" y="262" text-anchor="middle" fill="rgb(80,80,80)" font-family="-apple-system,system-ui,sans-serif" font-size="11">↑</text>
+  <rect x="74" y="248" width="26" height="20" rx="4" fill="rgb(245,245,245)" stroke="rgb(210,210,210)" stroke-width="1"/>
+  <text x="87" y="262" text-anchor="middle" fill="rgb(80,80,80)" font-family="-apple-system,system-ui,sans-serif" font-size="11">↓</text>
+  <rect x="104" y="248" width="26" height="20" rx="4" fill="rgb(255,240,240)" stroke="rgb(252,165,165)" stroke-width="1"/>
+  <text x="117" y="262" text-anchor="middle" fill="rgb(180,50,50)" font-family="-apple-system,system-ui,sans-serif" font-size="11">✕</text>
+  <!-- textarea for editing -->
+  <rect x="44" y="280" width="512" height="100" rx="5" fill="rgb(252,252,255)" stroke="rgb(83,74,183)" stroke-width="1.5"/>
+  <text x="56" y="300" fill="rgb(50,50,90)" font-family="'Courier New',monospace" font-size="11">## Capacitor Selection</text>
+  <text x="56" y="318" fill="rgb(50,50,90)" font-family="'Courier New',monospace" font-size="11">The 100 µF bulk cap smooths the input;</text>
+  <text x="56" y="336" fill="rgb(50,50,90)" font-family="'Courier New',monospace" font-size="11">add two 100 nF ceramic caps close to each</text>
+  <text x="56" y="354" fill="rgb(50,50,90)" font-family="'Courier New',monospace" font-size="11">VDD pin for high-frequency decoupling.</text>
+  <!-- blinking cursor hint -->
+  <rect x="56" y="358" width="1.5" height="14" fill="rgb(83,74,183)"/>
+  <!-- edit action buttons -->
+  <rect x="44" y="390" width="100" height="26" rx="5" fill="rgb(83,74,183)" stroke="rgb(62,57,160)" stroke-width="1"/>
+  <text x="94" y="407" text-anchor="middle" fill="white" font-family="-apple-system,system-ui,sans-serif" font-size="11" font-weight="600">Save  Ctrl+↵</text>
+  <rect x="154" y="390" width="72" height="26" rx="5" fill="rgb(240,240,240)" stroke="rgb(200,200,200)" stroke-width="1"/>
+  <text x="190" y="407" text-anchor="middle" fill="rgb(80,80,80)" font-family="-apple-system,system-ui,sans-serif" font-size="11">Cancel</text>
+
+  <!-- ── BLOCK 3 — preview (normal) ────────────────────────────────────── -->
+  <rect x="36" y="444" width="528" height="80" rx="8" fill="rgb(255,255,255)" stroke="rgb(224,224,224)" stroke-width="1.5"/>
+  <text x="52" y="468" fill="rgb(50,50,50)" font-family="-apple-system,system-ui,sans-serif" font-size="13" font-weight="600">Thermal Considerations</text>
+  <text x="52" y="488" fill="rgb(70,70,70)" font-family="-apple-system,system-ui,sans-serif" font-size="12">AMS1117 dissipates (Vin – Vout) × Iload.</text>
+  <text x="52" y="506" fill="rgb(70,70,70)" font-family="-apple-system,system-ui,sans-serif" font-size="12">At 200 mA: 0.34 W — within SOT-223 limits.</text>
+
+  <!-- ── ADD BLOCK BUTTON ───────────────────────────────────────────────── -->
+  <rect x="36" y="540" width="130" height="34" rx="7" fill="transparent" stroke="rgb(200,200,200)" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="101" y="562" text-anchor="middle" fill="rgb(150,150,150)" font-family="-apple-system,system-ui,sans-serif" font-size="12">+ Add block</text>
+
+  <!-- ── ANNOTATION LINES AND LABELS ───────────────────────────────────── -->
+
+  <!-- A: Article title -->
+  <line x1="580" y1="68" x2="640" y2="68" stroke="rgb(83,74,183)" stroke-width="1.3" marker-end="url(#arr)"/>
+  <rect x="643" y="50" width="240" height="36" rx="6" fill="rgb(238,237,254)" stroke="rgb(83,74,183)" stroke-width="1"/>
+  <text x="763" y="65" text-anchor="middle" fill="rgb(60,52,137)" font-family="-apple-system,system-ui,sans-serif" font-size="11" font-weight="600">Article title</text>
+  <text x="763" y="79" text-anchor="middle" fill="rgb(100,90,200)" font-family="-apple-system,system-ui,sans-serif" font-size="10">Double-click or ✎ to rename</text>
+
+  <!-- B: Block toolbar -->
+  <line x1="580" y1="115" x2="640" y2="115" stroke="rgb(83,74,183)" stroke-width="1.3" marker-end="url(#arr)"/>
+  <rect x="643" y="98" width="240" height="36" rx="6" fill="rgb(238,237,254)" stroke="rgb(83,74,183)" stroke-width="1"/>
+  <text x="763" y="113" text-anchor="middle" fill="rgb(60,52,137)" font-family="-apple-system,system-ui,sans-serif" font-size="11" font-weight="600">Block toolbar (appears on hover)</text>
+  <text x="763" y="127" text-anchor="middle" fill="rgb(100,90,200)" font-family="-apple-system,system-ui,sans-serif" font-size="10">↑ move up  ↓ move down  ✎ edit  ✕ delete</text>
+
+  <!-- C: Preview mode -->
+  <line x1="580" y1="190" x2="640" y2="190" stroke="rgb(15,110,86)" stroke-width="1.3" marker-end="url(#arr)"/>
+  <rect x="643" y="174" width="240" height="36" rx="6" fill="rgb(225,245,238)" stroke="rgb(15,110,86)" stroke-width="1"/>
+  <text x="763" y="189" text-anchor="middle" fill="rgb(8,80,65)" font-family="-apple-system,system-ui,sans-serif" font-size="11" font-weight="600">Preview mode — rendered Markdown</text>
+  <text x="763" y="203" text-anchor="middle" fill="rgb(20,130,100)" font-family="-apple-system,system-ui,sans-serif" font-size="10">Double-click anywhere to switch to edit mode</text>
+
+  <!-- D: Edit mode block -->
+  <line x1="580" y1="336" x2="640" y2="336" stroke="rgb(83,74,183)" stroke-width="1.3" marker-end="url(#arr)"/>
+  <rect x="643" y="288" width="240" height="96" rx="6" fill="rgb(238,237,254)" stroke="rgb(83,74,183)" stroke-width="1"/>
+  <text x="763" y="303" text-anchor="middle" fill="rgb(60,52,137)" font-family="-apple-system,system-ui,sans-serif" font-size="11" font-weight="600">Edit mode — monospace textarea</text>
+  <text x="763" y="317" text-anchor="middle" fill="rgb(100,90,200)" font-family="-apple-system,system-ui,sans-serif" font-size="10">Write raw Markdown here</text>
+  <text x="763" y="331" text-anchor="middle" fill="rgb(100,90,200)" font-family="-apple-system,system-ui,sans-serif" font-size="10">Ctrl+Enter — save</text>
+  <text x="763" y="345" text-anchor="middle" fill="rgb(100,90,200)" font-family="-apple-system,system-ui,sans-serif" font-size="10">Escape — cancel, discard changes</text>
+  <text x="763" y="359" text-anchor="middle" fill="rgb(100,90,200)" font-family="-apple-system,system-ui,sans-serif" font-size="10">Purple border = active edit mode</text>
+  <text x="763" y="374" text-anchor="middle" fill="rgb(100,90,200)" font-family="-apple-system,system-ui,sans-serif" font-size="10">Drag bottom edge to resize textarea</text>
+
+  <!-- E: Normal block -->
+  <line x1="580" y1="484" x2="640" y2="484" stroke="rgb(100,100,100)" stroke-width="1.3" marker-end="url(#arr)"/>
+  <rect x="643" y="468" width="240" height="34" rx="6" fill="rgb(245,245,245)" stroke="rgb(160,160,160)" stroke-width="1"/>
+  <text x="763" y="483" text-anchor="middle" fill="rgb(60,60,60)" font-family="-apple-system,system-ui,sans-serif" font-size="11">Block — preview (not hovered)</text>
+  <text x="763" y="496" text-anchor="middle" fill="rgb(100,100,100)" font-family="-apple-system,system-ui,sans-serif" font-size="10">Hover to reveal toolbar</text>
+
+  <!-- F: Add block button -->
+  <line x1="166" y1="557" x2="640" y2="557" stroke="rgb(160,85,10)" stroke-width="1.3" marker-end="url(#arr)"/>
+  <rect x="643" y="542" width="240" height="34" rx="6" fill="rgb(255,243,220)" stroke="rgb(160,85,10)" stroke-width="1"/>
+  <text x="763" y="557" text-anchor="middle" fill="rgb(110,60,5)" font-family="-apple-system,system-ui,sans-serif" font-size="11">+ Add block</text>
+  <text x="763" y="570" text-anchor="middle" fill="rgb(180,100,20)" font-family="-apple-system,system-ui,sans-serif" font-size="10">Opens inline form; Ctrl+Enter to confirm</text>
+
+  <!-- ── LEGEND ─────────────────────────────────────────────────────────── -->
+  <rect x="20" y="638" width="860" height="18" rx="4" fill="rgb(251,251,248)" stroke="rgba(40,40,38,0.10)" stroke-width="1"/>
+  <rect x="28" y="642" width="10" height="10" rx="2" fill="rgb(238,237,254)" stroke="rgb(83,74,183)" stroke-width="1"/>
+  <text x="44" y="651" fill="rgb(60,52,137)" font-family="-apple-system,system-ui,sans-serif" font-size="9">Interactive / edit</text>
+  <rect x="160" y="642" width="10" height="10" rx="2" fill="rgb(225,245,238)" stroke="rgb(15,110,86)" stroke-width="1"/>
+  <text x="176" y="651" fill="rgb(8,80,65)" font-family="-apple-system,system-ui,sans-serif" font-size="9">Preview (rendered)</text>
+  <rect x="310" y="642" width="10" height="10" rx="2" fill="rgb(255,243,220)" stroke="rgb(160,85,10)" stroke-width="1"/>
+  <text x="326" y="651" fill="rgb(110,60,5)" font-family="-apple-system,system-ui,sans-serif" font-size="9">Add / create action</text>
+  <text x="650" y="651" text-anchor="middle" fill="rgb(100,100,100)" font-family="-apple-system,system-ui,sans-serif" font-size="9">Blocks are ordered by Ordinal; ↑/↓ buttons swap adjacent blocks immediately (persisted).</text>
+</svg>

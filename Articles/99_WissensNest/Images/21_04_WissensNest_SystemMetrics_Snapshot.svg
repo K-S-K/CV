@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360" font-family="ui-sans-serif, system-ui, sans-serif">
+  <defs>
+    <marker id="ah" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#5d6d7e"/></marker>
+    <marker id="ah-grn" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#27ae60"/></marker>
+  </defs>
+
+  <rect width="900" height="360" fill="#f4f6f9" rx="10"/>
+  <text x="450" y="28" text-anchor="middle" font-size="15" font-weight="700" fill="#1a1a2e">SystemMetricsSnapshot — Data Model</text>
+
+  <!-- ═══ LEFT: Raw inputs ═══ -->
+  <rect x="12" y="44" width="350" height="282" fill="#eaf4fb" stroke="#2980b9" stroke-width="1.5" rx="8"/>
+  <text x="187" y="66" text-anchor="middle" font-size="12" font-weight="700" fill="#2980b9">Raw Inputs (from OS)</text>
+  <text x="187" y="82" text-anchor="middle" font-size="10" fill="#5d6d7e">record constructor parameters</text>
+
+  <!-- field rows: label left, source right -->
+  <!-- row y positions: 104, 128, 152, 176, 200, 224, 256 -->
+  <rect x="28" y="92" width="318" height="24" fill="#d6eaf8" rx="4"/>
+  <text x="38"  y="108" font-size="10" fill="#2c3e50" font-family="monospace">TotalPhysicalBytes</text>
+  <text x="338" y="108" text-anchor="end" font-size="9" fill="#5d6d7e">sysctl hw.memsize</text>
+
+  <rect x="28" y="120" width="318" height="24" fill="#d6eaf8" rx="4"/>
+  <text x="38"  y="136" font-size="10" fill="#2c3e50" font-family="monospace">AnonymousBytes</text>
+  <text x="338" y="136" text-anchor="end" font-size="9" fill="#5d6d7e">vm_stat "Anonymous pages" × pageSize</text>
+
+  <rect x="28" y="148" width="318" height="24" fill="#d6eaf8" rx="4"/>
+  <text x="38"  y="164" font-size="10" fill="#2c3e50" font-family="monospace">WiredBytes</text>
+  <text x="338" y="164" text-anchor="end" font-size="9" fill="#5d6d7e">vm_stat "Pages wired down" × pageSize</text>
+
+  <rect x="28" y="176" width="318" height="24" fill="#d6eaf8" rx="4"/>
+  <text x="38"  y="192" font-size="10" fill="#2c3e50" font-family="monospace">CompressedBytes</text>
+  <text x="338" y="192" text-anchor="end" font-size="9" fill="#5d6d7e">vm_stat "Pages occupied by compressor"</text>
+
+  <rect x="28" y="204" width="318" height="24" fill="#fde8d8" rx="4"/>
+  <text x="38"  y="220" font-size="10" fill="#2c3e50" font-family="monospace">OllamaBytes</text>
+  <text x="338" y="220" text-anchor="end" font-size="9" fill="#5d6d7e">Σ Process("ollama").WorkingSet64</text>
+
+  <rect x="28" y="232" width="318" height="24" fill="#d6eaf8" rx="4"/>
+  <text x="38"  y="248" font-size="10" fill="#2c3e50" font-family="monospace">SwapUsedBytes</text>
+  <text x="338" y="248" text-anchor="end" font-size="9" fill="#5d6d7e">sysctl vm.swapusage  used field</text>
+
+  <rect x="28" y="260" width="318" height="24" fill="#d5d8dc" rx="4"/>
+  <text x="38"  y="276" font-size="10" fill="#2c3e50" font-family="monospace">Timestamp</text>
+  <text x="338" y="276" text-anchor="end" font-size="9" fill="#5d6d7e">DateTimeOffset.UtcNow at collection time</text>
+
+  <text x="187" y="310" text-anchor="middle" font-size="9" fill="#7f8c8d">SwapUsedBytes and Timestamp are not used in computed properties</text>
+
+  <!-- ═══ ARROWS in middle ═══ -->
+  <!-- Five arrows for the five computed properties -->
+  <!-- TotalUsed uses: Anonymous, Wired, Compressed -->
+  <line x1="362" y1="133" x2="538" y2="114" stroke="#5d6d7e" stroke-width="1" marker-end="url(#ah)" stroke-dasharray="3,2"/>
+  <line x1="362" y1="161" x2="538" y2="114" stroke="#5d6d7e" stroke-width="1" marker-end="url(#ah)" stroke-dasharray="3,2"/>
+  <line x1="362" y1="189" x2="538" y2="114" stroke="#5d6d7e" stroke-width="1" marker-end="url(#ah)" stroke-dasharray="3,2"/>
+
+  <!-- FreeBytes uses: Total, Anonymous, Wired, Compressed -->
+  <line x1="362" y1="105" x2="538" y2="148" stroke="#5d6d7e" stroke-width="1" marker-end="url(#ah)" stroke-dasharray="3,2"/>
+
+  <!-- DisplayOllamaBytes uses: Ollama, Anonymous -->
+  <line x1="362" y1="217" x2="538" y2="218" stroke="#e67e22" stroke-width="1.5" marker-end="url(#ah-grn)"/>
+  <line x1="362" y1="133" x2="538" y2="218" stroke="#e67e22" stroke-width="1" stroke-dasharray="3,2" marker-end="url(#ah-grn)"/>
+
+  <!-- OtherUsed uses: Anonymous, DisplayOllama (→ chained) -->
+  <line x1="362" y1="133" x2="538" y2="256" stroke="#5d6d7e" stroke-width="1" marker-end="url(#ah)" stroke-dasharray="3,2"/>
+
+  <!-- UsedFraction: Total, TotalUsed (→ from TotalUsed) -->
+  <line x1="362" y1="105" x2="538" y2="182" stroke="#5d6d7e" stroke-width="1" marker-end="url(#ah)" stroke-dasharray="3,2"/>
+
+  <!-- ═══ RIGHT: Computed properties ═══ -->
+  <rect x="538" y="44" width="350" height="282" fill="#eafaf1" stroke="#27ae60" stroke-width="1.5" rx="8"/>
+  <text x="713" y="66" text-anchor="middle" font-size="12" font-weight="700" fill="#1e8449">Computed Properties</text>
+  <text x="713" y="82" text-anchor="middle" font-size="10" fill="#5d6d7e">calculated from raw inputs on every access</text>
+
+  <!-- computed rows -->
+  <rect x="554" y="92"  width="318" height="40" fill="#d5f5e3" rx="4"/>
+  <text x="564" y="108" font-size="10" fill="#2c3e50" font-family="monospace">TotalUsedBytes</text>
+  <text x="564" y="124" font-size="9"  fill="#5d6d7e">Wired + Compressed + Anonymous</text>
+
+  <rect x="554" y="136" width="318" height="40" fill="#d5f5e3" rx="4"/>
+  <text x="564" y="152" font-size="10" fill="#2c3e50" font-family="monospace">FreeBytes</text>
+  <text x="564" y="168" font-size="9"  fill="#5d6d7e">max(0, Total − Wired − Compressed − Anonymous)</text>
+
+  <rect x="554" y="180" width="318" height="40" fill="#d5f5e3" rx="4"/>
+  <text x="564" y="196" font-size="10" fill="#2c3e50" font-family="monospace">UsedFraction</text>
+  <text x="564" y="212" font-size="9"  fill="#5d6d7e">TotalUsed / TotalPhysical  (0.0 – 1.0)</text>
+
+  <rect x="554" y="224" width="318" height="40" fill="#fde8d8" rx="4"/>
+  <text x="564" y="240" font-size="10" fill="#2c3e50" font-family="monospace">DisplayOllamaBytes</text>
+  <text x="564" y="256" font-size="9"  fill="#5d6d7e">min(OllamaBytes, AnonymousBytes)  ← capped</text>
+
+  <rect x="554" y="268" width="318" height="40" fill="#d5f5e3" rx="4"/>
+  <text x="564" y="284" font-size="10" fill="#2c3e50" font-family="monospace">OtherUsedBytes</text>
+  <text x="564" y="300" font-size="9"  fill="#5d6d7e">max(0, Anonymous − DisplayOllamaBytes)</text>
+
+  <!-- cap explanation -->
+  <text x="713" y="340" text-anchor="middle" font-size="9" fill="#e67e22">DisplayOllamaBytes caps Ollama to Anonymous so the donut segments sum to 100%.</text>
+  <text x="713" y="352" text-anchor="middle" font-size="9" fill="#e67e22">The legend always shows the real OllamaBytes (RSS may exceed Anonymous).</text>
+</svg>

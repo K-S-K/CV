@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="700" viewBox="0 0 900 700" font-family="ui-sans-serif, system-ui, sans-serif">
+
+  <defs>
+    <marker id="down" markerWidth="9" markerHeight="9" refX="4.5" refY="8" orient="auto">
+      <path d="M0,0 L4.5,9 L9,0 Z" fill="#555"/>
+    </marker>
+  </defs>
+
+  <!-- background -->
+  <rect width="900" height="700" fill="#f4f6f9" rx="10"/>
+
+  <!-- title -->
+  <text x="450" y="26" text-anchor="middle" font-size="14" font-weight="700" fill="#1a1a2e">WebSearchTool — Data Transformation Pipeline</text>
+
+  <!-- ============================================================
+       Columns:  label  x=20..205 (185px)  |  data  x=215..880 (665px)
+       ============================================================ -->
+
+  <!-- ── Stage 1: Input JSON ── y=42, h=58 -->
+  <rect x="20"  y="42" width="185" height="58" rx="6" fill="#4a90d9" stroke="#2c6fad" stroke-width="1.5"/>
+  <text x="112" y="62" text-anchor="middle" font-size="10" font-weight="700" fill="white">① Input JSON</text>
+  <text x="112" y="77" text-anchor="middle" font-size="9"  fill="#d6eaff">model → ExecuteAsync</text>
+  <text x="112" y="90" text-anchor="middle" font-size="9"  fill="#d6eaff">(inputJson: string)</text>
+
+  <rect x="205" y="42" width="675" height="58" rx="6" fill="#eaf4ff" stroke="#2c6fad" stroke-width="1.5"/>
+  <text x="540" y="66" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="10" fill="#1a3a5c">{ "query": "Darwin evolution theory",  "max_results": 5 }</text>
+  <text x="230" y="88" font-family="'Courier New', Courier, monospace" font-size="9" fill="#555">&#x2192; JsonDocument.Parse  &#x2192;  query = "Darwin evolution theory",  maxResults = 5</text>
+
+  <!-- arrow 1→2 -->
+  <line x1="450" y1="100" x2="450" y2="114" stroke="#555" stroke-width="1.5" marker-end="url(#down)"/>
+
+  <!-- ── Stage 2: HTTP Request ── y=116, h=72 -->
+  <rect x="20"  y="116" width="185" height="72" rx="6" fill="#ca6f1e" stroke="#a04000" stroke-width="1.5"/>
+  <text x="112" y="138" text-anchor="middle" font-size="10" font-weight="700" fill="white">② HTTP GET</text>
+  <text x="112" y="153" text-anchor="middle" font-size="9"  fill="#fde8d0">Request</text>
+  <text x="112" y="168" text-anchor="middle" font-size="9"  fill="#fde8d0">Named client "websearch"</text>
+  <text x="112" y="181" text-anchor="middle" font-size="9"  fill="#fde8d0">+ User-Agent header</text>
+
+  <rect x="205" y="116" width="675" height="72" rx="6" fill="#fff5ec" stroke="#a04000" stroke-width="1.5"/>
+  <text x="220" y="138" font-family="'Courier New', Courier, monospace" font-size="9.5" fill="#5d2e00">GET https://html.duckduckgo.com/html/?q=Darwin+evolution+theory&amp;kl=wt-wt HTTP/1.1</text>
+  <text x="220" y="155" font-family="'Courier New', Courier, monospace" font-size="9.5" fill="#5d2e00">Host: html.duckduckgo.com</text>
+  <text x="220" y="172" font-family="'Courier New', Courier, monospace" font-size="9.5" fill="#5d2e00">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 …</text>
+
+  <!-- arrow 2→3 -->
+  <line x1="450" y1="188" x2="450" y2="202" stroke="#555" stroke-width="1.5" marker-end="url(#down)"/>
+
+  <!-- ── Stage 3: HTML Response ── y=204, h=100 -->
+  <rect x="20"  y="204" width="185" height="100" rx="6" fill="#e67e22" stroke="#ca6f1e" stroke-width="1.5"/>
+  <text x="112" y="228" text-anchor="middle" font-size="10" font-weight="700" fill="white">③ HTML Response</text>
+  <text x="112" y="243" text-anchor="middle" font-size="9"  fill="#fde8d0">200 OK · text/html</text>
+  <text x="112" y="258" text-anchor="middle" font-size="9"  fill="#fde8d0">~50 KB raw HTML</text>
+  <text x="112" y="273" text-anchor="middle" font-size="9"  fill="#fde8d0">key CSS classes:</text>
+  <text x="112" y="287" text-anchor="middle" font-size="9"  fill="#fde8d0">.result__body</text>
+  <text x="112" y="299" text-anchor="middle" font-size="9"  fill="#fde8d0">.result__a  .result__snippet</text>
+
+  <rect x="205" y="204" width="675" height="100" rx="6" fill="#fff5ec" stroke="#ca6f1e" stroke-width="1.5"/>
+  <text x="220" y="222" font-family="'Courier New', Courier, monospace" font-size="9" fill="#5d2e00">&lt;div class="result__body"&gt;</text>
+  <text x="220" y="237" font-family="'Courier New', Courier, monospace" font-size="9" fill="#5d2e00">  &lt;h2 class="result__title"&gt;</text>
+  <text x="220" y="252" font-family="'Courier New', Courier, monospace" font-size="9" fill="#5d2e00">    &lt;a class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fen.wikipedia.org..."&gt;</text>
+  <text x="220" y="267" font-family="'Courier New', Courier, monospace" font-size="9" fill="#5d2e00">      Charles Darwin - Wikipedia</text>
+  <text x="220" y="282" font-family="'Courier New', Courier, monospace" font-size="9" fill="#5d2e00">    &lt;/a&gt;  &lt;/h2&gt;</text>
+  <text x="220" y="297" font-family="'Courier New', Courier, monospace" font-size="9" fill="#5d2e00">  &lt;a class="result__snippet"&gt;English naturalist, geologist and biologist...&lt;/a&gt;</text>
+
+  <!-- arrow 3→4 -->
+  <line x1="450" y1="304" x2="450" y2="318" stroke="#555" stroke-width="1.5" marker-end="url(#down)"/>
+
+  <!-- ── Stage 4: AngleSharp DOM Selection ── y=320, h=72 -->
+  <rect x="20"  y="320" width="185" height="72" rx="6" fill="#8e44ad" stroke="#7d3c98" stroke-width="1.5"/>
+  <text x="112" y="342" text-anchor="middle" font-size="10" font-weight="700" fill="white">④ AngleSharp</text>
+  <text x="112" y="357" text-anchor="middle" font-size="9"  fill="#e8d5f5">CSS Selection</text>
+  <text x="112" y="372" text-anchor="middle" font-size="9"  fill="#e8d5f5">per .result__body</text>
+  <text x="112" y="385" text-anchor="middle" font-size="9"  fill="#e8d5f5">element</text>
+
+  <rect x="205" y="320" width="675" height="72" rx="6" fill="#f9f0ff" stroke="#7d3c98" stroke-width="1.5"/>
+  <text x="220" y="342" font-family="'Courier New', Courier, monospace" font-size="9.5" fill="#4a1a6e">.result__a       text:  "Charles Darwin - Wikipedia"</text>
+  <text x="220" y="359" font-family="'Courier New', Courier, monospace" font-size="9.5" fill="#4a1a6e">                 href:  "//duckduckgo.com/l/?uddg=https%3A%2F%2Fen.wikipedia.org..."</text>
+  <text x="220" y="376" font-family="'Courier New', Courier, monospace" font-size="9.5" fill="#4a1a6e">.result__snippet text:  "English naturalist, geologist and biologist..."</text>
+
+  <!-- arrow 4→5 -->
+  <line x1="450" y1="392" x2="450" y2="406" stroke="#555" stroke-width="1.5" marker-end="url(#down)"/>
+
+  <!-- ── Stage 5: URL Extraction ── y=408, h=72 -->
+  <rect x="20"  y="408" width="185" height="72" rx="6" fill="#16a085" stroke="#0e7060" stroke-width="1.5"/>
+  <text x="112" y="430" text-anchor="middle" font-size="10" font-weight="700" fill="white">⑤ URL Extraction</text>
+  <text x="112" y="445" text-anchor="middle" font-size="9"  fill="#c8f0ea">ExtractUrl(href)</text>
+  <text x="112" y="460" text-anchor="middle" font-size="9"  fill="#c8f0ea">find uddg param</text>
+  <text x="112" y="474" text-anchor="middle" font-size="9"  fill="#c8f0ea">WebUtility.UrlDecode</text>
+
+  <rect x="205" y="408" width="675" height="72" rx="6" fill="#eafaf6" stroke="#0e7060" stroke-width="1.5"/>
+  <text x="220" y="430" font-family="'Courier New', Courier, monospace" font-size="9.5" fill="#0a4035">href:     "//duckduckgo.com/l/?uddg=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FCharles_Darwin&amp;rut=…"</text>
+  <text x="220" y="447" font-family="'Courier New', Courier, monospace" font-size="9.5" fill="#0a4035">uddg:     "https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FCharles_Darwin"</text>
+  <text x="220" y="466" font-family="'Courier New', Courier, monospace" font-size="10" font-weight="700" fill="#0a4035">decoded:  "https://en.wikipedia.org/wiki/Charles_Darwin"</text>
+
+  <!-- arrow 5→6 -->
+  <line x1="450" y1="480" x2="450" y2="494" stroke="#555" stroke-width="1.5" marker-end="url(#down)"/>
+
+  <!-- ── Stage 6: SearchResult Record ── y=496, h=68 -->
+  <rect x="20"  y="496" width="185" height="68" rx="6" fill="#27ae60" stroke="#1e8449" stroke-width="1.5"/>
+  <text x="112" y="518" text-anchor="middle" font-size="10" font-weight="700" fill="white">⑥ SearchResult</text>
+  <text x="112" y="533" text-anchor="middle" font-size="9"  fill="#d5f5e3">record (per result)</text>
+  <text x="112" y="548" text-anchor="middle" font-size="9"  fill="#d5f5e3">collected into</text>
+  <text x="112" y="560" text-anchor="middle" font-size="9"  fill="#d5f5e3">List&lt;SearchResult&gt;</text>
+
+  <rect x="205" y="496" width="675" height="68" rx="6" fill="#edfaf2" stroke="#1e8449" stroke-width="1.5"/>
+  <text x="220" y="517" font-family="'Courier New', Courier, monospace" font-size="9.5" fill="#1a5c34">SearchResult {  Title:   "Charles Darwin - Wikipedia",</text>
+  <text x="220" y="534" font-family="'Courier New', Courier, monospace" font-size="9.5" fill="#1a5c34">               Url:     "https://en.wikipedia.org/wiki/Charles_Darwin",</text>
+  <text x="220" y="551" font-family="'Courier New', Courier, monospace" font-size="9.5" fill="#1a5c34">               Snippet: "English naturalist, geologist and biologist…" }</text>
+
+  <!-- arrow 6→7 -->
+  <line x1="450" y1="564" x2="450" y2="578" stroke="#555" stroke-width="1.5" marker-end="url(#down)"/>
+
+  <!-- ── Stage 7: Formatted Output ── y=580, h=90 -->
+  <rect x="20"  y="580" width="185" height="90" rx="6" fill="#2c3e50" stroke="#1a252f" stroke-width="1.5"/>
+  <text x="112" y="602" text-anchor="middle" font-size="10" font-weight="700" fill="white">⑦ Formatted Output</text>
+  <text x="112" y="617" text-anchor="middle" font-size="9"  fill="#c0cad4">plain-text string</text>
+  <text x="112" y="632" text-anchor="middle" font-size="9"  fill="#c0cad4">returned to</text>
+  <text x="112" y="647" text-anchor="middle" font-size="9"  fill="#c0cad4">ToolOrchestrator</text>
+  <text x="112" y="662" text-anchor="middle" font-size="9"  fill="#c0cad4">→ injected into model</text>
+
+  <rect x="205" y="580" width="675" height="90" rx="6" fill="#f0f3f5" stroke="#1a252f" stroke-width="1.5"/>
+  <text x="220" y="600" font-family="'Courier New', Courier, monospace" font-size="9.5" fill="#1a252f">Search results for: Darwin evolution theory</text>
+  <text x="220" y="617" font-family="'Courier New', Courier, monospace" font-size="9.5" fill="#1a252f"></text>
+  <text x="220" y="630" font-family="'Courier New', Courier, monospace" font-size="9.5" fill="#1a252f">1. Charles Darwin - Wikipedia</text>
+  <text x="220" y="645" font-family="'Courier New', Courier, monospace" font-size="9.5" fill="#1a252f">   https://en.wikipedia.org/wiki/Charles_Darwin</text>
+  <text x="220" y="660" font-family="'Courier New', Courier, monospace" font-size="9.5" fill="#1a252f">   English naturalist, geologist and biologist, best known for his…</text>
+
+</svg>

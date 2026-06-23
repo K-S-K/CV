@@ -1,0 +1,96 @@
+<svg width="100%" viewBox="0 0 740 560" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="370" y="20" text-anchor="middle" fill="rgb(35,35,33)" font-family="-apple-system,system-ui,sans-serif" font-size="14" font-weight="600">Approach C — Always-On Headless Voice Loop</text>
+  <text x="370" y="35" text-anchor="middle" fill="rgb(120,120,115)" font-family="-apple-system,system-ui,sans-serif" font-size="10">Raspberry Pi + VoiceClient.cs · no screen, no browser required</text>
+
+  <!-- ══════════════════════════ -->
+  <!-- LOOP CYCLE (circular)     -->
+  <!-- ══════════════════════════ -->
+  <!-- Center of cycle: 370, 295 -->
+  <!-- Steps placed clockwise, starting top -->
+
+  <!-- Background loop arc hint -->
+  <circle cx="370" cy="295" r="185" fill="none" stroke="rgba(83,74,183,0.08)" stroke-width="28"/>
+  <circle cx="370" cy="295" r="185" fill="none" stroke="rgba(83,74,183,0.15)" stroke-width="1.5" stroke-dasharray="8 5"/>
+
+  <!-- ── STEP 1: Wake Word (top) ── -->
+  <rect x="268" y="58" width="204" height="70" rx="10" fill="rgb(248,240,255)" stroke="rgb(110,50,180)" stroke-width="1.4"/>
+  <text x="370" y="84" text-anchor="middle" fill="rgb(80,30,140)" font-family="-apple-system,system-ui,sans-serif" font-size="13" font-weight="700">1 · Wake Word Detected</text>
+  <text x="370" y="102" text-anchor="middle" fill="rgb(110,50,180)" font-family="-apple-system,system-ui,sans-serif" font-size="11">openWakeWord running on RPi</text>
+  <text x="370" y="117" text-anchor="middle" fill="rgb(130,70,200)" font-family="-apple-system,system-ui,sans-serif" font-size="10">tiny model, always-on, ~50 MB RAM</text>
+
+  <!-- ── STEP 2: Record (right-top) ── -->
+  <rect x="548" y="148" width="182" height="70" rx="10" fill="rgb(228,242,255)" stroke="rgb(40,100,180)" stroke-width="1.4"/>
+  <text x="639" y="174" text-anchor="middle" fill="rgb(20,70,140)" font-family="-apple-system,system-ui,sans-serif" font-size="13" font-weight="700">2 · Record Speech</text>
+  <text x="639" y="192" text-anchor="middle" fill="rgb(50,120,200)" font-family="-apple-system,system-ui,sans-serif" font-size="11">NAudio captures mic</text>
+  <text x="639" y="207" text-anchor="middle" fill="rgb(80,140,210)" font-family="-apple-system,system-ui,sans-serif" font-size="10">until silence (VAD threshold)</text>
+
+  <!-- ── STEP 3: STT (right-bottom) ── -->
+  <rect x="548" y="342" width="182" height="70" rx="10" fill="rgb(220,245,245)" stroke="rgb(20,130,130)" stroke-width="1.4"/>
+  <text x="639" y="368" text-anchor="middle" fill="rgb(10,90,90)" font-family="-apple-system,system-ui,sans-serif" font-size="13" font-weight="700">3 · Speech-to-Text</text>
+  <text x="639" y="386" text-anchor="middle" fill="rgb(20,130,130)" font-family="-apple-system,system-ui,sans-serif" font-size="11">whisper.cpp HTTP :9000</text>
+  <text x="639" y="401" text-anchor="middle" fill="rgb(30,150,150)" font-family="-apple-system,system-ui,sans-serif" font-size="10">WAV → transcript text</text>
+
+  <!-- ── STEP 4: API + LLM (bottom) ── -->
+  <rect x="268" y="448" width="204" height="80" rx="10" fill="rgb(238,237,254)" stroke="rgb(83,74,183)" stroke-width="1.4"/>
+  <text x="370" y="474" text-anchor="middle" fill="rgb(60,52,137)" font-family="-apple-system,system-ui,sans-serif" font-size="13" font-weight="700">4 · LLM Inference</text>
+  <text x="370" y="492" text-anchor="middle" fill="rgb(83,74,183)" font-family="-apple-system,system-ui,sans-serif" font-size="11">WissensNest.API + Ollama</text>
+  <text x="370" y="508" text-anchor="middle" fill="rgb(100,90,200)" font-family="-apple-system,system-ui,sans-serif" font-size="10">tool calling if needed</text>
+  <text x="370" y="521" text-anchor="middle" fill="rgb(115,100,210)" font-family="-apple-system,system-ui,sans-serif" font-size="10">"turn on the lamp" → HomeControl</text>
+
+  <!-- ── STEP 5: TTS (left-bottom) ── -->
+  <rect x="10" y="342" width="182" height="70" rx="10" fill="rgb(255,243,225)" stroke="rgb(180,95,20)" stroke-width="1.4"/>
+  <text x="101" y="368" text-anchor="middle" fill="rgb(130,65,10)" font-family="-apple-system,system-ui,sans-serif" font-size="13" font-weight="700">5 · Text-to-Speech</text>
+  <text x="101" y="386" text-anchor="middle" fill="rgb(180,95,20)" font-family="-apple-system,system-ui,sans-serif" font-size="11">Piper TTS HTTP :5002</text>
+  <text x="101" y="401" text-anchor="middle" fill="rgb(200,110,30)" font-family="-apple-system,system-ui,sans-serif" font-size="10">response text → WAV bytes</text>
+
+  <!-- ── STEP 6: Play Audio (left-top) ── -->
+  <rect x="10" y="148" width="182" height="70" rx="10" fill="rgb(228,242,255)" stroke="rgb(40,100,180)" stroke-width="1.4"/>
+  <text x="101" y="174" text-anchor="middle" fill="rgb(20,70,140)" font-family="-apple-system,system-ui,sans-serif" font-size="13" font-weight="700">6 · Play Response</text>
+  <text x="101" y="192" text-anchor="middle" fill="rgb(50,120,200)" font-family="-apple-system,system-ui,sans-serif" font-size="11">NAudio → Jabra BT speaker</text>
+  <text x="101" y="207" text-anchor="middle" fill="rgb(80,140,210)" font-family="-apple-system,system-ui,sans-serif" font-size="10">WAV bytes → audio output</text>
+
+  <!-- ══════════════════════════════ -->
+  <!-- CYCLE ARROWS (clockwise)      -->
+  <!-- ══════════════════════════════ -->
+
+  <!-- 1 (top center, y=128) → 2 (right-top, left edge x=548, y=183) -->
+  <path d="M 472 93 Q 560 93 580 145" fill="none" stroke="rgb(100,100,95)" stroke-width="1.4" marker-end="url(#arr)"/>
+  <text x="570" y="110" text-anchor="middle" fill="rgb(110,108,100)" font-family="-apple-system,system-ui,sans-serif" font-size="9">wake!</text>
+
+  <!-- 2 (right-top bottom, y=218) → 3 (right-bottom top, y=342) -->
+  <line x1="639" y1="218" x2="639" y2="342" stroke="rgb(100,100,95)" stroke-width="1.4" marker-end="url(#arr)"/>
+  <text x="648" y="285" fill="rgb(110,108,100)" font-family="-apple-system,system-ui,sans-serif" font-size="9">WAV</text>
+
+  <!-- 3 (right-bottom left edge x=548, y=377) → 4 (bottom right x=472, top y=448) -->
+  <path d="M 570 412 Q 560 480 472 490" fill="none" stroke="rgb(100,100,95)" stroke-width="1.4" marker-end="url(#arr)"/>
+  <text x="540" y="436" text-anchor="middle" fill="rgb(110,108,100)" font-family="-apple-system,system-ui,sans-serif" font-size="9">transcript</text>
+
+  <!-- 4 (bottom left x=268, y=490) → 5 (left-bottom right x=192, y=377) -->
+  <path d="M 268 490 Q 180 480 170 412" fill="none" stroke="rgb(100,100,95)" stroke-width="1.4" marker-end="url(#arr)"/>
+  <text x="200" y="465" text-anchor="middle" fill="rgb(110,108,100)" font-family="-apple-system,system-ui,sans-serif" font-size="9">response</text>
+
+  <!-- 5 (left-bottom top y=342) → 6 (left-top bottom y=218) -->
+  <line x1="101" y1="342" x2="101" y2="218" stroke="rgb(100,100,95)" stroke-width="1.4" marker-end="url(#arr)"/>
+  <text x="110" y="285" fill="rgb(110,108,100)" font-family="-apple-system,system-ui,sans-serif" font-size="9">WAV</text>
+
+  <!-- 6 (left-top right x=192, y=183) → 1 (top left x=268, y=93) -->
+  <path d="M 170 148 Q 200 100 268 93" fill="none" stroke="rgb(100,100,95)" stroke-width="1.4" marker-end="url(#arr)"/>
+  <text x="180" y="100" text-anchor="middle" fill="rgb(110,108,100)" font-family="-apple-system,system-ui,sans-serif" font-size="9">resume</text>
+  <text x="180" y="111" text-anchor="middle" fill="rgb(110,108,100)" font-family="-apple-system,system-ui,sans-serif" font-size="9">listening</text>
+
+  <!-- ════════════════════════════ -->
+  <!-- CENTER LABEL                -->
+  <!-- ════════════════════════════ -->
+  <circle cx="370" cy="295" r="68" fill="rgb(251,251,248)" stroke="rgba(83,74,183,0.2)" stroke-width="1"/>
+  <text x="370" y="282" text-anchor="middle" fill="rgb(60,52,137)" font-family="-apple-system,system-ui,sans-serif" font-size="12" font-weight="700">VoiceClient</text>
+  <text x="370" y="298" text-anchor="middle" fill="rgb(83,74,183)" font-family="-apple-system,system-ui,sans-serif" font-size="10">.NET Console App</text>
+  <text x="370" y="312" text-anchor="middle" fill="rgb(100,90,200)" font-family="-apple-system,system-ui,sans-serif" font-size="9">orchestrates the loop</text>
+  <text x="370" y="325" text-anchor="middle" fill="rgb(115,105,210)" font-family="-apple-system,system-ui,sans-serif" font-size="9">runs on RPi or Mac</text>
+</svg>

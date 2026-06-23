@@ -1,0 +1,142 @@
+<svg width="100%" viewBox="0 0 860 640" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="430" y="22" text-anchor="middle" fill="rgb(35,35,33)" font-family="-apple-system,system-ui,sans-serif" font-size="15" font-weight="600">WissensNest — Chat Sidebar</text>
+
+  <!-- ── SIDEBAR FRAME ──────────────────────────────────────────────────── -->
+  <rect x="20" y="36" width="230" height="574" rx="10" fill="rgb(30,32,52)" stroke="rgb(55,58,88)" stroke-width="1.5"/>
+
+  <!-- App name / top bar -->
+  <rect x="20" y="36" width="230" height="38" rx="10" fill="rgb(40,42,68)" stroke="rgb(55,58,88)" stroke-width="1.5"/>
+  <rect x="20" y="56" width="230" height="18" fill="rgb(40,42,68)"/>
+  <text x="135" y="60" text-anchor="middle" fill="rgb(200,200,220)" font-family="-apple-system,system-ui,sans-serif" font-size="12" font-weight="700">WissensNest</text>
+
+  <!-- Divider -->
+  <line x1="20" y1="74" x2="250" y2="74" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+
+  <!-- ── PROJECT HEADER ─────────────────────────────────────────────────── -->
+  <rect x="28" y="82" width="214" height="28" rx="5" fill="rgba(255,255,255,0.09)"/>
+  <!-- chevron -->
+  <text x="38" y="101" fill="rgba(255,255,255,0.5)" font-family="-apple-system,system-ui,sans-serif" font-size="9">▾</text>
+  <!-- project name -->
+  <text x="50" y="101" fill="rgba(255,255,255,0.80)" font-family="-apple-system,system-ui,sans-serif" font-size="10" font-weight="700" letter-spacing="0.06em">STM32 WORK</text>
+  <!-- action buttons row -->
+  <text x="168" y="101" fill="rgba(160,196,255,0.85)" font-family="-apple-system,system-ui,sans-serif" font-size="11">⊞</text>
+  <text x="183" y="101" fill="rgba(255,255,255,0.45)" font-family="-apple-system,system-ui,sans-serif" font-size="11">⇄</text>
+  <text x="198" y="101" fill="rgba(255,255,255,0.45)" font-family="-apple-system,system-ui,sans-serif" font-size="11">✎</text>
+  <text x="213" y="101" fill="rgba(255,100,100,0.55)" font-family="-apple-system,system-ui,sans-serif" font-size="11">✕</text>
+  <text x="228" y="101" fill="rgba(255,255,255,0.50)" font-family="-apple-system,system-ui,sans-serif" font-size="12" font-weight="300">+</text>
+
+  <!-- ── CONVERSATION ITEMS ─────────────────────────────────────────────── -->
+  <!-- conv 1 (active) -->
+  <rect x="28" y="115" width="214" height="24" rx="4" fill="rgba(83,74,183,0.40)"/>
+  <text x="38" y="131" fill="rgba(255,255,255,0.90)" font-family="-apple-system,system-ui,sans-serif" font-size="11">Clock prescaler question</text>
+
+  <!-- conv 2 -->
+  <rect x="28" y="143" width="214" height="24" rx="4" fill="transparent"/>
+  <text x="38" y="159" fill="rgba(255,255,255,0.65)" font-family="-apple-system,system-ui,sans-serif" font-size="11">UART baud rate debug</text>
+
+  <!-- conv 3 -->
+  <rect x="28" y="171" width="214" height="24" rx="4" fill="transparent"/>
+  <text x="38" y="187" fill="rgba(255,255,255,0.65)" font-family="-apple-system,system-ui,sans-serif" font-size="11">DMA circular buffer setup</text>
+
+  <!-- ── SECTION HEADER ─────────────────────────────────────────────────── -->
+  <rect x="28" y="204" width="214" height="24" rx="4" fill="transparent"/>
+  <!-- section chevron -->
+  <text x="36" y="220" fill="rgba(255,255,255,0.4)" font-family="-apple-system,system-ui,sans-serif" font-size="9">▾</text>
+  <!-- section symbol + name -->
+  <text x="48" y="220" fill="rgba(180,170,255,0.75)" font-family="-apple-system,system-ui,sans-serif" font-size="10" font-weight="600">Design Notes</text>
+  <!-- hover actions (faint) -->
+  <text x="193" y="220" fill="rgba(255,255,255,0.35)" font-family="-apple-system,system-ui,sans-serif" font-size="10">✎</text>
+  <text x="206" y="220" fill="rgba(255,100,100,0.35)" font-family="-apple-system,system-ui,sans-serif" font-size="10">✕</text>
+  <text x="220" y="220" fill="rgba(255,255,255,0.35)" font-family="-apple-system,system-ui,sans-serif" font-size="11">+</text>
+
+  <!-- ── ARTICLE ITEMS (under section) ─────────────────────────────────── -->
+  <rect x="36" y="231" width="206" height="22" rx="4" fill="transparent"/>
+  <text x="52" y="246" fill="rgba(255,255,255,0.60)" font-family="-apple-system,system-ui,sans-serif" font-size="11">Power Supply</text>
+
+  <rect x="36" y="256" width="206" height="22" rx="4" fill="transparent"/>
+  <text x="52" y="271" fill="rgba(255,255,255,0.60)" font-family="-apple-system,system-ui,sans-serif" font-size="11">Clock Configuration</text>
+
+  <rect x="36" y="281" width="206" height="22" rx="4" fill="transparent"/>
+  <text x="52" y="296" fill="rgba(255,255,255,0.60)" font-family="-apple-system,system-ui,sans-serif" font-size="11">Pin Assignment Table</text>
+
+  <!-- ── SECOND SECTION (collapsed) ────────────────────────────────────── -->
+  <rect x="28" y="312" width="214" height="24" rx="4" fill="transparent"/>
+  <text x="36" y="328" fill="rgba(255,255,255,0.4)" font-family="-apple-system,system-ui,sans-serif" font-size="9">▸</text>
+  <text x="48" y="328" fill="rgba(180,170,255,0.55)" font-family="-apple-system,system-ui,sans-serif" font-size="10" font-weight="600">Test Reports</text>
+
+  <!-- ── ADD SECTION BUTTON ─────────────────────────────────────────────── -->
+  <text x="36" y="355" fill="rgba(255,255,255,0.28)" font-family="-apple-system,system-ui,sans-serif" font-size="10">+ New section</text>
+
+  <!-- Divider -->
+  <line x1="28" y1="368" x2="242" y2="368" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+  <!-- ── SECOND PROJECT ─────────────────────────────────────────────────── -->
+  <rect x="28" y="375" width="214" height="28" rx="5" fill="transparent"/>
+  <text x="38" y="394" fill="rgba(255,255,255,0.4)" font-family="-apple-system,system-ui,sans-serif" font-size="9">▸</text>
+  <text x="50" y="394" fill="rgba(255,255,255,0.40)" font-family="-apple-system,system-ui,sans-serif" font-size="10" font-weight="700" letter-spacing="0.06em">GERMAN LEARNING</text>
+
+  <!-- ── ADD PROJECT BUTTON ─────────────────────────────────────────────── -->
+  <text x="36" y="580" fill="rgba(255,255,255,0.28)" font-family="-apple-system,system-ui,sans-serif" font-size="11">+ New project</text>
+
+  <!-- ── ANNOTATION LINES AND LABELS ───────────────────────────────────── -->
+
+  <!-- A: Project header -->
+  <line x1="242" y1="96" x2="320" y2="96" stroke="rgb(83,74,183)" stroke-width="1.3" marker-end="url(#arr)"/>
+  <rect x="323" y="76" width="320" height="40" rx="6" fill="rgb(238,237,254)" stroke="rgb(83,74,183)" stroke-width="1"/>
+  <text x="480" y="91" text-anchor="middle" fill="rgb(60,52,137)" font-family="-apple-system,system-ui,sans-serif" font-size="11" font-weight="600">Project header</text>
+  <text x="480" y="108" text-anchor="middle" fill="rgb(100,90,200)" font-family="-apple-system,system-ui,sans-serif" font-size="10">▸/▾ expand  ⊞ prompt  ⇄/→ mode  ✎ rename  ✕ delete  + new chat</text>
+
+  <!-- B: Active conversation -->
+  <line x1="242" y1="127" x2="320" y2="127" stroke="rgb(15,110,86)" stroke-width="1.3" marker-end="url(#arr)"/>
+  <rect x="323" y="117" width="320" height="34" rx="6" fill="rgb(225,245,238)" stroke="rgb(15,110,86)" stroke-width="1"/>
+  <text x="480" y="132" text-anchor="middle" fill="rgb(8,80,65)" font-family="-apple-system,system-ui,sans-serif" font-size="11" font-weight="600">Active conversation (highlighted)</text>
+  <text x="480" y="145" text-anchor="middle" fill="rgb(20,130,100)" font-family="-apple-system,system-ui,sans-serif" font-size="10">Hover → ✎ rename, ✕ delete with confirmation</text>
+
+  <!-- C: Inactive conversation -->
+  <line x1="242" y1="159" x2="320" y2="171" stroke="rgb(100,100,100)" stroke-width="1.3" marker-end="url(#arr)"/>
+  <rect x="323" y="162" width="320" height="22" rx="6" fill="rgb(240,240,240)" stroke="rgb(160,160,160)" stroke-width="1"/>
+  <text x="480" y="177" text-anchor="middle" fill="rgb(60,60,60)" font-family="-apple-system,system-ui,sans-serif" font-size="11">Click to open conversation</text>
+
+  <!-- D: Section header -->
+  <line x1="242" y1="216" x2="320" y2="216" stroke="rgb(83,74,183)" stroke-width="1.3" marker-end="url(#arr)"/>
+  <rect x="323" y="200" width="320" height="34" rx="6" fill="rgb(238,237,254)" stroke="rgb(83,74,183)" stroke-width="1"/>
+  <text x="480" y="214" text-anchor="middle" fill="rgb(60,52,137)" font-family="-apple-system,system-ui,sans-serif" font-size="11" font-weight="600">Section header</text>
+  <text x="480" y="228" text-anchor="middle" fill="rgb(100,90,200)" font-family="-apple-system,system-ui,sans-serif" font-size="10">Hover → ✎ rename, ✕ delete, + new article</text>
+
+  <!-- E: Article items -->
+  <line x1="242" y1="258" x2="320" y2="265" stroke="rgb(160,85,10)" stroke-width="1.3" marker-end="url(#arr)"/>
+  <rect x="323" y="255" width="320" height="22" rx="6" fill="rgb(255,243,220)" stroke="rgb(160,85,10)" stroke-width="1"/>
+  <text x="480" y="270" text-anchor="middle" fill="rgb(110,60,5)" font-family="-apple-system,system-ui,sans-serif" font-size="11">Article — click to open editor</text>
+
+  <!-- F: Collapsed section -->
+  <line x1="242" y1="321" x2="320" y2="315" stroke="rgb(80,80,80)" stroke-width="1.3" marker-end="url(#arr)"/>
+  <rect x="323" y="304" width="320" height="24" rx="6" fill="rgb(245,245,245)" stroke="rgb(160,160,160)" stroke-width="1"/>
+  <text x="480" y="320" text-anchor="middle" fill="rgb(60,60,60)" font-family="-apple-system,system-ui,sans-serif" font-size="11">Section collapsed — ▸ to expand</text>
+
+  <!-- G: Add section -->
+  <line x1="242" y1="354" x2="320" y2="354" stroke="rgb(80,80,80)" stroke-width="1.3" marker-end="url(#arr)"/>
+  <rect x="323" y="344" width="320" height="22" rx="6" fill="rgb(245,245,245)" stroke="rgb(160,160,160)" stroke-width="1"/>
+  <text x="480" y="359" text-anchor="middle" fill="rgb(60,60,60)" font-family="-apple-system,system-ui,sans-serif" font-size="11">+ New section (under current project)</text>
+
+  <!-- H: Second project collapsed -->
+  <line x1="242" y1="389" x2="320" y2="396" stroke="rgb(80,80,80)" stroke-width="1.3" marker-end="url(#arr)"/>
+  <rect x="323" y="386" width="320" height="22" rx="6" fill="rgb(245,245,245)" stroke="rgb(160,160,160)" stroke-width="1"/>
+  <text x="480" y="401" text-anchor="middle" fill="rgb(60,60,60)" font-family="-apple-system,system-ui,sans-serif" font-size="11">Another project (collapsed) — click ▸ to open</text>
+
+  <!-- ── LEGEND ─────────────────────────────────────────────────────────── -->
+  <rect x="20" y="616" width="820" height="18" rx="4" fill="rgb(251,251,248)" stroke="rgba(40,40,38,0.10)" stroke-width="1"/>
+  <rect x="28" y="620" width="10" height="10" rx="2" fill="rgb(238,237,254)" stroke="rgb(83,74,183)" stroke-width="1"/>
+  <text x="44" y="629" fill="rgb(60,52,137)" font-family="-apple-system,system-ui,sans-serif" font-size="9">Project / Section</text>
+  <rect x="130" y="620" width="10" height="10" rx="2" fill="rgb(225,245,238)" stroke="rgb(15,110,86)" stroke-width="1"/>
+  <text x="146" y="629" fill="rgb(8,80,65)" font-family="-apple-system,system-ui,sans-serif" font-size="9">Active conversation</text>
+  <rect x="260" y="620" width="10" height="10" rx="2" fill="rgb(255,243,220)" stroke="rgb(160,85,10)" stroke-width="1"/>
+  <text x="276" y="629" fill="rgb(110,60,5)" font-family="-apple-system,system-ui,sans-serif" font-size="9">Article</text>
+  <text x="480" y="629" text-anchor="middle" fill="rgb(100,100,100)" font-family="-apple-system,system-ui,sans-serif" font-size="9">Action buttons appear on hover. Click outside to dismiss inline forms.</text>
+</svg>

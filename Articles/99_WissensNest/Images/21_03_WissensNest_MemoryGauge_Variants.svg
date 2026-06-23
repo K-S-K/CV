@@ -1,0 +1,208 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="400" viewBox="0 0 900 400" font-family="ui-sans-serif, system-ui, sans-serif">
+
+  <rect width="900" height="400" fill="#f4f6f9" rx="10"/>
+  <text x="450" y="28" text-anchor="middle" font-size="15" font-weight="700" fill="#1a1a2e">Memory Gauge — Three View Variants (click to cycle)</text>
+  <text x="450" y="46" text-anchor="middle" font-size="11" fill="#5d6d7e">Sample: 36 GB total · 26 GB used (72%) · Ollama 12 GB · Wired 4 GB · Compr 2 GB · Apps 8 GB · Swap 3 GB</text>
+
+  <!-- ══════════════════════════════════════════
+       PANEL 1 — Donut  (default)
+       Panel: x=10, y=56, w=264, h=300
+       Gauge nested SVG at x=22, y=96, 220×162
+  ══════════════════════════════════════════ -->
+  <rect x="10" y="56" width="264" height="308" fill="#1c1c1e" stroke="#e67e22" stroke-width="2" rx="8"/>
+  <text x="142" y="76" text-anchor="middle" font-size="12" font-weight="700" fill="#e67e22">Donut  (variant 0, default)</text>
+  <text x="142" y="90" text-anchor="middle" font-size="10" fill="#7f8c8d">viewBox 220 × 162</text>
+
+  <svg x="22" y="96" width="220" height="162" viewBox="0 0 220 162">
+    <!-- dark background -->
+    <rect width="220" height="162" fill="#1c1c1e"/>
+    <!-- track -->
+    <circle cx="70" cy="68" r="40" fill="none" stroke="#3a3a3c" stroke-width="17"/>
+    <!-- Ollama amber, starts at -90° -->
+    <circle cx="70" cy="68" r="40" fill="none" stroke="#FF9500" stroke-width="17" stroke-linecap="butt"
+            stroke-dasharray="83.8 251.3" transform="rotate(-90 70 68)"/>
+    <!-- Wired cyan, starts at 30° -->
+    <circle cx="70" cy="68" r="40" fill="none" stroke="#5AC8FA" stroke-width="17" stroke-linecap="butt"
+            stroke-dasharray="27.9 251.3" transform="rotate(30 70 68)"/>
+    <!-- Compressed red, starts at 70° -->
+    <circle cx="70" cy="68" r="40" fill="none" stroke="#FF3B30" stroke-width="17" stroke-linecap="butt"
+            stroke-dasharray="14.0 251.3" transform="rotate(70 70 68)"/>
+    <!-- Apps green, starts at 90° -->
+    <circle cx="70" cy="68" r="40" fill="none" stroke="#34C759" stroke-width="17" stroke-linecap="butt"
+            stroke-dasharray="55.8 251.3" transform="rotate(90 70 68)"/>
+    <!-- Swap outer track -->
+    <circle cx="70" cy="68" r="57" fill="none" stroke="#4a4a4e" stroke-width="5"/>
+    <!-- Swap arc red -->
+    <circle cx="70" cy="68" r="57" fill="none" stroke="#FF3B30" stroke-width="5" stroke-linecap="round" opacity="0.9"
+            stroke-dasharray="29.8 358.1" transform="rotate(-90 70 68)"/>
+    <!-- centre % -->
+    <text x="70" y="73" text-anchor="middle" font-size="15" fill="#e5e5ea" font-weight="700">72%</text>
+    <!-- legend -->
+    <rect x="134" y="18" width="9" height="9" rx="2" fill="#FF9500"/>
+    <text x="147" y="26" font-size="10" fill="#aeaeb2">Ollama</text>
+    <text x="218" y="26" text-anchor="end" font-size="10" fill="#e5e5ea">12.0G</text>
+    <rect x="134" y="39" width="9" height="9" rx="2" fill="#5AC8FA"/>
+    <text x="147" y="47" font-size="10" fill="#aeaeb2">Wired</text>
+    <text x="218" y="47" text-anchor="end" font-size="10" fill="#e5e5ea">4.0G</text>
+    <rect x="134" y="60" width="9" height="9" rx="2" fill="#FF3B30"/>
+    <text x="147" y="68" font-size="10" fill="#aeaeb2">Compr</text>
+    <text x="218" y="68" text-anchor="end" font-size="10" fill="#e5e5ea">2.0G</text>
+    <rect x="134" y="81" width="9" height="9" rx="2" fill="#34C759"/>
+    <text x="147" y="89" font-size="10" fill="#aeaeb2">Apps</text>
+    <text x="218" y="89" text-anchor="end" font-size="10" fill="#e5e5ea">8.0G</text>
+    <rect x="134" y="102" width="9" height="9" rx="2" fill="#3a3a3c" stroke="#aeaeb2" stroke-width="0.8"/>
+    <text x="147" y="110" font-size="10" fill="#aeaeb2">Free</text>
+    <text x="218" y="110" text-anchor="end" font-size="10" fill="#e5e5ea">10.0G</text>
+    <text x="134" y="126" font-size="11" fill="#FF3B30">⚡</text>
+    <text x="147" y="131" font-size="10" fill="#aeaeb2">Swap</text>
+    <text x="218" y="131" text-anchor="end" font-size="10" fill="#FF3B30">3.0G</text>
+    <!-- sparkline separator -->
+    <line x1="0" y1="140" x2="220" y2="140" stroke="#3a3a3c" stroke-width="0.5"/>
+    <!-- total (cyan) -->
+    <polyline points="0,146.3 31.4,145.9 62.9,146.7 94.3,145.4 125.7,145.8 157.1,145.0 188.6,145.2 220,145.0"
+              fill="none" stroke="#5AC8FA" stroke-width="1.5" opacity="0.7"/>
+    <!-- ollama (amber) -->
+    <polyline points="0,152.6 31.4,152.4 62.9,152.8 94.3,152.2 125.7,152.4 157.1,152.1 188.6,152.1 220,152.1"
+              fill="none" stroke="#FF9500" stroke-width="1.5" opacity="0.85"/>
+  </svg>
+
+  <!-- Panel 1 notes -->
+  <text x="142" y="272" text-anchor="middle" font-size="10" fill="#aeaeb2">Inner ring = RAM breakdown by category</text>
+  <text x="142" y="288" text-anchor="middle" font-size="10" fill="#aeaeb2">Outer thin ring = Swap pressure</text>
+  <text x="142" y="304" text-anchor="middle" font-size="10" fill="#aeaeb2">Bottom strip = 2-min sparkline history</text>
+  <text x="142" y="352" text-anchor="middle" font-size="9" fill="#5d6d7e">Segment order (clockwise from 12 o'clock):</text>
+
+  <!-- ══════════════════════════════════════════
+       PANEL 2 — Bars
+       Panel: x=318, y=56, w=264, h=308
+       Gauge nested SVG at x=330, y=96, 220×105
+  ══════════════════════════════════════════ -->
+  <rect x="318" y="56" width="264" height="308" fill="#1c1c1e" stroke="#2980b9" stroke-width="2" rx="8"/>
+  <text x="450" y="76" text-anchor="middle" font-size="12" font-weight="700" fill="#2980b9">Bars  (variant 1)</text>
+  <text x="450" y="90" text-anchor="middle" font-size="10" fill="#7f8c8d">viewBox 220 × 105</text>
+
+  <svg x="330" y="96" width="220" height="105" viewBox="0 0 220 105">
+    <rect width="220" height="105" fill="#1c1c1e"/>
+    <!-- RAM bar -->
+    <text x="0" y="19" font-size="9" fill="#aeaeb2" font-family="monospace">RAM</text>
+    <rect x="28" y="10" width="148" height="11" rx="3" fill="#3a3a3c"/>
+    <rect x="28" y="10" width="106.9" height="11" rx="3" fill="#5AC8FA" opacity="0.85"/>
+    <text x="173" y="19" text-anchor="end" font-size="9" fill="#aeaeb2">72%</text>
+    <text x="220" y="19" text-anchor="end" font-size="9" fill="#e5e5ea">26.0G</text>
+    <!-- OLL bar -->
+    <text x="0" y="47" font-size="9" fill="#aeaeb2" font-family="monospace">OLL</text>
+    <rect x="28" y="38" width="148" height="11" rx="3" fill="#3a3a3c"/>
+    <rect x="28" y="38" width="49.3" height="11" rx="3" fill="#FF9500" opacity="0.85"/>
+    <text x="173" y="47" text-anchor="end" font-size="9" fill="#aeaeb2">33%</text>
+    <text x="220" y="47" text-anchor="end" font-size="9" fill="#e5e5ea">12.0G</text>
+    <!-- SWP bar -->
+    <text x="0" y="75" font-size="9" fill="#aeaeb2" font-family="monospace">SWP</text>
+    <rect x="28" y="66" width="148" height="11" rx="3" fill="#3a3a3c"/>
+    <rect x="28" y="66" width="12.3" height="11" rx="3" fill="#FF3B30" opacity="0.85"/>
+    <text x="173" y="75" text-anchor="end" font-size="9" fill="#aeaeb2">8%</text>
+    <text x="220" y="75" text-anchor="end" font-size="9" fill="#FF3B30">3.0G</text>
+    <!-- sparkline separator -->
+    <line x1="0" y1="90" x2="220" y2="90" stroke="#3a3a3c" stroke-width="0.5"/>
+    <!-- total (cyan) -->
+    <polyline points="0,95.3 31.4,95.0 62.9,95.6 94.3,94.5 125.7,94.8 157.1,94.2 188.6,94.4 220,94.2"
+              fill="none" stroke="#5AC8FA" stroke-width="1.5" opacity="0.7"/>
+    <!-- ollama (amber) -->
+    <polyline points="0,100.5 31.4,100.4 62.9,100.7 94.3,100.2 125.7,100.4 157.1,100.1 188.6,100.1 220,100.1"
+              fill="none" stroke="#FF9500" stroke-width="1.5" opacity="0.85"/>
+  </svg>
+
+  <!-- Panel 2 notes -->
+  <text x="450" y="216" text-anchor="middle" font-size="10" fill="#aeaeb2">Three horizontal bars: RAM total,</text>
+  <text x="450" y="232" text-anchor="middle" font-size="10" fill="#aeaeb2">Ollama RSS, and Swap used</text>
+  <text x="450" y="248" text-anchor="middle" font-size="10" fill="#aeaeb2">% + GB value for each · sparkline below</text>
+  <text x="450" y="288" text-anchor="middle" font-size="9" fill="#5d6d7e">Most compact variant.</text>
+  <text x="450" y="304" text-anchor="middle" font-size="9" fill="#5d6d7e">Good for comparing Ollama vs total RAM</text>
+  <text x="450" y="318" text-anchor="middle" font-size="9" fill="#5d6d7e">and swap at a glance.</text>
+
+  <!-- ══════════════════════════════════════════
+       PANEL 3 — Dashboard
+       Panel: x=626, y=56, w=264, h=308
+       Gauge nested SVG at x=638, y=96, 220×195
+  ══════════════════════════════════════════ -->
+  <rect x="626" y="56" width="264" height="308" fill="#1c1c1e" stroke="#27ae60" stroke-width="2" rx="8"/>
+  <text x="758" y="76" text-anchor="middle" font-size="12" font-weight="700" fill="#27ae60">Dashboard  (variant 2)</text>
+  <text x="758" y="90" text-anchor="middle" font-size="10" fill="#7f8c8d">viewBox 220 × 195</text>
+
+  <svg x="638" y="96" width="220" height="195" viewBox="0 0 220 195">
+    <rect width="220" height="195" fill="#1c1c1e"/>
+    <!-- track -->
+    <circle cx="75" cy="78" r="47" fill="none" stroke="#3a3a3c" stroke-width="18"/>
+    <!-- Ollama amber, -90° -->
+    <circle cx="75" cy="78" r="47" fill="none" stroke="#FF9500" stroke-width="18" stroke-linecap="butt"
+            stroke-dasharray="98.4 295.3" transform="rotate(-90 75 78)"/>
+    <!-- Wired cyan, 30° -->
+    <circle cx="75" cy="78" r="47" fill="none" stroke="#5AC8FA" stroke-width="18" stroke-linecap="butt"
+            stroke-dasharray="32.8 295.3" transform="rotate(30 75 78)"/>
+    <!-- Compressed red, 70° -->
+    <circle cx="75" cy="78" r="47" fill="none" stroke="#FF3B30" stroke-width="18" stroke-linecap="butt"
+            stroke-dasharray="16.4 295.3" transform="rotate(70 75 78)"/>
+    <!-- Apps green, 90° -->
+    <circle cx="75" cy="78" r="47" fill="none" stroke="#34C759" stroke-width="18" stroke-linecap="butt"
+            stroke-dasharray="65.6 295.3" transform="rotate(90 75 78)"/>
+    <!-- Swap outer track -->
+    <circle cx="75" cy="78" r="64" fill="none" stroke="#4a4a4e" stroke-width="6"/>
+    <!-- Swap arc red -->
+    <circle cx="75" cy="78" r="64" fill="none" stroke="#FF3B30" stroke-width="6" stroke-linecap="round" opacity="0.9"
+            stroke-dasharray="33.5 402.1" transform="rotate(-90 75 78)"/>
+    <!-- centre: % large, used/total small -->
+    <text x="75" y="74" text-anchor="middle" font-size="18" fill="#e5e5ea" font-weight="700">72%</text>
+    <text x="75" y="91" text-anchor="middle" font-size="9" fill="#aeaeb2">26.0G / 36.0G</text>
+    <!-- legend -->
+    <rect x="146" y="14" width="9" height="9" rx="2" fill="#FF9500"/>
+    <text x="159" y="22" font-size="10" fill="#aeaeb2">Ollama</text>
+    <text x="219" y="22" text-anchor="end" font-size="10" fill="#e5e5ea">12.0G</text>
+    <rect x="146" y="36" width="9" height="9" rx="2" fill="#5AC8FA"/>
+    <text x="159" y="44" font-size="10" fill="#aeaeb2">Wired</text>
+    <text x="219" y="44" text-anchor="end" font-size="10" fill="#e5e5ea">4.0G</text>
+    <rect x="146" y="58" width="9" height="9" rx="2" fill="#FF3B30"/>
+    <text x="159" y="66" font-size="10" fill="#aeaeb2">Compr</text>
+    <text x="219" y="66" text-anchor="end" font-size="10" fill="#e5e5ea">2.0G</text>
+    <rect x="146" y="80" width="9" height="9" rx="2" fill="#34C759"/>
+    <text x="159" y="88" font-size="10" fill="#aeaeb2">Apps</text>
+    <text x="219" y="88" text-anchor="end" font-size="10" fill="#e5e5ea">8.0G</text>
+    <rect x="146" y="102" width="9" height="9" rx="2" fill="#3a3a3c" stroke="#aeaeb2" stroke-width="0.8"/>
+    <text x="159" y="110" font-size="10" fill="#aeaeb2">Free</text>
+    <text x="219" y="110" text-anchor="end" font-size="10" fill="#e5e5ea">10.0G</text>
+    <text x="146" y="128" font-size="12" fill="#FF3B30">⚡</text>
+    <text x="159" y="132" font-size="10" fill="#aeaeb2">Swap</text>
+    <text x="219" y="132" text-anchor="end" font-size="10" fill="#FF3B30">3.0G</text>
+    <!-- sparkline separator -->
+    <line x1="0" y1="148" x2="220" y2="148" stroke="#3a3a3c" stroke-width="0.5"/>
+    <!-- total filled area -->
+    <path d="M 0,178 L 0,158.5 L 31.4,157.9 L 62.9,159.1 L 94.3,157.0 L 125.7,157.6 L 157.1,156.4 L 188.6,156.7 L 220,156.4 L 220,178 Z"
+          fill="#5AC8FA" opacity="0.15"/>
+    <!-- total line -->
+    <polyline points="0,158.5 31.4,157.9 62.9,159.1 94.3,157.0 125.7,157.6 157.1,156.4 188.6,156.7 220,156.4"
+              fill="none" stroke="#5AC8FA" stroke-width="1.5" opacity="0.75"/>
+    <!-- ollama filled area -->
+    <path d="M 0,178 L 0,169.0 L 31.4,168.7 L 62.9,169.3 L 94.3,168.4 L 125.7,168.7 L 157.1,168.1 L 188.6,168.1 L 220,168.1 L 220,178 Z"
+          fill="#FF9500" opacity="0.2"/>
+    <!-- ollama line -->
+    <polyline points="0,169.0 31.4,168.7 62.9,169.3 94.3,168.4 125.7,168.7 157.1,168.1 188.6,168.1 220,168.1"
+              fill="none" stroke="#FF9500" stroke-width="1.5" opacity="0.9"/>
+    <!-- time labels -->
+    <text x="2" y="193" font-size="8" fill="#c4c4c6">2 min</text>
+    <text x="218" y="193" text-anchor="end" font-size="8" fill="#c4c4c6">now</text>
+  </svg>
+
+  <!-- Panel 3 notes -->
+  <text x="758" y="306" text-anchor="middle" font-size="10" fill="#aeaeb2">Same ring layout as Donut but larger.</text>
+  <text x="758" y="322" text-anchor="middle" font-size="10" fill="#aeaeb2">Adds used/total GB inside ring.</text>
+  <text x="758" y="338" text-anchor="middle" font-size="10" fill="#aeaeb2">Sparkline has filled area under each line.</text>
+  <text x="758" y="354" text-anchor="middle" font-size="10" fill="#aeaeb2">Time axis labelled "2 min" → "now".</text>
+
+
+  <!-- Legend for all panels, at bottom -->
+  <text x="12" y="390" font-size="9" fill="#00000">Color legend for all view variants:</text>
+  <text x="180" y="390" font-size="9" fill="#FF9500">■ Ollama</text>
+  <text x="250" y="390" font-size="9" fill="#5AC8FA">■ Wired</text>
+  <text x="320" y="390" font-size="9" fill="#FF3B30">■ Compressed</text>
+  <text x="430" y="390" font-size="9" fill="#34C759">■ Apps</text>
+  <text x="500" y="390" font-size="9" fill="#3a3a3c">░ Free (track)</text>
+ 
+</svg>

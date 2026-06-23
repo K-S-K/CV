@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 480" font-family="-apple-system,system-ui,sans-serif">
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5"
+            markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke"
+            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- canvas -->
+  <rect width="880" height="480" fill="#f4f6f9" rx="10"/>
+  <text x="440" y="26" text-anchor="middle" font-size="15" font-weight="700" fill="#1a1a2e">
+    WissensNest — Application Layout
+  </text>
+
+  <!-- ── Window frame ─────────────────────────────────────── -->
+  <!-- shadow -->
+  <rect x="133" y="53" width="618" height="358" rx="9" fill="#c8ccd4"/>
+  <!-- frame -->
+  <rect x="131" y="51" width="618" height="358" rx="9" fill="#ffffff"
+        stroke="#9ca3af" stroke-width="1.5"/>
+
+  <!-- ── Sidebar (dark) ─────────────────────────────────── -->
+  <rect x="131" y="51" width="188" height="358" rx="9" fill="#1c1c2e"/>
+  <!-- right-edge patch to remove rx on the joint -->
+  <rect x="309" y="51" width="10" height="358" fill="#1c1c2e"/>
+
+  <!-- Tab bar -->
+  <rect x="139" y="59" width="174" height="30" fill="#2a2a44" rx="4"/>
+  <!-- Active tab: Projects -->
+  <rect x="141" y="61" width="52" height="26" fill="rgb(83,74,183)" rx="3"/>
+  <text x="167" y="78" text-anchor="middle" font-size="10" font-weight="600" fill="#ffffff">Proj</text>
+  <!-- Prompts tab -->
+  <text x="221" y="78" text-anchor="middle" font-size="10" fill="#8888aa">Prompts</text>
+  <!-- Profiles tab -->
+  <text x="283" y="78" text-anchor="middle" font-size="10" fill="#8888aa">Profiles</text>
+
+  <!-- Sidebar items -->
+  <rect x="139" y="97" width="174" height="18" fill="#2d2d48" rx="3"/>
+  <text x="147" y="110" font-size="10" fill="rgb(196,181,253)">&#x25BE; My Project</text>
+
+  <rect x="149" y="118" width="164" height="16" fill="rgb(58,31,110)" rx="2"/>
+  <text x="157" y="130" font-size="9" fill="rgb(233,213,255)">&#x203A; Chat — Python (active)</text>
+
+  <text x="157" y="148" font-size="9" fill="#8888aa">&#x203A; Chat 2</text>
+  <text x="157" y="163" font-size="9" fill="#8888aa">Notes section</text>
+  <text x="165" y="178" font-size="9" fill="#666688">    Research notes</text>
+  <text x="147" y="198" font-size="10" fill="#8888aa">&#x25B8; Family</text>
+  <text x="147" y="215" font-size="10" fill="#8888aa">&#x25B8; Learning German</text>
+
+  <text x="147" y="395" font-size="9" fill="#555577">+ New project</text>
+
+  <!-- ── Ribbon toolbar ─────────────────────────────────── -->
+  <rect x="319" y="51" width="430" height="58" fill="#f0f0f5"
+        stroke="#d8dae0" stroke-width="1"/>
+
+  <!-- Metrics -->
+  <text x="334" y="68" font-size="9" font-weight="700" fill="#6b7280">METRICS</text>
+  <circle cx="350" cy="84" r="10" fill="none" stroke="rgb(83,74,183)" stroke-width="3"
+          stroke-dasharray="40 23"/>
+  <circle cx="350" cy="84" r="10" fill="none" stroke="rgb(167,139,250)" stroke-width="3"
+          stroke-dasharray="18 45" stroke-dashoffset="-40"/>
+
+  <!-- Navigation -->
+  <text x="376" y="68" font-size="9" font-weight="700" fill="#6b7280">NAVIGATION</text>
+  <text x="376" y="87" font-size="13" fill="#374151">&#x21C8; &#x2191; &#x2193; &#x21CA;</text>
+  <rect x="432" y="74" width="30" height="17" rx="3" fill="#e5e7eb" stroke="#d1d5db" stroke-width="1"/>
+  <text x="447" y="86" text-anchor="middle" font-size="9" fill="#374151">Auto</text>
+
+  <!-- View -->
+  <text x="474" y="68" font-size="9" font-weight="700" fill="#6b7280">VIEW</text>
+  <rect x="474" y="73" width="22" height="17" rx="3" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="485" y="86" text-anchor="middle" font-size="10" fill="#374151">A+</text>
+  <rect x="500" y="73" width="22" height="17" rx="3" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="511" y="86" text-anchor="middle" font-size="10" fill="#374151">A&#x2212;</text>
+  <rect x="526" y="73" width="22" height="17" rx="3" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="537" y="86" text-anchor="middle" font-size="9" fill="#374151">AL</text>
+
+  <!-- Tools -->
+  <text x="560" y="68" font-size="9" font-weight="700" fill="#6b7280">TOOLS</text>
+  <!-- active tool (web search) -->
+  <rect x="560" y="73" width="24" height="17" rx="3" fill="rgb(237,233,254)"
+        stroke="rgb(124,58,237)" stroke-width="1.5"/>
+  <text x="572" y="86" text-anchor="middle" font-size="8" font-weight="700" fill="rgb(91,33,182)">WS</text>
+  <!-- inactive tools -->
+  <rect x="588" y="73" width="24" height="17" rx="3" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="600" y="86" text-anchor="middle" font-size="8" fill="#9ca3af">FP</text>
+  <rect x="616" y="73" width="24" height="17" rx="3" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="628" y="86" text-anchor="middle" font-size="8" fill="#9ca3af">Lib</text>
+  <rect x="644" y="73" width="24" height="17" rx="3" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="656" y="86" text-anchor="middle" font-size="8" fill="#9ca3af">Wx</text>
+
+  <!-- Collapse toggle -->
+  <text x="732" y="85" font-size="12" fill="#9ca3af">&#x25BE;</text>
+
+  <!-- ── Chat messages ───────────────────────────────────── -->
+  <!-- assistant (green) -->
+  <rect x="327" y="118" width="272" height="50" rx="6"
+        fill="#d1fae5" stroke="#a7f3d0" stroke-width="1"/>
+  <text x="337" y="135" font-size="9" font-weight="600" fill="#065f46">Assistant</text>
+  <text x="337" y="150" font-size="9" fill="#065f46">Here is what I found about</text>
+  <text x="337" y="163" font-size="9" fill="#065f46">Python list comprehensions…</text>
+
+  <!-- user (purple, right-aligned) -->
+  <rect x="464" y="180" width="277" height="38" rx="6"
+        fill="rgb(237,233,254)" stroke="rgb(196,181,253)" stroke-width="1"/>
+  <text x="603" y="197" text-anchor="middle" font-size="9" font-weight="600" fill="rgb(76,29,149)">User</text>
+  <text x="603" y="212" text-anchor="middle" font-size="9" fill="rgb(76,29,149)">How do I reverse a list in Python?</text>
+
+  <!-- streaming assistant (amber = in-progress) -->
+  <rect x="327" y="230" width="272" height="52" rx="6"
+        fill="#fef3c7" stroke="#fcd34d" stroke-width="1"/>
+  <text x="337" y="247" font-size="9" font-weight="600" fill="#92400e">Assistant  (streaming…)</text>
+  <text x="337" y="262" font-size="9" fill="#92400e">You can use list.reverse() or</text>
+  <text x="337" y="277" font-size="9" fill="#92400e">built-in reversed() …  |</text>
+
+  <!-- tool activity row -->
+  <rect x="327" y="293" width="246" height="16" rx="3"
+        fill="#f5f3ff" stroke="rgb(124,58,237)" stroke-width="1"/>
+  <text x="335" y="305" font-size="8" fill="rgb(91,33,182)">web_search  "Python list reverse"  12 ms</text>
+
+  <!-- tool activation bar -->
+  <rect x="327" y="320" width="416" height="22" rx="4"
+        fill="#f9fafb" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="337" y="335" font-size="9" fill="#6b7280">Active tools:</text>
+  <rect x="403" y="323" width="22" height="16" rx="3"
+        fill="rgb(237,233,254)" stroke="rgb(124,58,237)" stroke-width="1.5"/>
+  <text x="414" y="335" text-anchor="middle" font-size="8" font-weight="700" fill="rgb(91,33,182)">WS</text>
+  <rect x="429" y="323" width="22" height="16" rx="3" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="440" y="335" text-anchor="middle" font-size="8" fill="#9ca3af">FP</text>
+  <rect x="455" y="323" width="22" height="16" rx="3" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="466" y="335" text-anchor="middle" font-size="8" fill="#9ca3af">Lib</text>
+
+  <!-- input box -->
+  <rect x="327" y="353" width="376" height="36" rx="5"
+        fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <text x="339" y="375" font-size="9" fill="#9ca3af">Type a message…  (Enter to send, Shift+Enter for newline)</text>
+  <!-- send button -->
+  <rect x="711" y="357" width="32" height="28" rx="4" fill="rgb(91,33,182)"/>
+  <text x="727" y="376" text-anchor="middle" font-size="14" fill="#ffffff">&#x2191;</text>
+
+  <!-- ── Callout annotations ─────────────────────────────── -->
+
+  <!-- 1. Sidebar — label left of window, line points right into sidebar -->
+  <rect x="10" y="218" width="70" height="24" rx="4" fill="#1f2937"/>
+  <text x="45" y="234" text-anchor="middle" font-size="10" fill="#ffffff">Sidebar</text>
+  <line x1="82" y1="230" x2="128" y2="230" stroke="rgb(115,114,108)" stroke-width="1.5"
+        marker-end="url(#arrow)"/>
+
+  <!-- 2. Three tabs — label above tab bar, line points down -->
+  <text x="167" y="42" text-anchor="middle" font-size="10" fill="#374151">Three tabs</text>
+  <line x1="167" y1="45" x2="167" y2="58" stroke="rgb(115,114,108)" stroke-width="1.5"
+        marker-end="url(#arrow)"/>
+
+  <!-- 3. Ribbon toolbar — label above ribbon, line points down -->
+  <text x="534" y="42" text-anchor="middle" font-size="10" fill="#374151">Ribbon toolbar</text>
+  <line x1="534" y1="45" x2="534" y2="58" stroke="rgb(115,114,108)" stroke-width="1.5"
+        marker-end="url(#arrow)"/>
+
+  <!-- 4. Content area — label right of window, line points left into chat -->
+  <rect x="757" y="210" width="118" height="24" rx="4" fill="#1f2937"/>
+  <text x="816" y="226" text-anchor="middle" font-size="10" fill="#ffffff">Content area</text>
+  <line x1="755" y1="222" x2="749" y2="222" stroke="rgb(115,114,108)" stroke-width="1.5"
+        marker-end="url(#arrow)"/>
+
+  <!-- 5. Tool activation bar — label below, line points up -->
+  <text x="390" y="458" text-anchor="middle" font-size="10" fill="#374151">Tool activation bar</text>
+  <line x1="390" y1="454" x2="390" y2="345" stroke="rgb(115,114,108)" stroke-width="1.5"
+        marker-end="url(#arrow)"/>
+
+  <!-- 6. Input + send — label below, line points up -->
+  <text x="620" y="458" text-anchor="middle" font-size="10" fill="#374151">Input + send</text>
+  <line x1="620" y1="454" x2="620" y2="393" stroke="rgb(115,114,108)" stroke-width="1.5"
+        marker-end="url(#arrow)"/>
+
+</svg>

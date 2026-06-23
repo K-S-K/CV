@@ -1,0 +1,184 @@
+<svg width="100%" viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="20" text-anchor="middle" fill="rgb(35,35,33)" font-family="-apple-system,system-ui,sans-serif" font-size="14" font-weight="600">WissensNest — Voice Layer Architecture</text>
+  <text x="450" y="36" text-anchor="middle" fill="rgb(120,120,115)" font-family="-apple-system,system-ui,sans-serif" font-size="10">Two client paths share the same MacBook services</text>
+
+  <!-- ════════════════════════════ -->
+  <!-- PATH A: Blazor UI (left)    -->
+  <!-- ════════════════════════════ -->
+  <rect x="10" y="48" width="248" height="430" rx="10" fill="rgb(245,244,255)" stroke="rgb(83,74,183)" stroke-width="0.9" stroke-dasharray="6 3"/>
+  <text x="134" y="64" text-anchor="middle" fill="rgb(60,52,137)" font-family="-apple-system,system-ui,sans-serif" font-size="10" font-weight="700" letter-spacing="0.8">APPROACH A — BLAZOR UI</text>
+
+  <!-- Browser -->
+  <rect x="24" y="74" width="220" height="58" rx="7" fill="rgb(241,239,232)" stroke="rgb(95,94,90)" stroke-width="1"/>
+  <text x="134" y="97" text-anchor="middle" fill="rgb(68,68,65)" font-family="-apple-system,system-ui,sans-serif" font-size="12" font-weight="600">Browser / Mobile App</text>
+  <text x="134" y="114" text-anchor="middle" fill="rgb(95,94,90)" font-family="-apple-system,system-ui,sans-serif" font-size="10">MediaRecorder API · AudioContext</text>
+  <text x="134" y="125" text-anchor="middle" fill="rgb(115,114,108)" font-family="-apple-system,system-ui,sans-serif" font-size="9">mic capture · audio playback</text>
+
+  <!-- JS voice layer -->
+  <rect x="24" y="154" width="220" height="52" rx="7" fill="rgb(255,251,220)" stroke="rgb(155,125,20)" stroke-width="1"/>
+  <text x="134" y="175" text-anchor="middle" fill="rgb(100,80,10)" font-family="-apple-system,system-ui,sans-serif" font-size="12" font-weight="600">wwwroot/js/voice.js</text>
+  <text x="134" y="191" text-anchor="middle" fill="rgb(140,115,20)" font-family="-apple-system,system-ui,sans-serif" font-size="10">MediaRecorder · Blob → base64</text>
+  <text x="134" y="202" text-anchor="middle" fill="rgb(155,125,20)" font-family="-apple-system,system-ui,sans-serif" font-size="9">JS interop bridge</text>
+
+  <!-- VoiceService.cs -->
+  <rect x="24" y="228" width="220" height="52" rx="7" fill="rgb(238,237,254)" stroke="rgb(83,74,183)" stroke-width="1"/>
+  <text x="134" y="249" text-anchor="middle" fill="rgb(60,52,137)" font-family="-apple-system,system-ui,sans-serif" font-size="12" font-weight="600">VoiceService.cs</text>
+  <text x="134" y="265" text-anchor="middle" fill="rgb(83,74,183)" font-family="-apple-system,system-ui,sans-serif" font-size="10">WissensNest.UI/Services</text>
+  <text x="134" y="276" text-anchor="middle" fill="rgb(100,90,200)" font-family="-apple-system,system-ui,sans-serif" font-size="9">circuit-scoped · IJSRuntime inject</text>
+
+  <!-- Down arrows in path A -->
+  <line x1="134" y1="132" x2="134" y2="154" stroke="rgb(95,94,90)" stroke-width="1.1" marker-end="url(#arr)"/>
+  <line x1="134" y1="206" x2="134" y2="228" stroke="rgb(95,94,90)" stroke-width="1.1" marker-end="url(#arr)"/>
+
+  <!-- Label: audio bytes down, audio play up -->
+  <text x="143" y="146" fill="rgb(95,94,90)" font-family="-apple-system,system-ui,sans-serif" font-size="9">audio blob</text>
+  <text x="143" y="220" fill="rgb(95,94,90)" font-family="-apple-system,system-ui,sans-serif" font-size="9">audio bytes</text>
+
+  <!-- VoiceService → whisper (cross arrow, shown later) -->
+  <!-- VoiceService → Chat.razor (local) -->
+  <rect x="24" y="374" width="220" height="52" rx="7" fill="rgb(238,237,254)" stroke="rgb(83,74,183)" stroke-width="1"/>
+  <text x="134" y="396" text-anchor="middle" fill="rgb(60,52,137)" font-family="-apple-system,system-ui,sans-serif" font-size="12" font-weight="600">Chat.razor</text>
+  <text x="134" y="412" text-anchor="middle" fill="rgb(83,74,183)" font-family="-apple-system,system-ui,sans-serif" font-size="10">transcript → chat input</text>
+  <text x="134" y="423" text-anchor="middle" fill="rgb(100,90,200)" font-family="-apple-system,system-ui,sans-serif" font-size="9">auto-send · TTS plays response</text>
+
+  <line x1="134" y1="280" x2="134" y2="374" stroke="rgb(83,74,183)" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+  <text x="143" y="330" fill="rgb(83,74,183)" font-family="-apple-system,system-ui,sans-serif" font-size="9">transcript</text>
+
+  <!-- ════════════════════════════ -->
+  <!-- PATH B: Headless (right)    -->
+  <!-- ════════════════════════════ -->
+  <rect x="642" y="48" width="248" height="430" rx="10" fill="rgb(242,248,255)" stroke="rgb(40,100,180)" stroke-width="0.9" stroke-dasharray="6 3"/>
+  <text x="766" y="64" text-anchor="middle" fill="rgb(20,70,140)" font-family="-apple-system,system-ui,sans-serif" font-size="10" font-weight="700" letter-spacing="0.8">APPROACH B/C — HEADLESS</text>
+
+  <!-- Audio Capture (NAudio) -->
+  <rect x="656" y="74" width="220" height="58" rx="7" fill="rgb(228,242,255)" stroke="rgb(40,100,180)" stroke-width="1"/>
+  <text x="766" y="97" text-anchor="middle" fill="rgb(20,70,140)" font-family="-apple-system,system-ui,sans-serif" font-size="12" font-weight="600">Audio Capture</text>
+  <text x="766" y="114" text-anchor="middle" fill="rgb(50,120,200)" font-family="-apple-system,system-ui,sans-serif" font-size="10">NAudio (NuGet) · USB Mic</text>
+  <text x="766" y="125" text-anchor="middle" fill="rgb(80,140,210)" font-family="-apple-system,system-ui,sans-serif" font-size="9">WAV → MemoryStream</text>
+
+  <!-- Wake Word -->
+  <rect x="656" y="154" width="220" height="52" rx="7" fill="rgb(248,240,255)" stroke="rgb(110,50,180)" stroke-width="1"/>
+  <text x="766" y="175" text-anchor="middle" fill="rgb(80,30,140)" font-family="-apple-system,system-ui,sans-serif" font-size="12" font-weight="600">WakeWordDetector</text>
+  <text x="766" y="191" text-anchor="middle" fill="rgb(110,50,180)" font-family="-apple-system,system-ui,sans-serif" font-size="10">openWakeWord — HTTP API</text>
+  <text x="766" y="202" text-anchor="middle" fill="rgb(130,70,200)" font-family="-apple-system,system-ui,sans-serif" font-size="9">Approach C only (always-on)</text>
+
+  <!-- VoiceClient -->
+  <rect x="656" y="228" width="220" height="52" rx="7" fill="rgb(238,237,254)" stroke="rgb(83,74,183)" stroke-width="1"/>
+  <text x="766" y="249" text-anchor="middle" fill="rgb(60,52,137)" font-family="-apple-system,system-ui,sans-serif" font-size="12" font-weight="600">VoiceClient.cs</text>
+  <text x="766" y="265" text-anchor="middle" fill="rgb(83,74,183)" font-family="-apple-system,system-ui,sans-serif" font-size="10">WissensNest.VoiceClient</text>
+  <text x="766" y="276" text-anchor="middle" fill="rgb(100,90,200)" font-family="-apple-system,system-ui,sans-serif" font-size="9">.NET Console · orchestrates loop</text>
+
+  <line x1="766" y1="132" x2="766" y2="154" stroke="rgb(40,100,180)" stroke-width="1.1" marker-end="url(#arr)"/>
+  <line x1="766" y1="206" x2="766" y2="228" stroke="rgb(110,50,180)" stroke-width="1.1" marker-end="url(#arr)"/>
+  <text x="774" y="146" fill="rgb(40,100,180)" font-family="-apple-system,system-ui,sans-serif" font-size="9">PCM stream</text>
+  <text x="774" y="220" fill="rgb(110,50,180)" font-family="-apple-system,system-ui,sans-serif" font-size="9">wake event</text>
+
+  <!-- Audio Playback -->
+  <rect x="656" y="374" width="220" height="52" rx="7" fill="rgb(228,242,255)" stroke="rgb(40,100,180)" stroke-width="1"/>
+  <text x="766" y="396" text-anchor="middle" fill="rgb(20,70,140)" font-family="-apple-system,system-ui,sans-serif" font-size="12" font-weight="600">Audio Playback</text>
+  <text x="766" y="412" text-anchor="middle" fill="rgb(50,120,200)" font-family="-apple-system,system-ui,sans-serif" font-size="10">NAudio · Speaker or Jabra BT (mic + spkr)</text>
+  <text x="766" y="423" text-anchor="middle" fill="rgb(80,140,210)" font-family="-apple-system,system-ui,sans-serif" font-size="9">WAV bytes → audio device</text>
+
+  <line x1="766" y1="280" x2="766" y2="374" stroke="rgb(40,100,180)" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+  <text x="774" y="330" fill="rgb(40,100,180)" font-family="-apple-system,system-ui,sans-serif" font-size="9">WAV audio</text>
+
+  <!-- ════════════════════════════════ -->
+  <!-- CENTER: Shared MacBook Services -->
+  <!-- ════════════════════════════════ -->
+  <rect x="268" y="48" width="364" height="430" rx="10" fill="rgb(252,252,250)" stroke="rgba(60,52,137,0.35)" stroke-width="1.2" stroke-dasharray="7 4"/>
+  <text x="450" y="64" text-anchor="middle" fill="rgb(60,52,137)" font-family="-apple-system,system-ui,sans-serif" font-size="10" font-weight="700" letter-spacing="0.8">MacBook Pro M3 — SHARED SERVICES</text>
+
+  <!-- whisper.cpp -->
+  <rect x="280" y="74" width="160" height="82" rx="7" fill="rgb(220,245,245)" stroke="rgb(20,130,130)" stroke-width="1.2"/>
+  <text x="360" y="99" text-anchor="middle" fill="rgb(10,90,90)" font-family="-apple-system,system-ui,sans-serif" font-size="13" font-weight="600">whisper.cpp</text>
+  <text x="360" y="117" text-anchor="middle" fill="rgb(20,130,130)" font-family="-apple-system,system-ui,sans-serif" font-size="11">STT · HTTP :9000</text>
+  <text x="360" y="132" text-anchor="middle" fill="rgb(30,150,150)" font-family="-apple-system,system-ui,sans-serif" font-size="9.5">POST /inference</text>
+  <text x="360" y="147" text-anchor="middle" fill="rgb(40,160,155)" font-family="-apple-system,system-ui,sans-serif" font-size="9">Metal · large-v3</text>
+
+  <!-- Piper TTS -->
+  <rect x="460" y="74" width="160" height="82" rx="7" fill="rgb(255,243,225)" stroke="rgb(180,95,20)" stroke-width="1.2"/>
+  <text x="540" y="99" text-anchor="middle" fill="rgb(130,65,10)" font-family="-apple-system,system-ui,sans-serif" font-size="13" font-weight="600">Piper TTS</text>
+  <text x="540" y="117" text-anchor="middle" fill="rgb(180,95,20)" font-family="-apple-system,system-ui,sans-serif" font-size="11">TTS · HTTP :5002</text>
+  <text x="540" y="132" text-anchor="middle" fill="rgb(200,110,30)" font-family="-apple-system,system-ui,sans-serif" font-size="9.5">POST /api/tts</text>
+  <text x="540" y="147" text-anchor="middle" fill="rgb(210,120,35)" font-family="-apple-system,system-ui,sans-serif" font-size="9">returns WAV bytes</text>
+
+  <!-- WissensNest.API -->
+  <rect x="280" y="228" width="340" height="70" rx="7" fill="rgb(238,237,254)" stroke="rgb(83,74,183)" stroke-width="1.2"/>
+  <text x="450" y="252" text-anchor="middle" fill="rgb(60,52,137)" font-family="-apple-system,system-ui,sans-serif" font-size="13" font-weight="600">WissensNest.API</text>
+  <text x="450" y="270" text-anchor="middle" fill="rgb(83,74,183)" font-family="-apple-system,system-ui,sans-serif" font-size="10">POST /chat/stream · ChatService · ToolOrchestrator</text>
+  <text x="450" y="284" text-anchor="middle" fill="rgb(100,90,200)" font-family="-apple-system,system-ui,sans-serif" font-size="9">Streaming SSE · conversation history · IWissensNestClient</text>
+
+  <!-- Ollama -->
+  <rect x="280" y="322" width="340" height="66" rx="7" fill="rgb(225,245,238)" stroke="rgb(15,110,86)" stroke-width="1.2"/>
+  <text x="450" y="346" text-anchor="middle" fill="rgb(8,80,65)" font-family="-apple-system,system-ui,sans-serif" font-size="13" font-weight="600">Ollama</text>
+  <text x="450" y="364" text-anchor="middle" fill="rgb(15,110,86)" font-family="-apple-system,system-ui,sans-serif" font-size="10">qwen2.5:14b · local LLM inference</text>
+  <text x="450" y="378" text-anchor="middle" fill="rgb(25,130,100)" font-family="-apple-system,system-ui,sans-serif" font-size="9">OllamaSharp · function calling for tools</text>
+
+  <!-- SQLite -->
+  <rect x="280" y="408" width="155" height="56" rx="7" fill="rgb(225,245,238)" stroke="rgb(15,110,86)" stroke-width="0.9"/>
+  <text x="357" y="430" text-anchor="middle" fill="rgb(8,80,65)" font-family="-apple-system,system-ui,sans-serif" font-size="11" font-weight="600">SQLite</text>
+  <text x="357" y="446" text-anchor="middle" fill="rgb(15,110,86)" font-family="-apple-system,system-ui,sans-serif" font-size="10">conversations · messages</text>
+  <text x="357" y="458" text-anchor="middle" fill="rgb(25,130,100)" font-family="-apple-system,system-ui,sans-serif" font-size="9">projects · prompts</text>
+
+  <!-- Tools -->
+  <rect x="445" y="408" width="175" height="56" rx="7" fill="rgb(248,240,255)" stroke="rgb(110,50,180)" stroke-width="0.9"/>
+  <text x="532" y="430" text-anchor="middle" fill="rgb(80,30,140)" font-family="-apple-system,system-ui,sans-serif" font-size="11" font-weight="600">WissensNest.Tools</text>
+  <text x="532" y="446" text-anchor="middle" fill="rgb(110,50,180)" font-family="-apple-system,system-ui,sans-serif" font-size="10">ITool — web, weather, time</text>
+  <text x="532" y="458" text-anchor="middle" fill="rgb(130,70,200)" font-family="-apple-system,system-ui,sans-serif" font-size="9">HomeControl (planned)</text>
+
+  <!-- Internal center arrows -->
+  <line x1="360" y1="156" x2="360" y2="228" stroke="rgb(20,130,130)" stroke-width="1.1" marker-end="url(#arr)"/>
+  <text x="368" y="196" fill="rgb(20,130,130)" font-family="-apple-system,system-ui,sans-serif" font-size="9">transcript</text>
+  <line x1="540" y1="228" x2="540" y2="156" stroke="rgb(180,95,20)" stroke-width="1.1" marker-end="url(#arr)"/>
+  <text x="548" y="200" fill="rgb(180,95,20)" font-family="-apple-system,system-ui,sans-serif" font-size="9">text in</text>
+  <line x1="450" y1="298" x2="450" y2="322" stroke="rgb(83,74,183)" stroke-width="1.1" marker-end="url(#arr)"/>
+  <line x1="430" y1="388" x2="390" y2="408" stroke="rgb(83,74,183)" stroke-width="1" marker-end="url(#arr)"/>
+  <line x1="470" y1="388" x2="510" y2="408" stroke="rgb(110,50,180)" stroke-width="1" marker-end="url(#arr)"/>
+
+  <!-- ════════════════════════ -->
+  <!-- CROSS-PATH ARROWS       -->
+  <!-- ════════════════════════ -->
+
+  <!-- VoiceService → whisper.cpp -->
+  <line x1="244" y1="248" x2="280" y2="115" stroke="rgb(20,130,130)" stroke-width="1.2" marker-end="url(#arr)"/>
+  <text x="248" y="186" fill="rgb(20,130,130)" font-family="-apple-system,system-ui,sans-serif" font-size="9">WAV POST</text>
+
+  <!-- VoiceService → WissensNest.API (text after transcript) -->
+  <line x1="244" y1="265" x2="280" y2="265" stroke="rgb(83,74,183)" stroke-width="1.1" marker-end="url(#arr)"/>
+  <text x="255" y="258" fill="rgb(83,74,183)" font-family="-apple-system,system-ui,sans-serif" font-size="9">chat req</text>
+
+  <!-- Piper → VoiceService (WAV back) -->
+  <line x1="460" y1="130" x2="244" y2="245" stroke="rgb(180,95,20)" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arr)"/>
+  <text x="330" y="176" fill="rgb(180,95,20)" font-family="-apple-system,system-ui,sans-serif" font-size="9">WAV bytes</text>
+
+  <!-- VoiceClient → whisper.cpp -->
+  <line x1="656" y1="252" x2="620" y2="115" stroke="rgb(20,130,130)" stroke-width="1.2" marker-end="url(#arr)"/>
+  <text x="626" y="190" fill="rgb(20,130,130)" font-family="-apple-system,system-ui,sans-serif" font-size="9">WAV POST</text>
+
+  <!-- VoiceClient → WissensNest.API -->
+  <line x1="656" y1="260" x2="620" y2="260" stroke="rgb(83,74,183)" stroke-width="1.1" marker-end="url(#arr)"/>
+  <text x="625" y="253" fill="rgb(83,74,183)" font-family="-apple-system,system-ui,sans-serif" font-size="9">chat req</text>
+
+  <!-- Piper → VoiceClient (WAV back) -->
+  <line x1="620" y1="130" x2="656" y2="400" stroke="rgb(180,95,20)" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arr)"/>
+  <text x="640" y="270" fill="rgb(180,95,20)" font-family="-apple-system,system-ui,sans-serif" font-size="9">WAV bytes</text>
+
+  <!-- API → both paths (SSE stream) -->
+  <line x1="280" y1="260" x2="244" y2="260" stroke="rgb(83,74,183)" stroke-width="1.1" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+  <line x1="620" y1="262" x2="656" y2="262" stroke="rgb(83,74,183)" stroke-width="1.1" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+
+  <!-- Legend -->
+  <text x="24" y="508" fill="rgb(80,80,75)" font-family="-apple-system,system-ui,sans-serif" font-size="10" font-weight="600">Legend:</text>
+  <line x1="100" y1="505" x2="150" y2="505" stroke="rgb(95,94,90)" stroke-width="1.2" marker-end="url(#arr)"/>
+  <text x="155" y="509" fill="rgb(80,80,75)" font-family="-apple-system,system-ui,sans-serif" font-size="9">data flow (sync)</text>
+  <line x1="240" y1="505" x2="280" y2="505" stroke="rgb(95,94,90)" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+  <text x="285" y="509" fill="rgb(80,80,75)" font-family="-apple-system,system-ui,sans-serif" font-size="9">data flow (async/stream)</text>
+  <text x="460" y="509" fill="rgb(130,130,125)" font-family="-apple-system,system-ui,sans-serif" font-size="9">Both paths call the same whisper.cpp, Piper, and WissensNest.API instances.</text>
+</svg>

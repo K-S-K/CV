@@ -1,0 +1,93 @@
+<svg width="100%" viewBox="0 0 900 530" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="20" text-anchor="middle" fill="rgb(35,35,33)" font-family="-apple-system,system-ui,sans-serif" font-size="14" font-weight="600">WissensNest — Telegram Read Flow</text>
+  <text x="450" y="36" text-anchor="middle" fill="rgb(120,120,115)" font-family="-apple-system,system-ui,sans-serif" font-size="10">TelegramReaderTool.ExecuteAsync — step-by-step execution with component interactions</text>
+
+  <text x="180" y="55" text-anchor="middle" fill="rgb(60,52,137)" font-family="-apple-system,system-ui,sans-serif" font-size="10" font-weight="700" letter-spacing="0.5">EXECUTION STEPS</text>
+  <text x="640" y="55" text-anchor="middle" fill="rgb(60,52,137)" font-family="-apple-system,system-ui,sans-serif" font-size="10" font-weight="700" letter-spacing="0.5">COMPONENT INTERACTIONS</text>
+  <line x1="380" y1="47" x2="380" y2="520" stroke="rgb(200,198,230)" stroke-width="0.8" stroke-dasharray="5 4"/>
+
+  <rect x="30" y="62" width="300" height="58" rx="7" fill="rgb(238,237,254)" stroke="rgb(83,74,183)" stroke-width="1.2"/>
+  <text x="180" y="83" text-anchor="middle" fill="rgb(60,52,137)" font-family="-apple-system,system-ui,sans-serif" font-size="12" font-weight="600">1. Parse Input</text>
+  <text x="180" y="98" text-anchor="middle" fill="rgb(83,74,183)" font-family="-apple-system,system-ui,sans-serif" font-size="9.5">validate accountId · channelIdentifier · articleId</text>
+  <text x="180" y="111" text-anchor="middle" fill="rgb(100,90,200)" font-family="-apple-system,system-ui,sans-serif" font-size="9">resolve article via IArticleRepository · get ITelegramSession</text>
+
+  <rect x="400" y="62" width="480" height="58" rx="7" fill="rgb(245,244,255)" stroke="rgb(180,175,230)" stroke-width="0.9"/>
+  <text x="640" y="83" text-anchor="middle" fill="rgb(60,52,137)" font-family="-apple-system,system-ui,sans-serif" font-size="11" font-weight="600">IArticleRepository.GetByIdAsync(articleId)</text>
+  <text x="640" y="98" text-anchor="middle" fill="rgb(83,74,183)" font-family="-apple-system,system-ui,sans-serif" font-size="9.5">→ Articles table (SQLite)</text>
+  <text x="640" y="111" text-anchor="middle" fill="rgb(100,90,200)" font-family="-apple-system,system-ui,sans-serif" font-size="9">TelegramSessionManager.GetSession(accountId) → TelegramSession</text>
+
+  <line x1="180" y1="120" x2="180" y2="145" stroke="rgb(83,74,183)" stroke-width="1.2" marker-end="url(#arr)"/>
+
+  <rect x="30" y="145" width="300" height="46" rx="7" fill="rgb(228,242,255)" stroke="rgb(37,99,235)" stroke-width="1.2"/>
+  <text x="180" y="165" text-anchor="middle" fill="rgb(20,60,140)" font-family="-apple-system,system-ui,sans-serif" font-size="12" font-weight="600">2. Resolve Channel</text>
+  <text x="180" y="181" text-anchor="middle" fill="rgb(37,99,235)" font-family="-apple-system,system-ui,sans-serif" font-size="9.5">→ TelegramChannelInfo { ChannelId, AccessHash, Title }</text>
+
+  <rect x="400" y="145" width="480" height="46" rx="7" fill="rgb(245,244,255)" stroke="rgb(180,175,230)" stroke-width="0.9"/>
+  <text x="640" y="163" text-anchor="middle" fill="rgb(60,52,137)" font-family="-apple-system,system-ui,sans-serif" font-size="11" font-weight="600">ITelegramSession.ResolveChannelAsync(identifier)</text>
+  <text x="640" y="179" text-anchor="middle" fill="rgb(37,99,235)" font-family="-apple-system,system-ui,sans-serif" font-size="9">Telegram Cloud: Contacts_ResolveUsername or Messages_GetAllChats</text>
+
+  <line x1="180" y1="191" x2="180" y2="216" stroke="rgb(83,74,183)" stroke-width="1.2" marker-end="url(#arr)"/>
+
+  <rect x="30" y="216" width="300" height="46" rx="7" fill="rgb(225,245,238)" stroke="rgb(15,110,86)" stroke-width="1.2"/>
+  <text x="180" y="236" text-anchor="middle" fill="rgb(8,80,65)" font-family="-apple-system,system-ui,sans-serif" font-size="12" font-weight="600">3. Read Sync State</text>
+  <text x="180" y="252" text-anchor="middle" fill="rgb(15,110,86)" font-family="-apple-system,system-ui,sans-serif" font-size="9.5">→ lastMessageId (0 if first sync for this channel)</text>
+
+  <rect x="400" y="216" width="480" height="46" rx="7" fill="rgb(245,244,255)" stroke="rgb(180,175,230)" stroke-width="0.9"/>
+  <text x="640" y="234" text-anchor="middle" fill="rgb(60,52,137)" font-family="-apple-system,system-ui,sans-serif" font-size="11" font-weight="600">ITelegramSyncStateRepository.GetAsync(accountId, channelId)</text>
+  <text x="640" y="250" text-anchor="middle" fill="rgb(15,110,86)" font-family="-apple-system,system-ui,sans-serif" font-size="9">→ TelegramSyncStates table; null → lastMessageId = 0 (full sync)</text>
+
+  <line x1="180" y1="262" x2="180" y2="287" stroke="rgb(83,74,183)" stroke-width="1.2" marker-end="url(#arr)"/>
+
+  <rect x="30" y="287" width="300" height="56" rx="7" fill="rgb(228,242,255)" stroke="rgb(37,99,235)" stroke-width="1.2"/>
+  <text x="180" y="308" text-anchor="middle" fill="rgb(20,60,140)" font-family="-apple-system,system-ui,sans-serif" font-size="12" font-weight="600">4. Fetch Messages</text>
+  <text x="180" y="323" text-anchor="middle" fill="rgb(37,99,235)" font-family="-apple-system,system-ui,sans-serif" font-size="9.5">→ N messages oldest-first (up to maxMessages)</text>
+  <text x="180" y="336" text-anchor="middle" fill="rgb(60,120,220)" font-family="-apple-system,system-ui,sans-serif" font-size="9">FLOOD_WAIT_n → delay n+1 s → retry</text>
+
+  <rect x="400" y="287" width="480" height="56" rx="7" fill="rgb(245,244,255)" stroke="rgb(180,175,230)" stroke-width="0.9"/>
+  <text x="640" y="306" text-anchor="middle" fill="rgb(60,52,137)" font-family="-apple-system,system-ui,sans-serif" font-size="11" font-weight="600">ITelegramSession.GetMessagesAsync(channel, lastId, max)</text>
+  <text x="640" y="321" text-anchor="middle" fill="rgb(37,99,235)" font-family="-apple-system,system-ui,sans-serif" font-size="9">Telegram Cloud: Messages_GetHistory (offset_id / add_offset / min_id)</text>
+  <text x="640" y="335" text-anchor="middle" fill="rgb(60,120,220)" font-family="-apple-system,system-ui,sans-serif" font-size="9">RpcException Code 420 → FLOOD_WAIT_n → delay + retry</text>
+
+  <line x1="180" y1="343" x2="180" y2="360" stroke="rgb(83,74,183)" stroke-width="1.2" marker-end="url(#arr)"/>
+
+  <rect x="80" y="360" width="200" height="36" rx="7" fill="rgb(255,251,220)" stroke="rgb(155,125,20)" stroke-width="1.1"/>
+  <text x="180" y="376" text-anchor="middle" fill="rgb(100,80,10)" font-family="-apple-system,system-ui,sans-serif" font-size="11" font-weight="600">No new messages?</text>
+  <text x="180" y="390" text-anchor="middle" fill="rgb(130,105,15)" font-family="-apple-system,system-ui,sans-serif" font-size="9">return "No new messages since last sync"</text>
+
+  <line x1="280" y1="378" x2="340" y2="378" stroke="rgb(155,125,20)" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+  <text x="295" y="372" fill="rgb(130,105,15)" font-family="-apple-system,system-ui,sans-serif" font-size="8.5">yes → early return</text>
+
+  <line x1="180" y1="396" x2="180" y2="416" stroke="rgb(83,74,183)" stroke-width="1.2" marker-end="url(#arr)"/>
+  <text x="188" y="410" fill="rgb(60,52,137)" font-family="-apple-system,system-ui,sans-serif" font-size="8.5">no → continue</text>
+
+  <rect x="30" y="416" width="300" height="46" rx="7" fill="rgb(238,237,254)" stroke="rgb(83,74,183)" stroke-width="1.2"/>
+  <text x="180" y="436" text-anchor="middle" fill="rgb(60,52,137)" font-family="-apple-system,system-ui,sans-serif" font-size="12" font-weight="600">5. Write Blocks</text>
+  <text x="180" y="452" text-anchor="middle" fill="rgb(83,74,183)" font-family="-apple-system,system-ui,sans-serif" font-size="9.5">one Block per message · ordinal = max_existing + N</text>
+
+  <rect x="400" y="416" width="480" height="46" rx="7" fill="rgb(245,244,255)" stroke="rgb(180,175,230)" stroke-width="0.9"/>
+  <text x="640" y="434" text-anchor="middle" fill="rgb(60,52,137)" font-family="-apple-system,system-ui,sans-serif" font-size="11" font-weight="600">IBlockRepository.AddAsync(block) × N</text>
+  <text x="640" y="450" text-anchor="middle" fill="rgb(83,74,183)" font-family="-apple-system,system-ui,sans-serif" font-size="9">→ Blocks table · header + text + [Attachment: ...] lines per message</text>
+
+  <line x1="180" y1="462" x2="180" y2="482" stroke="rgb(83,74,183)" stroke-width="1.2" marker-end="url(#arr)"/>
+
+  <rect x="30" y="482" width="300" height="36" rx="7" fill="rgb(225,245,238)" stroke="rgb(15,110,86)" stroke-width="1.2"/>
+  <text x="180" y="499" text-anchor="middle" fill="rgb(8,80,65)" font-family="-apple-system,system-ui,sans-serif" font-size="12" font-weight="600">6. Update Sync State</text>
+  <text x="180" y="513" text-anchor="middle" fill="rgb(15,110,86)" font-family="-apple-system,system-ui,sans-serif" font-size="9.5">upsert TelegramSyncState with new LastMessageId</text>
+
+  <rect x="400" y="482" width="480" height="36" rx="7" fill="rgb(245,244,255)" stroke="rgb(180,175,230)" stroke-width="0.9"/>
+  <text x="640" y="499" text-anchor="middle" fill="rgb(60,52,137)" font-family="-apple-system,system-ui,sans-serif" font-size="11" font-weight="600">ITelegramSyncStateRepository.AddAsync / UpdateAsync</text>
+  <text x="640" y="513" text-anchor="middle" fill="rgb(15,110,86)" font-family="-apple-system,system-ui,sans-serif" font-size="9">→ TelegramSyncStates table · LastMessageId = messages.Last().MessageId</text>
+
+  <line x1="330" y1="91" x2="400" y2="91" stroke="rgb(83,74,183)" stroke-width="1" marker-end="url(#arr)"/>
+  <line x1="330" y1="168" x2="400" y2="168" stroke="rgb(37,99,235)" stroke-width="1" marker-end="url(#arr)"/>
+  <line x1="330" y1="239" x2="400" y2="239" stroke="rgb(15,110,86)" stroke-width="1" marker-end="url(#arr)"/>
+  <line x1="330" y1="310" x2="400" y2="310" stroke="rgb(37,99,235)" stroke-width="1" marker-end="url(#arr)"/>
+  <line x1="330" y1="439" x2="400" y2="439" stroke="rgb(83,74,183)" stroke-width="1" marker-end="url(#arr)"/>
+  <line x1="330" y1="500" x2="400" y2="500" stroke="rgb(15,110,86)" stroke-width="1" marker-end="url(#arr)"/>
+</svg>
