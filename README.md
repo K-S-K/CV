@@ -81,6 +81,7 @@ All projects listed in this repository are divided into two categories:
 
 | Date           | [Employment Based Projects](./Articles/EmploymentBasedProjects.md) | [Experimental and Educational Projects](./Articles/ExperimentsAndEducation.md) |
 | ---- | ---- | ---- |
+| 2026 |    | [File Explorer for MacOS](./Articles/39_Shell/Article.md) |
 | 2026 |    | [Font Rasterization SaaS](./Articles/38_EmbeddedFonts/Article.md) |
 | 2026 |    | [Local AI Assistant](./Articles/37_LocalAI/Article.md) |
 | 2026 |    | [C#/C++ Interop Communication Example](https://github.com/K-S-K/Interop) |

@@ -2,6 +2,14 @@
 
 These are some of the projects I've created out of curiosity or for experimental and educational purposes.
 
+## [2026. Windows Explorer - Like File System Navigation Tool](./39_Shell/Article.md)
+
+This software helps me to feel comfortable after migrating from Windows to Mac. It allows me to navigate through the Mac File Tree, see directories content, modify text files,  and run terminal in the comfortable way.
+
+![Kata Shell](./39_Shell/Images/01_Kata_Dir.png)
+
+![Kata Shell](./39_Shell/Images/04_Kata_Terminal.png)
+
 ## [2026. Font Rasterization Service](./38_EmbeddedFonts/Article.md)
 
 Embedded Font Generator is a SaaS that rasterizes TTF fonts into C header files for small monochrome displays — SSD1306 OLED, e-ink, ST7735. The user can pick a font, set the cell dimensions, trim the character set to what the firmware actually needs, manually fix any pixels, preview on an emulated display, and download a ready-to-compile `.h` file.
