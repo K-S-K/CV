@@ -29,3 +29,7 @@ Then, I've added an inline MD / txt File Editor.
 And, finally, I've added the Terminal window, which is in sync with File Structure Tree.
 
 ![Terminal](./Images/04_Kata_Terminal.png)
+
+Finally, i've git a ready to use product:
+
+![File Move](./Images/81_Kata_FileMove.gif)
