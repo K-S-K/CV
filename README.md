@@ -81,7 +81,7 @@ All projects listed in this repository are divided into two categories:
 
 | Date | Name / Category | [Job](./Articles/EmploymentBasedProjects.md) | [Edu](./Articles/ExperimentsAndEducation.md) | Stack and Tags |
 | ---- | ---- | ---- | ---- | ---- |
-| 2026 | [File Explorer for macOS](./Articles/39_Shell/Article.md), available at [katashell.app](https://www.katashell.app/). | | [x] | Swift/Mac, UI/UX, AI-Assisted |
+| 2026 | [File Explorer for macOS](./Articles/39_Shell/Article.md), [katashell.app](https://www.katashell.app/). | | [x] | Swift/Mac, UI/UX, AI-Assisted |
 | 2026 | [Font Rasterization SaaS](./Articles/38_EmbeddedFonts/Article.md) | | [x] | .NET, [Linux](./Articles/LinuxTargetedProjects.md), Blazor, SaaS, CI/CD, Blue/Green Deployment, UI/UX, AI-Assisted |
 | 2026 | [Local AI Assistant](./Articles/37_LocalAI/Article.md) | | [x] | .NET, [Cross-Platform](./Articles/LinuxTargetedProjects.md), Blazor, UI/UX, AI-Assisted |
 | 2026 | [C#/C++ Interop Communication Example](https://github.com/K-S-K/Interop) | | [x] | C#, C++, Linux |
