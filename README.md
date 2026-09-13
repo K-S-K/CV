@@ -81,23 +81,26 @@ All projects listed in this repository are divided into two categories:
 
 ```mermaid
 gantt
-    title Project Timeline: May 2025 - Jan 2027
+    title Project Timeline: Jun 2023 - Jun 2027
     dateFormat  YYYY-MM-DD
-    axisFormat  %b %d
+    axisFormat  %Y %m
+    tickInterval 4month
+
+    section Linux IPC
+    Linux IPC         :a1, 2024-04-15, 2024-04-25
 
     section Gaia AOCS SDT
-    Gaia AOCS SDT     :a1, 2024-05-15, 700d
+    Gaia AOCS SDT     :a2, 2024-05-15, 2026-04-15
 
     section Wissens Nest
-    Wissens Nest      :a2, 2026-04-15, 20d
+    Wissens Nest      :a3, 2026-04-15, 2026-09-15
 
     section Embedded Fonts
-    Embedded Fonts    :a3, 2026-05-01, 50d
+    Embedded Fonts    :a4, 2026-05-01, 2026-06-20
 
     section Kata-Shell
-    Kata-Shell        :a4, 2026-06-01, 106d
+    Kata-Shell        :a5, 2026-06-01, 2026-09-15
 ```
-
 
 | Date | Name / Category | [Job](./Articles/EmploymentBasedProjects.md) | [Edu](./Articles/ExperimentsAndEducation.md) | Stack and Tags |
 | ---- | ---- | ---- | ---- | ---- |
