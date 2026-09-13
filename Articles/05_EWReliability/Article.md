@@ -4,6 +4,8 @@
 
 **Development period:** August 2012 - May 2017.
 
+**Categories:** [Job](../EmploymentBasedProjects.md)
+
 ## The problem
 
 A cell operator billing system had to meet a regulatory requirement: availability factor ≥ 0.99995. This was not an ambition — it was a legal certification threshold. Below it, the system could not be officially operated in that country.
