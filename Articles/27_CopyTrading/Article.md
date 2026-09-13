@@ -2,7 +2,9 @@
 
 [Back to the main page](../../README.md)
 
-**Development period:** August 2021 - November 2021.
+**Development period:** August 2021-November 2021.
+
+**Categories:** [Job](../EmploymentBasedProjects.md)
 
 **Practical application:** In use and evolving new features[^1].
 
@@ -10,7 +12,7 @@
 
 ## Project description
 
-This project automatically copies Originator trader positions for the Follower trader accounts on the Binance Cryptocurrency Exchange.
+This project automatically copies the Originator trader's positions to Follower trader accounts on the Binance Cryptocurrency Exchange.
 
 Technically, it is a Windows Service that contains a listener module and a set of trader modules.
 
@@ -23,17 +25,17 @@ This is the whole idea. The service owner charges clients a monthly subscription
 **My part in this project.** I was involved from the very beginning of the project. So I've done the following:
 
 - Collecting the primary requirements from the Customer.
-- RND - Check the viability of the idea (secondary connecting to the exchange by tool with the Originator trader account, listening to the echo of trading orders and order update signals, creating the same orders for the Follower's account). API documentation is not a contract — before committing to a client relationship, I needed a working prototype as proof that the exchange's infrastructure actually behaves as described under real conditions.
-- Proposing the MVP architecture specification, discuss its stages with the Customer.
+- RND - Check the viability of the idea (secondary connection to the exchange by tool with the Originator trader account, listening to the echo of trading orders and order update signals, creating the same orders for the Follower's account). API documentation is not a contract — before committing to a client relationship, I needed a working prototype as proof that the exchange's infrastructure actually behaves as described under real conditions.
+- Proposing the MVP architecture specification, discussing its stages with the Customer.
 - Creating the MVP, deploying to the tenant server, and transferring it to the Customer.
-- Customer support, collect Customer experience and wishes for the first version.
+- Customer support, collecting Customer experience and wishes for the first version.
 - Collecting the requirements from the Customer after their first experience with the tool.
 - Planning the sprints for the first working version development.
 - Implementation.
 - Technical support
-- Transferred the project to my colleague, code review during several following sprints.
+- Transferred the project to my colleague; code review during several following sprints.
 
-**Implementation technologies:** .NET 5, WPF, Binance.Net library by JKorf, and some subject area knowledge.
+**Implementation technologies:** .NET 5, WPF, Binance.Net library by JKorf, and some subject-area knowledge.
 
 ## Some illustrations from the project
 
