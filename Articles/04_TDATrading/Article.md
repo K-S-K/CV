@@ -4,9 +4,11 @@
 
 **Development period:** 2017–2022.
 
+**Categories:** [Job](../EmploymentBasedProjects.md)
+
 ## What this actually was
 
-This was not a startup. It was a five-year research collaboration between two people — a trading domain expert and a software architect — who wanted to find out whether a specific class of trading hypothesis could be made to work. The answer was: partially, and interestingly.
+This was not a startup. It was a five-year research collaboration between two people — a trading domain expert and a software architect — who wanted to find out whether a specific class of trading hypothesis could be made to work.
 
 My partner had spent years trading manually. He had intuitions about price behavior that he could describe but not systematically test. I could build the instrument to test them. The problem was translation: his mental model of markets was not naturally expressible in software terms, and my mental model of software was not naturally grounded in market behavior.
 
@@ -16,7 +18,7 @@ The first thing we built was not code. It was a language — a shared vocabulary
 
 The architecture evolved through consequences rather than upfront design.
 
-When we began experimenting with trading at multiple frequencies simultaneously — up to twenty different time resolutions running in parallel — we discovered that the system had no way to reason about risk across all of them at once. A balance control module had to be introduced: something that decided how much capital was available for active work and how much had to stay protected. This was a domain insight forcing an architectural change. The system couldn't be correct without it.
+When we began experimenting with trading at multiple frequencies simultaneously — up to twenty different time resolutions running in parallel — we discovered that the system had no way to reason about risk across all of them at once. A balance control module had to be introduced: something that decided how much capital was available for active work and how much had to stay protected. This domain insight forced an architectural change. The system couldn't be correct without it.
 
 The second major refactoring came from a bug we couldn't explain. Eight hours into a live session, an exception. We couldn't reproduce it in tests. The session state at the moment of failure was unrecoverable. My response was to build extended logging deep enough that every session could be replayed in full — every signal, every decision, every state transition — against the exchange emulator. This made every future bug reproducible by definition. It was significant refactoring, but it changed the nature of what we could investigate.
 
