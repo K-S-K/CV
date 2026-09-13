@@ -4,6 +4,8 @@
 
 **Development period:** 1999.
 
+**Categories:** [Job](../EmploymentBasedProjects.md)
+
 **Practical application:** Never[^1].
 
 **Project purpose:** To learn how to deal with graphical data representation, print functionality, [CHM](https://learn.microsoft.com/en-us/dynamicsax-2012/appuser-itpro/deprecated-chm-help-files) context help manipulation, and desktop application infrastructure.
