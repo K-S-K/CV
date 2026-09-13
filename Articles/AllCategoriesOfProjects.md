@@ -4,7 +4,8 @@
 
 This software helps me to feel comfortable after migrating from Windows to Mac. It gave me the possibility to navigate through the Mac File Tree, view directory contents, modify text files, and use the terminal comfortably.
 
-![File Move](./39_Shell/Images/81_Kata_FileMove.gif)
+![File Move](./39_Shell/Images/81_Kata_FileMove.gif)  
+You can download it from [katashell.app](https://www.katashell.app/).
 
 ## [2026. Font Rasterization Service](./38_EmbeddedFonts/Article.md)
 
