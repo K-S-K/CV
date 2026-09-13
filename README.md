@@ -74,7 +74,7 @@ I am currently learning FreeRTOS, bare-metal C and C++, and embedded Linux — n
 The following articles contain a brief view of the projects with links to detailed descriptions.
 All projects listed in this repository are divided into two categories:
 
-- **[All Projects](AllCategoriesOfProjects.md)** - this is the full **illustrated** chronological project list.
+- **[All Projects](./Articles/AllCategoriesOfProjects.md)** - this is the full **illustrated** chronological project list.
 - **[Experimental Projects](./Articles/ExperimentsAndEducation.md)** - projects created out of curiosity, or for experimental and educational purposes.
 - **[Employment Based Projects](./Articles/EmploymentBasedProjects.md)** - projects I worked on during employment.
 - **[Linux and Cross Platform Projects](./Articles/LinuxTargetedProjects.md)** - the projects that can be executed on Linux, and also Cross-Platform projects.
