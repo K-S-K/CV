@@ -79,29 +79,6 @@ All projects listed in this repository are divided into two categories:
 - **[Employment Based Projects](./Articles/EmploymentBasedProjects.md)** - projects I worked on during employment.
 - **[Linux and Cross Platform Projects](./Articles/LinuxTargetedProjects.md)** - the projects that can be executed on Linux, and also Cross-Platform projects.
 
-```mermaid
-gantt
-    title Project Timeline: Jun 2023 - Jun 2027
-    dateFormat  YYYY-MM-DD
-    axisFormat  %Y %m
-    tickInterval 4month
-
-    section Linux IPC
-    Linux IPC         :a1, 2024-04-15, 2024-04-25
-
-    section Gaia AOCS SDT
-    Gaia AOCS SDT     :a2, 2024-05-15, 2026-04-15
-
-    section Wissens Nest
-    Wissens Nest      :a3, 2026-04-15, 2026-09-15
-
-    section Embedded Fonts
-    Embedded Fonts    :a4, 2026-05-01, 2026-06-20
-
-    section Kata-Shell
-    Kata-Shell        :a5, 2026-06-01, 2026-09-15
-```
-
 | Date | Name / Category | [Job](./Articles/EmploymentBasedProjects.md) | [Edu](./Articles/ExperimentsAndEducation.md) | Stack and Tags |
 | ---- | ---- | ---- | ---- | ---- |
 | 2026 | [File Explorer for macOS](./Articles/39_Shell/Article.md), [katashell.app](https://www.katashell.app/). | | [x] | Swift/Mac, UI/UX, AI-Assisted |
