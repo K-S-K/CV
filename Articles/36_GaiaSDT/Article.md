@@ -4,27 +4,29 @@
 
 **Development period:** 2024.05–2026.04
 
+**Categories:** [Job](../EmploymentBasedProjects.md)
+
 **Practical application:** Testing innovative attitude control approaches for the next-generation telescope[^1].
 
 ## The Problem
 
-The scientists at the Astronomisches Rechen-Institut had spent years working with data downloaded from the Gaia telescope. From that experience, they had developed concrete ideas about how attitude control could be improved for a future spacecraft — better disturbance detection, more precise corrections, significant fuel economy over a multi-year mission. To test those ideas, they needed a complete simulation of the Attitude and Orbit Control System (AOCS).
+Scientists at the Astronomisches Rechen-Institut had spent years working with data downloaded from the Gaia telescope. From that experience, they developed concrete ideas for improving attitude control for a future spacecraft—better disturbance detection, more precise corrections, and significant fuel savings over a multi-year mission. To test those ideas, they needed a complete simulation of the Attitude and Orbit Control System (AOCS).
 
-What they had was a collection of partial implementations. Separate modules written in Python and Java by different people, for different research goals, developed by brilliant astronomers and mathematicians — not software engineers. They had attempted to connect these parts using Kafka. It didn't work properly, and it didn't promise to work with necessary performance. The modules had no compatibility in data exchange, units, or coordinate scales. The whole system had never run together. They could not see how it behaved as a complete system.
+What they had was a collection of partial implementations. Separate modules written in Python and Java by different people, for different research goals, developed by brilliant astronomers and mathematicians — not software engineers. They had attempted to connect these parts using Kafka. It didn't work properly, and it didn't promise to work with the necessary performance. The modules had no compatibility in data exchange, units, or coordinate scales. The whole system had never run together. They could not see how it behaved as a complete system.
 
 They needed someone to bridge the gap between their scientific understanding and a working instrument — and that gap is what brought me to the project.
 
 ## What I Had to Learn
 
-Before any architecture was possible, I had to understand the system the software was meant to simulate.
+Before I could design any architecture, I had to understand the system the software was meant to simulate.
 
-I started with the signal and data flow between the AOCS components — what each device does, at what frequency, with what delay, and under what physical constraints. The central structural insight came early: there is a strict boundary between **physical reality** and **what the system can observe**. The spacecraft exists in physics. The control system can only act on what its sensors report. These two levels must be kept separate in the simulation, or the model produces results that could never happen in hardware.
+I started with the signal and data flow between the AOCS components — what each device does, at what frequency, with what delay, and under what physical constraints. The central structural insight came early: a strict boundary exists between **physical reality** and **what the system can observe**. The spacecraft exists in physics. The control system can only act on what its sensors report. These two levels must be kept separate in the simulation, or the model produces results that could never happen in hardware.
 
 Working through this with my colleagues, I built an understanding of each component in the control loop:
 
 - **Scanning Law** — the nominal attitude plan that defines where the spacecraft should be pointing at every moment of the mission. Two implementations: *inertial movement*, a pure rotation based on the equations of motion (used for testing and calibration); and *orbital plan movement*, a rotation with a spiral offset designed to scan the entire planned sky area over time
 - **Inertial rotation** — the physics model of how the spacecraft actually moves under applied torques and disturbances
-- **Disturbances** — micrometeorite impacts, thermal deformation clanks, solar radiation pressure, fuel sloshing in tanks
+- **Disturbances** — micrometeorite impacts, thermal deformation, clanks, solar radiation pressure, fuel sloshing in tanks
 - **Star Catalog** — the sky map that supports sensor modeling; given a pointing direction and a field of view, it returns the list of stars visible from that direction, enabling the Star Tracker's lost-in-space constellation recognition
 - **Star Tracker** — photographs a patch of sky, uses the Star Catalog to recognize constellation patterns, returns an *approximation* of orientation with hardware-specific errors
 - **Focal Plane** — measures angular velocity at high precision from star movement across the CCD arrays, with hardware-specific delays
