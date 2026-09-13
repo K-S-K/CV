@@ -4,6 +4,8 @@
 
 **Development period:** 2001–2007.
 
+**Categories:** [Job](../EmploymentBasedProjects.md)
+
 ## Starting from the physics
 
 My university degree is in Electric Energy System Automated Control. Engineering education — at least in that discipline — trains you to see software models as representations of physical reality, not as abstractions that happen to be convenient. A substation is not a node in a graph. A meter reading is not a data point. The relationship between them is governed by hardware with calibrated properties, and if your model doesn't encode those properties, your calculations are wrong — not in the way that causes crashes, but in the way that produces confident-looking incorrect numbers.
