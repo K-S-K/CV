@@ -4,6 +4,8 @@
 
 **Development period:** 2023-2024.
 
+**Categories:** [Experiment](../ExperimentsAndEducation.md), [Linux](../LinuxTargetedProjects.md), [Cross-Platform](../LinuxTargetedProjects.md)
+
 **Practical application:** The idea testing[^1].
 
 **Project purpose:** To create a simple editor for the prototyping board wiring planning with effective storage files in a version-management-friendly format.

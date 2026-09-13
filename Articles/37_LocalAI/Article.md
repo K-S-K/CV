@@ -4,6 +4,8 @@
 
 **Development period:** 2026.04–ongoing
 
+**Categories:** [Experiment](../ExperimentsAndEducation.md), [Linux](../LinuxTargetedProjects.md), [Cross-Platform](../LinuxTargetedProjects.md)
+
 **Starting question:** Can a language model actually help with real daily work if it runs entirely on local hardware?[^1]
 
 ---

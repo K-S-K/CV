@@ -7,10 +7,6 @@ These are some of the projects that I worked on during my employment in differen
 During my work at the Astronomishes Rechen Institut of the Heidelberg University, I develop a physics-based Software Digital Twin of Gaia telescope Attitude and Orbit Control System. It is a tool for testing and tuning spacecraft attitude control algorithms, originally prototyped in Python and Java by my colleagues.
 ![The Gaia AOCS SDT UI](./36_GaiaSDT/Images/Fig_01_SDT-UI-Q.png)
 
-## [2021. Binance Copy Trading](./27_CopyTrading/Article.md)
-
-The copy trading project for the Binance Cryptocurrency exchange.
-
 ## [2017-2022. Automated Trading System](./04_TDATrading/Article.md)
 
 It was a long R&D project dedicated to trading automation. We experimented with different trading algorithms for years, achieving some success, great excitement, and much experience.

@@ -4,7 +4,7 @@
 
 **Development period:** 2024.05–2026.04
 
-**Categories:** [Job](../EmploymentBasedProjects.md)
+**Categories:** [Job](../EmploymentBasedProjects.md), [Linux](../LinuxTargetedProjects.md), [Cross-Platform](../LinuxTargetedProjects.md)
 
 **Practical application:** Testing innovative attitude control approaches for the next-generation telescope[^1].
 
@@ -69,6 +69,7 @@ The tool continues in use. My contract has formally ended, but the collaboration
 **Architecture:** Cross-platform .NET, deployable as a monolith or distributed across Docker containers — developer machine, local Docker network, or distributed hardware.
 
 **Components:**
+
 - Library assemblies — mathematical abstractions and infrastructure
 - Module assemblies — Scanning Law (two variants), inertial rotation, disturbances, Star Catalog, Star Tracker, Focal Plane, Kalman Filter, Controller, Micro Propulsion System
 - Laboratory — integrates modules and manages communication between them

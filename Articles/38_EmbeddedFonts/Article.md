@@ -6,6 +6,8 @@
 
 **Development period:** 2026.06.01–2026.06.15
 
+**Categories:** [Experiment](../ExperimentsAndEducation.md), [Linux](../LinuxTargetedProjects.md)
+
 **Current state:** Complete, with occasional random improvements.
 
 **Practical application:** Publicly available, free-of-charge SaaS. **[embedded-font.com](https://embedded-font.com/)** — free, runs in the browser, no account needed.[^1]
