@@ -2,15 +2,13 @@
 
 ## [2026. Windows Explorer - Like File System Navigation Tool](./39_Shell/Article.md)
 
-This software helps me to feel comfortable after migrating from Windows to Mac. It allows me to navigate through the Mac File Tree, see directories content, modify text files,  and run terminal in the comfortable way.
+This software helps me to feel comfortable after migrating from Windows to Mac. It gave me the possibility to navigate through the Mac File Tree, view directory contents, modify text files, and use the terminal comfortably.
 
-![Kata Shell](./39_Shell/Images/01_Kata_Dir.png)
-
-![Kata Shell](./39_Shell/Images/04_Kata_Terminal.png)
+![File Move](./Images/81_Kata_FileMove.gif)
 
 ## [2026. Font Rasterization Service](./38_EmbeddedFonts/Article.md)
 
-Embedded Font Generator is a SaaS that rasterizes TTF fonts into C header files for small monochrome displays — SSD1306 OLED, e-ink, ST7735. The user can pick a font, set the cell dimensions, trim the character set to what the firmware actually needs, manually fix any pixels, preview on an emulated display, and download a ready-to-compile `.h` file.
+Embedded Font Generator is a SaaS that rasterizes TTF fonts into C header files for small monochrome displays — SSD1306 OLED, e-ink, ST7735. Users can pick a font, set the cell dimensions, trim the character set to what the firmware actually needs, manually fix any pixels, preview on an emulated display, and download a ready-to-compile `.h` file.
 
 It is the actual working site, which can serve the needs of embedded developers right now at **[embedded-font.com](https://embedded-font.com/)** — for free, runs in the browser, no account needed.
 
@@ -18,7 +16,7 @@ It is the actual working site, which can serve the needs of embedded developers 
 
 ## [2026. AI Assistant](./37_LocalAI/Article.md)
 
-In this project, I'm experimenting with the potential of language models to assist me in my daily activities.
+In this project, I'm experimenting with language models to assist me in my daily activities.
 
 TI just started working on this project, and the description will grow here.
 
@@ -26,15 +24,15 @@ TI just started working on this project, and the description will grow here.
 
 ## [2026. Interop Communication Example](https://github.com/K-S-K/Interop)
 
-Sometimes, when I work on hardware-related projects, I see that some tasks are better implemented in C++ than in C#. The reasons are performance-, compatibility-, and culturally related. On the other hand, some functionality, such as web services or database communication, is more efficiently implemented in C#. And I got curious: how easy or difficult is it to integrate the benefits of both technologies into a single solution? And, is it possible to debug the control flow transparently through the border between them, as if it were one homogeneous piece of code?
+Sometimes, when I work on hardware-related projects, I see that some tasks are better implemented in C++ than in C#. The reasons are performance-, compatibility-, and culture-related. On the other hand, some functionality, such as web services or database communication, is more efficiently implemented in C#. And I got curious: how easy or difficult is it to integrate the benefits of both technologies into a single solution? And, is it possible to debug the control flow transparently through the border between them, as if it were one homogeneous piece of code?
 
-This project is the result of a series of experiments in this direction. Also, it can serve as a boilerplate for developing a native C++ DLL and a C# client EXE in a single Visual Studio solution.
+This project is the result of a series of experiments in this direction. It can also serve as a boilerplate for developing a native C++ DLL and a C# client EXE in a single Visual Studio solution.
 
 ![P/Invoke Interop Diagram](./32_Interop/Images/Fig.2.1.InteropAsync.svg)
 
 ## [2024-2026 The Software Digital Twin of Gaia telescope Attitude and Orbit Control System](./36_GaiaSDT/Article.md)
 
-During my work at the Astronomishes Rechen Institut of the Heidelberg University, I develop a physics-based Software Digital Twin of Gaia telescope Attitude and Orbit Control System. It is a tool for testing and tuning spacecraft attitude control algorithms, originally prototyped in Python and Java by my colleagues.
+During my work at the Astronomisches Rechen-Institut of Heidelberg University, I developed a physics-based Software Digital Twin of the Gaia telescope Attitude and Orbit Control System. It is a tool for testing and tuning spacecraft attitude control algorithms, originally prototyped in Python and Java by my colleagues.
 ![The Gaia AOCS SDT UI](./36_GaiaSDT/Images/Fig_01_SDT-UI-Q.png)
 
 ## [2025. The FreeRTOS-based timer working on RP2350](https://github.com/K-S-K/Pico-Timer-2)
@@ -45,26 +43,26 @@ Through this project, I gained experience with FreeRTOS and embedded development
 - State machine as a configurable abstract menu controller;
 - Rotary Encoder as the only input of a User Interface;
 - Screen abstraction layer, which potentially allows the use of different types of displays;
-- I2C communication with Display and Real Time Clock Module;
+- I2C communication with Display and Real-Time Clock Module;
 - Raspberry PI Pico FreeRTOS toolchain setup.
 
 ![Timer User Interface](https://github.com/K-S-K/Pico-Timer-2/raw/main/Doc/Pico2-timer-menu.gif)
 
 ## [2025 Simple 3V3 LMR50410 DC-DC Converter](https://github.com/K-S-K/PWR-LMR50410-Simple)
 
-Just a first CAD-based PCB design experience as a part of passing the Fedevel course.
+Just a first CAD-based PCB design experience as part of passing the Fedevel course.
 
 ![Schematics of the Converter](./31_PowerSupplyPCB/Schematics.png)
 
 ## [2024-2025. The Experiment with .NET and Raspberry PI](https://github.com/K-S-K/RPIDBClock)
 
-Through this project, I touched the I2C devices from the .NET code, and found it easy and convenient. .NET provides all necessary tools in the "System.Device.Gpio" NuGet library to build any communication API at GPIO level, and also to work with "I2cDevice" and just exchange data with devices with byte resolution. Also, I've made a desk clock that shows the current date and time, as well as the two closest trains on my commute route. The development process was funny and attractive.
+Through this project, I touched the I2C devices from the .NET code and found it easy and convenient. .NET provides all necessary tools in the "System.Device.Gpio" NuGet library to build any communication API at the GPIO level, and also to work with "I2cDevice" and just exchange data with devices at byte resolution. I also made a desk clock that shows the current date and time, as well as the two closest trains on my commute route. The development process was fun and attractive.
 
 ![Raspberry Pi Clock](https://github.com/K-S-K/RPIDBClock/raw/main/Doc/Images/Fig_00_Common_View.jpg)
 
 ## [2024. Data exchange between Docker containerized applications](https://github.com/K-S-K/CCCS)
 
-These days, I started relearning C++ and learning Linux to prepare for my new job at the Astronomisches Rechen-Institut, a branch of Heidelberg University. That's how this project was created.
+These days, I started relearning C++ and learning Linux to prepare for my new job at the Astronomisches Rechen-Institut, a branch of Heidelberg University. That's how I created this project.
 
 The purpose of this project is to adjust the approach to creating multiple projects in separate Docker containers and to allow them to communicate via sockets. The project can be used as a template for creating more complex projects.
 
