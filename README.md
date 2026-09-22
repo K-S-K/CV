@@ -88,7 +88,7 @@ All projects listed in this repository are divided into two categories:
 | 2025 | [Simple 3V3 LMR50410 DC-DC Converter](https://github.com/K-S-K/PWR-LMR50410-Simple) | | [x] | PCB development |
 | 2024&#8209;2026 | [Gaia telescope Attitude and Orbit Control System Software Digital Twin](Articles/36_GaiaSDT/Article.md) | [x] | | .NET, [Cross-Platform](./Articles/LinuxTargetedProjects.md), Microservices, Docker, Blazor, UI/UX |
 | 2024&#8209;2026 | [The FreeRTOS-based timer working on RP2350](https://github.com/K-S-K/Pico-Timer-2) | | [x] | C++, FreeRTOS, Embedded, RP2350, UI/UX |
-| 2024&#8209;2025 | [The Experiment with .NET and Raspberry PI](https://github.com/K-S-K/RPIDBClock) | | [x] | .NET, [Linux](./Articles/LinuxTargetedProjects.md), Embedded, I2C, UI/UX |
+| 2024&#8209;2025 | [The Experiment: .NET-based Desk Clock on Raspberry PI](https://github.com/K-S-K/RPIDBClock) | | [x] | .NET, [Linux](./Articles/LinuxTargetedProjects.md), Embedded, I2C, UI/UX |
 | 2024 | [Data exchange between Docker containerized applications](https://github.com/K-S-K/CCCS) | | [x] | C++, [Linux](./Articles/LinuxTargetedProjects.md), Docker, WebSockets, IPC |
 | 2023&#8209;2024 | [Prototype Board CAD](Articles/30_BBCAD/Article.md) | | [x] | .NET, [Cross-Platform](./Articles/LinuxTargetedProjects.md), Blazor, UI/UX |
 | 2023 | [LCD Screen driver for ESP Microcontroller](https://github.com/K-S-K/ESP32-02-OLed-SSD1366) | | [x] | C++, FreeRTOS, Embedded, ESP32 |
