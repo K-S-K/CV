@@ -113,11 +113,9 @@ And one more thing, more personal. In my own projects, I set the task myself and
 
 ## Technical Details
 
-**Architecture:** A new section of an existing web platform. A chat-based AI assistant drives the existing Sizing & Costing calculator through dedicated entry points; all derived figures (targets, levers, comparisons) are computed in code; web search supplies time-sensitive facts.
+**Architecture:** A new section of an existing web platform (Node, MS Azure AI). A chat-based AI assistant drives the existing Sizing & Costing calculator through dedicated entry points; all derived figures (targets, levers, comparisons) are computed in code; web search supplies time-sensitive facts.
 
-**Integration:** Shares the platform's design system and mascot. The existing form, its formulas, its report and the existing chat were left untouched.
-
-<!-- TODO: implementation technologies (language, framework, AI model/provider) -->
+**Integration:** Shares the platform's design system. The existing form, its formulas, its report and the existing chat were left untouched.
 
 **Current status:** Feature-complete, handed over for code review and merge (October 2026).
 
