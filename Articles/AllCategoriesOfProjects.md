@@ -15,6 +15,21 @@ It is the actual working site, which can serve the needs of embedded developers 
 
 ![Embedded Font Generator](./38_EmbeddedFonts/Images/01_CommonView.png)
 
+
+
+## [2026 E-Planner — An AI-Guided Planner for Hydrogen Production Facilities](./41_H2D_EPlanner/Article.md)
+
+This autumn, I had an internship at a hydrogen-production planning firm. They let me do one AI-related task in the existing product and wrap one modeling part of their product with an AI-powered assistant.
+
+The platform already had a solid calculator for sizing and costing for the hydrogen production facility. It was a form. You had to know which scenario to choose, which fields to fill, and what the numbers meant.
+
+That is fine for an expert. For someone who just owns a wind farm, or runs a fleet of hydrogen trucks, or simply thinks "maybe I should make hydrogen", it is a wall. Such a user rarely knows the right question, so they cannot get the right answer.
+
+My task was to lower this barrier to entry. The user should feel comfortable from the first click, and the product should lead them step by step to a solution to their own problem — without losing a single bit of the calculator's precision.
+
+![E-Planner](./41_H2D_EPlanner/Fig-0-screenshot.png)
+
+
 ## [2026. AI Assistant](./37_LocalAI/Article.md)
 
 In this project, I'm experimenting with language models to assist me in my daily activities.
