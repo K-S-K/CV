@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 600" width="1120" height="600" role="img" aria-labelledby="t3 d3">
+  <title id="t3">Start with anything</title>
+  <desc id="d3">Nine ways a user can start, on the left, each linked by an arrow to one of the four calculator scenarios on the right. The label on each arrow shows how the assistant converts the user's words: a size click gives 23, 200 or 480 kg/h; "I want to make hydrogen" gets the three sizes offered; a 2-tonne tank is about 16.7 kg/h at a 5-day buffer; a 5 MW electrolyser about 101 kg/h; 10 buses with a week of buffer about 12.5 kg/h; 300 tonnes a year about 34 kg/h. These six go to Hydrogen demand. 40 GWh a year is about 4.6 MW on average and goes to Energy demand. A 10 million euro budget is split 70/30 and goes to Investment budget. A 7 MW wind farm goes to Own generation with solar and hydro at zero. A band at the bottom says every scenario then needs a price profile, offered as chips with a chart of each.</desc>
+
+  <style>
+    text { font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #0f172a; }
+    .h1 { font-size: 20px; font-weight: 700; }
+    .sub { font-size: 13px; fill: #475569; }
+    .col { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; fill: #475569; }
+    .say { font-size: 13px; }
+    .conv { font-size: 11.5px; fill: #047857; font-weight: 600; }
+    .sc { font-size: 15px; font-weight: 700; fill: #1d4ed8; }
+    .scs { font-size: 11.5px; fill: #475569; }
+    .t12 { font-size: 12.5px; }
+    .b { font-weight: 700; }
+  </style>
+  <defs>
+    <marker id="ah3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1120" height="600" rx="16" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="32" y="42" class="h1">Start with anything</text>
+  <text x="32" y="64" class="sub">The user brings what they actually know. The assistant converts it into a calculator input and says the assumption out loud.</text>
+
+  <text x="32" y="104" class="col">WHAT THE USER SAYS OR CLICKS</text>
+  <text x="540" y="104" class="col" text-anchor="middle">HOW THE ASSISTANT CONVERTS IT</text>
+  <text x="720" y="104" class="col">CALCULATOR SCENARIO</text>
+
+  <!-- arrows first, labels on top -->
+  <g stroke="#94a3b8" stroke-width="1.5" marker-end="url(#ah3)">
+    <line x1="392" y1="137" x2="714" y2="137"/>
+    <line x1="392" y1="179" x2="714" y2="179"/>
+    <line x1="392" y1="221" x2="714" y2="221"/>
+    <line x1="392" y1="263" x2="714" y2="263"/>
+    <line x1="392" y1="305" x2="714" y2="305"/>
+    <line x1="392" y1="347" x2="714" y2="347"/>
+    <line x1="392" y1="389" x2="714" y2="389"/>
+    <line x1="392" y1="431" x2="714" y2="431"/>
+    <line x1="392" y1="473" x2="714" y2="473"/>
+  </g>
+
+  <!-- user inputs -->
+  <g>
+    <rect x="32" y="120" width="360" height="34" rx="8" fill="#059669"/>
+    <text x="46" y="142" class="say b" style="fill:#ffffff">Click: Small · Medium · Large</text>
+    <rect x="32" y="162" width="360" height="34" rx="8" fill="#ecfdf5" stroke="#6ee7b7"/>
+    <text x="46" y="184" class="say">“I want to make hydrogen”</text>
+    <rect x="32" y="204" width="360" height="34" rx="8" fill="#ecfdf5" stroke="#6ee7b7"/>
+    <text x="46" y="226" class="say">“I have a 2-tonne tank”</text>
+    <rect x="32" y="246" width="360" height="34" rx="8" fill="#ecfdf5" stroke="#6ee7b7"/>
+    <text x="46" y="268" class="say">“We run a 5 MW electrolyser”</text>
+    <rect x="32" y="288" width="360" height="34" rx="8" fill="#ecfdf5" stroke="#6ee7b7"/>
+    <text x="46" y="310" class="say">“10 buses, a week of buffer”</text>
+    <rect x="32" y="330" width="360" height="34" rx="8" fill="#ecfdf5" stroke="#6ee7b7"/>
+    <text x="46" y="352" class="say">“300 tonnes of hydrogen a year”</text>
+    <rect x="32" y="372" width="360" height="34" rx="8" fill="#ecfdf5" stroke="#6ee7b7"/>
+    <text x="46" y="394" class="say">“We use 40 GWh a year”</text>
+    <rect x="32" y="414" width="360" height="34" rx="8" fill="#ecfdf5" stroke="#6ee7b7"/>
+    <text x="46" y="436" class="say">“Our budget is €10M”</text>
+    <rect x="32" y="456" width="360" height="34" rx="8" fill="#ecfdf5" stroke="#6ee7b7"/>
+    <text x="46" y="478" class="say">“We have a 7 MW wind farm”</text>
+  </g>
+
+  <!-- conversion pills -->
+  <g>
+    <rect x="450" y="126" width="180" height="22" rx="11" fill="#ffffff" stroke="#a7f3d0"/>
+    <text x="540" y="141" text-anchor="middle" class="conv">23 / 200 / 480 kg/h at once</text>
+    <rect x="450" y="168" width="180" height="22" rx="11" fill="#ffffff" stroke="#a7f3d0"/>
+    <text x="540" y="183" text-anchor="middle" class="conv">offers the three sizes</text>
+    <rect x="450" y="210" width="180" height="22" rx="11" fill="#ffffff" stroke="#a7f3d0"/>
+    <text x="540" y="225" text-anchor="middle" class="conv">≈ 16.7 kg/h at 5 days</text>
+    <rect x="450" y="252" width="180" height="22" rx="11" fill="#ffffff" stroke="#a7f3d0"/>
+    <text x="540" y="267" text-anchor="middle" class="conv">≈ 101 kg/h</text>
+    <rect x="450" y="294" width="180" height="22" rx="11" fill="#ffffff" stroke="#a7f3d0"/>
+    <text x="540" y="309" text-anchor="middle" class="conv">≈ 12.5 kg/h, 7-day buffer</text>
+    <rect x="450" y="336" width="180" height="22" rx="11" fill="#ffffff" stroke="#a7f3d0"/>
+    <text x="540" y="351" text-anchor="middle" class="conv">≈ 34 kg/h</text>
+    <rect x="450" y="378" width="180" height="22" rx="11" fill="#ffffff" stroke="#a7f3d0"/>
+    <text x="540" y="393" text-anchor="middle" class="conv">≈ 4.6 MW on average</text>
+    <rect x="450" y="420" width="180" height="22" rx="11" fill="#ffffff" stroke="#a7f3d0"/>
+    <text x="540" y="435" text-anchor="middle" class="conv">split 70 / 30</text>
+    <rect x="450" y="462" width="180" height="22" rx="11" fill="#ffffff" stroke="#a7f3d0"/>
+    <text x="540" y="477" text-anchor="middle" class="conv">wind 7 MW, others 0</text>
+  </g>
+
+  <!-- scenarios -->
+  <rect x="720" y="120" width="368" height="244" rx="10" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.5"/>
+  <text x="740" y="226" class="sc">Hydrogen demand</text>
+  <text x="740" y="246" class="scs">How much hydrogen per hour</text>
+  <text x="740" y="262" class="scs">the plant must deliver</text>
+  <rect x="720" y="372" width="368" height="34" rx="8" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.5"/>
+  <text x="740" y="394" class="sc">Energy demand</text>
+  <text x="880" y="394" class="scs">average power to cover</text>
+  <rect x="720" y="414" width="368" height="34" rx="8" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.5"/>
+  <text x="740" y="436" class="sc">Investment budget</text>
+  <text x="900" y="436" class="scs">electrolyser + storage</text>
+  <rect x="720" y="456" width="368" height="34" rx="8" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.5"/>
+  <text x="740" y="478" class="sc">Own generation</text>
+  <text x="880" y="478" class="scs">wind, solar, hydro</text>
+
+  <!-- price profile band -->
+  <rect x="32" y="510" width="1056" height="56" rx="10" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="48" y="533" class="t12"><tspan class="b">Then one more choice: the electricity price profile.</tspan> EEX (market), FLAT or WEEKDAY/WEEKEND — offered as chips, each with a chart of</text>
+  <text x="48" y="552" class="t12">its prices, so the user sees what they choose. A size click uses EEX straight away. A user who is unsure gets EEX, with a note that it can be changed.</text>
+  <text x="32" y="588" style="font-size:11px;fill:#475569">Conversions follow the calculator’s own formulas and defaults. The user never hears “the calculator has no such field”.</text>
+</svg>

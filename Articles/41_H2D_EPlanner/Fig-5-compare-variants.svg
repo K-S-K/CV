@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 560" width="1120" height="560" role="img" aria-labelledby="t5 d5">
+  <title id="t5">Keep variants and compare them</title>
+  <desc id="d5">The user saves variants to a strip, ticks two of them and presses Compare. The comparison splits in two. On the right, the results panel shows the numbers at once: what differs between the inputs, an "At a glance" card with a verdict line, ratios and a leader per criterion, and bars per figure. On the left, the assistant writes what the gap means for this user, using a fresh web search for rules and technology, and offers chips to go deeper into each aspect. A band says numbers stay on the right and knowledge on the left.</desc>
+
+  <style>
+    text { font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #0f172a; }
+    .h1 { font-size: 20px; font-weight: 700; }
+    .sub { font-size: 13px; fill: #475569; }
+    .cap { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; }
+    .hd { font-size: 15px; font-weight: 700; }
+    .t12 { font-size: 12.5px; }
+    .t11 { font-size: 11.5px; fill: #475569; }
+    .b { font-weight: 700; }
+    .grn { fill: #047857; }
+    .blu { fill: #1d4ed8; }
+    .vio { fill: #6d28d9; }
+    .wht { fill: #ffffff; }
+  </style>
+  <defs>
+    <marker id="ah5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1120" height="560" rx="16" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="32" y="42" class="h1">Keep variants and compare them</text>
+  <text x="32" y="64" class="sub">The user keeps only the variants they like. Two of them side by side: numbers on the right at once, meaning on the left.</text>
+
+  <!-- strip -->
+  <rect x="300" y="84" width="520" height="56" rx="12" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="316" y="104" class="cap" style="fill:#475569">SAVED VARIANTS</text>
+  <g>
+    <rect x="316" y="110" width="110" height="24" rx="6" fill="#ffffff" stroke="#1d4ed8"/>
+    <rect x="323" y="116" width="12" height="12" rx="2" fill="#1d4ed8"/>
+    <path d="M325.5 122 L328 124.5 L332.5 119.5" stroke="#ffffff" stroke-width="1.6" fill="none"/>
+    <text x="340" y="126" class="t12">Medium plant</text>
+    <rect x="432" y="110" width="104" height="24" rx="6" fill="#ffffff" stroke="#1d4ed8"/>
+    <rect x="439" y="116" width="12" height="12" rx="2" fill="#1d4ed8"/>
+    <path d="M441.5 122 L444 124.5 L448.5 119.5" stroke="#ffffff" stroke-width="1.6" fill="none"/>
+    <text x="456" y="126" class="t12">Big storage</text>
+    <rect x="542" y="110" width="94" height="24" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+    <rect x="549" y="116" width="12" height="12" rx="2" fill="#ffffff" stroke="#94a3b8"/>
+    <text x="566" y="126" class="t12">Flat plant</text>
+    <rect x="726" y="106" width="80" height="28" rx="7" fill="#1d4ed8"/>
+    <text x="766" y="125" text-anchor="middle" class="t12 b wht" style="fill:#ffffff">Compare</text>
+  </g>
+
+  <g stroke="#64748b" stroke-width="1.5" fill="none" marker-end="url(#ah5)">
+    <path d="M520 140 C520 160 300 150 280 176"/>
+    <path d="M600 140 C600 160 820 150 840 176"/>
+  </g>
+
+  <!-- left: assistant -->
+  <rect x="32" y="180" width="500" height="290" rx="12" fill="#ecfdf5" stroke="#6ee7b7"/>
+  <text x="50" y="204" class="cap grn">ASSISTANT · LEFT</text>
+  <text x="50" y="226" class="hd">What the gap means for this user</text>
+  <rect x="50" y="240" width="464" height="128" rx="10" fill="#ffffff" stroke="#a7f3d0"/>
+  <text x="64" y="262" class="t12"><tspan class="b">Verdict:</tspan> Big storage makes 2.4× the hydrogen for 3.3×</text>
+  <text x="64" y="280" class="t12">the investment, at the same cost per kg.</text>
+  <text x="64" y="304" class="t12">• <tspan class="b">Per the search</tspan> — rules for a larger tank at this site…</text>
+  <text x="64" y="324" class="t12">• <tspan class="b">Per the search</tspan> — which electrolyser type fits…</text>
+  <text x="64" y="350" class="t11">Facts that change come from a fresh web search, attributed.</text>
+  <g>
+    <rect x="50" y="380" width="128" height="26" rx="13" fill="#ffffff" stroke="#059669"/>
+    <text x="114" y="397" text-anchor="middle" style="font-size:11.5px" class="grn">Grid connection?</text>
+    <rect x="186" y="380" width="128" height="26" rx="13" fill="#ffffff" stroke="#059669"/>
+    <text x="250" y="397" text-anchor="middle" style="font-size:11.5px" class="grn">Permits for 92 t?</text>
+    <rect x="322" y="380" width="128" height="26" rx="13" fill="#ffffff" stroke="#059669"/>
+    <text x="386" y="397" text-anchor="middle" style="font-size:11.5px" class="grn">Price risk?</text>
+  </g>
+  <text x="50" y="430" class="t11">Each chip opens one aspect of this comparison in depth.</text>
+  <text x="50" y="448" class="t11">Starts automatically on Compare; follow-up questions</text>
+  <text x="50" y="464" class="t11">about "this comparison" are understood.</text>
+
+  <!-- right: panel -->
+  <rect x="588" y="180" width="500" height="290" rx="12" fill="#eff6ff" stroke="#93c5fd"/>
+  <text x="606" y="204" class="cap blu">RESULTS PANEL · RIGHT</text>
+  <text x="606" y="226" class="hd">The numbers, side by side, at once</text>
+  <rect x="606" y="240" width="464" height="40" rx="8" fill="#ffffff" stroke="#bfdbfe"/>
+  <text x="618" y="258" class="t11">What differs</text>
+  <text x="618" y="274" class="t12">Demand 200 → 480 kg/h · Buffer 5 → 8 days</text>
+  <rect x="606" y="288" width="464" height="64" rx="8" fill="#ffffff" stroke="#bfdbfe"/>
+  <text x="618" y="306" class="t11">At a glance</text>
+  <text x="618" y="324" class="t12 b">A trade-off: each variant leads on some figures.</text>
+  <text x="618" y="342" class="t12">Big storage vs Medium plant: H₂ ×2.4 · CapEx ×3.3 · cost/kg Same</text>
+  <!-- bars -->
+  <g>
+    <text x="606" y="376" class="t11">Total CapEx</text>
+    <rect x="720" y="366" width="80" height="10" rx="2" fill="#93c5fd"/>
+    <rect x="720" y="378" width="264" height="10" rx="2" fill="#1e3a8a"/>
+    <text x="992" y="387" class="t11">×3.3</text>
+    <text x="606" y="412" class="t11">H₂ produced</text>
+    <rect x="720" y="402" width="110" height="10" rx="2" fill="#93c5fd"/>
+    <rect x="720" y="414" width="264" height="10" rx="2" fill="#1e3a8a"/>
+    <text x="992" y="423" class="t11">×2.4</text>
+    <text x="606" y="448" class="t11">Cost of H₂</text>
+    <rect x="720" y="438" width="140" height="10" rx="2" fill="#93c5fd"/>
+    <rect x="720" y="450" width="140" height="10" rx="2" fill="#1e3a8a"/>
+    <text x="868" y="459" class="t11">Same</text>
+  </g>
+  <g>
+    <rect x="1010" y="440" width="10" height="10" rx="2" fill="#93c5fd"/>
+    <text x="1024" y="449" style="font-size:10.5px;fill:#475569">A</text>
+    <rect x="1040" y="440" width="10" height="10" rx="2" fill="#1e3a8a"/>
+    <text x="1054" y="449" style="font-size:10.5px;fill:#475569">B</text>
+  </g>
+
+  <rect x="32" y="488" width="1056" height="44" rx="10" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="48" y="515" class="t12"><tspan class="b">Calculation on the right, knowledge on the left.</tspan> The panel's summary is worked out from the two results, never by the AI; rules, permits and suppliers stay in the chat.</text>
+  <text x="32" y="550" style="font-size:11px;fill:#475569">Illustrative: "Medium plant" is 200 kg/h with a 5-day buffer, "Big storage" 480 kg/h with 8 days, both on EEX. Up to 10 variants, kept in this browser.</text>
+</svg>

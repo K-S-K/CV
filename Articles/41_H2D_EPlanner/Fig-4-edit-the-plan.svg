@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 560" width="1120" height="560" role="img" aria-labelledby="t4 d4">
+  <title id="t4">Change the plan like a configurator</title>
+  <desc id="d4">Three ways to change the plan on the results panel. A: change an input, for example the storage buffer from 5 to 3 days. B: set a target on a result, for example total CapEx of 20 million euros; the plant is resized from 200 to 320 kg/h and the target is reached within 0.01 percent. C: set a target on the cost of hydrogen; since size does not move it, the panel offers the levers that do: efficiency, electricity surcharge or another price profile, each with its exact figure, and marks the ones out of reach. All three are staged, then applied together in one recalculation, and the updated plan shows each figure's change.</desc>
+
+  <style>
+    text { font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #0f172a; }
+    .h1 { font-size: 20px; font-weight: 700; }
+    .sub { font-size: 13px; fill: #475569; }
+    .hd { font-size: 15px; font-weight: 700; }
+    .t13 { font-size: 13px; }
+    .t12 { font-size: 12.5px; }
+    .t11 { font-size: 11.5px; fill: #475569; }
+    .b { font-weight: 700; }
+    .blu { fill: #1d4ed8; }
+    .amb { fill: #92400e; }
+    .vio { fill: #6d28d9; }
+    .dis { fill: #64748b; }
+    .wht { fill: #ffffff; }
+  </style>
+  <defs>
+    <marker id="ah4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1120" height="560" rx="16" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="32" y="42" class="h1">Change the plan like a configurator</text>
+  <text x="32" y="64" class="sub">Three ways to change it. Every change is staged first and applied together, so the recalculation runs once.</text>
+
+  <!-- A -->
+  <rect x="32" y="86" width="330" height="244" rx="12" fill="#eff6ff" stroke="#93c5fd"/>
+  <text x="50" y="114" class="hd blu">A · Change an input</text>
+  <text x="50" y="136" class="t12">Click a value on the plant schematic,</text>
+  <text x="50" y="153" class="t12">type the new one, confirm.</text>
+  <rect x="50" y="170" width="294" height="34" rx="8" fill="#ffffff" stroke="#d97706"/>
+  <text x="62" y="192" class="t12">Storage buffer</text>
+  <text x="332" y="192" text-anchor="end" class="t12 b amb">5 → 3 days</text>
+  <rect x="50" y="212" width="294" height="34" rx="8" fill="#ffffff" stroke="#d97706"/>
+  <text x="62" y="234" class="t12">Electrolyser efficiency</text>
+  <text x="332" y="234" text-anchor="end" class="t12 b amb">75 → 70 %</text>
+  <text x="50" y="272" class="t11">Any input of the scenario: price profile,</text>
+  <text x="50" y="288" class="t11">CapEx rates, load, buffers, wind, solar, hydro.</text>
+  <text x="50" y="304" class="t11">Each staged value can be undone on its own.</text>
+
+  <!-- B -->
+  <rect x="395" y="86" width="330" height="244" rx="12" fill="#fffbeb" stroke="#fcd34d"/>
+  <text x="413" y="114" class="hd amb">B · Set a target on a result</text>
+  <text x="413" y="136" class="t12">A pencil on Total CapEx, Electricity cost,</text>
+  <text x="413" y="153" class="t12">H₂ produced and CO₂ avoided.</text>
+  <rect x="413" y="170" width="294" height="34" rx="8" fill="#ffffff" stroke="#d97706"/>
+  <text x="425" y="192" class="t12">Total CapEx</text>
+  <text x="695" y="192" text-anchor="end" class="t12 b amb">€12.5M → target €20M</text>
+  <path d="M560 206 V218" stroke="#64748b" stroke-width="1.5" marker-end="url(#ah4)"/>
+  <rect x="413" y="222" width="294" height="34" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="425" y="244" class="t12">Plant resized</text>
+  <text x="695" y="244" text-anchor="end" class="t12 b">200 → 320 kg/h</text>
+  <text x="413" y="276" class="t11">Reached €20.0M, within 0.01 %. Technology</text>
+  <text x="413" y="292" class="t11">and prices stay as they are — only the size</text>
+  <text x="413" y="308" class="t11">changes. One target at a time.</text>
+
+  <!-- C -->
+  <rect x="758" y="86" width="330" height="244" rx="12" fill="#f5f3ff" stroke="#c4b5fd"/>
+  <text x="776" y="114" class="hd vio">C · Target the cost of H₂</text>
+  <text x="776" y="136" class="t12">Size does not move it, so the panel asks</text>
+  <text x="776" y="153" class="t12">how: €4.65 → €4.00/kg?</text>
+  <rect x="776" y="166" width="294" height="28" rx="7" fill="#ffffff" stroke="#d97706"/>
+  <text x="788" y="185" class="t12">Efficiency 75 → 87 %</text>
+  <text x="1058" y="185" text-anchor="end" style="font-size:11px" class="amb">⚠ above today's best</text>
+  <rect x="776" y="200" width="294" height="28" rx="7" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <text x="788" y="219" class="t12 dis">Surcharge</text>
+  <text x="1058" y="219" text-anchor="end" style="font-size:11px" class="dis">would need below 0 %</text>
+  <rect x="776" y="234" width="294" height="28" rx="7" fill="#ffffff" stroke="#7c3aed"/>
+  <text x="788" y="253" class="t12">FLAT price profile</text>
+  <text x="1058" y="253" text-anchor="end" class="t12 b vio">€1.20/kg ✓</text>
+  <rect x="776" y="268" width="294" height="28" rx="7" fill="#ffffff" stroke="#7c3aed"/>
+  <text x="788" y="287" class="t12">WEEKDAY/WEEKEND profile</text>
+  <text x="1058" y="287" text-anchor="end" class="t12 b vio">€1.13/kg ✓</text>
+  <text x="776" y="316" class="t11">Exact figures, shown at once; the user picks.</text>
+
+  <!-- converge -->
+  <g stroke="#64748b" stroke-width="1.5" fill="none" marker-end="url(#ah4)">
+    <path d="M197 330 C197 352 220 352 220 372"/>
+    <path d="M560 330 C560 356 300 350 280 372"/>
+    <path d="M923 330 C923 362 360 346 340 372"/>
+  </g>
+
+  <!-- bottom flow -->
+  <rect x="32" y="376" width="430" height="64" rx="12" fill="#fffbeb" stroke="#d97706"/>
+  <text x="50" y="400" class="t13 b amb">3 changes not applied yet</text>
+  <text x="50" y="420" class="t11">The plan stays on screen, faded, until applied</text>
+  <rect x="316" y="392" width="128" height="30" rx="8" fill="#1d4ed8"/>
+  <text x="380" y="412" text-anchor="middle" class="t12 b wht" style="fill:#ffffff">Apply changes</text>
+
+  <path d="M462 408 H508" stroke="#64748b" stroke-width="1.5" marker-end="url(#ah4)"/>
+  <rect x="512" y="376" width="250" height="64" rx="12" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="530" y="402" class="t13 b">One recalculation</text>
+  <text x="530" y="422" class="t11">by the same calculator as the form</text>
+
+  <path d="M762 408 H808" stroke="#64748b" stroke-width="1.5" marker-end="url(#ah4)"/>
+  <rect x="812" y="376" width="276" height="64" rx="12" fill="#eff6ff" stroke="#93c5fd"/>
+  <text x="830" y="402" class="t13 b">Updated plan</text>
+  <text x="830" y="422" class="t11">Each figure shows its change vs before</text>
+
+  <rect x="32" y="462" width="1056" height="64" rx="10" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="48" y="487" class="t12"><tspan class="b">Why stage first:</tspan> the calculator answers in seconds, but the round trip through the assistant takes from under a minute to a few minutes.</text>
+  <text x="48" y="507" class="t12">So the user sets everything they want, then waits once. A single quick change still takes one action: Ctrl/⌘+Enter stages and applies it.</text>
+  <text x="32" y="548" style="font-size:11px;fill:#475569">Figures: the Medium example (200 kg/h, EEX). Targets and cost options are computed exactly, not estimated by the AI.</text>
+</svg>

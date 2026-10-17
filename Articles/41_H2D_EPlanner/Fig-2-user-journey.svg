@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 470" width="1120" height="470" role="img" aria-labelledby="t2 d2">
+  <title id="t2">The user's path through E-Planner</title>
+  <desc id="d2">Five stages from left to right: start, first result, tune, keep and compare, decide and plan. For each stage, the top lane shows what the assistant on the left does and the bottom lane shows what the results panel on the right does. A band at the bottom says both sides always refer to the same variant.</desc>
+
+  <style>
+    text { font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #0f172a; }
+    .h1 { font-size: 20px; font-weight: 700; }
+    .sub { font-size: 13px; fill: #475569; }
+    .stage { font-size: 14px; font-weight: 700; fill: #ffffff; }
+    .num { font-size: 11px; font-weight: 700; fill: #cbd5e1; letter-spacing: 0.06em; }
+    .lane { font-size: 13px; font-weight: 700; }
+    .lane2 { font-size: 11px; fill: #475569; }
+    .t12 { font-size: 12.5px; }
+    .mut { fill: #475569; font-style: italic; }
+    .grn { fill: #047857; }
+    .blu { fill: #1d4ed8; }
+  </style>
+
+  <rect x="0" y="0" width="1120" height="470" rx="16" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="32" y="42" class="h1">The user's path</text>
+  <text x="32" y="64" class="sub">From a first click to a plan the user understands. Each stage happens on both sides of the screen at once.</text>
+
+  <!-- stage headers -->
+  <g>
+    <path d="M184 86 H352 L364 104 L352 122 H184 Z" fill="#0f172a"/>
+    <text x="196" y="101" class="num" style="fill:#cbd5e1">STAGE 1</text><text x="196" y="117" class="stage" style="fill:#ffffff">Start</text>
+    <path d="M368 86 H536 L548 104 L536 122 H368 L380 104 Z" fill="#1e293b"/>
+    <text x="392" y="101" class="num" style="fill:#cbd5e1">STAGE 2</text><text x="392" y="117" class="stage" style="fill:#ffffff">First result</text>
+    <path d="M552 86 H720 L732 104 L720 122 H552 L564 104 Z" fill="#334155"/>
+    <text x="576" y="101" class="num" style="fill:#cbd5e1">STAGE 3</text><text x="576" y="117" class="stage" style="fill:#ffffff">Tune the plan</text>
+    <path d="M736 86 H904 L916 104 L904 122 H736 L748 104 Z" fill="#1e293b"/>
+    <text x="760" y="101" class="num" style="fill:#cbd5e1">STAGE 4</text><text x="760" y="117" class="stage" style="fill:#ffffff">Keep and compare</text>
+    <path d="M920 86 H1096 V122 H920 L932 104 Z" fill="#0f172a"/>
+    <text x="944" y="101" class="num" style="fill:#cbd5e1">STAGE 5</text><text x="944" y="117" class="stage" style="fill:#ffffff">Decide and plan</text>
+  </g>
+
+  <!-- lane: assistant -->
+  <rect x="32" y="134" width="1064" height="128" rx="10" fill="#ecfdf5" stroke="#6ee7b7"/>
+  <text x="46" y="160" class="lane grn">Assistant</text>
+  <text x="46" y="178" class="lane2">left side:</text>
+  <text x="46" y="193" class="lane2">talks, explains,</text>
+  <text x="46" y="208" class="lane2">guides</text>
+  <g>
+    <rect x="184" y="146" width="168" height="104" rx="8" fill="#ffffff" stroke="#a7f3d0"/>
+    <text x="196" y="168" class="t12">Pick Small, Medium or</text>
+    <text x="196" y="186" class="t12">Large — or say what you</text>
+    <text x="196" y="204" class="t12">have: a tank, a fleet,</text>
+    <text x="196" y="222" class="t12">a budget, a wind farm</text>
+
+    <rect x="368" y="146" width="168" height="104" rx="8" fill="#ffffff" stroke="#a7f3d0"/>
+    <text x="380" y="168" class="t12">One short sentence on</text>
+    <text x="380" y="186" class="t12">what matters most, then</text>
+    <text x="380" y="204" class="t12">three next steps as</text>
+    <text x="380" y="222" class="t12">clickable chips</text>
+
+    <rect x="552" y="146" width="168" height="104" rx="8" fill="#ffffff" stroke="#a7f3d0"/>
+    <text x="564" y="168" class="t12">Decides small things</text>
+    <text x="564" y="186" class="t12">itself and says so; asks</text>
+    <text x="564" y="204" class="t12">only what it cannot</text>
+    <text x="564" y="222" class="t12">work out</text>
+
+    <rect x="736" y="146" width="168" height="104" rx="8" fill="#ffffff" stroke="#a7f3d0"/>
+    <text x="748" y="168" class="t12">Explains what the gap</text>
+    <text x="748" y="186" class="t12">means: technology,</text>
+    <text x="748" y="204" class="t12">rules, risks — with</text>
+    <text x="748" y="222" class="t12">sources</text>
+
+    <rect x="920" y="146" width="168" height="104" rx="8" fill="#ffffff" stroke="#a7f3d0"/>
+    <text x="932" y="168" class="t12">Certificates, THG quota,</text>
+    <text x="932" y="186" class="t12">permits, site, suppliers</text>
+    <text x="932" y="204" class="t12">— for this plant, in</text>
+    <text x="932" y="222" class="t12">Germany by default</text>
+  </g>
+
+  <!-- lane: panel -->
+  <rect x="32" y="274" width="1064" height="128" rx="10" fill="#eff6ff" stroke="#93c5fd"/>
+  <text x="46" y="300" class="lane blu">Results panel</text>
+  <text x="46" y="318" class="lane2">right side:</text>
+  <text x="46" y="333" class="lane2">calculates, shows,</text>
+  <text x="46" y="348" class="lane2">takes edits</text>
+  <g>
+    <rect x="184" y="286" width="168" height="104" rx="8" fill="#ffffff" stroke="#bfdbfe"/>
+    <text x="196" y="308" class="t12 mut">Fills in with the first</text>
+    <text x="196" y="326" class="t12 mut">calculation — a size</text>
+    <text x="196" y="344" class="t12 mut">click gives one at once</text>
+
+    <rect x="368" y="286" width="168" height="104" rx="8" fill="#ffffff" stroke="#bfdbfe"/>
+    <text x="380" y="308" class="t12">Plant schematic, five</text>
+    <text x="380" y="326" class="t12">key figures, price and</text>
+    <text x="380" y="344" class="t12">set-point chart, market</text>
+    <text x="380" y="362" class="t12">reference, full table</text>
+
+    <rect x="552" y="286" width="168" height="104" rx="8" fill="#ffffff" stroke="#bfdbfe"/>
+    <text x="564" y="308" class="t12">Edit values or set a</text>
+    <text x="564" y="326" class="t12">target; stage several,</text>
+    <text x="564" y="344" class="t12">apply once; changes</text>
+    <text x="564" y="362" class="t12">marked on the figures</text>
+
+    <rect x="736" y="286" width="168" height="104" rx="8" fill="#ffffff" stroke="#bfdbfe"/>
+    <text x="748" y="308" class="t12">Saved variants strip;</text>
+    <text x="748" y="326" class="t12">two side by side with an</text>
+    <text x="748" y="344" class="t12">"At a glance" summary</text>
+
+    <rect x="920" y="286" width="168" height="104" rx="8" fill="#ffffff" stroke="#bfdbfe"/>
+    <text x="932" y="308" class="t12">The chosen variant stays</text>
+    <text x="932" y="326" class="t12">saved and reopens with</text>
+    <text x="932" y="344" class="t12">one click</text>
+  </g>
+
+  <!-- shared context band -->
+  <rect x="32" y="414" width="1064" height="40" rx="10" fill="#f8fafc" stroke="#cbd5e1"/>
+  <g stroke="#0f172a" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M54 426 V442 M49 431 L54 426 L59 431"/>
+    <path d="M66 442 V426 M61 437 L66 442 L71 437"/>
+  </g>
+  <text x="84" y="439" class="t12"><tspan font-weight="700">Both sides always mean the same variant.</tspan> "This one" in the chat is whatever the panel shows — a fresh result, a reopened saved variant, or a comparison.</text>
+</svg>

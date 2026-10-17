@@ -1,0 +1,209 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" width="960" height="620" role="img" aria-labelledby="t1 d1">
+  <title id="t1">E-Planner: one screen, two sides</title>
+  <desc id="d1">A schematic of the E-Planner screen. A new E-Planner button sits in the left menu. The left column is the assistant: a one-line greeting with a Small / Medium / Large size picker, the user's pick, a short reply with three next-step chips, and project-question chips. The right column is the results panel: a strip of saved variants with a Compare button, the variant name with a "Changed — not saved" badge, a plant schematic from power through electrolyser and storage to offtake with two staged edits, five key figures with pencils, price and market charts, and a bar with "Discard changes" and "Apply changes". Six numbered callouts explain the main features.</desc>
+
+  <style>
+    text { font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #0f172a; }
+    .h1 { font-size: 20px; font-weight: 700; }
+    .sub { font-size: 13px; fill: #475569; }
+    .cap { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; }
+    .ttl { font-size: 14px; font-weight: 600; }
+    .t12 { font-size: 12px; }
+    .t11 { font-size: 11px; }
+    .t10 { font-size: 10px; fill: #475569; }
+    .lbl { font-size: 9.5px; font-weight: 700; letter-spacing: 0.06em; fill: #475569; }
+    .val { font-size: 14px; font-weight: 700; }
+    .mut { fill: #475569; }
+    .grn { fill: #047857; }
+    .blu { fill: #1d4ed8; }
+    .amb { fill: #92400e; }
+    .wht { fill: #ffffff; }
+    .b { font-weight: 700; }
+    .stale { opacity: 0.55; }
+  </style>
+
+  <rect x="0" y="0" width="960" height="620" rx="16" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="32" y="42" class="h1">E-Planner: one screen, two sides</text>
+  <text x="32" y="64" class="sub">The left side talks, explains and guides. The right side calculates and shows the plan, which the user edits directly.</text>
+
+  <!-- app window -->
+  <rect x="32" y="84" width="896" height="420" rx="12" fill="#f8fafc" stroke="#cbd5e1"/>
+  <!-- nav rail -->
+  <path d="M44 84 H80 V504 H44 A12 12 0 0 1 32 492 V96 A12 12 0 0 1 44 84 Z" fill="#e2e8f0"/>
+  <rect x="44" y="104" width="24" height="24" rx="6" fill="#cbd5e1"/>
+  <rect x="44" y="140" width="24" height="24" rx="6" fill="#cbd5e1"/>
+  <rect x="44" y="176" width="24" height="24" rx="6" fill="#cbd5e1"/>
+  <rect x="42" y="210" width="28" height="28" rx="7" fill="#059669"/>
+  <g fill="#ffffff"><circle cx="50" cy="218" r="2"/><circle cx="56" cy="218" r="2"/><circle cx="62" cy="218" r="2"/><circle cx="50" cy="224" r="2"/><circle cx="56" cy="224" r="2"/><circle cx="62" cy="224" r="2"/><circle cx="50" cy="230" r="2"/><circle cx="56" cy="230" r="2"/><circle cx="62" cy="230" r="2"/></g>
+  <text x="56" y="252" text-anchor="middle" style="font-size:9px;font-weight:700" class="grn">E-Planner</text>
+
+  <!-- chat column -->
+  <rect x="92" y="96" width="300" height="396" rx="10" fill="#ffffff" stroke="#6ee7b7"/>
+  <text x="104" y="118" class="cap grn">ASSISTANT</text>
+  <text x="104" y="136" class="ttl">Knowledge and guidance</text>
+
+  <rect x="104" y="148" width="264" height="48" rx="10" fill="#ecfdf5"/>
+  <text x="116" y="168" class="t12">Start with anything you have — a tank,</text>
+  <text x="116" y="185" class="t12">a machine, a budget — or pick a size:</text>
+
+  <rect x="104" y="204" width="84" height="30" rx="8" fill="#ffffff" stroke="#059669"/>
+  <text x="146" y="224" text-anchor="middle" class="t12 grn b">Small</text>
+  <rect x="194" y="204" width="84" height="30" rx="8" fill="#059669"/>
+  <text x="236" y="224" text-anchor="middle" class="t12 wht b" style="fill:#ffffff">Medium</text>
+  <rect x="284" y="204" width="84" height="30" rx="8" fill="#ffffff" stroke="#059669"/>
+  <text x="326" y="224" text-anchor="middle" class="t12 grn b">Large</text>
+
+  <rect x="300" y="244" width="80" height="26" rx="10" fill="#047857"/>
+  <text x="340" y="261" text-anchor="middle" class="t12 wht" style="fill:#ffffff">Medium</text>
+
+  <rect x="104" y="280" width="264" height="48" rx="10" fill="#ecfdf5"/>
+  <text x="116" y="300" class="t12">A Medium plant needs about 10 MW of</text>
+  <text x="116" y="317" class="t12">electrolysis. Where shall we go next?</text>
+
+  <rect x="104" y="336" width="84" height="24" rx="12" fill="#ffffff" stroke="#059669"/>
+  <text x="146" y="352" text-anchor="middle" class="t11 grn">3-day buffer?</text>
+  <rect x="194" y="336" width="62" height="24" rx="12" fill="#ffffff" stroke="#059669"/>
+  <text x="225" y="352" text-anchor="middle" class="t11 grn">On FLAT?</text>
+  <rect x="262" y="336" width="112" height="24" rx="12" fill="#ffffff" stroke="#059669"/>
+  <text x="318" y="352" text-anchor="middle" class="t11 grn">Compare with Large</text>
+
+  <text x="104" y="384" class="t10">Ask about your project:</text>
+  <rect x="104" y="392" width="100" height="24" rx="12" fill="#f5f3ff" stroke="#7c3aed"/>
+  <text x="154" y="408" text-anchor="middle" class="t11" style="fill:#6d28d9">Certificate value</text>
+  <rect x="210" y="392" width="70" height="24" rx="12" fill="#f5f3ff" stroke="#7c3aed"/>
+  <text x="245" y="408" text-anchor="middle" class="t11" style="fill:#6d28d9">THG quota</text>
+  <rect x="286" y="392" width="90" height="24" rx="12" fill="#f5f3ff" stroke="#7c3aed"/>
+  <text x="331" y="408" text-anchor="middle" class="t11" style="fill:#6d28d9">Manufacturers</text>
+
+  <rect x="104" y="444" width="276" height="36" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="118" y="467" class="t12 mut">Ask anything…</text>
+  <circle cx="362" cy="462" r="11" fill="#059669"/>
+  <path d="M357 462 H366 M362 457 L367 462 L362 467" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- results panel -->
+  <rect x="404" y="96" width="512" height="396" rx="10" fill="#ffffff" stroke="#93c5fd"/>
+  <text x="418" y="118" class="cap blu">RESULTS PANEL</text>
+  <text x="418" y="136" class="ttl">Configuration and results</text>
+
+  <text x="418" y="158" class="t10">Saved variants</text>
+  <rect x="418" y="164" width="104" height="30" rx="7" fill="#eff6ff" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="470" y="183" text-anchor="middle" class="t11 b">Medium plant</text>
+  <rect x="528" y="164" width="104" height="30" rx="7" fill="#ffffff" stroke="#93c5fd"/>
+  <rect x="536" y="173" width="12" height="12" rx="2" fill="#1d4ed8"/>
+  <path d="M538.5 179 L541 181.5 L545.5 176.5" stroke="#ffffff" stroke-width="1.6" fill="none"/>
+  <text x="590" y="183" text-anchor="middle" class="t11">Big storage</text>
+  <rect x="638" y="164" width="104" height="30" rx="7" fill="#ffffff" stroke="#93c5fd"/>
+  <rect x="646" y="173" width="12" height="12" rx="2" fill="#1d4ed8"/>
+  <path d="M648.5 179 L651 181.5 L655.5 176.5" stroke="#ffffff" stroke-width="1.6" fill="none"/>
+  <text x="700" y="183" text-anchor="middle" class="t11">Flat plant</text>
+  <rect x="748" y="166" width="74" height="26" rx="7" fill="#1d4ed8"/>
+  <text x="785" y="183" text-anchor="middle" class="t11 wht b" style="fill:#ffffff">Compare</text>
+
+  <text x="418" y="220" style="font-size:15px;font-weight:700">Medium plant ✎</text>
+  <rect x="540" y="206" width="134" height="20" rx="10" fill="#fffbeb" stroke="#d97706"/>
+  <text x="607" y="220" text-anchor="middle" class="t10 amb b" style="fill:#92400e">Changed — not saved</text>
+
+  <!-- schematic -->
+  <rect x="418" y="234" width="108" height="56" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="430" y="252" class="lbl">POWER</text>
+  <text x="430" y="272" class="val">Grid · EEX</text>
+  <rect x="542" y="234" width="108" height="56" rx="8" fill="#fffbeb" stroke="#d97706"/>
+  <text x="554" y="252" class="lbl">ELECTROLYSER</text>
+  <text x="554" y="270" class="val">9.87 MW</text>
+  <text x="554" y="284" class="t10 amb" style="fill:#92400e">efficiency 75→70%</text>
+  <rect x="666" y="234" width="108" height="56" rx="8" fill="#fffbeb" stroke="#d97706"/>
+  <text x="678" y="252" class="lbl">STORAGE</text>
+  <text x="678" y="270" class="val">24 t</text>
+  <text x="678" y="284" class="t10 amb" style="fill:#92400e">buffer 5 → 3 days</text>
+  <rect x="790" y="234" width="108" height="56" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="802" y="252" class="lbl">OFFTAKE</text>
+  <text x="802" y="272" class="val">200 kg/h</text>
+  <g stroke="#64748b" stroke-width="1.5" fill="none">
+    <path d="M527 262 H539 M535 258 L539 262 L535 266"/>
+    <path d="M651 262 H663 M659 258 L663 262 L659 266"/>
+    <path d="M775 262 H787 M783 258 L787 262 L783 266"/>
+  </g>
+
+  <!-- KPI row (faded: out of date until applied) -->
+  <g class="stale">
+    <rect x="418" y="300" width="90" height="54" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="426" y="317" class="t10">Total CapEx</text>
+    <text x="426" y="342" class="val">€12.5M</text>
+    <rect x="517" y="300" width="90" height="54" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="525" y="317" class="t10">Electricity</text>
+    <text x="525" y="342" class="val">€301k/mo</text>
+    <rect x="616" y="300" width="90" height="54" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="624" y="317" class="t10">H₂ produced</text>
+    <text x="624" y="342" class="val">64.7 t/mo</text>
+    <rect x="715" y="300" width="90" height="54" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="723" y="317" class="t10">CO₂ avoided</text>
+    <text x="723" y="342" class="val">555 t/mo</text>
+    <rect x="814" y="300" width="90" height="54" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="822" y="317" class="t10">Cost of H₂</text>
+    <text x="822" y="342" class="val">€4.65/kg</text>
+  </g>
+  <g class="t11 blu">
+    <text x="497" y="317" class="t11 blu">✎</text>
+    <text x="596" y="317" class="t11 blu">✎</text>
+    <text x="695" y="317" class="t11 blu">✎</text>
+    <text x="794" y="317" class="t11 blu">✎</text>
+    <text x="893" y="317" class="t11 blu">✎</text>
+  </g>
+
+  <!-- charts (faded) -->
+  <g class="stale">
+    <rect x="418" y="364" width="300" height="68" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="426" y="379" class="t10">Electricity price and electrolyser set point</text>
+    <g fill="#93c5fd">
+      <rect x="430" y="404" width="12" height="22"/><rect x="448" y="396" width="12" height="30"/>
+      <rect x="466" y="410" width="12" height="16"/><rect x="484" y="390" width="12" height="36"/>
+      <rect x="502" y="400" width="12" height="26"/><rect x="520" y="414" width="12" height="12"/>
+      <rect x="538" y="394" width="12" height="32"/><rect x="556" y="406" width="12" height="20"/>
+      <rect x="574" y="398" width="12" height="28"/><rect x="592" y="412" width="12" height="14"/>
+      <rect x="610" y="392" width="12" height="34"/><rect x="628" y="402" width="12" height="24"/>
+      <rect x="646" y="408" width="12" height="18"/><rect x="664" y="396" width="12" height="30"/>
+      <rect x="682" y="404" width="12" height="22"/>
+    </g>
+    <polyline points="436,394 454,402 472,390 490,410 508,398 526,388 544,408 562,396 580,400 598,388 616,412 634,398 652,392 670,404 688,396" fill="none" stroke="#059669" stroke-width="2"/>
+    <rect x="727" y="364" width="175" height="68" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="735" y="379" class="t10">EEX Hydrix — market reference</text>
+    <line x1="737" y1="408" x2="892" y2="408" stroke="#64748b" stroke-width="2"/>
+    <text x="737" y="425" class="t10">not part of this calculation</text>
+  </g>
+
+  <!-- pending bar -->
+  <rect x="418" y="442" width="484" height="38" rx="9" fill="#fffbeb" stroke="#d97706"/>
+  <text x="432" y="466" class="t12 b" style="fill:#92400e">2 changes not applied yet</text>
+  <rect x="686" y="449" width="102" height="24" rx="7" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="737" y="465" text-anchor="middle" class="t11">Discard changes</text>
+  <rect x="794" y="449" width="100" height="24" rx="7" fill="#1d4ed8"/>
+  <text x="844" y="465" text-anchor="middle" class="t11 wht b" style="fill:#ffffff">Apply changes</text>
+
+  <!-- callout markers -->
+  <g class="t11 wht b">
+    <circle cx="378" cy="204" r="10" fill="#0f172a"/><text x="378" y="208" text-anchor="middle" class="t11 wht b" style="fill:#ffffff">1</text>
+    <circle cx="382" cy="336" r="10" fill="#0f172a"/><text x="382" y="340" text-anchor="middle" class="t11 wht b" style="fill:#ffffff">2</text>
+    <circle cx="382" cy="392" r="10" fill="#0f172a"/><text x="382" y="396" text-anchor="middle" class="t11 wht b" style="fill:#ffffff">3</text>
+    <circle cx="832" cy="166" r="10" fill="#0f172a"/><text x="832" y="170" text-anchor="middle" class="t11 wht b" style="fill:#ffffff">4</text>
+    <circle cx="906" cy="300" r="10" fill="#0f172a"/><text x="906" y="304" text-anchor="middle" class="t11 wht b" style="fill:#ffffff">5</text>
+    <circle cx="906" cy="442" r="10" fill="#0f172a"/><text x="906" y="446" text-anchor="middle" class="t11 wht b" style="fill:#ffffff">6</text>
+  </g>
+
+  <!-- legend -->
+  <g>
+    <circle cx="42" cy="530" r="10" fill="#0f172a"/><text x="42" y="534" text-anchor="middle" class="t11 wht b" style="fill:#ffffff">1</text>
+    <text x="60" y="534" class="t12">One click on a size gives a full example</text>
+    <circle cx="352" cy="530" r="10" fill="#0f172a"/><text x="352" y="534" text-anchor="middle" class="t11 wht b" style="fill:#ffffff">2</text>
+    <text x="370" y="534" class="t12">Every choice is a clickable chip</text>
+    <circle cx="662" cy="530" r="10" fill="#0f172a"/><text x="662" y="534" text-anchor="middle" class="t11 wht b" style="fill:#ffffff">3</text>
+    <text x="680" y="534" class="t12">Project questions: permits, certificates</text>
+
+    <circle cx="42" cy="560" r="10" fill="#0f172a"/><text x="42" y="564" text-anchor="middle" class="t11 wht b" style="fill:#ffffff">4</text>
+    <text x="60" y="564" class="t12">Keep variants, reopen them, compare two</text>
+    <circle cx="352" cy="560" r="10" fill="#0f172a"/><text x="352" y="564" text-anchor="middle" class="t11 wht b" style="fill:#ffffff">5</text>
+    <text x="370" y="564" class="t12">Edit any value or set a target on a result</text>
+    <circle cx="662" cy="560" r="10" fill="#0f172a"/><text x="662" y="564" text-anchor="middle" class="t11 wht b" style="fill:#ffffff">6</text>
+    <text x="680" y="564" class="t12">Several edits, one recalculation</text>
+  </g>
+  <text x="32" y="600" class="t10">Schematic, not a screenshot. Figures: the Medium example (200 kg/h, EEX price profile). Faded figures are out of date until the changes are applied.</text>
+</svg>

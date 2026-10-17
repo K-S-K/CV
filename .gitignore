@@ -9,3 +9,6 @@
 
 # Claude Permissions settings:
 .claude/settings.json
+
+#VSCode settings:
+.vscode/settings.json
