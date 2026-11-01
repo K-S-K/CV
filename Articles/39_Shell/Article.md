@@ -34,4 +34,4 @@ Finally, i've git a ready-to-use product:
 
 ![File Move](./Images/81_Kata_FileMove.gif)
 
-And if you're interested, you can download and play with it from the products site [katashell.app](https://www.katashell.app/)
+And if you're interested, you can download and play with it from the products site [katashell.app](https://www.katashell.app/?ref=github)
